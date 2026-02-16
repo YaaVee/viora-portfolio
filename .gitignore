@@ -1,76 +1,21 @@
-# Dependencies
 node_modules/
-package-lock.json
-
-# Environment files
 .env
 .env.local
-.env.*.local
-
-# Logs
 logs/
 *.log
-npm-debug.log*
-
-# OS files
 .DS_Store
-Thumbs.db
-
-# IDE
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# Backup files
 portfolio-backups/
-*.backup
 *.tar.gz
-
-# PM2
 .pm2/
-
-# VPN configs (sensitive)
 vpn-config/*.key
-vpn-config/*.conf
-!vpn-config/client.conf.example
-
-# SSL certificates (sensitive)
 ssl/*.key
-ssl/*.crt
-!ssl/README.md
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Project specific
 grafana-data/
 prometheus-data/
-elasticsearch-data/
-
-# Binary files
 *.iso
 *.AppImage
-*.tar.gz
-*.tgz
-
-# Python
 __pycache__/
 *.pyc
-.python-version
-.venv/
-venv/
-
-# Terraform
 .terraform/
 *.tfstate
-*.tfstate.backup
-
-# Ansible
-*.retry
-
-# Keep the projects-websites folder but not any sensitive files inside
-projects-websites/*/node_modules/
-projects-websites/*/.env
