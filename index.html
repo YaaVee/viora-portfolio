@@ -2813,71 +2813,641 @@ function filterProjects(category) {
     });
 }
  
-        // CASE STUDIES PAGE - Detailed
-        function getCaseStudiesPage() {
-            return `
-                <div class="page-header">
-                    <h1>Case Studies</h1>
-                    <p>Events Cases</p>
-                </div>
+        // CASE STUDIES PAGE - 40 Imaginary Scenarios with Realistic Technical Solutions
+function getCaseStudiesPage() {
+    const caseStudies = [
+        // ===== FINANCIAL SERVICES (1-8) =====
+        {
+            id: 1,
+            title: "Crypto Exchange Security Breach Recovery",
+            client: "NovaCrypt Exchange",
+            industry: "Cryptocurrency",
+            problem: "A decentralized crypto exchange experienced a sophisticated hot wallet compromise resulting in $2.3M in potential losses. Attackers exploited a vulnerability in the transaction signing process and had established persistence through a compromised API key.",
+            troubleshooting: "Conducted emergency incident response including: isolating affected systems, analyzing blockchain transactions to trace attacker patterns, reviewing API logs to identify the initial compromise vector, and performing memory forensics on validator nodes to detect backdoors.",
+            solution: "Implemented a multi-signature cold wallet architecture requiring 5-of-7 approvals for large transactions. Deployed hardware security modules (HSMs) for key management. Created an AI-based anomaly detection system for transaction patterns. Established a bug bounty program with bounties up to $50,000. Recovered 85% of funds through rapid response.",
+            technologies: ["HSM", "Multi-sig wallets", "Blockchain forensics", "Anomaly detection"],
+            timeline: "2 weeks",
+            icon: "fa-bitcoin"
+        },
+        {
+            id: 2,
+            title: "Core Banking System Migration Security",
+            client: "Meridian Trust Bank",
+            industry: "Banking",
+            problem: "During a legacy core banking system migration to a modern platform, customer transaction data was being corrupted during ETL processes. Approximately 15,000 transactions failed to reconcile, and test migrations showed data integrity issues with interest calculations and account balances.",
+            troubleshooting: "Deployed database replication monitoring to identify exact points of data corruption. Used checksum validation across source and target databases. Implemented transaction replay testing with historical data. Conducted schema analysis to identify compatibility issues with date/time formats and currency precision.",
+            solution: "Created an ETL validation framework that automatically compares source and target data with cryptographic hashing. Implemented dual-write strategy during cutover with real-time reconciliation. Deployed database firewall to block unauthorized schema changes. Established continuous data validation cron jobs running every 15 minutes post-migration.",
+            technologies: ["ETL validation", "Database replication", "Checksum verification", "Data reconciliation"],
+            timeline: "3 months",
+            icon: "fa-university"
+        },
+        {
+            id: 3,
+            title: "Payment Gateway PCI-DSS Compliance Failure",
+            client: "PayFlow Financial",
+            industry: "Fintech",
+            problem: "A payment processor failed their PCI-DSS audit due to cardholder data being stored in unencrypted application logs. The logs contained full PAN (Primary Account Number) data from 3 months of transactions, affecting approximately 500,000 customers.",
+            troubleshooting: "Conducted log forensics to determine scope of exposure. Analyzed application code to identify where PAN data was being logged. Reviewed log rotation and retention policies. Assessed SIEM rules for detecting sensitive data in logs.",
+            solution: "Implemented real-time log scrubbing using regular expressions to mask PAN data before writing. Deployed a data loss prevention (DLP) solution specifically for structured data. Created automated log scanning that alerts on any credit card pattern. Established quarterly log review audits with automated reporting.",
+            technologies: ["Log scrubbing", "DLP", "PCI-DSS controls", "SIEM integration"],
+            timeline: "6 weeks",
+            icon: "fa-credit-card"
+        },
+        {
+            id: 4,
+            title: "Mobile Banking App MITM Vulnerability",
+            client: "VaultLine Financial",
+            industry: "Mobile Banking",
+            problem: "A mobile banking application was found vulnerable to man-in-the-middle attacks due to improper certificate pinning implementation. Security researchers demonstrated the ability to intercept login credentials and transaction data on public WiFi networks.",
+            troubleshooting: "Decompiled the mobile app to analyze certificate validation logic. Tested network traffic interception using custom proxy configurations. Reviewed SSL/TLS implementation across all API endpoints. Assessed certificate management and renewal procedures.",
+            solution: "Implemented dynamic certificate pinning with backup pins stored in secure hardware-backed keystore. Deployed certificate transparency monitoring to detect fraudulent certificates. Added certificate validation at both application and API gateway levels. Created automated mobile app security testing pipeline.",
+            technologies: ["Certificate pinning", "Mobile security", "API gateway", "SSL/TLS"],
+            timeline: "3 weeks",
+            icon: "fa-mobile-alt"
+        },
+        {
+            id: 5,
+            title: "Investment Platform API Rate Limiting Breach",
+            client: "WealthSphere Invest",
+            industry: "Wealth Management",
+            problem: "An algorithmic trading platform's API lacked proper rate limiting, allowing a malicious actor to execute 50,000 unauthorized trades in 3 minutes, manipulating stock prices and causing $1.8M in client losses.",
+            troubleshooting: "Analyzed API access logs to identify the attack pattern. Reviewed authentication mechanisms for API keys. Assessed trading algorithms for circuit breaker triggers. Investigated whether the attack exploited any authentication bypass vulnerabilities.",
+            solution: "Implemented multi-layer rate limiting at API gateway, application, and database levels. Deployed adaptive rate limiting that adjusts based on user behavior patterns. Created real-time trading circuit breakers that halt activity when thresholds are exceeded. Added anomaly detection for trading patterns.",
+            technologies: ["Rate limiting", "API security", "Circuit breakers", "Anomaly detection"],
+            timeline: "4 weeks",
+            icon: "fa-chart-line"
+        },
+        {
+            id: 6,
+            title: "Cross-Border Payment Settlement Delays",
+            client: "GlobalRemit Transfer",
+            industry: "Remittance",
+            problem: "International payment settlements were experiencing 8-12 hour delays due to inefficient reconciliation processes between correspondent banks. The manual verification system couldn't handle the 50,000 daily transaction volume.",
+            troubleshooting: "Mapped the end-to-end payment flow across 12 correspondent banks. Identified bottlenecks in manual compliance checks. Analyzed SWIFT message processing times. Reviewed KYC/AML verification workflows.",
+            solution: "Implemented a blockchain-based settlement layer providing real-time transaction finality. Deployed smart contracts for automated compliance checks. Created a unified API layer connecting all correspondent banks. Established automated reconciliation with cryptographic proof.",
+            technologies: ["Blockchain", "Smart contracts", "API integration", "Automated reconciliation"],
+            timeline: "4 months",
+            icon: "fa-globe"
+        },
+        {
+            id: 7,
+            title: "Credit Scoring Algorithm Bias Detection",
+            client: "FairScore Analytics",
+            industry: "Credit Bureau",
+            problem: "A machine learning-based credit scoring model was found to have demographic bias, resulting in 15% higher rejection rates for certain applicant groups. This created regulatory risk and potential discrimination lawsuits.",
+            troubleshooting: "Conducted fairness audits across demographic segments. Analyzed feature importance to identify biased input variables. Reviewed training data for representation issues. Tested model predictions against protected class data.",
+            solution: "Implemented adversarial debiasing techniques in the model training pipeline. Created fairness constraints in the optimization function. Deployed continuous bias monitoring dashboards. Established regular model audits with third-party validation.",
+            technologies: ["ML fairness", "Adversarial debiasing", "Bias monitoring", "Model validation"],
+            timeline: "8 weeks",
+            icon: "fa-chart-pie"
+        },
+        {
+            id: 8,
+            title: "Treasury Management System Ransomware",
+            client: "CapitalBridge Holdings",
+            industry: "Investment Banking",
+            problem: "A treasury management system was hit by ransomware that encrypted 15 years of historical transaction data. The attack propagated through a compromised VPN credential of a third-party vendor.",
+            troubleshooting: "Isolated affected systems to prevent lateral spread. Conducted forensic analysis of the attack vector. Assessed backup integrity and recovery capabilities. Reviewed third-party access controls and vendor risk management.",
+            solution: "Implemented air-gapped backup strategy with immutable storage. Deployed zero-trust network access (ZTNA) replacing traditional VPN. Created third-party risk management platform with continuous monitoring. Established incident response playbook with regular tabletop exercises.",
+            technologies: ["Immutable backups", "ZTNA", "Vendor risk management", "Incident response"],
+            timeline: "6 weeks",
+            icon: "fa-shield-virus"
+        },
 
-                <div class="case-studies-grid">
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">Bank Security Transformation</div>
-                            <div class="case-client">LCB Bank</div>
-                            <div class="case-desc">Implemented comprehensive network security across 50+ branches including next-gen firewalls, IDS/IPS, and 24/7 security monitoring. Reduced security incidents by 95% and achieved ISO 27001 certification within 8 months.</div>
-                        </div>
-                    </div>
+        // ===== HEALTHCARE (9-16) =====
+        {
+            id: 9,
+            title: "Hospital Network Segmentation Failure",
+            client: "Regional Health System",
+            industry: "Healthcare",
+            problem: "A ransomware attack spread from an infected IoT patient monitor to the entire hospital network, affecting 500+ devices including MRI machines and patient records systems. The flat network design allowed lateral movement.",
+            troubleshooting: "Mapped network topology to identify segmentation gaps. Analyzed firewall rules for inter-VLAN traffic. Reviewed IoT device security configurations. Assessed medical device firmware vulnerabilities.",
+            solution: "Implemented micro-segmentation with granular firewall rules between device types. Deployed NAC (Network Access Control) for all medical IoT devices. Created separate VLANs for patient care, administrative, and public networks. Established medical device security assessment program.",
+            technologies: ["Micro-segmentation", "NAC", "Medical IoT security", "VLAN design"],
+            timeline: "3 months",
+            icon: "fa-hospital"
+        },
+        {
+            id: 10,
+            title: "Telemedicine Platform Encryption Failure",
+            client: "VirtualCare Connect",
+            industry: "Telehealth",
+            problem: "A telemedicine platform was streaming patient consultations without proper end-to-end encryption. Security researchers discovered that video streams could be intercepted and viewed by unauthorized parties on the same network.",
+            troubleshooting: "Analyzed WebRTC implementation for encryption gaps. Tested network traffic capture during live consultations. Reviewed key exchange mechanisms. Assessed compliance with healthcare privacy regulations.",
+            solution: "Implemented end-to-end encryption using the Signal Protocol for all media streams. Deployed certificate pinning for WebRTC connections. Created encrypted recording storage with client-side decryption. Established quarterly penetration testing for the platform.",
+            technologies: ["Signal Protocol", "WebRTC security", "E2E encryption", "Certificate pinning"],
+            timeline: "5 weeks",
+            icon: "fa-video"
+        },
+        {
+            id: 11,
+            title: "Electronic Health Record Access Audit Failure",
+            client: "MediRecord Systems",
+            industry: "Healthcare IT",
+            problem: "Audit logs for electronic health record access were incomplete, failing to capture 40% of user access events. During a regulatory audit, they couldn't prove who accessed specific patient records, risking $2M in fines.",
+            troubleshooting: "Reviewed database trigger configurations for audit logging. Analyzed application code for missing audit calls. Tested concurrent access scenarios for logging race conditions. Assessed SIEM ingestion of audit events.",
+            solution: "Implemented blockchain-based audit logging providing tamper-evident access records. Deployed database activity monitoring (DAM) as a backup audit source. Created real-time audit log validation with alerts for gaps. Established automated compliance reporting.",
+            technologies: ["Blockchain audit", "DAM", "SIEM", "Compliance automation"],
+            timeline: "8 weeks",
+            icon: "fa-file-medical"
+        },
+        {
+            id: 12,
+            title: "Medical Device Firmware Vulnerability",
+            client: "MedTech Innovations",
+            industry: "Medical Devices",
+            problem: "A line of insulin pumps was found to have a critical firmware vulnerability allowing remote attackers to modify dosage settings. The devices lacked proper authentication and used hardcoded credentials.",
+            troubleshooting: "Conducted binary analysis of firmware to identify vulnerabilities. Tested radio communication protocols for replay attacks. Reviewed manufacturing processes for secure credential management. Assessed over-the-air update mechanisms.",
+            solution: "Implemented secure boot with code signing for all firmware updates. Deployed hardware security module (HSM) for key storage. Created signed firmware update pipeline with version rollback protection. Established medical device security lab for continuous testing.",
+            technologies: ["Secure boot", "HSM", "Firmware signing", "Code analysis"],
+            timeline: "4 months",
+            icon: "fa-syringe"
+        },
+        {
+            id: 13,
+            title: "Healthcare API Data Exposure",
+            client: "HealthSync Integrations",
+            industry: "Healthcare API",
+            problem: "A FHIR API used by healthcare apps was exposing patient data due to improper authorization checks. Developers discovered that authenticated users could access any patient's records by simply changing the patient ID in the URL.",
+            troubleshooting: "Reviewed API authorization middleware implementation. Tested horizontal privilege escalation scenarios. Analyzed API rate limiting and monitoring. Assessed OAuth2 scope implementation.",
+            solution: "Implemented ABAC (Attribute-Based Access Control) with relationship-based authorization. Deployed API gateway with JWT validation and scope enforcement. Created automated API security testing in CI/CD. Established real-time monitoring for anomalous API access patterns.",
+            technologies: ["ABAC", "OAuth2", "JWT", "API gateway"],
+            timeline: "6 weeks",
+            icon: "fa-code-branch"
+        },
+        {
+            id: 14,
+            title: "Clinical Trial Data Integrity Compromise",
+            client: "PharmaResearch Global",
+            industry: "Pharmaceuticals",
+            problem: "Clinical trial data for a promising cancer drug was found to have unauthorized modifications. A researcher had altered outcome data to make the drug appear more effective, potentially affecting FDA approval.",
+            troubleshooting: "Analyzed database transaction logs to identify unauthorized changes. Reviewed access controls for trial data. Assessed audit trail completeness. Investigated separation of duties in data entry processes.",
+            solution: "Implemented immutable audit trails using write-once read-many (WORM) storage. Deployed blockchain-based data notarization for all trial results. Created automated data integrity verification with cryptographic hashing. Established mandatory separation of duties with approval workflows.",
+            technologies: ["WORM storage", "Blockchain notarization", "Data integrity", "Separation of duties"],
+            timeline: "3 months",
+            icon: "fa-flask"
+        },
+        {
+            id: 15,
+            title: "Healthcare IoT Botnet Infection",
+            client: "City Health Network",
+            industry: "Healthcare IoT",
+            problem: "Hundreds of hospital IoT devices (patient monitors, infusion pumps, temperature sensors) were infected with botnet malware, causing network congestion and intermittent device failures. The devices were using default credentials.",
+            troubleshooting: "Scanned network for compromised IoT devices. Analyzed malware behavior and command & control communication. Reviewed device credential policies. Assessed network segmentation effectiveness.",
+            solution: "Implemented network micro-segmentation isolating IoT devices to dedicated VLANs. Deployed IoT security platform with device fingerprinting and behavioral analytics. Created automated credential rotation for all medical devices. Established zero-trust network access for device management.",
+            technologies: ["IoT security", "Network segmentation", "Behavioral analytics", "Zero trust"],
+            timeline: "2 months",
+            icon: "fa-network-wired"
+        },
+        {
+            id: 16,
+            title: "Healthcare Blockchain Interoperability",
+            client: "HealthChain Consortium",
+            industry: "Healthcare Blockchain",
+            problem: "A consortium of 50 hospitals attempting to share patient data via blockchain faced 30-second transaction times, making the system unusable for real-time care coordination. The blockchain couldn't handle the 10,000 daily transaction volume.",
+            troubleshooting: "Analyzed blockchain consensus mechanism performance. Reviewed smart contract efficiency for data storage. Tested network latency between hospital nodes. Assessed database synchronization strategies.",
+            solution: "Implemented layer-2 scaling solution with off-chain state channels for frequent transactions. Deployed hybrid architecture combining blockchain for audit trail with traditional database for fast queries. Created optimized smart contracts reducing gas costs by 80%. Established caching layer for frequently accessed data.",
+            technologies: ["Layer-2 scaling", "State channels", "Hybrid architecture", "Smart contract optimization"],
+            timeline: "4 months",
+            icon: "fa-link"
+        },
 
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">E-commerce Security Overhaul</div>
-                            <div class="case-client">Commerce Ghana</div>
-                            <div class="case-desc">Led PCI-DSS compliance initiative for Ghana's largest e-commerce platform. Implemented WAF, fraud detection ML models, and secure payment processing. Achieved compliance and reduced payment fraud by 99%.</div>
-                        </div>
-                    </div>
+        // ===== E-COMMERCE & RETAIL (17-24) =====
+        {
+            id: 17,
+            title: "Black Friday Shopping Cart Exploit",
+            client: "MegaMart Online",
+            industry: "E-commerce",
+            problem: "During Black Friday sales, attackers exploited a race condition in the shopping cart system to apply unlimited discount coupons. They purchased $500,000 worth of merchandise at 90% off before detection.",
+            troubleshooting: "Analyzed transaction logs to identify the attack pattern. Reviewed coupon validation logic for race conditions. Tested concurrent request handling. Assessed inventory management system integration.",
+            solution: "Implemented distributed locking for coupon applications using Redis. Deployed idempotent API design preventing duplicate processing. Created real-time fraud detection rules for coupon abuse. Established rate limiting on checkout endpoints.",
+            technologies: ["Distributed locking", "Redis", "Idempotent APIs", "Fraud detection"],
+            timeline: "3 weeks",
+            icon: "fa-shopping-cart"
+        },
+        {
+            id: 18,
+            title: "E-commerce Platform PCI Scope Reduction",
+            client: "ShopStream Retail",
+            industry: "E-commerce",
+            problem: "An e-commerce platform's PCI-DSS scope included 200 servers because payment data was being processed on the same infrastructure as the main application, significantly increasing compliance costs and audit burden.",
+            troubleshooting: "Mapped payment data flow across all systems. Identified where cardholder data was stored, processed, or transmitted. Reviewed tokenization implementation. Assessed iframe integration with payment provider.",
+            solution: "Implemented iframe-based payment integration keeping cardholder data within PCI-compliant iframe. Deployed tokenization at the edge, replacing PAN with tokens before reaching application servers. Created network segmentation isolating payment systems to a dedicated PCI zone. Established quarterly scope validation scans.",
+            technologies: ["PCI scope reduction", "Tokenization", "iframe integration", "Network segmentation"],
+            timeline: "2 months",
+            icon: "fa-credit-card"
+        },
+        {
+            id: 19,
+            title: "Inventory Management API Overload",
+            client: "GlobalMart Distribution",
+            industry: "Retail",
+            problem: "During peak holiday season, the inventory management API collapsed under 10x normal load, causing 4 hours of downtime and $2M in lost sales. The API couldn't scale due to database connection limits.",
+            troubleshooting: "Analyzed API performance metrics during the failure. Reviewed database connection pooling configuration. Tested load balancing effectiveness. Assessed caching implementation for inventory data.",
+            solution: "Implemented read replicas for inventory queries, separating from write operations. Deployed Redis caching layer reducing database queries by 90%. Created connection pooling with dynamic scaling based on load. Established auto-scaling for API instances based on queue depth.",
+            technologies: ["Read replicas", "Redis caching", "Connection pooling", "Auto-scaling"],
+            timeline: "4 weeks",
+            icon: "fa-boxes"
+        },
+        {
+            id: 20,
+            title: "Loyalty Program Points Theft",
+            client: "RewardsPlus",
+            industry: "Retail Loyalty",
+            problem: "Attackers exploited an API vulnerability to transfer loyalty points between accounts without authorization, stealing approximately 50 million points worth $500,000. The API lacked proper ownership validation.",
+            troubleshooting: "Analyzed API logs to identify unauthorized point transfers. Reviewed authorization logic for point transactions. Tested for IDOR (Insecure Direct Object References) vulnerabilities. Assessed rate limiting on sensitive operations.",
+            solution: "Implemented cryptographic signing of point transfer requests with user-specific keys. Deployed behavioral analytics detecting unusual point redemption patterns. Created multi-factor authentication for high-value transfers. Established transaction limits with velocity checks.",
+            technologies: ["Cryptographic signing", "Behavioral analytics", "MFA", "Velocity checks"],
+            timeline: "3 weeks",
+            icon: "fa-gift"
+        },
+        {
+            id: 21,
+            title: "Supply Chain Vendor Portal Breach",
+            client: "RetailCorp Supply",
+            industry: "Supply Chain",
+            problem: "A compromised vendor credential allowed attackers to access the supplier portal and modify shipping addresses for 50 high-value orders, redirecting $800,000 in merchandise to fraudulent addresses.",
+            troubleshooting: "Traced the attack to a specific vendor account with weak password. Analyzed portal access logs for unusual patterns. Reviewed vendor onboarding and offboarding processes. Assessed MFA implementation for vendor accounts.",
+            solution: "Implemented mandatory MFA for all vendor accounts using TOTP. Deployed vendor risk scoring based on behavior and transaction patterns. Created just-in-time access provisioning with automatic revocation. Established vendor security requirements in contracts.",
+            technologies: ["MFA", "Risk scoring", "JIT access", "Vendor security"],
+            timeline: "5 weeks",
+            icon: "fa-truck"
+        },
+        {
+            id: 22,
+            title: "E-commerce Search Engine Injection",
+            client: "FindIt Marketplace",
+            industry: "E-commerce",
+            problem: "Attackers injected malicious JavaScript into product search results through a stored XSS vulnerability. The script stole session cookies from 10,000 users, allowing account takeover and fraudulent purchases.",
+            troubleshooting: "Analyzed search input sanitization and output encoding. Reviewed CSP headers for XSS mitigation. Tested for bypasses in input validation. Assessed session management security.",
+            solution: "Implemented strict CSP with nonce-based script execution. Deployed context-aware output encoding for all user-supplied data. Created automated XSS scanning in CI/CD pipeline. Established HttpOnly and Secure flags for all session cookies.",
+            technologies: ["CSP", "Output encoding", "XSS prevention", "Secure cookies"],
+            timeline: "2 weeks",
+            icon: "fa-search"
+        },
+        {
+            id: 23,
+            title: "Omnichannel Inventory Desync",
+            client: "Unified Retail Group",
+            industry: "Retail",
+            problem: "Real-time inventory synchronization between online store and physical locations failed during peak season, resulting in 500+ customers being told items were in stock when they weren't, causing significant brand damage.",
+            troubleshooting: "Analyzed message queue for inventory updates between systems. Reviewed database replication lag between locations. Tested conflict resolution for simultaneous updates. Assessed event-driven architecture reliability.",
+            solution: "Implemented event sourcing with CQRS pattern for inventory management. Deployed optimistic concurrency control with version stamps. Created real-time inventory dashboard with synchronization status. Established compensating transactions for failed updates.",
+            technologies: ["Event sourcing", "CQRS", "Optimistic concurrency", "Compensating transactions"],
+            timeline: "6 weeks",
+            icon: "fa-store"
+        },
+        {
+            id: 24,
+            title: "Recommendation Engine Data Poisoning",
+            client: "TrendSetter AI",
+            industry: "Retail AI",
+            problem: "Attackers manipulated product recommendation algorithms by creating fake user accounts and artificially inflating views/purchases of competitor products, causing the AI to recommend inferior products and reducing sales by 15%.",
+            troubleshooting: "Analyzed training data for anomalies and poisoning attempts. Reviewed feature importance in recommendation models. Tested model resilience to adversarial examples. Assessed user behavior validation.",
+            solution: "Implemented robust statistics for outlier detection in training data. Deployed adversarial training making models resilient to manipulation. Created user reputation scoring to filter synthetic activity. Established continuous model validation against baseline metrics.",
+            technologies: ["Adversarial ML", "Robust statistics", "User reputation", "Model validation"],
+            timeline: "2 months",
+            icon: "fa-brain"
+        },
 
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">Cloud Migration Security</div>
-                            <div class="case-client">Telecom Ghana</div>
-                            <div class="case-desc">Securely migrated critical telecom infrastructure to AWS with zero downtime. Implemented defense-in-depth security architecture, IAM, and continuous compliance monitoring. Saved 40% in operational costs.</div>
-                        </div>
-                    </div>
+        // ===== MANUFACTURING & INDUSTRIAL (25-32) =====
+        {
+            id: 25,
+            title: "Industrial Control System Ransomware",
+            client: "Precision Manufacturing",
+            industry: "Manufacturing",
+            problem: "Ransomware infected the industrial control network, encrypting PLC configurations and halting production for 5 days. The attack entered through a compromised HVAC contractor's laptop connected to the OT network.",
+            troubleshooting: "Isolated OT network to prevent further spread. Analyzed firewall rules between IT and OT networks. Reviewed contractor remote access policies. Assessed backup viability for PLC configurations.",
+            solution: "Implemented unidirectional gateways between IT and OT networks preventing any inbound connections. Deployed air-gapped backup system for all PLC configurations. Created OT-specific endpoint protection with whitelisting. Established contractor onboarding process with dedicated jump hosts.",
+            technologies: ["Unidirectional gateways", "Air-gapped backups", "Application whitelisting", "OT security"],
+            timeline: "8 weeks",
+            icon: "fa-industry"
+        },
+        {
+            id: 26,
+            title: "SCADA System Authentication Bypass",
+            client: "WaterWorks Utilities",
+            industry: "Water Treatment",
+            problem: "A SCADA system controlling water treatment facilities had a hardcoded backdoor account that was discovered and exploited, allowing unauthorized changes to chemical dosing levels, potentially endangering public health.",
+            troubleshooting: "Analyzed SCADA firmware for hidden accounts. Reviewed authentication mechanisms across all control systems. Tested network segmentation between SCADA and corporate network. Assessed vendor secure development practices.",
+            solution: "Implemented multi-factor authentication for all SCADA access using hardware tokens. Deployed network-based anomaly detection for OT protocols. Created configuration management database tracking all authorized changes. Established vendor security requirements in procurement.",
+            technologies: ["OT authentication", "Hardware tokens", "Protocol anomaly detection", "Configuration management"],
+            timeline: "6 weeks",
+            icon: "fa-water"
+        },
+        {
+            id: 27,
+            title: "Supply Chain BOM Integrity Compromise",
+            client: "AeroTech Components",
+            industry: "Aerospace",
+            problem: "A supplier's Bill of Materials (BOM) system was compromised, with attackers subtly altering component specifications for critical aircraft parts. The changes would have caused premature fatigue failure if undetected.",
+            troubleshooting: "Traced BOM modifications to compromised supplier credentials. Analyzed cryptographic signatures on BOM documents. Reviewed supplier authentication and authorization processes. Assessed supply chain verification procedures.",
+            solution: "Implemented blockchain-based BOM verification with multi-party signatures. Deployed digital twins for all critical components enabling real-time verification. Created automated BOM validation against trusted sources. Established cryptographic chain of custody for all specifications.",
+            technologies: ["Blockchain verification", "Digital twins", "BOM validation", "Chain of custody"],
+            timeline: "4 months",
+            icon: "fa-plane"
+        },
+        {
+            id: 28,
+            title: "Predictive Maintenance System Failure",
+            client: "RailCorp Logistics",
+            industry: "Transportation",
+            problem: "A predictive maintenance system for train bearings started generating false failure alerts, causing unnecessary maintenance shutdowns and delaying 200+ shipments. The ML model had degraded due to sensor drift.",
+            troubleshooting: "Analyzed sensor data quality and calibration status. Reviewed model performance metrics over time. Tested for concept drift in the ML pipeline. Assessed data preprocessing and feature engineering.",
+            solution: "Implemented automated data quality validation with alerts for sensor drift. Deployed model monitoring with statistical tests for concept drift. Created ensemble model combining multiple algorithms for robustness. Established continuous model retraining pipeline with fresh data.",
+            technologies: ["Data quality", "Concept drift detection", "Ensemble learning", "ML pipeline"],
+            timeline: "5 weeks",
+            icon: "fa-train"
+        },
+        {
+            id: 29,
+            title: "Industrial Robot Fleet Hijacking",
+            client: "AutoBuild Assembly",
+            industry: "Automotive",
+            problem: "Attackers compromised the robot control network and reprogrammed 15 assembly line robots to operate at unsafe speeds, causing a collision that damaged $2M in equipment and injured two workers.",
+            troubleshooting: "Isolated robot network and analyzed control logs. Reviewed robot programming interface security. Assessed safety system integration with control systems. Investigated remote access mechanisms.",
+            solution: "Implemented safety-rated PLCs separate from control networks with hardwired emergency stops. Deployed network segmentation isolating robot control from corporate network. Created robot behavior monitoring with anomaly detection. Established mandatory security updates for all industrial controllers.",
+            technologies: ["Safety PLCs", "Network segmentation", "Robot monitoring", "Industrial security"],
+            timeline: "3 months",
+            icon: "fa-robot"
+        },
+        {
+            id: 30,
+            title: "Smart Grid Demand Response Manipulation",
+            client: "EnergyGrid Cooperative",
+            industry: "Utilities",
+            problem: "Attackers manipulated smart meter data to artificially trigger demand response events, causing voltage fluctuations that damaged transformers and caused $5M in equipment failure across the grid.",
+            troubleshooting: "Analyzed smart meter data for manipulation patterns. Reviewed demand response algorithm logic. Tested meter authentication and encryption. Assessed grid control system resilience.",
+            solution: "Implemented cryptographic attestation for all smart meter readings. Deployed grid-scale anomaly detection using physics-informed AI. Created redundant control paths with manual override capability. Established real-time grid monitoring with automatic isolation.",
+            technologies: ["Cryptographic attestation", "Physics-informed AI", "Redundant controls", "Grid monitoring"],
+            timeline: "6 months",
+            icon: "fa-bolt"
+        },
+        {
+            id: 31,
+            title: "Chemical Plant Safety System Bypass",
+            client: "ChemCorp Processing",
+            industry: "Chemical",
+            problem: "During a routine upgrade, technicians accidentally bypassed safety instrumented systems (SIS) while testing new controls, creating a situation where a pressure vessel overpressurized and nearly caused a catastrophic release.",
+            troubleshooting: "Reviewed bypass procedures and authorization workflows. Analyzed alarm logs during the incident. Tested SIS integration with control systems. Assessed safety culture and training.",
+            solution: "Implemented mandatory two-person rule for safety system bypasses with biometric verification. Deployed tamper-evident logging for all bypass events. Created automated alerts to management when safety systems are bypassed. Established virtual safety barriers that cannot be disabled remotely.",
+            technologies: ["Two-person rule", "Biometric verification", "Tamper-evident logging", "Virtual safety barriers"],
+            timeline: "8 weeks",
+            icon: "fa-flask"
+        },
+        {
+            id: 32,
+            title: "Oil Pipeline Leak Detection Failure",
+            client: "PetroFlow Pipelines",
+            industry: "Oil & Gas",
+            problem: "A leak detection system failed to identify a small pipeline leak for 3 days, resulting in 50,000 gallons of oil spill. The system's acoustic sensors had been incorrectly calibrated during maintenance.",
+            troubleshooting: "Analyzed acoustic sensor calibration records. Reviewed leak detection algorithm parameters. Tested sensor data quality and validation. Assessed maintenance procedures and documentation.",
+            solution: "Implemented multi-modal leak detection combining acoustic, pressure, and flow data with ML fusion. Deployed automatic sensor calibration validation before maintenance sign-off. Created redundant leak detection using satellite imagery analysis. Established continuous model validation against known leak scenarios.",
+            technologies: ["Sensor fusion", "ML leak detection", "Satellite monitoring", "Model validation"],
+            timeline: "4 months",
+            icon: "fa-oil-can"
+        },
 
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">DevSecOps Transformation</div>
-                            <div class="case-client">Social Development Bank</div>
-                            <div class="case-desc">Transformed development practices with DevSecOps implementation. Integrated security into CI/CD pipelines, automated vulnerability scanning, and reduced deployment time from weeks to hours while improving security posture.</div>
-                        </div>
-                    </div>
-
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">Healthcare Data Protection</div>
-                            <div class="case-client">Clara Teaching Hospital</div>
-                            <div class="case-desc">Implemented HIPAA-compliant security controls for patient records system. Deployed encryption, access controls, and audit logging. Successfully passed external audit and improved patient data security.</div>
-                        </div>
-                    </div>
-
-                    <div class="case-card">
-                        <div class="case-image"></div>
-                        <div class="case-content">
-                            <div class="case-title">Fintech Security Architecture</div>
-                            <div class="case-client">Teepay</div>
-                            <div class="case-desc">Designed and implemented security architecture for mobile money platform. Included real-time fraud detection, transaction monitoring, and regulatory compliance. Handles millions in transactions daily with zero security incidents.</div>
-                        </div>
-                    </div>
-                </div>
-            `;
+        // ===== TECHNOLOGY & SOFTWARE (33-40) =====
+        {
+            id: 33,
+            title: "SaaS Platform Data Leak via Search Indexing",
+            client: "CloudSync Solutions",
+            industry: "SaaS",
+            problem: "A document management SaaS platform accidentally allowed search engines to index private customer documents, exposing sensitive business plans and financial data from 200 companies for 3 weeks before detection.",
+            troubleshooting: "Analyzed robots.txt configuration and meta tags. Reviewed search engine crawl logs. Tested authentication bypasses in document access. Assessed CDN and caching configurations.",
+            solution: "Implemented X-Robots-Tag headers preventing indexing of authenticated content. Deployed canonical URL validation ensuring only intended versions are accessible. Created automated scanning for sensitive data exposure. Established quarterly external attack surface reviews.",
+            technologies: ["Robots header", "Canonical URLs", "Data exposure scanning", "Attack surface management"],
+            timeline: "2 weeks",
+            icon: "fa-cloud"
+        },
+        {
+            id: 34,
+            title: "Docker Registry Cryptomining Exploit",
+            client: "ContainerWorks",
+            industry: "DevOps",
+            problem: "Attackers compromised a public Docker registry and injected cryptomining malware into popular base images. Over 10,000 developers downloaded infected images, resulting in cryptomining on their build servers.",
+            troubleshooting: "Analyzed image layers to identify malware insertion point. Reviewed registry access controls and audit logs. Tested image signing and verification. Assessed supply chain security practices.",
+            solution: "Implemented notary for image signing and verification at pull time. Deployed vulnerability scanning for all images in registry with automatic quarantine. Created trusted build pipeline with reproducible builds. Established software bill of materials (SBOM) for all images.",
+            technologies: ["Notary", "Image signing", "Vulnerability scanning", "SBOM"],
+            timeline: "4 weeks",
+            icon: "fa-docker"
+        },
+        {
+            id: 35,
+            title: "Kubernetes RBAC Privilege Escalation",
+            client: "CloudNative Apps",
+            industry: "Kubernetes",
+            problem: "A developer accidentally received cluster-admin privileges due to a misconfigured RBAC policy, allowing them to accidentally delete production namespaces and cause 8 hours of downtime for critical applications.",
+            troubleshooting: "Reviewed RBAC configuration and role bindings. Analyzed audit logs for privilege usage. Tested principle of least privilege compliance. Assessed change management processes.",
+            solution: "Implemented OPA/Gatekeeper policies enforcing RBAC best practices. Deployed just-in-time privilege elevation with approval workflows. Created automated RBAC auditing with drift detection. Established namespace isolation with network policies.",
+            technologies: ["OPA/Gatekeeper", "JIT access", "RBAC auditing", "Network policies"],
+            timeline: "3 weeks",
+            icon: "fa-cubes"
+        },
+        {
+            id: 36,
+            title: "Terraform State File Exposure",
+            client: "InfraCode",
+            industry: "Infrastructure as Code",
+            problem: "A Terraform state file stored in public S3 bucket exposed AWS access keys, database passwords, and infrastructure configuration for 50 production environments. The bucket had been misconfigured as public-readable.",
+            troubleshooting: "Analyzed S3 bucket policies and ACLs. Reviewed Terraform backend configuration. Test for public access to state files. Assessed secrets management practices.",
+            solution: "Implemented remote state locking with DynamoDB and encryption at rest. Deployed backend configuration requiring encryption and access logging. Created automated S3 bucket policy validation in CI/CD. Established secrets management using HashiCorp Vault.",
+            technologies: ["Remote state", "Encryption", "Bucket policy validation", "Vault"],
+            timeline: "2 weeks",
+            icon: "fa-code"
+        },
+        {
+            id: 37,
+            title: "GitHub Actions Secrets Leak",
+            client: "DevFlow CI",
+            industry: "CI/CD",
+            problem: "A developer accidentally printed GitHub secrets to build logs in a CI pipeline, exposing API keys for 30 production services. The logs were publicly accessible for 2 weeks before rotation.",
+            troubleshooting: "Analyzed build logs for secret exposure patterns. Reviewed GitHub Actions secret masking configuration. Tested for secret leakage in various scenarios. Assessed log retention and access controls.",
+            solution: "Implemented custom secret redaction in log output using正则表达式. Deployed pre-commit hooks preventing secret commits. Created automated secret scanning in CI/CD with build failure on detection. Established forced secret rotation with audit trail.",
+            technologies: ["Log redaction", "Pre-commit hooks", "Secret scanning", "Automated rotation"],
+            timeline: "1 week",
+            icon: "fa-github"
+        },
+        {
+            id: 38,
+            title: "Database Connection Pool Exhaustion",
+            client: "DataFlow Analytics",
+            industry: "Data Platform",
+            problem: "A misconfigured connection pool in a microservices architecture led to database connection exhaustion, causing cascading failures across 15 services and 6 hours of platform unavailability.",
+            troubleshooting: "Analyzed connection pool metrics and database logs. Reviewed connection timeout and retry configurations. Tested circuit breaker behavior under load. Assessed service dependency health checks.",
+            solution: "Implemented dynamic connection pooling with circuit breakers and bulkheads. Deployed read replicas for analytical queries separating from transactional workload. Created connection pool monitoring with predictive alerts. Established graceful degradation with fallback mechanisms.",
+            technologies: ["Circuit breakers", "Bulkheads", "Read replicas", "Predictive monitoring"],
+            timeline: "3 weeks",
+            icon: "fa-database"
+        },
+        {
+            id: 39,
+            title: "WebAssembly Cryptojacking",
+            client: "MediaStream CDN",
+            industry: "Content Delivery",
+            problem: "Attackers injected WebAssembly cryptominers into JavaScript libraries served through a CDN, affecting 500,000 website visitors who unknowingly had their browsers mining cryptocurrency without consent.",
+            troubleshooting: "Analyzed CDN logs for unauthorized file modifications. Reviewed JavaScript library integrity verification. Tested Subresource Integrity (SRI) implementation. Assessed CDN access controls.",
+            solution: "Implemented Subresource Integrity (SRI) with automatic hash generation in build pipeline. Deployed CDN with immutable content and version pinning. Created automated content scanning for malicious scripts. Established supply chain security with dependency verification.",
+            technologies: ["SRI", "Immutable CDN", "Content scanning", "Supply chain security"],
+            timeline: "2 weeks",
+            icon: "fa-file-code"
+        },
+        {
+            id: 40,
+            title: "Serverless Function Cold Start DoS",
+            client: "LambdaScale Apps",
+            industry: "Serverless",
+            problem: "Attackers exploited cold start behavior by sending traffic patterns that constantly cycled through random function invocations, preventing any instances from staying warm and increasing latency from 100ms to 10 seconds.",
+            troubleshooting: "Analyzed invocation patterns and cold start frequency. Reviewed concurrency limits and provisioning configurations. Tested various invocation patterns for DoS potential. Assessed function memory and initialization code.",
+            solution: "Implemented provisioned concurrency with predictive scaling based on traffic patterns. Deployed scheduled warming with canary functions maintaining baseline instances. Created function optimization reducing cold start time to under 100ms. Established WAF rules blocking random invocation patterns.",
+            technologies: ["Provisioned concurrency", "Predictive scaling", "Cold start optimization", "WAF rules"],
+            timeline: "4 weeks",
+            icon: "fa-cloud-upload-alt"
         }
+    ];
+
+    // Build case studies HTML
+    let caseStudiesHTML = '';
+    
+    caseStudies.forEach(study => {
+        // Create technology tags
+        const techTags = study.technologies.map(tech => 
+            `<span class="tech-tag">${tech}</span>`
+        ).join('');
+        
+        caseStudiesHTML += `
+            <div class="case-card" onclick="toggleCaseDetails(${study.id})" style="cursor: pointer;">
+                <div class="case-image" style="background: linear-gradient(135deg, #00ff9d20, #00b8ff20); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas ${study.icon}" style="font-size: 60px; color: #00ff9d; opacity: 0.7;"></i>
+                </div>
+                <div class="case-content">
+                    <div class="case-title">${study.title}</div>
+                    <div class="case-client" style="display: flex; justify-content: space-between;">
+                        <span><i class="fas fa-building"></i> ${study.client}</span>
+                        <span><i class="fas fa-tag"></i> ${study.industry}</span>
+                    </div>
+                    <div class="case-tech" style="margin: 10px 0;">
+                        ${techTags}
+                    </div>
+                    <div id="case-preview-${study.id}" class="case-preview">
+                        <p><strong>⚠️ Problem:</strong> ${study.problem.substring(0, 150)}...</p>
+                        <p><small style="color: #00ff9d;">Click to expand full case study →</small></p>
+                    </div>
+                    <div id="case-full-${study.id}" class="case-full" style="display: none; margin-top: 15px;">
+                        <div style="background: rgba(0,255,157,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                            <h4 style="color: #ff4444; margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> Problem</h4>
+                            <p>${study.problem}</p>
+                        </div>
+                        <div style="background: rgba(255,255,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                            <h4 style="color: #ffaa00; margin-bottom: 10px;"><i class="fas fa-search"></i> Troubleshooting</h4>
+                            <p>${study.troubleshooting}</p>
+                        </div>
+                        <div style="background: rgba(0,255,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                            <h4 style="color: #00ff9d; margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Solution</h4>
+                            <p>${study.solution}</p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; color: #b0b0b0; font-size: 0.9em;">
+                            <span><i class="fas fa-clock"></i> Timeline: ${study.timeline}</span>
+                            <span><i class="fas fa-cog"></i> ${study.technologies.length} technologies</span>
+                        </div>
+                        <p style="margin-top: 10px;"><small style="color: #00ff9d;">Click to collapse ↑</small></p>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    return `
+        <div class="page-header">
+            <h1>Case Studies</h1>
+            <p>40+ real-world security challenges and their technical solutions</p>
+        </div>
+
+        <div class="case-filters" style="margin: 30px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="filter-btn active" onclick="filterCaseStudies('all')">All Industries</button>
+            <button class="filter-btn" onclick="filterCaseStudies('financial')">Financial</button>
+            <button class="filter-btn" onclick="filterCaseStudies('healthcare')">Healthcare</button>
+            <button class="filter-btn" onclick="filterCaseStudies('retail')">Retail</button>
+            <button class="filter-btn" onclick="filterCaseStudies('manufacturing')">Manufacturing</button>
+            <button class="filter-btn" onclick="filterCaseStudies('tech')">Technology</button>
+        </div>
+
+        <div class="case-studies-grid" id="case-studies-grid">
+            ${caseStudiesHTML}
+        </div>
+
+        <div style="margin: 50px 0; padding: 30px; background: rgba(0,255,157,0.05); border-radius: 15px; text-align: center;">
+            <h3 style="color: #00ff9d; margin-bottom: 20px;">📊 Case Study Statistics</h3>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                <div>
+                    <div style="font-size: 40px; color: #00ff9d;">40+</div>
+                    <div>Case Studies</div>
+                </div>
+                <div>
+                    <div style="font-size: 40px; color: #00ff9d;">8</div>
+                    <div>Industries</div>
+                </div>
+                <div>
+                    <div style="font-size: 40px; color: #00ff9d;">100%</div>
+                    <div>Real Solutions</div>
+                </div>
+                <div>
+                    <div style="font-size: 40px; color: #00ff9d;">0</div>
+                    <div>Real Companies</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; color: #b0b0b0;">All case studies are imaginary scenarios with realistic technical solutions</p>
+        </div>
+    `;
+}
+
+// Toggle case study details
+function toggleCaseDetails(id) {
+    const preview = document.getElementById(`case-preview-${id}`);
+    const full = document.getElementById(`case-full-${id}`);
+    
+    if (full.style.display === 'none') {
+        preview.style.display = 'none';
+        full.style.display = 'block';
+    } else {
+        preview.style.display = 'block';
+        full.style.display = 'none';
+    }
+}
+
+// Filter case studies by industry
+function filterCaseStudies(industry) {
+    // Update active filter button
+    document.querySelectorAll('.case-filters .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    // This would need the actual case studies data to filter
+    // For now, we'll just show/hide based on the industry mapping
+    const industryMap = {
+        'financial': [1,2,3,4,5,6,7,8],
+        'healthcare': [9,10,11,12,13,14,15,16],
+        'retail': [17,18,19,20,21,22,23,24],
+        'manufacturing': [25,26,27,28,29,30,31,32],
+        'tech': [33,34,35,36,37,38,39,40]
+    };
+    
+    const cards = document.querySelectorAll('.case-card');
+    if (industry === 'all') {
+        cards.forEach(card => card.style.display = 'block');
+    } else {
+        cards.forEach((card, index) => {
+            const studyId = index + 1;
+            if (industryMap[industry].includes(studyId)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
 
         // AI AUGMENTATION PAGE - Detailed
         function getAIAugmentationPage() {

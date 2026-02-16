@@ -452,6 +452,518 @@
             font-size: 14px;
         }
 
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .project-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ff9d;
+            box-shadow: 0 20px 40px rgba(0,255,157,0.2);
+        }
+
+        .project-image {
+            height: 150px;
+            background: linear-gradient(135deg, #00ff9d20, #00b8ff20);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-image i {
+            font-size: 50px;
+            color: #00ff9d;
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover .project-image i {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #00ff9d;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .tech-tag {
+            padding: 4px 12px;
+            background: rgba(0,255,157,0.1);
+            border-radius: 15px;
+            font-size: 11px;
+            color: #00ff9d;
+            border: 1px solid rgba(0,255,157,0.2);
+        }
+
+        .project-desc {
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .project-link i {
+            color: #00ff9d;
+            font-size: 14px;
+        }
+
+        .project-link:hover {
+            color: #00ff9d;
+            transform: translateX(5px);
+        }
+
+        /* Category Filter */
+        .project-filters {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 25px;
+            color: #b0b0b0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 13px;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #00ff9d;
+            color: #0a0a0a;
+            border-color: #00ff9d;
+        }
+
+        /* Case Studies Grid */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .case-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ff9d;
+        }
+
+        .case-image {
+            height: 150px;
+            background: linear-gradient(135deg, #00ff9d20, #00b8ff20);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .case-content {
+            padding: 20px;
+        }
+
+        .case-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .case-client {
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .case-desc {
+            color: #b0b0b0;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        /* Real-time AI Page */
+        .ai-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .ai-chat {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            display: flex;
+            gap: 10px;
+            max-width: 80%;
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #00ff9d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a0a0a;
+            font-size: 14px;
+        }
+
+        .message-content {
+            background: rgba(0,255,157,0.1);
+            padding: 10px 15px;
+            border-radius: 15px;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        .message.user .message-content {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .chat-input button {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ff9d, #00b8ff);
+            border: none;
+            color: #0a0a0a;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .chat-input button:hover {
+            transform: scale(1.1);
+        }
+
+        .code-analyzer {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .code-input {
+            width: 100%;
+            height: 200px;
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #00ff9d;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 13px;
+            margin: 15px 0;
+        }
+
+        .analyze-btn {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #00ff9d, #00b8ff);
+            border: none;
+            border-radius: 25px;
+            color: #0a0a0a;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,255,157,0.3);
+        }
+
+        .threat-feed {
+            margin-top: 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .threat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .threat-item:last-child {
+            border-bottom: none;
+        }
+
+        .threat-severity {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .severity-critical {
+            background: rgba(255,0,0,0.2);
+            color: #ff4444;
+        }
+
+        .severity-high {
+            background: rgba(255,165,0,0.2);
+            color: #ffaa00;
+        }
+
+        .severity-medium {
+            background: rgba(255,255,0,0.2);
+            color: #ffff00;
+        }
+
+        .severity-low {
+            background: rgba(0,255,0,0.2);
+            color: #00ff00;
+        }
+
+        /* Video Conferencing Page */
+        .video-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .video-main {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .video-participant {
+            background: #1a1a1a;
+            border-radius: 10px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 2px solid rgba(0,255,157,0.3);
+        }
+
+        .participant-name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .video-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .control-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #00ff9d;
+            color: #0a0a0a;
+            transform: scale(1.1);
+        }
+
+        .control-btn.danger:hover {
+            background: #ff4444;
+        }
+
+        .video-sidebar {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .chat-tab {
+            margin-top: 20px;
+        }
+
+        .chat-message {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Spreadsheet Automation Page */
+        .spreadsheet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .automation-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+        }
+
+        .automation-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ff9d;
+        }
+
+        .automation-icon {
+            font-size: 40px;
+            color: #00ff9d;
+            margin-bottom: 15px;
+        }
+
+        /* AI Augmentation Page */
+        .ai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .ai-feature-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+        }
+
+        .ai-feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ff9d;
+        }
+
         /* Auto Status Bar */
         .auto-status {
             position: fixed;
@@ -568,6 +1080,11 @@
         @media (max-width: 768px) {
             .stats {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ai-container,
+            .video-container {
+                grid-template-columns: 1fr;
             }
 
             .name {
@@ -1084,7 +1601,7 @@
         }
 
         // ============================================
-        // PAGE CONTENT FUNCTIONS
+        // PAGE CONTENT FUNCTIONS - ALL PAGES RESTORED
         // ============================================
         
         function showPage(page) {
@@ -1151,12 +1668,12 @@
             }
         }
 
-        // Home Page with YOUR image
+        // HOME PAGE - WITH YOUR PICTURE
         function getHomePage() {
             return `
                 <section class="hero">
                     <div class="hero-content">
-                        <div class="greeting">👋 Hello, I'm</div>
+                        <div class="greeting">Hello, I'm</div>
                         <h1 class="name">Viora Yaba<br><span>Mensah</span></h1>
                         <div class="title">Cloud Security Engineer & DevSecOps Specialist</div>
                         
@@ -1195,14 +1712,6 @@
                         <div class="stat-label">Services</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label">Clients</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years</div>
-                    </div>
-                    <div class="stat-item">
                         <div class="stat-number">100%</div>
                         <div class="stat-label">Auto-Heal</div>
                     </div>
@@ -1237,7 +1746,7 @@
             `;
         }
 
-        // Services Page
+        // SERVICES PAGE - COMPLETE WITH 60+ SERVICES
         function getServicesPage() {
             return `
                 <div class="page-header">
@@ -1245,12 +1754,442 @@
                     <p>60+ enterprise-grade security solutions with Ghana market pricing</p>
                 </div>
                 <div class="services-grid">
-                    ${getAllServices()}
+                    <!-- Network Security (12) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Enterprise Firewall Configuration</div>
+                        <div class="service-price">GHS 2,500 - 15,000</div>
+                        <div class="service-desc">Professional firewall setup with pfSense, Fortinet, or Cisco ASA. Includes rule optimization, NAT configuration, and 24/7 monitoring.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Site-to-Site VPN</div>
+                        <div class="service-price">GHS 1,500 - 8,000</div>
+                        <div class="service-desc">Secure VPN connecting multiple locations using IPsec, WireGuard, or OpenVPN with failover configuration.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">IDS/IPS Implementation</div>
+                        <div class="service-price">GHS 3,500 - 20,000</div>
+                        <div class="service-desc">Intrusion detection and prevention with Snort, Suricata, or Zeek. Custom rules and threat intelligence integration.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Wireless Security</div>
+                        <div class="service-price">GHS 2,000 - 12,000</div>
+                        <div class="service-desc">Secure WiFi with WPA3-Enterprise, RADIUS authentication, rogue AP detection, and wireless intrusion prevention.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Network Segmentation</div>
+                        <div class="service-price">GHS 8,000 - 40,000</div>
+                        <div class="service-desc">VLAN design, micro-segmentation, ACLs, and DMZ setup to contain breaches and protect critical assets.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-dns"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">DNS Security</div>
+                        <div class="service-price">GHS 2,500 - 12,000</div>
+                        <div class="service-desc">DNSSEC implementation, DNS filtering, and protection against DNS tunneling and cache poisoning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-traffic-light"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Load Balancer Security</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Secure HAProxy, Nginx, or F5 configuration with SSL/TLS optimization and DDoS protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">NAC Implementation</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">Network Access Control with Cisco ISE or Aruba ClearPass for endpoint compliance and guest access.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Network Traffic Analysis</div>
+                        <div class="service-price">GHS 7,000 - 35,000</div>
+                        <div class="service-desc">Deep packet inspection, NetFlow analysis, and anomaly detection using ELK Stack or Splunk.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bug"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Penetration Testing</div>
+                        <div class="service-price">GHS 5,000 - 30,000</div>
+                        <div class="service-desc">Comprehensive network penetration testing including vulnerability assessment and exploitation.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clock"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">DDoS Protection</div>
+                        <div class="service-price">GHS 4,000 - 25,000</div>
+                        <div class="service-desc">DDoS mitigation with Cloudflare, AWS Shield, or on-premise solutions.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Security Policy Design</div>
+                        <div class="service-price">GHS 3,500 - 18,000</div>
+                        <div class="service-desc">Development of network security policies, procedures, and incident response playbooks.</div>
+                    </div>
+
+                    <!-- Cloud Security (12) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-aws"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">AWS Security Hardening</div>
+                        <div class="service-price">GHS 4,000 - 30,000</div>
+                        <div class="service-desc">Complete AWS security: IAM roles, Security Groups, GuardDuty, Security Hub, and CIS compliance.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-microsoft"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">Azure Security Center</div>
+                        <div class="service-price">GHS 4,500 - 28,000</div>
+                        <div class="service-desc">Azure Defender setup, Sentinel SIEM, and regulatory compliance monitoring.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-google"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">GCP Security</div>
+                        <div class="service-price">GHS 4,200 - 27,000</div>
+                        <div class="service-desc">Cloud Armor, IAM, VPC Service Controls, and Security Command Center.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-docker"></i></div>
+                        <div class="service-category">Container Security</div>
+                        <div class="service-name">Kubernetes Security</div>
+                        <div class="service-price">GHS 5,000 - 40,000</div>
+                        <div class="service-desc">RBAC, network policies, pod security standards, and container image scanning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-migration"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">Cloud Migration Security</div>
+                        <div class="service-price">GHS 6,000 - 35,000</div>
+                        <div class="service-desc">Secure migration with encryption, VPN connectivity, and zero-downtime planning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-key"></i></div>
+                        <div class="service-category">Identity Security</div>
+                        <div class="service-name">IAM Implementation</div>
+                        <div class="service-price">GHS 7,000 - 35,000</div>
+                        <div class="service-desc">SSO, MFA, RBAC, identity federation, and privileged access management.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-lock"></i></div>
+                        <div class="service-category">Data Security</div>
+                        <div class="service-name">Cloud Encryption</div>
+                        <div class="service-price">GHS 5,000 - 28,000</div>
+                        <div class="service-desc">Encryption at rest and in transit, KMS setup, and key rotation policies.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">CSPM Implementation</div>
+                        <div class="service-price">GHS 8,000 - 45,000</div>
+                        <div class="service-desc">Cloud Security Posture Management with Prisma Cloud or Wiz.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-server"></i></div>
+                        <div class="service-category">Serverless Security</div>
+                        <div class="service-name">Lambda/Functions Security</div>
+                        <div class="service-price">GHS 6,000 - 30,000</div>
+                        <div class="service-desc">Serverless security including IAM, dependency scanning, and runtime protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <div class="service-category">Database Security</div>
+                        <div class="service-name">Cloud Database Security</div>
+                        <div class="service-price">GHS 5,500 - 32,000</div>
+                        <div class="service-desc">Secure RDS, DynamoDB, Cosmos DB with encryption and audit logging.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="service-category">Monitoring</div>
+                        <div class="service-name">Cloud Security Monitoring</div>
+                        <div class="service-price">GHS 4,800 - 25,000</div>
+                        <div class="service-desc">24/7 monitoring, log analysis, and alerting across cloud providers.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="service-category">Compliance</div>
+                        <div class="service-name">Cloud Compliance Automation</div>
+                        <div class="service-price">GHS 9,000 - 50,000</div>
+                        <div class="service-desc">Automated compliance for GDPR, HIPAA, PCI-DSS, and ISO 27001.</div>
+                    </div>
+
+                    <!-- Web Development (10) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">E-commerce Platform</div>
+                        <div class="service-price">GHS 15,000 - 80,000</div>
+                        <div class="service-desc">Full e-commerce with payment integration (MTN MoMo, card), inventory, and PCI-DSS compliance.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">Corporate Website</div>
+                        <div class="service-price">GHS 8,000 - 35,000</div>
+                        <div class="service-desc">Professional website with CMS, responsive design, and security headers.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">WAF Implementation</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Web Application Firewall with Cloudflare, AWS WAF, or ModSecurity.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-lock"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">CSP Implementation</div>
+                        <div class="service-price">GHS 2,500 - 12,000</div>
+                        <div class="service-desc">Content Security Policy to prevent XSS and data injection attacks.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">WordPress Security</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">WordPress hardening, malware scanning, login protection, and automatic updates.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">Custom Web Application</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">Custom React/Node.js application with built-in security from day one.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">PWA Development</div>
+                        <div class="service-price">GHS 9,000 - 45,000</div>
+                        <div class="service-desc">Progressive Web App with offline capabilities and secure storage.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">GDPR Compliance</div>
+                        <div class="service-price">GHS 4,000 - 20,000</div>
+                        <div class="service-desc">Cookie consent, privacy policy, and data subject access request handling.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="service-category">Web Performance</div>
+                        <div class="service-name">Performance Optimization</div>
+                        <div class="service-price">GHS 3,500 - 18,000</div>
+                        <div class="service-desc">Speed optimization, caching, CDN, and Core Web Vitals improvement.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-ssl"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">SSL/TLS Implementation</div>
+                        <div class="service-price">GHS 1,500 - 8,000</div>
+                        <div class="service-desc">SSL certificate installation and best-practice TLS configuration.</div>
+                    </div>
+
+                    <!-- AI Augmentation (8) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">AI-Powered Security Monitoring</div>
+                        <div class="service-price">GHS 20,000 - 100,000</div>
+                        <div class="service-desc">ML-based anomaly detection with custom model training and real-time alerts.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-comment-dots"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">Security Chatbot Assistant</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">AI assistant trained on your documentation for employee security questions.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">Automated Code Security Review</div>
+                        <div class="service-price">GHS 8,000 - 40,000</div>
+                        <div class="service-desc">AI-driven code analysis to identify vulnerabilities and hardcoded secrets.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">Predictive Security Analytics</div>
+                        <div class="service-price">GHS 25,000 - 120,000</div>
+                        <div class="service-desc">Predict incidents based on historical data and threat intelligence.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">AI Phishing Detection</div>
+                        <div class="service-price">GHS 18,000 - 85,000</div>
+                        <div class="service-desc">ML models that detect sophisticated phishing with 99% accuracy.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">User Behavior Analytics</div>
+                        <div class="service-price">GHS 20,000 - 95,000</div>
+                        <div class="service-desc">Insider threat detection and compromised account identification.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">Automated Threat Intelligence</div>
+                        <div class="service-price">GHS 22,000 - 100,000</div>
+                        <div class="service-desc">AI-powered threat collection, correlation, and enrichment.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <div class="service-category">AI Security</div>
+                        <div class="service-name">Log Analysis with NLP</div>
+                        <div class="service-price">GHS 15,000 - 70,000</div>
+                        <div class="service-desc">Natural Language Processing for intelligent log categorization and analysis.</div>
+                    </div>
+
+                    <!-- Spreadsheet Automation (10) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-excel"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Compliance Tracking Automation</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Automated compliance spreadsheets with real-time updates and alerts.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Security KPI Dashboard</div>
+                        <div class="service-price">GHS 5,000 - 25,000</div>
+                        <div class="service-desc">Automated metrics dashboard with trend analysis and executive summaries.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Vulnerability Management Tracker</div>
+                        <div class="service-price">GHS 5,000 - 25,000</div>
+                        <div class="service-desc">Automated tracking with prioritization and remediation workflows.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Asset Inventory Automation</div>
+                        <div class="service-price">GHS 4,000 - 18,000</div>
+                        <div class="service-desc">Automated IT asset discovery, tracking, and lifecycle management.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clock"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">SLA Compliance Tracking</div>
+                        <div class="service-price">GHS 5,000 - 22,000</div>
+                        <div class="service-desc">Automated SLA monitoring with real-time alerts and trend analysis.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">User Access Review Automation</div>
+                        <div class="service-price">GHS 7,000 - 30,000</div>
+                        <div class="service-desc">Automated access certification with approval workflows and audit trails.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Incident Response Tracker</div>
+                        <div class="service-price">GHS 3,500 - 16,000</div>
+                        <div class="service-desc">Automated incident logging, tracking, and SLA monitoring.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Risk Register Automation</div>
+                        <div class="service-price">GHS 4,500 - 20,000</div>
+                        <div class="service-desc">Dynamic risk register with automated scoring and mitigation tracking.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Audit Preparation Dashboard</div>
+                        <div class="service-price">GHS 6,000 - 28,000</div>
+                        <div class="service-desc">Automated evidence collection and auditor-ready reports.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                        <div class="service-category">Spreadsheet Automation</div>
+                        <div class="service-name">Patch Management Tracker</div>
+                        <div class="service-price">GHS 6,000 - 25,000</div>
+                        <div class="service-desc">Automated patch compliance tracking and exception management.</div>
+                    </div>
+
+                    <!-- DevSecOps (8) -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">CI/CD Security Integration</div>
+                        <div class="service-price">GHS 12,000 - 60,000</div>
+                        <div class="service-desc">Security gates in CI/CD with SAST, DAST, and dependency scanning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-infinity"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">IaC Security Implementation</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">Secure Infrastructure as Code with Terraform/CloudFormation scanning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">Container Security</div>
+                        <div class="service-price">GHS 15,000 - 70,000</div>
+                        <div class="service-desc">Image scanning, runtime protection, and registry security.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-git-alt"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">GitOps Security</div>
+                        <div class="service-price">GHS 8,000 - 40,000</div>
+                        <div class="service-desc">Secure GitOps workflows with branch protection and commit signing.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-key"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">Secrets Management</div>
+                        <div class="service-price">GHS 7,000 - 35,000</div>
+                        <div class="service-desc">Automated secrets management with HashiCorp Vault or cloud KMS.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">DevSecOps Maturity Assessment</div>
+                        <div class="service-price">GHS 20,000 - 80,000</div>
+                        <div class="service-desc">Comprehensive assessment and roadmap for DevSecOps improvement.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">SBOM Generation</div>
+                        <div class="service-price">GHS 9,000 - 45,000</div>
+                        <div class="service-desc">Software Bill of Materials generation and vulnerability correlation.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield"></i></div>
+                        <div class="service-category">DevSecOps</div>
+                        <div class="service-name">Security Champions Program</div>
+                        <div class="service-price">GHS 10,000 - 45,000</div>
+                        <div class="service-desc">Establish security champions program across development teams.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Cloud Security Page
+        // CLOUD SECURITY PAGE - Detailed
         function getCloudSecurityPage() {
             return `
                 <div class="page-header">
@@ -1258,12 +2197,95 @@
                     <p>Secure your cloud infrastructure across AWS, Azure, and GCP</p>
                 </div>
                 <div class="services-grid">
-                    ${getCloudServices()}
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-aws"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">AWS Security Hardening</div>
+                        <div class="service-price">GHS 4,000 - 30,000</div>
+                        <div class="service-desc">Complete AWS security implementation including IAM roles, Security Groups, AWS Config, GuardDuty, and Security Hub. Achieve CIS AWS Foundations compliance.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-microsoft"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">Azure Security Center</div>
+                        <div class="service-price">GHS 4,500 - 28,000</div>
+                        <div class="service-desc">Azure Defender setup, Security Center configuration, Sentinel SIEM integration, and regulatory compliance monitoring for your Azure workloads.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-google"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">GCP Security</div>
+                        <div class="service-price">GHS 4,200 - 27,000</div>
+                        <div class="service-desc">Google Cloud security including Cloud Armor, IAM, VPC Service Controls, and Security Command Center for comprehensive threat detection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-docker"></i></div>
+                        <div class="service-category">Container Security</div>
+                        <div class="service-name">Kubernetes Security</div>
+                        <div class="service-price">GHS 5,000 - 40,000</div>
+                        <div class="service-desc">Complete K8s security including RBAC, network policies, pod security standards, admission controllers, and container image scanning with tools like Aqua or Twistlock.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-migration"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">Cloud Migration Security</div>
+                        <div class="service-price">GHS 6,000 - 35,000</div>
+                        <div class="service-desc">Secure migration of workloads to cloud with encryption, VPN connectivity, security assessment, and zero-downtime cutover planning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-key"></i></div>
+                        <div class="service-category">Identity Security</div>
+                        <div class="service-name">IAM Implementation</div>
+                        <div class="service-price">GHS 7,000 - 35,000</div>
+                        <div class="service-desc">Complete identity and access management including SSO, MFA, RBAC, identity federation, and privileged access management.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-lock"></i></div>
+                        <div class="service-category">Data Security</div>
+                        <div class="service-name">Cloud Encryption</div>
+                        <div class="service-price">GHS 5,000 - 28,000</div>
+                        <div class="service-desc">Implementation of encryption at rest and in transit, KMS setup, key rotation policies, and envelope encryption strategies.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                        <div class="service-category">Cloud Security</div>
+                        <div class="service-name">CSPM Implementation</div>
+                        <div class="service-price">GHS 8,000 - 45,000</div>
+                        <div class="service-desc">Cloud Security Posture Management with tools like Prisma Cloud or Wiz for continuous compliance and misconfiguration detection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-server"></i></div>
+                        <div class="service-category">Serverless Security</div>
+                        <div class="service-name">Lambda/Functions Security</div>
+                        <div class="service-price">GHS 6,000 - 30,000</div>
+                        <div class="service-desc">Security hardening for serverless functions including IAM roles, dependency scanning, and runtime protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <div class="service-category">Database Security</div>
+                        <div class="service-name">Cloud Database Security</div>
+                        <div class="service-price">GHS 5,500 - 32,000</div>
+                        <div class="service-desc">Secure RDS, DynamoDB, Cosmos DB with encryption, audit logging, and advanced threat protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="service-category">Monitoring</div>
+                        <div class="service-name">Cloud Security Monitoring</div>
+                        <div class="service-price">GHS 4,800 - 25,000</div>
+                        <div class="service-desc">24/7 security monitoring, log analysis, and alerting with CloudWatch, Azure Monitor, or Stackdriver.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                        <div class="service-category">Compliance</div>
+                        <div class="service-name">Cloud Compliance Automation</div>
+                        <div class="service-price">GHS 9,000 - 50,000</div>
+                        <div class="service-desc">Automated compliance monitoring for GDPR, HIPAA, PCI-DSS, ISO 27001 with continuous audit readiness.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Network Security Page
+        // NETWORK SECURITY PAGE - Detailed
         function getNetworkSecurityPage() {
             return `
                 <div class="page-header">
@@ -1271,12 +2293,95 @@
                     <p>Protect your infrastructure from network-based threats</p>
                 </div>
                 <div class="services-grid">
-                    ${getNetworkServices()}
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Enterprise Firewall Configuration</div>
+                        <div class="service-price">GHS 2,500 - 15,000</div>
+                        <div class="service-desc">Professional firewall setup on pfSense, Fortinet, Cisco ASA, or Palo Alto. Includes rule optimization, NAT configuration, and VPN setup with high availability.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Site-to-Site VPN</div>
+                        <div class="service-price">GHS 1,500 - 8,000</div>
+                        <div class="service-desc">Secure site-to-site VPN implementation using IPsec, WireGuard, or OpenVPN. Includes failover configuration and performance optimization.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">IDS/IPS Implementation</div>
+                        <div class="service-price">GHS 3,500 - 20,000</div>
+                        <div class="service-desc">Intrusion detection and prevention with Snort, Suricata, or Zeek. Includes custom rule creation and threat intelligence integration.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Wireless Security</div>
+                        <div class="service-price">GHS 2,000 - 12,000</div>
+                        <div class="service-desc">Secure WiFi configuration with WPA3-Enterprise, RADIUS authentication, rogue AP detection, and wireless intrusion prevention.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Network Segmentation</div>
+                        <div class="service-price">GHS 8,000 - 40,000</div>
+                        <div class="service-desc">VLAN design and implementation, micro-segmentation, ACLs, and DMZ setup to contain breaches and protect critical assets.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-dns"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">DNS Security</div>
+                        <div class="service-price">GHS 2,500 - 12,000</div>
+                        <div class="service-desc">DNSSEC implementation, DNS filtering, response policy zones, and protection against DNS tunneling and cache poisoning.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-traffic-light"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Load Balancer Security</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Secure configuration of HAProxy, Nginx, or F5 load balancers including SSL/TLS optimization and DDoS protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">NAC Implementation</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">Network Access Control with Cisco ISE or Aruba ClearPass for endpoint compliance and guest access management.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Network Traffic Analysis</div>
+                        <div class="service-price">GHS 7,000 - 35,000</div>
+                        <div class="service-desc">Deep packet inspection, NetFlow/sFlow analysis, and anomaly detection using ELK Stack or Splunk.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bug"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Penetration Testing</div>
+                        <div class="service-price">GHS 5,000 - 30,000</div>
+                        <div class="service-desc">Comprehensive network penetration testing including vulnerability assessment, exploitation, and remediation guidance.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clock"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">DDoS Protection</div>
+                        <div class="service-price">GHS 4,000 - 25,000</div>
+                        <div class="service-desc">Implementation of DDoS mitigation strategies using Cloudflare, AWS Shield, or on-premise solutions.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="service-category">Network Security</div>
+                        <div class="service-name">Security Policy Design</div>
+                        <div class="service-price">GHS 3,500 - 18,000</div>
+                        <div class="service-desc">Development of network security policies, procedures, and incident response playbooks.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Web Development Page
+        // WEB DEVELOPMENT PAGE - Detailed
         function getWebDevPage() {
             return `
                 <div class="page-header">
@@ -1284,12 +2389,81 @@
                     <p>Secure, performant, and beautiful websites</p>
                 </div>
                 <div class="services-grid">
-                    ${getWebServices()}
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">E-commerce Platform</div>
+                        <div class="service-price">GHS 15,000 - 80,000</div>
+                        <div class="service-desc">Full-featured e-commerce with payment gateway integration (MTN MoMo, card), inventory management, and PCI-DSS compliance built-in.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-building"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">Corporate Website</div>
+                        <div class="service-price">GHS 8,000 - 35,000</div>
+                        <div class="service-desc">Professional business website with CMS, responsive design, SEO optimization, and built-in security headers.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">WAF Implementation</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Web Application Firewall setup with Cloudflare, AWS WAF, or ModSecurity including custom rule creation and OWASP Top 10 protection.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-lock"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">CSP Implementation</div>
+                        <div class="service-price">GHS 2,500 - 12,000</div>
+                        <div class="service-desc">Content Security Policy implementation to prevent XSS, data injection, and clickjacking with reporting and policy refinement.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">WordPress Security</div>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Complete WordPress hardening including plugin security, login protection, malware scanning, and automatic updates.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">Custom Web Application</div>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">Custom React/Node.js application with authentication, authorization, and security built-in from day one.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="service-category">Web Development</div>
+                        <div class="service-name">PWA Development</div>
+                        <div class="service-price">GHS 9,000 - 45,000</div>
+                        <div class="service-desc">Progressive Web App with offline capabilities, push notifications, and secure data storage.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">GDPR Compliance</div>
+                        <div class="service-price">GHS 4,000 - 20,000</div>
+                        <div class="service-desc">GDPR compliance implementation including cookie consent, privacy policy, and data subject access request handling.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="service-category">Web Performance</div>
+                        <div class="service-name">Performance Optimization</div>
+                        <div class="service-price">GHS 3,500 - 18,000</div>
+                        <div class="service-desc">Website speed optimization including caching, CDN setup, image optimization, and Core Web Vitals improvement.</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-ssl"></i></div>
+                        <div class="service-category">Web Security</div>
+                        <div class="service-name">SSL/TLS Implementation</div>
+                        <div class="service-price">GHS 1,500 - 8,000</div>
+                        <div class="service-desc">SSL certificate installation, configuration, and maintenance with best practices for TLS versions and cipher suites.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Spreadsheet Automation Page
+        // SPREADSHEET AUTOMATION PAGE - Detailed
         function getSpreadsheetPage() {
             return `
                 <div class="page-header">
@@ -1297,48 +2471,415 @@
                     <p>Transform manual spreadsheets into automated workflows</p>
                 </div>
                 <div class="spreadsheet-grid">
-                    ${getSpreadsheetServices()}
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-file-excel"></i></div>
+                        <h3>Compliance Tracking Automation</h3>
+                        <div class="service-price">GHS 3,000 - 15,000</div>
+                        <div class="service-desc">Transform manual compliance spreadsheets into automated systems with real-time updates, alerts, and audit trails. Includes automated data entry from multiple sources.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Security KPI Dashboard</h3>
+                        <div class="service-price">GHS 5,000 - 25,000</div>
+                        <div class="service-desc">Automated security metrics dashboard pulling data from multiple sources. Includes executive summaries, trend analysis, and automated reporting.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-tasks"></i></div>
+                        <h3>Vulnerability Management Tracker</h3>
+                        <div class="service-price">GHS 5,000 - 25,000</div>
+                        <div class="service-desc">Automated vulnerability tracking from scan results with prioritization, remediation workflows, and SLA monitoring.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>Asset Inventory Automation</h3>
+                        <div class="service-price">GHS 4,000 - 18,000</div>
+                        <div class="service-desc">Automated IT asset discovery and tracking with lifecycle management, license tracking, and compliance reporting.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-clock"></i></div>
+                        <h3>SLA Compliance Tracking</h3>
+                        <div class="service-price">GHS 5,000 - 22,000</div>
+                        <div class="service-desc">Automated SLA monitoring and tracking with real-time alerts, trend analysis, and compliance reporting for security teams.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>User Access Review Automation</h3>
+                        <div class="service-price">GHS 7,000 - 30,000</div>
+                        <div class="service-desc">Automated access certification workflows with identity management integration, approval processes, and audit trails.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Incident Response Tracker</h3>
+                        <div class="service-price">GHS 3,500 - 16,000</div>
+                        <div class="service-desc">Automated incident logging, tracking, and reporting with SLA monitoring, trend analysis, and post-incident review automation.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h3>Risk Register Automation</h3>
+                        <div class="service-price">GHS 4,500 - 20,000</div>
+                        <div class="service-desc">Dynamic risk register with automated risk scoring, mitigation tracking, and executive risk dashboards.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-file-invoice"></i></div>
+                        <h3>Audit Preparation Dashboard</h3>
+                        <div class="service-price">GHS 6,000 - 28,000</div>
+                        <div class="service-desc">Automated evidence collection and audit preparation with control mapping, gap analysis, and auditor-ready reports.</div>
+                    </div>
+                    <div class="automation-card">
+                        <div class="automation-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3>Patch Management Tracker</h3>
+                        <div class="service-price">GHS 6,000 - 25,000</div>
+                        <div class="service-desc">Automated patch compliance tracking with real-time status, exception management, and compliance reporting.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Projects Page
-        function getProjectsPage() {
-            return `
-                <div class="page-header">
-                    <h1>My Security Projects</h1>
-                    <p>Real-world implementations and open-source contributions</p>
-                </div>
+        // Projects Page - UPDATED WITH REAL GITHUB LINKS (DESIGN UNCHANGED)
+function getProjectsPage() {
+    // Array of all 50 project names (matching GitHub repos)
+    const projectNames = [
+        "pfsense-enterprise-config",
+        "opnsense-ids-setup",
+        "fortigate-vpn-cluster",
+        "cisco-asa-anyconnect",
+        "mikrotik-router-config",
+        "sophos-xg-lab",
+        "unifi-network-config",
+        "ipfire-hardening",
+        "untangle-business-config",
+        "smoothwall-education",
+        "wireguard-multisite",
+        "openvpn-aws-cluster",
+        "strongswan-ikev2",
+        "softether-multiprotocol",
+        "zerotier-iot-mesh",
+        "tailscale-team-access",
+        "nebula-mesh-lighthouse",
+        "tinc-docker-mesh",
+        "algo-cloud-vpn",
+        "pritunl-enterprise-cluster",
+        "haproxy-letsencrypt-docker",
+        "nginx-microservices-lb",
+        "traefik-swarm-config",
+        "envoy-service-mesh",
+        "keepalived-haproxy-ha",
+        "snort-ids-lab",
+        "suricata-elk-docker",
+        "zeek-threat-hunting",
+        "wazuh-siem-docker",
+        "security-onion-lab",
+        "frr-bgp-lab",
+        "ospf-multiarea-gns3",
+        "vxlan-evpn-fabric",
+        "linux-pbr-config",
+        "pim-multicast-lab",
+        "ansible-network-automation",
+        "netmiko-multivendor",
+        "napalm-network-automation",
+        "saltstack-network-states",
+        "gitops-network-ci",
+        "docker-overlay-multihost",
+        "k8s-calico-policies",
+        "cilium-ebpf-mesh",
+        "istio-multicluster",
+        "weave-net-docker",
+        "ovs-openflow-lab",
+        "onos-sdn-lab",
+        "opendaylight-custom-app",
+        "p4-switch-programming",
+        "openstack-nfv-tacker"
+    ];
 
-                <div class="project-filters">
-                    <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
-                    <button class="filter-btn" onclick="filterProjects('security')">Security</button>
-                    <button class="filter-btn" onclick="filterProjects('cloud')">Cloud</button>
-                    <button class="filter-btn" onclick="filterProjects('devsecops')">DevSecOps</button>
-                    <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
-                </div>
+    // Project data with categories (matching your existing design)
+    const projectCategories = [
+        "security", "security", "network", "network", "network",
+        "security", "network", "security", "network", "security",
+        "vpn", "vpn", "vpn", "vpn", "vpn",
+        "vpn", "vpn", "vpn", "vpn", "vpn",
+        "loadbalancer", "loadbalancer", "loadbalancer", "loadbalancer", "loadbalancer",
+        "ids", "ids", "ids", "ids", "ids",
+        "routing", "routing", "routing", "routing", "routing",
+        "automation", "automation", "automation", "automation", "automation",
+        "containers", "containers", "containers", "containers", "containers",
+        "sdn", "sdn", "sdn", "sdn", "sdn"
+    ];
 
-                <div class="projects-grid" id="projects-grid">
-                    ${getProjectList()}
+    // Project titles (matching your existing design)
+    const projectTitles = [
+        "Enterprise Firewall Configuration",
+        "IDS/IPS Implementation",
+        "Site-to-Site VPN",
+        "Network Segmentation",
+        "Load Balancer Security",
+        "Penetration Testing",
+        "Wireless Security",
+        "DDoS Protection",
+        "DNS Security",
+        "Security Policy Design",
+        "WireGuard VPN",
+        "OpenVPN Server",
+        "IPsec VPN",
+        "SSL VPN",
+        "Remote Access VPN",
+        "Site-to-Site VPN",
+        "Cloud VPN",
+        "Container VPN",
+        "Mobile VPN",
+        "VPN Gateway",
+        "HAProxy Load Balancer",
+        "Nginx Load Balancer",
+        "Traefik Load Balancer",
+        "Envoy Proxy",
+        "Keepalived HA",
+        "Suricata IDS",
+        "Snort IDS",
+        "Zeek IDS",
+        "Wazuh SIEM",
+        "Security Onion",
+        "BGP Routing",
+        "OSPF Routing",
+        "VXLAN Routing",
+        "Policy Routing",
+        "Multicast Routing",
+        "Ansible Automation",
+        "Python Automation",
+        "Network Automation",
+        "Config Management",
+        "CI/CD Pipeline",
+        "Docker Networking",
+        "K8s Networking",
+        "Service Mesh",
+        "Container Security",
+        "Network Policies",
+        "OpenFlow SDN",
+        "SDN Controller",
+        "Network Virtualization",
+        "P4 Programming",
+        "NFV Orchestration"
+    ];
+
+    // Technologies for each project
+    const projectTech = [
+        ["pfSense", "VLAN", "OpenVPN", "Traffic Shaping"],
+        ["Suricata", "Snort", "IDS", "IPS"],
+        ["IPsec", "WireGuard", "OpenVPN", "Site-to-Site"],
+        ["VLAN", "ACL", "DMZ", "Micro-segmentation"],
+        ["HAProxy", "Nginx", "SSL", "Load Balancing"],
+        ["Metasploit", "Nmap", "Burp Suite", "Exploitation"],
+        ["WPA3", "RADIUS", "802.11", "Rogue AP"],
+        ["Cloudflare", "AWS Shield", "Rate Limiting", "WAF"],
+        ["DNSSEC", "DNS Filter", "DNS over HTTPS", "DNS Security"],
+        ["ISO 27001", "NIST", "Policy", "Compliance"],
+        ["WireGuard", "Kernel", "UDP", "Cryptography"],
+        ["OpenVPN", "SSL/TLS", "PKI", "Authentication"],
+        ["StrongSwan", "IKEv2", "IPsec", "Certificates"],
+        ["SoftEther", "SSL-VPN", "L2TP", "OpenVPN"],
+        ["ZeroTier", "SD-WAN", "Mesh", "IoT"],
+        ["Tailscale", "WireGuard", "ACLs", "Mesh"],
+        ["Nebula", "Mesh", "Lighthouse", "P2P"],
+        ["Tinc", "Mesh", "Docker", "VPN"],
+        ["Algo", "WireGuard", "Cloud", "Privacy"],
+        ["Pritunl", "Enterprise", "MongoDB", "SSO"],
+        ["HAProxy", "Docker", "LetsEncrypt", "SSL"],
+        ["Nginx", "Microservices", "Reverse Proxy", "Caching"],
+        ["Traefik", "Docker Swarm", "K8s", "Let's Encrypt"],
+        ["Envoy", "Service Mesh", "gRPC", "Observability"],
+        ["Keepalived", "VRRP", "HAProxy", "Failover"],
+        ["Suricata", "ELK", "Kibana", "Elasticsearch"],
+        ["Snort", "Barnyard2", "MySQL", "BASE"],
+        ["Zeek", "Python", "Jupyter", "Threat Hunting"],
+        ["Wazuh", "SIEM", "FIM", "Compliance"],
+        ["Security Onion", "ELK", "Zeek", "Suricata"],
+        ["FRRouting", "BGP", "OSPF", "Linux"],
+        ["Quagga", "OSPF", "Area Design", "GNS3"],
+        ["VXLAN", "EVPN", "Cumulus", "BGP"],
+        ["PBR", "Linux", "Routing", "iptables"],
+        ["PIM", "Multicast", "IGMP", "RP"],
+        ["Ansible", "Network", "Automation", "Jinja2"],
+        ["Python", "Netmiko", "Multi-vendor", "Scripting"],
+        ["NAPALM", "Network", "Automation", "Python"],
+        ["SaltStack", "States", "Grains", "Pillar"],
+        ["GitLab CI", "GitOps", "Pipeline", "Validation"],
+        ["Docker", "Overlay", "Swarm", "Encryption"],
+        ["Kubernetes", "Calico", "Network Policy", "RBAC"],
+        ["Cilium", "eBPF", "Service Mesh", "Hubble"],
+        ["Istio", "Multi-cluster", "mTLS", "Gateway"],
+        ["Weave", "Docker", "Network", "Encryption"],
+        ["Open vSwitch", "OpenFlow", "SDN", "Mininet"],
+        ["ONOS", "SDN", "OpenFlow", "Controller"],
+        ["OpenDaylight", "MD-SAL", "YANG", "OpenFlow"],
+        ["P4", "BMv2", "Switch", "INT"],
+        ["OpenStack", "NFV", "Tacker", "VNF"]
+    ];
+
+    // Build projects HTML with REAL GitHub links
+    let projectsHTML = '';
+    
+    for (let i = 0; i < projectNames.length; i++) {
+        const projectName = projectNames[i];
+        const category = projectCategories[i];
+        const title = projectTitles[i];
+        const techs = projectTech[i];
+        
+        // Create tech tags
+        const techTags = techs.map(tech => 
+            `<span class="tech-tag">${tech}</span>`
+        ).join('');
+        
+        // Build project card with REAL GitHub links - DESIGN EXACTLY THE SAME
+        projectsHTML += `
+            <div class="project-card" data-category="${category}">
+                <div class="project-image">
+                    <i class="fas ${getProjectIcon(category)}"></i>
                 </div>
-            `;
+                <div class="project-content">
+                    <div class="project-title">${title}</div>
+                    <div class="project-tech">
+                        ${techTags}
+                    </div>
+                    <div class="project-desc">
+                        Production-ready ${title.toLowerCase()} configuration with full automation and security hardening.
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/YaaVee/${projectName}" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Real Code
+                        </a>
+                        <a href="https://github.com/YaaVee/${projectName}/blob/main/README.md" target="_blank" class="project-link">
+                            <i class="fas fa-book"></i> Documentation
+                        </a>
+                        <a href="https://github.com/YaaVee/${projectName}/archive/refs/heads/main.zip" class="project-link">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="page-header">
+            <h1>My Security Projects</h1>
+            <p>50+ real-world implementations with actual code on GitHub</p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+            <button class="filter-btn" onclick="filterProjects('security')">Security</button>
+            <button class="filter-btn" onclick="filterProjects('network')">Network</button>
+            <button class="filter-btn" onclick="filterProjects('vpn')">VPN</button>
+            <button class="filter-btn" onclick="filterProjects('loadbalancer')">Load Balancer</button>
+            <button class="filter-btn" onclick="filterProjects('ids')">IDS/IPS</button>
+            <button class="filter-btn" onclick="filterProjects('routing')">Routing</button>
+            <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
+            <button class="filter-btn" onclick="filterProjects('containers')">Containers</button>
+            <button class="filter-btn" onclick="filterProjects('sdn')">SDN/NFV</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            ${projectsHTML}
+        </div>
+    `;
+}
+
+// Helper function for icons (unchanged)
+function getProjectIcon(category) {
+    const icons = {
+        'security': 'fa-shield-alt',
+        'network': 'fa-network-wired',
+        'vpn': 'fa-lock',
+        'loadbalancer': 'fa-balance-scale',
+        'ids': 'fa-search',
+        'routing': 'fa-route',
+        'automation': 'fa-robot',
+        'containers': 'fa-cubes',
+        'sdn': 'fa-project-diagram'
+    };
+    return icons[category] || 'fa-shield-alt';
+}
+
+// Update filter function to handle all categories
+function filterProjects(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const projects = document.querySelectorAll('.project-card');
+    projects.forEach(p => {
+        if (category === 'all' || p.dataset.category === category) {
+            p.style.display = 'block';
+        } else {
+            p.style.display = 'none';
         }
-
-        // Case Studies Page
+    });
+}
+ 
+        // CASE STUDIES PAGE - Detailed
         function getCaseStudiesPage() {
             return `
                 <div class="page-header">
                     <h1>Case Studies</h1>
-                    <p>Real results for Ghanaian businesses</p>
+                    <p>Events Cases</p>
                 </div>
 
                 <div class="case-studies-grid">
-                    ${getCaseStudiesList()}
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Bank Security Transformation</div>
+                            <div class="case-client">LCB Bank</div>
+                            <div class="case-desc">Implemented comprehensive network security across 50+ branches including next-gen firewalls, IDS/IPS, and 24/7 security monitoring. Reduced security incidents by 95% and achieved ISO 27001 certification within 8 months.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">E-commerce Security Overhaul</div>
+                            <div class="case-client">Commerce Ghana</div>
+                            <div class="case-desc">Led PCI-DSS compliance initiative for Ghana's largest e-commerce platform. Implemented WAF, fraud detection ML models, and secure payment processing. Achieved compliance and reduced payment fraud by 99%.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Cloud Migration Security</div>
+                            <div class="case-client">Telecom Ghana</div>
+                            <div class="case-desc">Securely migrated critical telecom infrastructure to AWS with zero downtime. Implemented defense-in-depth security architecture, IAM, and continuous compliance monitoring. Saved 40% in operational costs.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">DevSecOps Transformation</div>
+                            <div class="case-client">Social Development Bank</div>
+                            <div class="case-desc">Transformed development practices with DevSecOps implementation. Integrated security into CI/CD pipelines, automated vulnerability scanning, and reduced deployment time from weeks to hours while improving security posture.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Healthcare Data Protection</div>
+                            <div class="case-client">Clara Teaching Hospital</div>
+                            <div class="case-desc">Implemented HIPAA-compliant security controls for patient records system. Deployed encryption, access controls, and audit logging. Successfully passed external audit and improved patient data security.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Fintech Security Architecture</div>
+                            <div class="case-client">Teepay</div>
+                            <div class="case-desc">Designed and implemented security architecture for mobile money platform. Included real-time fraud detection, transaction monitoring, and regulatory compliance. Handles millions in transactions daily with zero security incidents.</div>
+                        </div>
+                    </div>
                 </div>
             `;
         }
 
-        // AI Augmentation Page
+        // AI AUGMENTATION PAGE - Detailed
         function getAIAugmentationPage() {
             return `
                 <div class="page-header">
@@ -1346,12 +2887,59 @@
                     <p>Supercharge your security with artificial intelligence</p>
                 </div>
                 <div class="ai-features">
-                    ${getAIServices()}
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI-Powered Security Monitoring</h3>
+                        <div class="service-price">GHS 20,000 - 100,000</div>
+                        <div class="service-desc">Machine learning-based anomaly detection that learns normal behavior patterns and identifies potential threats in real-time. Includes custom model training and continuous improvement.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3>Security Chatbot Assistant</h3>
+                        <div class="service-price">GHS 10,000 - 50,000</div>
+                        <div class="service-desc">AI-powered conversational assistant trained on your security documentation. Answers employee questions, guides incident response, and provides security awareness training.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                        <h3>Automated Code Security Review</h3>
+                        <div class="service-price">GHS 8,000 - 40,000</div>
+                        <div class="service-desc">AI-driven static code analysis that identifies vulnerabilities, hardcoded secrets, and security anti-patterns in your source code with actionable remediation advice.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Predictive Security Analytics</h3>
+                        <div class="service-price">GHS 25,000 - 120,000</div>
+                        <div class="service-desc">Predictive models that forecast potential security incidents based on historical data, threat intelligence, and emerging patterns. Proactive risk mitigation.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3>AI Phishing Detection</h3>
+                        <div class="service-price">GHS 18,000 - 85,000</div>
+                        <div class="service-desc">Machine learning models that detect sophisticated phishing emails with 99% accuracy, analyzing content, sender behavior, and visual similarities.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>User Behavior Analytics</h3>
+                        <div class="service-price">GHS 20,000 - 95,000</div>
+                        <div class="service-desc">AI-powered insider threat detection that identifies anomalous user behavior, compromised accounts, and potential data exfiltration.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Automated Threat Intelligence</h3>
+                        <div class="service-price">GHS 22,000 - 100,000</div>
+                        <div class="service-desc">AI-powered threat intelligence collection, correlation, and enrichment. Automatically identifies relevant threats to your industry and infrastructure.</div>
+                    </div>
+                    <div class="ai-feature-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <h3>Log Analysis with NLP</h3>
+                        <div class="service-price">GHS 15,000 - 70,000</div>
+                        <div class="service-desc">Natural Language Processing for intelligent log analysis, automatically categorizing events, identifying patterns, and highlighting security-relevant activities.</div>
+                    </div>
                 </div>
             `;
         }
 
-        // Realtime AI Page
+        // REALTIME AI PAGE - Interactive
         function getRealtimeAIPage() {
             return `
                 <div class="page-header">
@@ -1365,7 +2953,7 @@
                         <div class="chat-messages" id="chat-messages">
                             <div class="message bot">
                                 <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                                <div class="message-content">Hello! I'm your DevSecOps AI assistant. I can help with security questions, threat intelligence, and best practices.</div>
+                                <div class="message-content">Hello! I'm your DevSecOps AI assistant. I can help with security questions, threat intelligence, and best practices. Ask me about cloud security, network protection, or compliance!</div>
                             </div>
                         </div>
                         <div class="chat-input">
@@ -1376,7 +2964,11 @@
 
                     <div class="code-analyzer">
                         <h3 style="margin-bottom: 15px; color: #00ff9d;">Code Security Analyzer</h3>
-                        <textarea class="code-input" id="code-input" placeholder="Paste your code here to check for security vulnerabilities..."></textarea>
+                        <textarea class="code-input" id="code-input" placeholder="Paste your code here to check for security vulnerabilities...">def authenticate_user(username, password):
+    # Simple authentication
+    if username == "admin" and password == "password123":
+        return True
+    return False</textarea>
                         <button class="analyze-btn" onclick="analyzeCode()">Analyze Security</button>
                         <div id="analysis-result" style="margin-top: 15px; padding: 15px; background: rgba(0,255,157,0.05); border-radius: 10px; color: #b0b0b0;"></div>
                     </div>
@@ -1387,20 +2979,35 @@
                     <div id="threat-feed">
                         <div class="threat-item">
                             <span class="threat-severity severity-critical">CRITICAL</span>
-                            <span><strong>Log4Shell</strong> exploitation attempts detected in Ghana region</span>
+                            <span><strong>Log4Shell</strong> exploitation attempts detected in Ghana region (3 new targets)</span>
                             <span style="margin-left: auto; color: #b0b0b0;">2 min ago</span>
                         </div>
                         <div class="threat-item">
                             <span class="threat-severity severity-high">HIGH</span>
-                            <span><strong>LockBit 3.0</strong> ransomware targeting financial institutions</span>
+                            <span><strong>LockBit 3.0</strong> ransomware targeting financial institutions in West Africa</span>
                             <span style="margin-left: auto; color: #b0b0b0;">15 min ago</span>
+                        </div>
+                        <div class="threat-item">
+                            <span class="threat-severity severity-medium">MEDIUM</span>
+                            <span><strong>Phishing campaign</strong> impersonating Ghana Revenue Authority</span>
+                            <span style="margin-left: auto; color: #b0b0b0;">32 min ago</span>
+                        </div>
+                        <div class="threat-item">
+                            <span class="threat-severity severity-high">HIGH</span>
+                            <span><strong>AWS S3 bucket</strong> misconfiguration scanner detected (12 exposed buckets)</span>
+                            <span style="margin-left: auto; color: #b0b0b0;">47 min ago</span>
+                        </div>
+                        <div class="threat-item">
+                            <span class="threat-severity severity-critical">CRITICAL</span>
+                            <span><strong>Zero-day exploit</strong> in popular VPN software affecting remote workers</span>
+                            <span style="margin-left: auto; color: #b0b0b0;">1 hour ago</span>
                         </div>
                     </div>
                 </div>
             `;
         }
 
-        // Video Conferencing Page
+        // VIDEO PAGE - Interactive
         function getVideoPage() {
             return `
                 <div class="page-header">
@@ -1410,7 +3017,7 @@
 
                 <div class="video-container">
                     <div class="video-main">
-                        <h3 style="margin-bottom: 15px; color: #00ff9d;">Meeting Room</h3>
+                        <h3 style="margin-bottom: 15px; color: #00ff9d;">Meeting Room: "Security Review"</h3>
                         <div class="video-grid">
                             <div class="video-participant">
                                 <i class="fas fa-user-circle" style="font-size: 40px; color: #00ff9d;"></i>
@@ -1420,21 +3027,47 @@
                                 <i class="fas fa-user-circle" style="font-size: 40px; color: #00b8ff;"></i>
                                 <div class="participant-name">Client</div>
                             </div>
+                            <div class="video-participant">
+                                <i class="fas fa-user-circle" style="font-size: 40px; color: #aa00ff;"></i>
+                                <div class="participant-name">Security Team</div>
+                            </div>
+                            <div class="video-participant">
+                                <i class="fas fa-user-circle" style="font-size: 40px; color: #ffaa00;"></i>
+                                <div class="participant-name">Developer</div>
+                            </div>
                         </div>
                         <div class="video-controls">
                             <button class="control-btn" title="Toggle Camera"><i class="fas fa-video"></i></button>
                             <button class="control-btn" title="Toggle Microphone"><i class="fas fa-microphone"></i></button>
                             <button class="control-btn" title="Share Screen"><i class="fas fa-desktop"></i></button>
+                            <button class="control-btn" title="Chat"><i class="fas fa-comment"></i></button>
+                            <button class="control-btn" title="Record Meeting"><i class="fas fa-record-vinyl"></i></button>
+                            <button class="control-btn" title="Breakout Rooms"><i class="fas fa-users"></i></button>
                             <button class="control-btn danger" title="End Call"><i class="fas fa-phone-slash"></i></button>
                         </div>
                     </div>
 
                     <div class="video-sidebar">
                         <h3 style="margin-bottom: 15px; color: #00ff9d;">Meeting Chat</h3>
-                        <div class="chat-tab">
+                        <div class="chat-tab" style="height: 300px; overflow-y: auto; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 10px;">
                             <div class="chat-message">
                                 <div class="message-avatar"><i class="fas fa-user"></i></div>
-                                <div class="message-content"><b>System:</b> Secure connection established</div>
+                                <div class="message-content"><b>System:</b> Secure connection established (AES-256)</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <input type="text" style="flex:1; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 25px; color: white;" placeholder="Type message...">
+                            <button class="control-btn" style="width: 45px; height: 45px;"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <h4 style="color: #00ff9d; margin-bottom: 10px;">Meeting Features:</h4>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span class="tech-tag"><i class="fas fa-lock"></i> End-to-end encrypted</span>
+                                <span class="tech-tag"><i class="fas fa-closed-captioning"></i> Live transcription</span>
+                                <span class="tech-tag"><i class="fas fa-code"></i> Collaborative code editor</span>
+                                <span class="tech-tag"><i class="fas fa-download"></i> Cloud recording</span>
                             </div>
                         </div>
                     </div>
@@ -1442,7 +3075,7 @@
             `;
         }
 
-        // About Page
+        // ABOUT PAGE
         function getAboutPage() {
             return `
                 <div class="page-header">
@@ -1454,14 +3087,26 @@
                     <p style="font-size: 20px; font-style: italic; color: #b0b0b0; line-height: 1.8;">
                         "Security is not a product you buy or a feature you add—it's a process you embrace. 
                         My approach combines automation, continuous monitoring, and proactive threat detection 
-                        to build security into every layer of the development lifecycle."
+                        to build security into every layer of the development lifecycle. I believe in making 
+                        security seamless and invisible to users while being impenetrable to attackers."
                     </p>
                     <p style="margin-top: 20px; color: #00ff9d;">— Viora Yaba Mensah</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0;">
+                    <div style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px;">
+                        <h3 style="color: #00ff9d; margin-bottom: 15px;">My Approach</h3>
+                        <p style="color: #b0b0b0;">I integrate security into development workflows from day one. This "shift-left" approach catches vulnerabilities early when they're cheaper and easier to fix. I combine automated tools with manual testing to ensure comprehensive protection.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 15px;">
+                        <h3 style="color: #00ff9d; margin-bottom: 15px;">Why Work With Me</h3>
+                        <p style="color: #b0b0b0;">With deep expertise in cloud security, DevSecOps, and AI-powered defense, I bring enterprise-grade security to organizations of all sizes. I understand the unique challenges of the Ghanaian market and provide solutions that balance security with business needs.</p>
+                    </div>
                 </div>
             `;
         }
 
-        // Contact Page
+        // CONTACT PAGE
         function getContactPage() {
             return `
                 <div class="page-header">
@@ -1473,54 +3118,53 @@
                     <div>
                         <div class="info-card" style="margin-bottom: 15px;">
                             <div class="info-icon"><i class="fas fa-phone"></i></div>
-                            <div><h4>Phone</h4><p>+233 240524332</p></div>
+                            <div><h4>Phone / WhatsApp</h4><p>+233 240524332</p><p style="font-size: 12px; color: #00ff9d;">Available 8am-6pm GMT</p></div>
                         </div>
                         <div class="info-card" style="margin-bottom: 15px;">
                             <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                            <div><h4>Email</h4><p>vvioraviorav@gmail.com</p></div>
+                            <div><h4>Email</h4><p>vvioraviorav@gmail.com</p><p style="font-size: 12px; color: #00ff9d;">Response within 24 hours</p></div>
                         </div>
                         <div class="info-card" style="margin-bottom: 15px;">
                             <div class="info-icon"><i class="fab fa-github"></i></div>
-                            <div><h4>GitHub</h4><p>github.com/YaaVee</p></div>
+                            <div><h4>GitHub</h4><p>github.com/YaaVee</p><p style="font-size: 12px; color: #00ff9d;">Open source contributions</p></div>
+                        </div>
+                        <div class="info-card" style="margin-bottom: 15px;">
+                            <div class="info-icon"><i class="fab fa-linkedin"></i></div>
+                            <div><h4>LinkedIn</h4><p>linkedin.com/in/viora-mensah-75676135b</p></div>
+                        </div>
+                        <div class="info-card" style="margin-bottom: 15px;">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4>Location</h4><p>Accra, Ghana</p><p style="font-size: 12px; color: #00ff9d;">Available for remote work nationwide</p></div>
                         </div>
                     </div>
 
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! I will contact you soon.');">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! I will contact you within 24 hours.');">
+                        <h3 style="color: #00ff9d; margin-bottom: 20px;">Send a Message</h3>
                         <div class="form-group">
                             <input type="text" id="name" required>
-                            <label for="name">Name</label>
+                            <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" required>
-                            <label for="email">Email</label>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" required>
+                            <label for="company">Company</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="phone" required>
+                            <label for="phone">Phone Number</label>
                         </div>
                         <div class="form-group">
                             <textarea id="message" rows="4" required></textarea>
-                            <label for="message">Message</label>
+                            <label for="message">How can I help?</label>
                         </div>
-                        <button type="submit" class="submit-btn">Send</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             `;
         }
-
-        // Helper function for all services (abbreviated for space - you have all 60+ in your actual code)
-        function getAllServices() {
-            return `
-                <div class="service-card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><div class="service-category">Network Security</div><div class="service-name">Enterprise Firewall</div><div class="service-price">GHS 2,500 - 15,000</div><div class="service-desc">Complete firewall setup with 24/7 monitoring</div></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-cloud"></i></div><div class="service-category">Cloud Security</div><div class="service-name">AWS Hardening</div><div class="service-price">GHS 4,000 - 30,000</div><div class="service-desc">AWS security with GuardDuty and Security Hub</div></div>
-                <div class="service-card"><div class="service-icon"><i class="fas fa-robot"></i></div><div class="service-category">AI Security</div><div class="service-name">AI Monitoring</div><div class="service-price">GHS 20,000 - 100,000</div><div class="service-desc">ML-based threat detection</div></div>
-            `; // You have the full 60+ services in your actual code
-        }
-
-        // Placeholder functions for other services (you have the full versions)
-        function getCloudServices() { return getAllServices(); }
-        function getNetworkServices() { return getAllServices(); }
-        function getWebServices() { return getAllServices(); }
-        function getSpreadsheetServices() { return getAllServices(); }
-        function getProjectList() { return getAllServices(); }
-        function getCaseStudiesList() { return getAllServices(); }
-        function getAIServices() { return getAllServices(); }
 
         // Chat function
         function sendMessage() {
@@ -1537,12 +3181,21 @@
             `;
 
             setTimeout(() => {
+                let response = "I understand you're asking about security. Let me provide some guidance...";
+                if (message.toLowerCase().includes('aws')) {
+                    response = "For AWS security, I recommend enabling GuardDuty, using IAM roles with least privilege, enabling CloudTrail, and implementing S3 bucket policies.";
+                } else if (message.toLowerCase().includes('firewall')) {
+                    response = "For firewall configuration, best practices include: default deny rules, regular rule reviews, enabling logging, and implementing DMZ for public services.";
+                } else if (message.toLowerCase().includes('kubernetes') || message.toLowerCase().includes('k8s')) {
+                    response = "For Kubernetes security, focus on: RBAC, pod security standards, network policies, container image scanning, and regular security updates.";
+                }
                 chat.innerHTML += `
                     <div class="message bot">
                         <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                        <div class="message-content">Thanks for your question! I'll help you with that.</div>
+                        <div class="message-content">${response}</div>
                     </div>
                 `;
+                chat.scrollTop = chat.scrollHeight;
             }, 1000);
 
             input.value = '';
@@ -1555,8 +3208,20 @@
             result.innerHTML = '🔍 Analyzing code for security issues...';
             
             setTimeout(() => {
-                result.innerHTML = '✅ Analysis complete: No critical vulnerabilities found.';
-                result.style.color = '#00ff9d';
+                const hasPassword = code.toLowerCase().includes('password');
+                const hasHardcoded = code.includes('password123') || code.includes('secret') || code.includes('key');
+                
+                let analysis = '';
+                if (hasHardcoded) {
+                    analysis = '❌ CRITICAL: Hardcoded credentials detected! Never store passwords in code.';
+                } else if (hasPassword) {
+                    analysis = '⚠️ WARNING: Password handling detected. Ensure proper hashing and secure storage.';
+                } else {
+                    analysis = '✅ No critical vulnerabilities found.';
+                }
+                
+                result.innerHTML = analysis;
+                result.style.color = hasHardcoded ? '#ff4444' : '#00ff9d';
             }, 2000);
         }
 
@@ -1564,11 +3229,19 @@
         function filterProjects(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
+
+            const projects = document.querySelectorAll('.project-card');
+            projects.forEach(p => {
+                if (category === 'all' || p.dataset.category === category) {
+                    p.style.display = 'block';
+                } else {
+                    p.style.display = 'none';
+                }
+            });
         }
 
-        // Start the auto system
-        initAutoSystem();
-        simulateAutoStart();
+        // Load home page by default
+        showPage('home');
     </script>
 </body>
 </html>
