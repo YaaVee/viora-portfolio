@@ -1,14 +1,36 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "devCommand": null,
-  "installCommand": null,
-  "routes": [
-    { "src": "/projects-websites/(.*)", "dest": "/projects-websites/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "name": "viora-portfolio",
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "projects-websites/**/*.html",
+      "use": "@vercel/static"
+    }
   ],
-  "github": {
-    "silent": false,
-    "autoJobCancelation": true
-  }
+  "routes": [
+    {
+      "src": "/projects-websites/(.*)",
+      "dest": "/projects-websites/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+      ]
+    }
+  ]
 }
