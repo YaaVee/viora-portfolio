@@ -2591,101 +2591,1044 @@ function getCloudSecurityPage() {
     `;
 }
 
-        // NETWORK SECURITY PAGE - Detailed
-        function getNetworkSecurityPage() {
-            return `
-                <div class="page-header">
-                    <h1>Network Security Services</h1>
-                    <p>Protect your infrastructure from network-based threats</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Enterprise Firewall Configuration</div>
-                        <div class="service-price">GHS 2,500 - 15,000</div>
-                        <div class="service-desc">Professional firewall setup on pfSense, Fortinet, Cisco ASA, or Palo Alto. Includes rule optimization, NAT configuration, and VPN setup with high availability.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Site-to-Site VPN</div>
-                        <div class="service-price">GHS 1,500 - 8,000</div>
-                        <div class="service-desc">Secure site-to-site VPN implementation using IPsec, WireGuard, or OpenVPN. Includes failover configuration and performance optimization.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-search"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">IDS/IPS Implementation</div>
-                        <div class="service-price">GHS 3,500 - 20,000</div>
-                        <div class="service-desc">Intrusion detection and prevention with Snort, Suricata, or Zeek. Includes custom rule creation and threat intelligence integration.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Wireless Security</div>
-                        <div class="service-price">GHS 2,000 - 12,000</div>
-                        <div class="service-desc">Secure WiFi configuration with WPA3-Enterprise, RADIUS authentication, rogue AP detection, and wireless intrusion prevention.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-sitemap"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Network Segmentation</div>
-                        <div class="service-price">GHS 8,000 - 40,000</div>
-                        <div class="service-desc">VLAN design and implementation, micro-segmentation, ACLs, and DMZ setup to contain breaches and protect critical assets.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-dns"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">DNS Security</div>
-                        <div class="service-price">GHS 2,500 - 12,000</div>
-                        <div class="service-desc">DNSSEC implementation, DNS filtering, response policy zones, and protection against DNS tunneling and cache poisoning.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-traffic-light"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Load Balancer Security</div>
-                        <div class="service-price">GHS 3,000 - 15,000</div>
-                        <div class="service-desc">Secure configuration of HAProxy, Nginx, or F5 load balancers including SSL/TLS optimization and DDoS protection.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-door-open"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">NAC Implementation</div>
-                        <div class="service-price">GHS 10,000 - 50,000</div>
-                        <div class="service-desc">Network Access Control with Cisco ISE or Aruba ClearPass for endpoint compliance and guest access management.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Network Traffic Analysis</div>
-                        <div class="service-price">GHS 7,000 - 35,000</div>
-                        <div class="service-desc">Deep packet inspection, NetFlow/sFlow analysis, and anomaly detection using ELK Stack or Splunk.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-bug"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Penetration Testing</div>
-                        <div class="service-price">GHS 5,000 - 30,000</div>
-                        <div class="service-desc">Comprehensive network penetration testing including vulnerability assessment, exploitation, and remediation guidance.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-clock"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">DDoS Protection</div>
-                        <div class="service-price">GHS 4,000 - 25,000</div>
-                        <div class="service-desc">Implementation of DDoS mitigation strategies using Cloudflare, AWS Shield, or on-premise solutions.</div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-                        <div class="service-category">Network Security</div>
-                        <div class="service-name">Security Policy Design</div>
-                        <div class="service-price">GHS 3,500 - 18,000</div>
-                        <div class="service-desc">Development of network security policies, procedures, and incident response playbooks.</div>
-                    </div>
-                </div>
-            `;
-        }
+        // 60 NETWORK SECURITY SERVICES WITH DETAILED DESCRIPTIONS
+const networkSecurityServices = [
+    // === FIREWALL CONFIGURATION & MANAGEMENT (1-10) ===
+    {
+        name: "Enterprise Firewall Implementation",
+        category: "Network Security",
+        price: "GHS 2,500 - 15,000",
+        icon: "fa-shield-alt",
+        description: "Complete enterprise-grade firewall deployment with stateful inspection, application control, and intrusion prevention. Includes hardware/software selection, initial configuration, rule optimization, and 24/7 monitoring setup. Supports multi-WAN failover and traffic shaping for business-critical applications.",
+        deliverables: [
+            "Firewall hardware/VM installation",
+            "Security policy configuration",
+            "NAT/PAT rules implementation",
+            "VPN gateway setup",
+            "High availability clustering",
+            "24/7 monitoring dashboard"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["pfSense", "OPNsense", "Fortinet", "Cisco ASA", "Palo Alto"]
+    },
+    {
+        name: "Next-Gen Firewall (NGFW) Deployment",
+        category: "Network Security",
+        price: "GHS 5,000 - 25,000",
+        icon: "fa-shield-virus",
+        description: "Deployment of next-generation firewalls with deep packet inspection, SSL/TLS decryption, and application-layer filtering. Includes intrusion prevention system (IPS), malware blocking, and URL filtering capabilities. Perfect for organizations requiring advanced threat protection and compliance.",
+        deliverables: [
+            "NGFW hardware/VM installation",
+            "SSL/TLS inspection configuration",
+            "Application control policies",
+            "IPS/IDS rule sets",
+            "User identity integration (AD/LDAP)",
+            "Threat intelligence feeds"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["FortiGate", "Palo Alto", "Check Point", "Sophos XG", "WatchGuard"]
+    },
+    {
+        name: "Firewall Rule Base Optimization",
+        category: "Network Security",
+        price: "GHS 1,500 - 8,000",
+        icon: "fa-ruler",
+        description: "Comprehensive audit and optimization of existing firewall rules to improve performance, reduce attack surface, and ensure compliance. Identifies redundant, shadowed, and overly permissive rules. Provides detailed remediation plan and implementation support.",
+        deliverables: [
+            "Complete rule base audit",
+            "Shadow rule detection",
+            "Redundancy elimination",
+            "Performance optimization",
+            "Compliance reporting (PCI-DSS, ISO 27001)",
+            "Rule documentation update"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Tufin", "Algosec", "FireMon", "SolarWinds", "Manual audit"]
+    },
+    {
+        name: "Multi-WAN Load Balancing & Failover",
+        "category": "Network Security",
+        price: "GHS 2,000 - 10,000",
+        icon: "fa-balance-scale",
+        description: "Implementation of multi-WAN load balancing with automatic failover for business continuity. Combines multiple internet connections to increase bandwidth and provide redundancy. Includes intelligent traffic routing based on application type and real-time link monitoring.",
+        deliverables: [
+            "Multi-WAN configuration",
+            "Load balancing algorithms setup",
+            "Automatic failover testing",
+            "Link monitoring and alerts",
+            "Traffic shaping policies",
+            "Bandwidth aggregation"
+        ],
+        timeframe: "2-3 days",
+        technologies: ["pfSense", "MikroTik", "Cisco", "Fortinet", "Peplink"]
+    },
+    {
+        name: "Cloud Firewall as a Service (FWaaS)",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-cloud",
+        description: "Deployment of cloud-based firewall services to protect distributed environments and remote workers. Provides consistent security policies across all locations without hardware. Includes web filtering, DNS security, and threat intelligence integration.",
+        deliverables: [
+            "Cloud firewall subscription setup",
+            "Global policy configuration",
+            "User/group-based policies",
+            "Web filtering rules",
+            "DNS security enforcement",
+            "Centralized management console"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Zscaler", "Cisco Umbrella", "FortiGate Cloud", "Palo Alto Prisma", "Cloudflare"]
+    },
+    {
+        name: "Stateful Inspection Firewall Configuration",
+        "category": "Network Security",
+        price: "GHS 1,800 - 9,000",
+        icon: "fa-network-wired",
+        description: "Configuration of stateful inspection firewalls that track the state of active connections and make decisions based on context. Essential for protecting internal networks while allowing legitimate traffic. Includes connection tracking optimization and anti-spoofing measures.",
+        deliverables: [
+            "Stateful rule configuration",
+            "Connection tracking optimization",
+            "Anti-spoofing implementation",
+            "Session timeout tuning",
+            "Logging and monitoring setup",
+            "Performance benchmarking"
+        ],
+        timeframe: "1-3 days",
+        technologies: ["iptables", "nftables", "Cisco ASA", "Check Point", "Windows Firewall"]
+    },
+    {
+        name: "UTM (Unified Threat Management) Implementation",
+        "category": "Network Security",
+        price: "GHS 4,000 - 22,000",
+        icon: "fa-shield",
+        description: "Complete UTM solution combining firewall, intrusion detection, antivirus, VPN, content filtering, and spam blocking in a single platform. Ideal for small to medium businesses seeking comprehensive security with simplified management.",
+        deliverables: [
+            "UTM appliance/VM installation",
+            "All-in-one security modules",
+            "Content filtering policies",
+            "Gateway antivirus setup",
+            "Spam filtering configuration",
+            "Unified reporting dashboard"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["Sophos UTM", "FortiGate", "WatchGuard", "Untangle", "pfSense with pfBlocker"]
+    },
+    {
+        name: "Firewall High Availability Cluster",
+        "category": "Network Security",
+        price: "GHS 4,500 - 20,000",
+        icon: "fa-server",
+        description: "Implementation of firewall high availability clusters using active-passive or active-active configurations. Ensures zero downtime during hardware failures or maintenance windows. Includes state synchronization and automatic failover testing.",
+        deliverables: [
+            "HA cluster design",
+            "Active-passive configuration",
+            "State synchronization setup",
+            "Failover testing protocol",
+            "Maintenance procedures",
+            "Monitoring and alerting"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["pfSense CARP", "Fortinet HA", "Cisco ASA failover", "Palo Alto HA", "Keepalived"]
+    },
+    {
+        name: "Firewall Migration Service",
+        "category": "Network Security",
+        price: "GHS 3,500 - 16,000",
+        icon: "fa-truck",
+        description: "Seamless migration from legacy firewalls to modern platforms with zero downtime. Includes configuration conversion, rule optimization, and thorough testing. Supports migration between different vendors (Cisco to Fortinet, pfSense to Palo Alto, etc.).",
+        deliverables: [
+            "Configuration analysis",
+            "Rule conversion/migration",
+            "Zero-downtime cutover plan",
+            "Post-migration testing",
+            "Rollback procedures",
+            "Documentation update"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["Vendor-specific tools", "Terraform", "Ansible", "Custom scripts", "Migration tools"]
+    },
+    {
+        name: "Firewall Change Management Process",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-clipboard-list",
+        description: "Establishment of formal firewall change management processes to prevent misconfigurations and maintain security posture. Includes request workflows, approval gates, automated testing, and audit trails. Ensures compliance with ISO 27001 and other standards.",
+        deliverables: [
+            "Change request templates",
+            "Approval workflow setup",
+            "Automated rule testing",
+            "Change documentation",
+            "Audit trail implementation",
+            "Staff training materials"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["ServiceNow", "Jira", "Custom workflows", "Git", "Ansible Tower"]
+    },
+
+    // === VPN & REMOTE ACCESS (11-20) ===
+    {
+        name: "Site-to-Site VPN Implementation",
+        "category": "Network Security",
+        price: "GHS 1,500 - 8,000",
+        icon: "fa-network-wired",
+        description: "Secure site-to-site VPN connecting multiple office locations using IPsec or WireGuard. Provides encrypted communication between branches with automatic failover and load balancing. Supports dynamic routing protocols for complex topologies.",
+        deliverables: [
+            "VPN gateway configuration",
+            "Tunnel establishment",
+            "Routing protocol setup",
+            "Encryption policy configuration",
+            "Failover testing",
+            "Performance optimization"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["WireGuard", "IPsec", "OpenVPN", "MikroTik", "pfSense", "Cisco"]
+    },
+    {
+        name: "Remote Access VPN (SSL VPN)",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-laptop-house",
+        description: "Secure remote access solution for employees working from home or traveling. SSL VPN provides clientless access via web browser or optional client for full network connectivity. Includes MFA integration, endpoint posture checking, and split-tunneling options.",
+        deliverables: [
+            "VPN gateway setup",
+            "User authentication (AD/LDAP)",
+            "MFA integration",
+            "Endpoint posture checking",
+            "Access policies configuration",
+            "Client software distribution"
+        ],
+        timeframe: "2-5 days",
+        technologies: ["OpenVPN", "Pritunl", "FortiGate SSL VPN", "Cisco AnyConnect", "Palo Alto GlobalProtect"]
+    },
+    {
+        name: "WireGuard High-Performance VPN",
+        "category": "Network Security",
+        price: "GHS 1,800 - 10,000",
+        icon: "fa-bolt",
+        description: "Implementation of WireGuard, the modern, high-performance VPN protocol with superior speed (up to 1 Gbps) and minimal latency. Ideal for bandwidth-intensive applications and IoT deployments. Includes key management and roaming support.",
+        deliverables: [
+            "WireGuard server setup",
+            "Client key generation",
+            "Peer configuration",
+            "Roaming support",
+            "Performance tuning",
+            "Monitoring dashboard"
+        ],
+        timeframe: "1-3 days",
+        technologies: ["WireGuard", "wg-easy", "Algo VPN", "Streisand", "Pi-hole integration"]
+    },
+    {
+        name: "IPsec VPN with StrongSwan",
+        "category": "Network Security",
+        price: "GHS 2,500 - 15,000",
+        icon: "fa-key",
+        description: "Enterprise-grade IPsec VPN using StrongSwan with IKEv2 support. Provides strong encryption, perfect forward secrecy, and compatibility with all major platforms. Includes certificate-based authentication and mobility extensions.",
+        deliverables: [
+            "StrongSwan installation",
+            "IKEv2 configuration",
+            "Certificate authority setup",
+            "Client profile generation",
+            "Mobility (MOBIKE) support",
+            "Interoperability testing"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["StrongSwan", "Libreswan", "Racoon", "ipsec-tools", "EasyRSA"]
+    },
+    {
+        name: "OpenVPN Access Server Deployment",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-door-open",
+        description: "Commercial OpenVPN Access Server deployment with web-based management, user portal, and detailed logging. Supports LDAP/Active Directory integration, MFA, and fine-grained access controls. Includes clustering for high availability.",
+        deliverables: [
+            "Access Server installation",
+            "User/group configuration",
+            "LDAP/AD integration",
+            "MFA setup (Google Authenticator)",
+            "Access policy configuration",
+            "Load balancing setup"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["OpenVPN AS", "OpenVPN Community", "LDAP", "RADIUS", "Google Authenticator"]
+    },
+    {
+        name: "ZeroTier SD-WAN Implementation",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-project-diagram",
+        description: "Software-defined networking using ZeroTier for secure, zero-configuration connectivity across any location. Perfect for IoT deployments, distributed teams, and cloud infrastructure. Includes flow rules for traffic segmentation.",
+        deliverables: [
+            "ZeroTier network creation",
+            "Controller configuration",
+            "Flow rule implementation",
+            "Route management",
+            "Multicast handling",
+            "Monitoring dashboard"
+        ],
+        timeframe: "1-3 days",
+        technologies: ["ZeroTier", "ZeroTier Central", "Moon nodes", "Flow rules", "VLAN integration"]
+    },
+    {
+        name: "Tailscale Mesh VPN",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-sitemap",
+        description: "Zero-configuration mesh VPN using Tailscale, built on WireGuard. Provides secure, direct connections between devices with automatic key rotation and ACLs. Perfect for teams needing simple, secure remote access.",
+        deliverables: [
+            "Tailscale network setup",
+            "ACL policy configuration",
+            "MagicDNS enablement",
+            "Subnet router deployment",
+            "Exit node configuration",
+            "User/group management"
+        ],
+        timeframe: "1-2 days",
+        technologies: ["Tailscale", "WireGuard", "ACLs", "MagicDNS", "SSO integration"]
+    },
+    {
+        name: "Nebula Mesh Networking",
+        "category": "Network Security",
+        price: "GHS 3,000 - 16,000",
+        icon: "fa-star",
+        description: "Implementation of Nebula, Slack's scalable overlay networking tool. Provides peer-to-peer encrypted connections with lighthouse nodes for coordination. Ideal for large-scale infrastructure with thousands of nodes.",
+        deliverables: [
+            "Certificate authority setup",
+            "Lighthouse node deployment",
+            "Node configuration",
+            "Network policy definition",
+            "Firewall rule configuration",
+            "Monitoring integration"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["Nebula", "Golang", "Lighthouse", "Certificate management", "Prometheus"]
+    },
+    {
+        name: "VPN Performance Optimization",
+        "category": "Network Security",
+        price: "GHS 1,500 - 9,000",
+        icon: "fa-tachometer-alt",
+        description: "Comprehensive VPN performance tuning to maximize throughput and minimize latency. Includes MTU optimization, encryption algorithm selection, and hardware offloading. Perfect for organizations experiencing slow VPN speeds.",
+        deliverables: [
+            "Throughput baseline measurement",
+            "MTU/MSS optimization",
+            "Encryption algorithm tuning",
+            "Hardware offloading setup",
+            "TCP optimization",
+            "Performance monitoring"
+        ],
+        timeframe: "2-3 days",
+        technologies: ["iPerf3", "Wireshark", "TCP tuning", "Hardware acceleration", "Custom scripts"]
+    },
+    {
+        name: "Multi-Factor Authentication for VPN",
+        "category": "Network Security",
+        price: "GHS 1,500 - 8,000",
+        icon: "fa-mobile-alt",
+        description: "Integration of MFA with existing VPN infrastructure to enhance security. Supports TOTP (Google Authenticator), SMS, email, and hardware tokens. Includes user enrollment, backup codes, and emergency access procedures.",
+        deliverables: [
+            "MFA server setup",
+            "VPN integration",
+            "User enrollment process",
+            "Backup code generation",
+            "Emergency access procedure",
+            "User training materials"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Google Authenticator", "Duo Security", "RSA SecurID", "YubiKey", "Authy"]
+    },
+
+    // === IDS/IPS & THREAT DETECTION (21-30) ===
+    {
+        name: "Suricata IDS/IPS Deployment",
+        "category": "Network Security",
+        price: "GHS 3,500 - 20,000",
+        icon: "fa-search",
+        description: "High-performance intrusion detection and prevention using Suricata with multi-threading and GPU acceleration. Includes rule management, protocol detection, and file extraction capabilities. Integrates with existing SIEM for centralized logging.",
+        deliverables: [
+            "Suricata installation",
+            "Rule set configuration",
+            "IPS mode setup",
+            "Protocol detection tuning",
+            "File extraction configuration",
+            "ELK stack integration"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["Suricata", "Emerging Threats", "ET Pro", "ELK Stack", "Kibana"]
+    },
+    {
+        name: "Snort IDS Implementation",
+        "category": "Network Security",
+        price: "GHS 2,500 - 15,000",
+        icon: "fa-bug",
+        description: "Classic intrusion detection system using Snort with Barnyard2 for database output. Includes custom rule creation, preprocessor configuration, and BASE web interface for alert analysis. Perfect for compliance requirements.",
+        deliverables: [
+            "Snort installation",
+            "Barnyard2 configuration",
+            "MySQL database setup",
+            "BASE web interface",
+            "Custom rule development",
+            "Alert tuning"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Snort", "Barnyard2", "MySQL", "BASE", "Pullpork"]
+    },
+    {
+        name: "Zeek (formerly Bro) Network Monitoring",
+        "category": "Network Security",
+        price: "GHS 4,000 - 22,000",
+        icon: "fa-chart-bar",
+        description: "Comprehensive network monitoring framework that goes beyond traditional IDS to provide detailed logs, file extraction, and protocol analysis. Includes Python scripting for custom analysis and threat hunting.",
+        deliverables: [
+            "Zeek installation",
+            "Log management setup",
+            "File extraction configuration",
+            "Custom script development",
+            "Threat intelligence integration",
+            "Visualization dashboard"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["Zeek", "Python", "ELK Stack", "Kafka", "Jupyter notebooks"]
+    },
+    {
+        name: "Security Onion Platform",
+        "category": "Network Security",
+        price: "GHS 5,000 - 28,000",
+        icon: "fa-onion",
+        description: "Complete security monitoring platform combining Suricata, Zeek, Elasticsearch, Logstash, Kibana, and TheHive. Provides network visibility, threat hunting, and incident response capabilities in a single, integrated solution.",
+        deliverables: [
+            "Security Onion installation",
+            "Sensor deployment",
+            "Network configuration",
+            "Rule management",
+            "Alert tuning",
+            "Incident response workflow"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["Security Onion", "Suricata", "Zeek", "ELK", "TheHive", "Cortex"]
+    },
+    {
+        name: "Wazuh SIEM + XDR Implementation",
+        "category": "Network Security",
+        price: "GHS 4,500 - 25,000",
+        icon: "fa-shield-halved",
+        description: "Open-source SIEM platform with file integrity monitoring, vulnerability detection, and compliance monitoring. Includes agent deployment for endpoints and cloud workloads. Perfect for organizations seeking affordable enterprise security.",
+        deliverables: [
+            "Wazuh manager installation",
+            "Agent deployment",
+            "File integrity monitoring",
+            "Vulnerability detection",
+            "Compliance checks (PCI-DSS, GDPR)",
+            "Alert configuration"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["Wazuh", "Elasticsearch", "OpenSearch", "TheHive", "VirusTotal integration"]
+    },
+    {
+        name: "Network Traffic Analysis with ELK",
+        "category": "Network Security",
+        price: "GHS 4,000 - 24,000",
+        icon: "fa-chart-line",
+        description: "Comprehensive network traffic analysis using Elasticsearch, Logstash, Kibana (ELK) with Packetbeat and Filebeat. Provides real-time visibility into network communications, latency analysis, and anomaly detection.",
+        deliverables: [
+            "ELK stack installation",
+            "Packetbeat configuration",
+            "Filebeat deployment",
+            "Custom dashboards",
+            "Anomaly detection rules",
+            "Long-term storage strategy"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["Elasticsearch", "Logstash", "Kibana", "Packetbeat", "Filebeat", "Elastalert"]
+    },
+    {
+        name: "Network-Based Malware Detection",
+        "category": "Network Security",
+        price: "GHS 5,000 - 30,000",
+        icon: "fa-virus",
+        description: "Advanced malware detection using network behavior analysis, sandboxing, and threat intelligence. Identifies command-and-control communications, ransomware activity, and data exfiltration attempts in real-time.",
+        deliverables: [
+            "Malware detection platform setup",
+            "Network sensor deployment",
+            "Threat intelligence feeds",
+            "Sandbox integration",
+            "Alert configuration",
+            "Incident response playbooks"
+        ],
+        timeframe: "4-8 days",
+        technologies: ["Cuckoo Sandbox", "VirusTotal", "MISP", "YARA", "ClamAV", "Custom rules"]
+    },
+    {
+        name: "Threat Intelligence Platform Integration",
+        "category": "Network Security",
+        price: "GHS 4,500 - 26,000",
+        icon: "fa-brain",
+        description: "Integration of threat intelligence feeds with existing security tools to enhance detection capabilities. Includes MISP setup, STIX/TAXII feeds, and automated IOC blocking on firewalls and IDS.",
+        deliverables: [
+            "MISP platform installation",
+            "Threat feed subscription",
+            "STIX/TAXII configuration",
+            "IOC automation",
+            "Integration with existing tools",
+            "Threat hunting workflows"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["MISP", "OpenCTI", "STIX/TAXII", "AlienVault OTX", "CrowdStrike Falcon", "YARA"]
+    },
+    {
+        name: "DNS Sinkhole & Threat Blocking",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-dns",
+        description: "Implementation of DNS sinkhole (Pi-hole, AdGuard) to block malicious domains, ads, and trackers at the network level. Provides visibility into DNS queries and prevents connections to known malware command-and-control servers.",
+        deliverables: [
+            "DNS sinkhole installation",
+            "Blocklist configuration",
+            "DHCP integration",
+            "Query logging setup",
+            "Custom whitelist management",
+            "Performance optimization"
+        ],
+        timeframe: "1-3 days",
+        technologies: ["Pi-hole", "AdGuard Home", "dnsmasq", "Unbound", "pfBlockerNG", "OISD blocklist"]
+    },
+    {
+        name: "Network Anomaly Detection with AI",
+        "category": "Network Security",
+        price: "GHS 8,000 - 40,000",
+        icon: "fa-robot",
+        description: "Machine learning-based anomaly detection that learns normal network behavior and identifies deviations in real-time. Uses unsupervised learning to detect zero-day attacks, insider threats, and subtle reconnaissance activities.",
+        deliverables: [
+            "ML model training",
+            "Network baseline establishment",
+            "Real-time detection pipeline",
+            "Alert configuration",
+            "Investigation tools",
+            "Model retraining schedule"
+        ],
+        timeframe: "5-10 days",
+        technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "ELK Stack", "Kafka", "Jupyter"]
+    },
+
+    // === NETWORK SEGMENTATION (31-40) ===
+    {
+        name: "VLAN Design and Implementation",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-diagram-project",
+        description: "Strategic VLAN design to segment network traffic and reduce attack surface. Includes VLAN creation, trunking configuration, inter-VLAN routing, and ACL implementation. Supports 802.1Q tagging and VTP for large deployments.",
+        deliverables: [
+            "VLAN architecture design",
+            "Switch configuration",
+            "Trunk port setup",
+            "Inter-VLAN routing",
+            "ACL implementation",
+            "Documentation"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["Cisco IOS", "Juniper JunOS", "HP/Aruba", "MikroTik", "802.1Q", "VTP"]
+    },
+    {
+        name: "Micro-segmentation Strategy",
+        "category": "Network Security",
+        price: "GHS 6,000 - 35,000",
+        icon: "fa-grid-2",
+        description: "Granular security policies applied at the workload level, even within the same subnet. Uses network virtualization and host-based firewalls to isolate applications and limit lateral movement in case of breach.",
+        deliverables: [
+            "Application dependency mapping",
+            "Security policy design",
+            "Micro-segmentation implementation",
+            "Zero-trust enforcement",
+            "Monitoring and logging",
+            "Policy validation"
+        ],
+        timeframe: "5-10 days",
+        technologies: ["VMware NSX", "Cisco ACI", "Illumio", "Calico", "Cilium", "Windows Firewall"]
+    },
+    {
+        name: "DMZ (Demilitarized Zone) Architecture",
+        "category": "Network Security",
+        price: "GHS 4,000 - 22,000",
+        icon: "fa-shield-halved",
+        description: "Design and implementation of DMZ architecture to securely host public-facing services while protecting internal networks. Includes multi-tier DMZ design, firewall rules, and bastion host configuration.",
+        deliverables: [
+            "DMZ architecture design",
+            "Firewall rule configuration",
+            "Bastion host setup",
+            "Service isolation",
+            "Monitoring implementation",
+            "Security testing"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["pfSense", "FortiGate", "Cisco ASA", "AWS VPC", "Azure VNet", "DMZ best practices"]
+    },
+    {
+        name: "Network Access Control (NAC) Implementation",
+        "category": "Network Security",
+        price: "GHS 8,000 - 45,000",
+        icon: "fa-door-closed",
+        description: "Comprehensive NAC solution that enforces security policies for all devices attempting network access. Includes endpoint posture assessment, guest management, and automated quarantine for non-compliant devices.",
+        deliverables: [
+            "NAC controller deployment",
+            "Policy configuration",
+            "Endpoint profiling",
+            "Guest access portal",
+            "Integration with AD/LDAP",
+            "Remediation workflows"
+        ],
+        timeframe: "5-10 days",
+        technologies: ["Cisco ISE", "Aruba ClearPass", "PacketFence", "FortiNAC", "Portnox", "FreeRADIUS"]
+    },
+    {
+        name: "802.1X Authentication Deployment",
+        "category": "Network Security",
+        price: "GHS 4,500 - 25,000",
+        icon: "fa-id-card",
+        description: "Enterprise-grade port-based authentication using 802.1X with RADIUS. Ensures only authorized devices can connect to the network. Supports EAP-TLS, PEAP, and EAP-TTLS with certificate-based authentication.",
+        deliverables: [
+            "RADIUS server setup",
+            "Certificate authority configuration",
+            "Switch configuration",
+            "Supplicant deployment",
+            "Policy configuration",
+            "Troubleshooting guide"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["FreeRADIUS", "Microsoft NPS", "ClearPass", "Cisco ISE", "EAP-TLS", "PEAP"]
+    },
+    {
+        name: "Guest WiFi Security & Isolation",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-wifi",
+        description: "Secure guest WiFi implementation with captive portal, bandwidth limiting, and strict isolation from corporate networks. Includes voucher-based access, social login options, and detailed usage reporting.",
+        deliverables: [
+            "Guest network VLAN setup",
+            "Captive portal configuration",
+            "Bandwidth limiting",
+            "Isolation policies",
+            "Authentication options",
+            "Usage reporting"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["UniFi", "MikroTik", "pfSense", "OpenNDS", "CoovaChilli", "Ruckus"]
+    },
+    {
+        name: "Industrial Network Segmentation (OT/ICS)",
+        "category": "Network Security",
+        price: "GHS 10,000 - 55,000",
+        icon: "fa-industry",
+        description: "Specialized network segmentation for industrial control systems and operational technology. Implements Purdue Model architecture with strict isolation between IT and OT networks. Includes deep packet inspection for industrial protocols.",
+        deliverables: [
+            "Purdue Model architecture",
+            "IT/OT isolation",
+            "Industrial firewall deployment",
+            "Protocol inspection (Modbus, DNP3)",
+            "Remote access security",
+            "Compliance documentation"
+        ],
+        timeframe: "7-14 days",
+        technologies: ["Claroty", "Nozomi", "Dragos", "Fortinet OT", "Cisco Industrial", "Modbus/TCP"]
+    },
+    {
+        name: "Data Center Network Segmentation",
+        "category": "Network Security",
+        price: "GHS 7,000 - 40,000",
+        icon: "fa-database",
+        description: "Advanced segmentation for data center environments using VXLAN and EVPN. Provides tenant isolation, workload mobility, and network virtualization. Includes integration with cloud environments and hybrid deployments.",
+        deliverables: [
+            "VXLAN overlay design",
+            "EVPN configuration",
+            "Tenant isolation",
+            "Workload mobility",
+            "Cloud integration",
+            "Monitoring setup"
+        ],
+        timeframe: "5-12 days",
+        technologies: ["VXLAN", "EVPN", "Cisco ACI", "VMware NSX", "Juniper Contrail", "Cumulus Linux"]
+    },
+    {
+        name: "Network Segmentation Audit",
+        "category": "Network Security",
+        price: "GHS 3,000 - 16,000",
+        icon: "fa-clipboard-check",
+        description: "Comprehensive audit of existing network segmentation to identify gaps and improvement opportunities. Includes traffic flow analysis, rule base review, and penetration testing of segment boundaries.",
+        deliverables: [
+            "Traffic flow analysis",
+            "Rule base review",
+            "Boundary penetration testing",
+            "Gap analysis report",
+            "Remediation roadmap",
+            "Compliance mapping"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["Wireshark", "Nmap", "Scapy", "Tcpdump", "Security assessment tools"]
+    },
+    {
+        name: "Zero Trust Network Architecture (ZTNA)",
+        "category": "Network Security",
+        price: "GHS 9,000 - 50,000",
+        icon: "fa-lock",
+        description: "Implementation of zero trust principles including never trust, always verify. Deploys software-defined perimeter, micro-segmentation, and continuous authentication. Eliminates implicit trust based on network location.",
+        deliverables: [
+            "ZTNA architecture design",
+            "Identity-based access",
+            "Application-specific tunnels",
+            "Continuous monitoring",
+            "Integration with existing tools",
+            "Migration strategy"
+        ],
+        timeframe: "6-15 days",
+        technologies: ["Zscaler", "Cloudflare Access", "Okta", "Palo Alto Prisma", "BeyondCorp", "Tailscale"]
+    },
+
+    // === LOAD BALANCING & TRAFFIC MANAGEMENT (41-45) ===
+    {
+        name: "HAProxy Load Balancer Configuration",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-arrows-spin",
+        description: "High-performance load balancing with HAProxy for web applications and APIs. Includes SSL termination, health checking, session persistence, and detailed logging. Supports both TCP and HTTP load balancing with advanced ACLs.",
+        deliverables: [
+            "HAProxy installation",
+            "Load balancing configuration",
+            "SSL/TLS termination",
+            "Health check setup",
+            "Sticky sessions",
+            "Monitoring integration"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["HAProxy", "Keepalived", "LetsEncrypt", "Prometheus", "Grafana", "ACL"]
+    },
+    {
+        name: "Nginx Load Balancer & Reverse Proxy",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-rotate",
+        description: "Nginx-based load balancing and reverse proxy with caching, compression, and security features. Provides rate limiting, IP whitelisting, and web application firewall capabilities. Ideal for microservices architectures.",
+        deliverables: [
+            "Nginx installation",
+            "Upstream configuration",
+            "Caching setup",
+            "Rate limiting",
+            "WAF integration",
+            "Performance tuning"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Nginx", "Nginx Plus", "ModSecurity", "Lua", "OpenResty", "PageSpeed"]
+    },
+    {
+        name: "Traefik with Docker/Kubernetes",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-cubes",
+        description: "Modern reverse proxy and load balancer designed for containerized environments. Provides automatic service discovery, Let's Encrypt integration, and detailed metrics. Supports multiple providers including Docker Swarm and Kubernetes.",
+        deliverables: [
+            "Traefik deployment",
+            "Service discovery setup",
+            "TLS automation",
+            "Middleware configuration",
+            "Dashboard access",
+            "Monitoring integration"
+        ],
+        timeframe: "2-5 days",
+        technologies: ["Traefik", "Docker", "Kubernetes", "Let's Encrypt", "Prometheus", "Grafana"]
+    },
+    {
+        name: "Envoy Proxy & Service Mesh",
+        "category": "Network Security",
+        price: "GHS 5,000 - 28,000",
+        icon: "fa-code-branch",
+        description: "High-performance proxy with advanced observability and routing capabilities. Deployed as sidecar in service mesh architectures (Istio, Consul). Provides circuit breaking, retries, and distributed tracing for microservices.",
+        deliverables: [
+            "Envoy deployment",
+            "Listener/route configuration",
+            "Cluster management",
+            "Observability setup",
+            "Tracing integration",
+            "Performance optimization"
+        ],
+        timeframe: "4-8 days",
+        technologies: ["Envoy", "Istio", "Consul", "Jaeger", "Prometheus", "gRPC"]
+    },
+    {
+        name: "Global Server Load Balancing (GSLB)",
+        "category": "Network Security",
+        price: "GHS 4,500 - 25,000",
+        icon: "fa-globe",
+        description: "Global load balancing across multiple data centers or cloud regions. Provides disaster recovery, geographic distribution, and performance optimization. Includes health monitoring and automatic failover.",
+        deliverables: [
+            "GSLB architecture design",
+            "DNS integration",
+            "Health monitoring",
+            "Failover automation",
+            "Performance routing",
+            "Disaster recovery testing"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["AWS Route 53", "Azure Traffic Manager", "NS1", "F5 GTM", "PowerDNS", "BGP anycast"]
+    },
+
+    // === NETWORK HARDENING (46-50) ===
+    {
+        name: "Router/Switch Security Hardening",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-router",
+        description: "Comprehensive security hardening of network devices following industry best practices (CIS benchmarks, NIST). Includes disabling unnecessary services, secure management access, logging configuration, and control plane protection.",
+        deliverables: [
+            "Security baseline creation",
+            "CIS benchmark implementation",
+            "Secure management setup",
+            "Logging configuration",
+            "Control plane protection",
+            "Configuration backup"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["Cisco IOS", "Juniper JunOS", "MikroTik RouterOS", "FRRouting", "CIS benchmarks", "NIST 800-53"]
+    },
+    {
+        name: "DNS Security (DNSSEC) Implementation",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-dns",
+        description: "Implementation of DNSSEC to protect against DNS spoofing and cache poisoning. Includes zone signing, key management, and validation. Provides cryptographic authentication of DNS responses.",
+        deliverables: [
+            "DNSSEC zone signing",
+            "Key generation/management",
+            "DS record configuration",
+            "Validation setup",
+            "Monitoring implementation",
+            "Troubleshooting guide"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["BIND", "PowerDNS", "Unbound", "Cloudflare DNS", "Route53", "DNSSEC-Tools"]
+    },
+    {
+        name: "BGP Security (RPKI & BGPsec)",
+        "category": "Network Security",
+        price: "GHS 4,000 - 22,000",
+        icon: "fa-route",
+        description: "Implementation of RPKI to protect BGP routing from hijacking and route leaks. Includes ROA creation, validation configuration, and BGP origin validation. Optional BGPsec implementation for path validation.",
+        deliverables: [
+            "RPKI validator setup",
+            "ROA creation",
+            "BGP origin validation",
+            "Route filtering",
+            "Monitoring implementation",
+            "Peering configuration"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["RPKI", "BGPsec", "RIPE NCC RPKI", "Cloudflare RPKI", "FRRouting", "BIRD"]
+    },
+    {
+        name: "Network Device Access Control",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-user-lock",
+        description: "Secure access control for network devices including AAA, TACACS+/RADIUS, and privilege levels. Implements role-based access control (RBAC) with command authorization and detailed accounting.",
+        deliverables: [
+            "AAA server setup (TACACS+/RADIUS)",
+            "User authentication configuration",
+            "Authorization policies",
+            "Accounting/audit logs",
+            "Privilege level design",
+            "Emergency access procedures"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["TACACS+", "RADIUS", "Cisco ACS", "FreeRADIUS", "Aruba ClearPass", "LDAP/AD"]
+    },
+    {
+        name: "NTP Security Configuration",
+        "category": "Network Security",
+        price: "GHS 1,500 - 8,000",
+        icon: "fa-clock",
+        description: "Secure NTP deployment to protect against time synchronization attacks. Includes NTP authentication, symmetric key configuration, and access control. Critical for accurate logging and certificate validation.",
+        deliverables: [
+            "Secure NTP server setup",
+            "Authentication configuration",
+            "Access control lists",
+            "Monitoring implementation",
+            "Client configuration",
+            "Redundancy setup"
+        ],
+        timeframe: "1-3 days",
+        technologies: ["NTPd", "Chrony", "OpenNTPD", "Windows Time", "NTPsec", "NIST time servers"]
+    },
+
+    // === NETWORK MONITORING & MANAGEMENT (51-55) ===
+    {
+        name: "SNMPv3 Secure Monitoring",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-chart-simple",
+        description: "Implementation of secure SNMPv3 for encrypted device monitoring. Includes user configuration, trap handling, and integration with monitoring systems. Provides authentication and privacy for network management traffic.",
+        deliverables: [
+            "SNMPv3 configuration",
+            "User/group setup",
+            "Trap receiver configuration",
+            "MIB compilation",
+            "Monitoring integration",
+            "Alert configuration"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["SNMPv3", "Net-SNMP", "PRTG", "Nagios", "Zabbix", "Cacti"]
+    },
+    {
+        name: "NetFlow/sFlow/IPFIX Analysis",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-wave-square",
+        description: "Network flow analysis for traffic visibility, capacity planning, and security investigations. Implements NetFlow/sFlow/IPFIX collection with analysis tools. Identifies bandwidth hogs, detects anomalies, and supports forensics.",
+        deliverables: [
+            "Flow exporter configuration",
+            "Collector setup",
+            "Analysis tool deployment",
+            "Dashboard creation",
+            "Alert configuration",
+            "Long-term storage"
+        ],
+        timeframe: "3-5 days",
+        technologies: ["NetFlow", "sFlow", "IPFIX", "nfdump", "ElastiFlow", "ntopng", "PRTG"]
+    },
+    {
+        name: "Network Performance Monitoring (NPM)",
+        "category": "Network Security",
+        price: "GHS 3,500 - 20,000",
+        icon: "fa-gauge-high",
+        description: "End-to-end network performance monitoring including latency, jitter, and packet loss measurements. Deploys synthetic monitoring and passive analysis to identify performance bottlenecks before they impact users.",
+        deliverables: [
+            "Monitoring infrastructure setup",
+            "Synthetic test configuration",
+            "Baseline establishment",
+            "Alert configuration",
+            "Reporting dashboard",
+            "Capacity planning"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["PRTG", "SolarWinds", "Nagios", "Zabbix", "Prometheus", "Smokeping"]
+    },
+    {
+        name: "Network Configuration Management",
+        "category": "Network Security",
+        price: "GHS 3,000 - 16,000",
+        icon: "fa-gears",
+        description: "Automated backup, version control, and change tracking for network device configurations. Implements RANCID/Oxidized with Git integration. Provides configuration compliance checking and quick disaster recovery.",
+        deliverables: [
+            "Backup system deployment",
+            "Git repository setup",
+            "Change notification",
+            "Compliance checking",
+            "Configuration restoration",
+            "Audit reporting"
+        ],
+        timeframe: "2-5 days",
+        technologies: ["RANCID", "Oxidized", "Git", "Ansible", "SaltStack", "Cisco Prime"]
+    },
+    {
+        name: "Network Log Management & SIEM Integration",
+        "category": "Network Security",
+        price: "GHS 4,000 - 24,000",
+        icon: "fa-file-lines",
+        description: "Centralized log collection from all network devices with integration into SIEM platforms. Includes log parsing, correlation rules, and long-term storage for compliance. Supports syslog, TLS encryption, and reliable transport.",
+        deliverables: [
+            "Log server deployment",
+            "Device log configuration",
+            "Log parsing/normalization",
+            "SIEM integration",
+            "Correlation rules",
+            "Compliance reporting"
+        ],
+        timeframe: "3-6 days",
+        technologies: ["rsyslog", "syslog-ng", "ELK Stack", "Splunk", "Graylog", "Fluentd"]
+    },
+
+    // === WIRELESS NETWORK SECURITY (56-60) ===
+    {
+        name: "Enterprise WiFi Security (WPA3-Enterprise)",
+        "category": "Network Security",
+        price: "GHS 4,000 - 24,000",
+        icon: "fa-wifi",
+        description: "Implementation of WPA3-Enterprise with 192-bit encryption for maximum wireless security. Includes RADIUS server configuration, certificate-based authentication, and rogue AP detection. Meets government and financial institution requirements.",
+        deliverables: [
+            "WPA3-Enterprise configuration",
+            "RADIUS/EAP-TLS setup",
+            "Certificate authority deployment",
+            "Client configuration",
+            "Rogue AP detection",
+            "Wireless IDS implementation"
+        ],
+        timeframe: "4-7 days",
+        technologies: ["WPA3", "RADIUS", "EAP-TLS", "FreeRADIUS", "Aruba", "Cisco Wireless", "Ruckus"]
+    },
+    {
+        name: "Wireless Intrusion Prevention System (WIPS)",
+        "category": "Network Security",
+        price: "GHS 5,000 - 28,000",
+        icon: "fa-ban",
+        description: "Dedicated wireless intrusion prevention that detects and blocks rogue access points, evil twins, and wireless attacks. Provides 24/7 monitoring with automated countermeasures and forensic logging.",
+        deliverables: [
+            "WIPS sensors deployment",
+            "Central management setup",
+            "Threat signature updates",
+            "Automated countermeasures",
+            "Alert configuration",
+            "Incident reporting"
+        ],
+        timeframe: "4-8 days",
+        technologies: ["Cisco MSE", "Aruba AirWave", "FortiWLM", "WatchGuard", "AirDefense", "Kismet"]
+    },
+    {
+        name: "WiFi Guest Network with Captive Portal",
+        "category": "Network Security",
+        price: "GHS 2,500 - 14,000",
+        icon: "fa-user-group",
+        description: "Secure guest WiFi with customizable captive portal, social login, and voucher-based access. Includes bandwidth management, session time limits, and strict isolation from corporate networks. Provides usage analytics and reporting.",
+        deliverables: [
+            "Guest network VLAN setup",
+            "Captive portal configuration",
+            "Authentication options",
+            "Bandwidth limiting",
+            "Isolation policies",
+            "Analytics dashboard"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["UniFi", "MikroTik", "pfSense", "OpenNDS", "CoovaChilli", "Ruckus Cloud"]
+    },
+    {
+        name: "WiFi Site Survey & RF Optimization",
+        "category": "Network Security",
+        price: "GHS 3,000 - 18,000",
+        icon: "fa-ruler-combined",
+        description: "Professional WiFi site survey using spectrum analysis tools to optimize coverage and minimize interference. Includes heat mapping, channel planning, and transmit power optimization for maximum performance and security.",
+        deliverables: [
+            "Physical site survey",
+            "Spectrum analysis",
+            "Heat map generation",
+            "AP placement recommendations",
+            "Channel/power optimization",
+            "Post-implementation validation"
+        ],
+        timeframe: "2-5 days",
+        technologies: ["Ekahau", "NetSpot", "Acrylic WiFi", "MetaGeek", "AirMagnet", "Wireshark"]
+    },
+    {
+        name: "Wireless Client Isolation & Segmentation",
+        "category": "Network Security",
+        price: "GHS 2,000 - 12,000",
+        icon: "fa-cube",
+        description: "Implementation of client isolation to prevent direct communication between wireless clients, protecting against lateral attacks. Includes dynamic VLAN assignment based on user role, device type, or authentication method.",
+        deliverables: [
+            "Client isolation configuration",
+            "Dynamic VLAN assignment",
+            "Role-based access control",
+            "Device profiling",
+            "BYOD security policies",
+            "Integration with RADIUS"
+        ],
+        timeframe: "2-4 days",
+        technologies: ["Cisco ISE", "Aruba ClearPass", "Ruckus SmartZone", "MikroTik", "UniFi", "FreeRADIUS"]
+    }
+];
 
         // WEB DEVELOPMENT PAGE - Detailed
         function getWebDevPage() {

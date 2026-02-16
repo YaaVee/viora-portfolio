@@ -1,0 +1,15 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "devCommand": null,
+  "installCommand": null,
+  "routes": [
+    { "src": "/projects-websites/(.*)", "dest": "/projects-websites/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "github": {
+    "silent": true,
+    "autoAlias": true,
+    "autoJobCancelation": true
+  }
+}
