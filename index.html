@@ -2190,107 +2190,109 @@
         }
 
         // ============================================
-// CLOUD SECURITY PAGE - 40+ DETAILED SERVICES
+// EXPANDED CLOUD SECURITY PAGE - 40 SERVICES
 // ============================================
+// Replace your existing getCloudSecurityPage() function with this
+
 function getCloudSecurityPage() {
     return `
         <div class="page-header">
             <h1>Cloud Security Services</h1>
-            <p>40+ enterprise-grade cloud security solutions with pricing</p>
+            <p>Comprehensive cloud security solutions across AWS, Azure, GCP, and multi-cloud environments</p>
         </div>
 
-        <!-- AWS Security Services (1-10) -->
+        <!-- AWS Security Services (10) -->
         <div style="margin: 40px 0 20px;">
-            <h2 style="color: #00ff9d; font-size: 28px; border-left: 4px solid #00ff9d; padding-left: 15px;">
-                <i class="fab fa-aws" style="margin-right: 10px;"></i> AWS Security Services
+            <h2 style="color: #00ff9d; font-size: 28px; display: flex; align-items: center; gap: 10px;">
+                <i class="fab fa-aws"></i> AWS Security Services
             </h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS IAM Hardening & Identity Governance</div>
-                <div class="service-price">GHS 4,500 - 28,000</div>
-                <div class="service-desc">Comprehensive IAM assessment and remediation including least privilege analysis, unused permission removal, cross-account role optimization, and automated permission boundary implementation. Includes identity federation setup with Okta/Azure AD, MFA enforcement, and continuous compliance monitoring with AWS Config rules.</div>
+                <div class="service-name">AWS IAM Hardening</div>
+                <div class="service-price">GHS 4,500 - 18,000</div>
+                <div class="service-desc"><strong>Comprehensive Identity and Access Management:</strong> Implement least-privilege access controls, fine-grained IAM policies, role-based access control (RBAC), and automated access reviews. Includes MFA enforcement, password policies, and integration with corporate identity providers via SAML 2.0 or OIDC. Perfect for organizations with 50-500 employees seeking to eliminate excessive permissions and reduce attack surface.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS GuardDuty & Threat Detection</div>
-                <div class="service-price">GHS 5,200 - 32,000</div>
-                <div class="service-desc">Full GuardDuty deployment with custom threat lists, trusted IP lists, and automated remediation workflows. Integration with Security Hub, Detective, and Lambda-based incident response. Includes 30-day threat hunting and baseline establishment for anomaly detection.</div>
+                <div class="service-name">AWS Shield Advanced + WAF</div>
+                <div class="service-price">GHS 8,000 - 35,000</div>
+                <div class="service-desc"><strong>Enterprise DDoS Protection & Web Application Firewall:</strong> Deploy AWS Shield Advanced for 24/7 DDoS mitigation with $3,000/month DDoS cost protection. Configure AWS WAF with custom rules to block OWASP Top 10 threats, SQL injection, cross-site scripting, and bot traffic. Includes real-time attack visibility, incident response support, and automated rule updates based on emerging threats.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS WAF & Shield Advanced</div>
-                <div class="service-price">GHS 6,800 - 45,000</div>
-                <div class="service-desc">Custom WAF rule development for OWASP Top 10 protection, bot mitigation, and application-layer DDoS defense. Shield Advanced configuration with AWS Firewall Manager for centralized policy management across all CloudFront distributions, ALBs, and API Gateways.</div>
+                <div class="service-name">AWS GuardDuty + Detective</div>
+                <div class="service-price">GHS 6,500 - 28,000</div>
+                <div class="service-desc"><strong>Intelligent Threat Detection:</strong> Deploy GuardDuty for continuous threat monitoring using machine learning and integrated threat intelligence. Detect cryptocurrency mining, credential compromise, and API abuse. Integrate with Detective for automated root cause analysis and visual investigation of security findings. Includes custom threat feeds and automated remediation workflows.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Config & Compliance Automation</div>
-                <div class="service-price">GHS 4,800 - 29,000</div>
-                <div class="service-desc">Custom AWS Config rules for CIS benchmarks, PCI-DSS, HIPAA, and GDPR compliance. Automated remediation with Systems Manager, compliance scorecards, and real-time dashboards. Includes 50+ pre-built compliance packs.</div>
+                <div class="service-name">AWS Security Hub + Config</div>
+                <div class="service-price">GHS 7,000 - 32,000</div>
+                <div class="service-desc"><strong>Centralized Security & Compliance Management:</strong> Aggregate security findings from GuardDuty, Inspector, Macie, and third-party tools into Security Hub. Implement automated compliance checks against CIS AWS Foundations Benchmark, NIST 800-53, and PCI DSS. Generate executive reports, track remediation progress, and maintain continuous compliance posture.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Secrets Manager & KMS Encryption</div>
-                <div class="service-price">GHS 5,500 - 33,000</div>
-                <div class="service-desc">Enterprise-grade secrets management with automatic rotation, cross-region replication, and integration with RDS, Redshift, and custom applications. KMS key management with automatic rotation, key policies, and envelope encryption implementation.</div>
+                <div class="service-name">AWS Macie Data Discovery</div>
+                <div class="service-price">GHS 9,000 - 40,000</div>
+                <div class="service-desc"><strong>Automated Data Classification & Protection:</strong> Deploy Macie to automatically discover, classify, and protect sensitive data stored in S3. Identify PII, PHI, financial data, and intellectual property. Implement automated remediation for exposed data, including encryption, access controls, and data lifecycle policies. Includes compliance reporting for GDPR, HIPAA, and LGPD.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Security Hub & SIEM Integration</div>
-                <div class="service-price">GHS 7,200 - 48,000</div>
-                <div class="service-desc">Centralized security findings aggregation from GuardDuty, Inspector, Macie, and third-party tools. Custom insight rules, automated ticketing with Jira/Servicenow, and integration with Splunk/ELK for advanced correlation.</div>
+                <div class="service-name">AWS KMS + CloudHSM</div>
+                <div class="service-price">GHS 8,500 - 38,000</div>
+                <div class="service-desc"><strong>Enterprise Key Management & Hardware Security Module:</strong> Implement centralized key management using AWS KMS with automatic key rotation and audit logging. Deploy CloudHSM for FIPS 140-2 Level 3 validated hardware security modules for regulatory compliance. Includes envelope encryption strategies, cross-region key replication, and integration with third-party SIEM solutions.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Macie & Data Discovery</div>
-                <div class="service-price">GHS 6,500 - 42,000</div>
-                <div class="service-desc">Automated discovery and classification of PII, PHI, and financial data across S3 buckets. Custom data identifiers for Ghana-specific data types (passport numbers, SSNIT IDs, mobile money accounts). Automated remediation workflows for exposed data.</div>
+                <div class="service-name">AWS Network Firewall</div>
+                <div class="service-price">GHS 7,500 - 33,000</div>
+                <div class="service-desc"><strong>Managed Network Security for VPC:</strong> Deploy AWS Network Firewall with stateful inspection, intrusion prevention, and web filtering. Configure Suricata-compatible rules for deep packet inspection, domain filtering, and protocol detection. Includes VPC traffic mirroring, centralized rule management, and integration with AWS Firewall Manager for multi-account enforcement.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Network Firewall & VPC Security</div>
-                <div class="service-price">GHS 8,500 - 55,000</div>
-                <div class="service-desc">Stateful network inspection with AWS Network Firewall, VPC traffic mirroring for deep packet inspection, and network access analyzer. Includes VPC flow log analysis, anomaly detection, and automated threat blocking.</div>
+                <div class="service-name">AWS Inspector + Systems Manager</div>
+                <div class="service-price">GHS 5,500 - 24,000</div>
+                <div class="service-desc"><strong>Automated Vulnerability Management:</strong> Deploy Inspector for continuous EC2 and container workload scanning. Identify CVE vulnerabilities, network exposure, and deviations from security best practices. Integrate with Systems Manager Patch Manager for automated patching. Includes vulnerability prioritization, remediation workflows, and compliance reporting.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Inspector & Vulnerability Management</div>
-                <div class="service-price">GHS 4,200 - 26,000</div>
-                <div class="service-desc">Automated vulnerability scanning for EC2, ECR, and Lambda. Integration with Systems Manager for patch management, prioritization scoring, and automated remediation workflows. Includes 90-day trending and reporting.</div>
+                <div class="service-name">AWS Backup + Disaster Recovery</div>
+                <div class="service-price">GHS 6,000 - 27,000</div>
+                <div class="service-desc"><strong>Centralized Backup & Disaster Recovery:</strong> Implement automated backup policies for EBS, RDS, DynamoDB, and EFS with encryption at rest. Configure cross-region replication for disaster recovery. Establish recovery point objectives (RPO) and recovery time objectives (RTO) with automated failover testing. Includes retention policy management and compliance reporting.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-aws"></i></div>
                 <div class="service-category">AWS Security</div>
-                <div class="service-name">AWS Control Tower & Landing Zone Security</div>
-                <div class="service-price">GHS 12,000 - 75,000</div>
-                <div class="service-desc">Multi-account security architecture with centralized logging, cross-account IAM roles, and preventive guardrails. Includes account vending machine with security-by-design, mandatory encryption, and automated compliance monitoring.</div>
+                <div class="service-name">AWS Well-Architected Review</div>
+                <div class="service-price">GHS 12,000 - 50,000</div>
+                <div class="service-desc"><strong>Comprehensive Security Architecture Review:</strong> Conduct thorough assessment of AWS workloads against the Well-Architected Framework's security pillar. Review identity & access management, detective controls, infrastructure protection, data protection, and incident response. Deliver detailed findings, prioritized remediation roadmap, and implementation assistance for identified gaps.</div>
             </div>
         </div>
 
-        <!-- Azure Security Services (11-20) -->
+        <!-- Azure Security Services (10) -->
         <div style="margin: 60px 0 20px;">
-            <h2 style="color: #00ff9d; font-size: 28px; border-left: 4px solid #00ff9d; padding-left: 15px;">
-                <i class="fab fa-microsoft" style="margin-right: 10px;"></i> Microsoft Azure Security Services
+            <h2 style="color: #00ff9d; font-size: 28px; display: flex; align-items: center; gap: 10px;">
+                <i class="fab fa-microsoft"></i> Microsoft Azure Security Services
             </h2>
         </div>
         <div class="services-grid">
@@ -2298,87 +2300,87 @@ function getCloudSecurityPage() {
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
                 <div class="service-name">Microsoft Defender for Cloud</div>
-                <div class="service-price">GHS 5,800 - 38,000</div>
-                <div class="service-desc">Complete Defender deployment across workloads, containers, and databases. Includes workload protection plans, regulatory compliance dashboards, and automated remediation with Azure Policy. Integration with Microsoft Sentinel for advanced hunting.</div>
+                <div class="service-price">GHS 5,500 - 25,000</div>
+                <div class="service-desc"><strong>Unified Cloud Security Posture Management:</strong> Deploy Defender for Cloud across hybrid and multi-cloud environments. Implement continuous assessment of security configurations, regulatory compliance monitoring (CIS, NIST, ISO 27001), and actionable recommendations. Includes workload protection for servers, databases, storage, and containers with integrated threat detection.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Active Directory & Identity Protection</div>
-                <div class="service-price">GHS 5,200 - 34,000</div>
-                <div class="service-desc">Conditional access policies, identity governance, and privileged identity management. Includes risk-based adaptive policies, access reviews, and entitlement management. Integration with on-premises AD via Azure AD Connect with pass-through authentication.</div>
+                <div class="service-name">Azure Sentinel SIEM</div>
+                <div class="service-price">GHS 10,000 - 45,000</div>
+                <div class="service-desc"><strong>Cloud-Native SIEM & SOAR:</strong> Deploy Azure Sentinel for intelligent security analytics across your entire enterprise. Aggregate logs from Azure, on-premises, and third-party applications. Leverage built-in UEBA for anomaly detection, threat hunting with Jupyter notebooks, and automated incident response with playbooks. Includes custom analytics rules and threat intelligence integration.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Sentinel SIEM Implementation</div>
-                <div class="service-price">GHS 9,500 - 65,000</div>
-                <div class="service-desc">Cloud-native SIEM with MITRE ATT&CK mapping, UEBA, and SOAR capabilities. Custom analytics rules, threat intelligence integration, and automated incident response playbooks. Includes 50+ data connector configurations.</div>
+                <div class="service-name">Azure AD Identity Protection</div>
+                <div class="service-price">GHS 4,500 - 20,000</div>
+                <div class="service-desc"><strong>Advanced Identity Security:</strong> Implement Azure AD Premium P2 with Identity Protection for risk-based conditional access. Deploy Privileged Identity Management (PIM) for just-in-time privileged access. Configure risk policies to automatically block or remediate compromised identities. Includes identity governance, access reviews, and entitlement management for 500-5000 users.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Policy & Regulatory Compliance</div>
-                <div class="service-price">GHS 4,800 - 30,000</div>
-                <div class="service-desc">Custom policy definitions for CIS, ISO 27001, PCI-DSS, and GDPR. Initiative assignments with exemption management, compliance scanning, and remediation tasks. Includes 100+ built-in policy implementations.</div>
+                <div class="service-name">Azure DDoS Protection</div>
+                <div class="service-price">GHS 6,000 - 28,000</div>
+                <div class="service-desc"><strong>Enterprise DDoS Mitigation:</strong> Deploy Azure DDoS Protection Standard for always-on traffic monitoring and automatic mitigation of network and application layer attacks. Protect public IP addresses, load balancers, and application gateways. Includes real-time attack metrics, diagnostic logs, and integration with Azure Monitor for alerting and post-attack forensics.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Key Vault & Encryption Management</div>
-                <div class="service-price">GHS 4,500 - 28,000</div>
-                <div class="service-desc">HSM-backed key management, certificate lifecycle automation, and secrets rotation. Integration with Azure Disk Encryption, SQL TDE, and custom applications. Includes soft-delete protection and purge protection.</div>
+                <div class="service-name">Azure Key Vault + Managed HSM</div>
+                <div class="service-price">GHS 5,000 - 23,000</div>
+                <div class="service-desc"><strong>Secure Key & Secret Management:</strong> Deploy Azure Key Vault for centralized management of secrets, keys, and certificates. Implement Managed HSM for FIPS 140-2 Level 3 validated hardware security. Configure automated key rotation, access logging, and integration with Azure Policy for compliance enforcement. Includes backup and disaster recovery for cryptographic materials.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Firewall & Network Security</div>
-                <div class="service-price">GHS 6,500 - 42,000</div>
-                <div class="service-desc">Stateful firewall with threat intelligence filtering, DNAT/SNAT rules, and application FQDN filtering. Integration with Azure DDoS Protection Standard, forced tunneling, and hub-spoke network security architecture.</div>
+                <div class="service-name">Azure Firewall Premium</div>
+                <div class="service-price">GHS 6,500 - 30,000</div>
+                <div class="service-desc"><strong>Advanced Network Security:</strong> Deploy Azure Firewall Premium with TLS inspection, IDPS, and web filtering. Configure application and network rules with intelligence feeds. Enable threat intelligence-based filtering to block known malicious IPs and domains. Includes centralized policy management across hubs and spokes, integration with Azure Monitor, and traffic analytics.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure DDoS Protection & WAF</div>
-                <div class="service-price">GHS 7,200 - 48,000</div>
-                <div class="service-desc">Always-on traffic monitoring and adaptive tuning with Azure DDoS Protection Standard. Application Gateway WAF with OWASP rule sets, bot protection, and custom rule development for application-layer attacks.</div>
+                <div class="service-name">Azure Policy + Blueprints</div>
+                <div class="service-price">GHS 5,000 - 22,000</div>
+                <div class="service-desc"><strong>Governance & Compliance Automation:</strong> Implement Azure Policy for automated enforcement of security standards across subscriptions. Create custom policy definitions for organizational requirements. Deploy Azure Blueprints for repeatable compliance environments (PCI DSS, HIPAA, ISO 27001). Includes policy exemption management, compliance reporting, and remediation tasks.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Information Protection & Data Loss Prevention</div>
-                <div class="service-price">GHS 5,500 - 35,000</div>
-                <div class="service-desc">Classification, labeling, and protection of sensitive data across SharePoint, OneDrive, and Exchange. DLP policies with policy tips, incident reports, and integration with Microsoft 365 compliance center.</div>
+                <div class="service-name">Azure Information Protection</div>
+                <div class="service-price">GHS 5,500 - 24,000</div>
+                <div class="service-desc"><strong>Data Classification & Protection:</strong> Deploy Azure Information Protection for persistent data protection across documents and emails. Configure classification labels, automatic detection of sensitive data, and usage rights management. Implement encryption and access controls for protected documents. Includes integration with Microsoft 365 and third-party applications.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Backup & Disaster Recovery Security</div>
-                <div class="service-price">GHS 4,800 - 32,000</div>
-                <div class="service-desc">Encrypted backup policies, soft-delete configuration, and cross-region restore. Azure Site Recovery security hardening with multi-user authorization, network isolation, and test failover automation.</div>
+                <div class="service-name">Azure Security Benchmark Assessment</div>
+                <div class="service-price">GHS 8,000 - 35,000</div>
+                <div class="service-desc"><strong>Comprehensive Azure Security Review:</strong> Conduct thorough assessment against Microsoft Cloud Security Benchmark. Review identity management, privileged access, data protection, network security, and incident response. Deliver prioritized remediation plan with implementation guidance. Includes executive summary and technical findings for stakeholders.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-microsoft"></i></div>
                 <div class="service-category">Azure Security</div>
-                <div class="service-name">Azure Kubernetes Service Security</div>
-                <div class="service-price">GHS 8,500 - 58,000</div>
-                <div class="service-desc">AKS security hardening with Azure Policy for Kubernetes, Azure Defender for containers, and Azure AD integration. Includes network policies, pod identity, secret store CSI driver, and container image scanning.</div>
+                <div class="service-name">Azure Arc Security Management</div>
+                <div class="service-price">GHS 9,000 - 40,000</div>
+                <div class="service-desc"><strong>Hybrid & Multi-Cloud Security:</strong> Deploy Azure Arc to extend Azure security controls to on-premises and other cloud environments. Centralize security policy enforcement, threat detection, and compliance monitoring across Windows/Linux servers, Kubernetes clusters, and SQL servers. Includes inventory management, patch compliance, and security configuration assessment.</div>
             </div>
         </div>
 
-        <!-- Google Cloud Security Services (21-30) -->
+        <!-- GCP Security Services (8) -->
         <div style="margin: 60px 0 20px;">
-            <h2 style="color: #00ff9d; font-size: 28px; border-left: 4px solid #00ff9d; padding-left: 15px;">
-                <i class="fab fa-google" style="margin-right: 10px;"></i> Google Cloud Security Services
+            <h2 style="color: #00ff9d; font-size: 28px; display: flex; align-items: center; gap: 10px;">
+                <i class="fab fa-google"></i> Google Cloud Security Services
             </h2>
         </div>
         <div class="services-grid">
@@ -2386,185 +2388,205 @@ function getCloudSecurityPage() {
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
                 <div class="service-name">Security Command Center Premium</div>
-                <div class="service-price">GHS 7,500 - 52,000</div>
-                <div class="service-desc">Complete vulnerability assessment, threat detection, and asset discovery across GCP organizations. Includes Event Threat Detection, Container Threat Detection, and Web Security Scanner with VM Manager integration.</div>
+                <div class="service-price">GHS 7,000 - 32,000</div>
+                <div class="service-desc"><strong>Unified Security & Risk Management:</strong> Deploy Security Command Center Premium for comprehensive threat detection, vulnerability scanning, and compliance monitoring. Discover asset inventory, detect misconfigurations, identify sensitive data, and monitor for threats across GCP workloads. Includes integrated findings from Event Threat Detection, Web Security Scanner, and Container Threat Detection.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Cloud IAM & Access Governance</div>
-                <div class="service-price">GHS 4,800 - 30,000</div>
-                <div class="service-desc">Fine-grained access control with custom roles, policy intelligence, and access approval. Includes organization policies, workload identity federation, and just-in-time access with IAM Conditions.</div>
+                <div class="service-name">Cloud Armor + Cloud CDN</div>
+                <div class="service-price">GHS 5,500 - 25,000</div>
+                <div class="service-desc"><strong>Web Application & DDoS Protection:</strong> Deploy Cloud Armor with WAF rules to protect against OWASP Top 10 threats. Configure adaptive protection using machine learning to detect and block application-layer DDoS attacks. Implement geo-based access controls, rate limiting, and preconfigured rules for WordPress, Apache, and Nginx. Includes integration with Cloud CDN for edge security.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Cloud Armor & WAF</div>
-                <div class="service-price">GHS 6,200 - 42,000</div>
-                <div class="service-desc">Adaptive protection with Google's global security infrastructure. Custom WAF rules, DDoS protection, and bot management. Includes pre-configured rules for OWASP Top 10 and CVE-specific protections.</div>
+                <div class="service-name">Cloud IAM + Policy Intelligence</div>
+                <div class="service-price">GHS 4,500 - 20,000</div>
+                <div class="service-desc"><strong>Advanced Identity & Access Management:</strong> Implement least-privilege access with Cloud IAM, including custom roles and conditional access. Use Policy Intelligence to identify unused permissions, analyze access patterns, and right-size IAM policies. Configure workload identity federation for Kubernetes and service accounts. Includes continuous access validation and privilege escalation monitoring.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Cloud IDS & Network Security</div>
-                <div class="service-price">GHS 6,800 - 45,000</div>
-                <div class="service-desc">Managed intrusion detection with Palo Alto Networks threat signatures. VPC Service Controls for data exfiltration prevention, private Google Access, and firewall rules logging and analysis.</div>
+                <div class="service-name">Cloud Key Management + EKM</div>
+                <div class="service-price">GHS 5,000 - 22,000</div>
+                <div class="service-desc"><strong>Enterprise Key Management:</strong> Deploy Cloud KMS with automatic key rotation and centralized management. Implement External Key Manager (EKM) for customers managing keys in external HSM. Configure encryption at rest for all GCP services with CMEK. Includes key usage auditing, access transparency logs, and integration with VPC Service Controls.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Cloud Key Management Service</div>
-                <div class="service-price">GHS 4,200 - 26,000</div>
-                <div class="service-desc">Centralized key management with HSM options, automatic rotation, and key access logs. Integration with Cloud Storage, BigQuery, and Compute Engine. Includes CMEK and CSEK implementation.</div>
+                <div class="service-name">VPC Service Controls</div>
+                <div class="service-price">GHS 6,000 - 28,000</div>
+                <div class="service-desc"><strong>Data Exfiltration Prevention:</strong> Implement VPC Service Controls to create security perimeters around GCP resources. Define ingress/egress policies to prevent unauthorized data transfer. Configure context-aware access based on identity, device, and location. Includes audit logging, dry-run mode for safe testing, and integration with Access Context Manager.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Chronicle SIEM & SOAR</div>
-                <div class="service-price">GHS 12,000 - 85,000</div>
-                <div class="service-desc">Google Cloud's security analytics platform with 1-year retention, unstructured log ingestion, and YARA-L rule development. Includes automated investigation and response playbooks.</div>
+                <div class="service-name">Event Threat Detection</div>
+                <div class="service-price">GHS 5,500 - 24,000</div>
+                <div class="service-desc"><strong>Real-Time Threat Detection:</strong> Deploy Event Threat Detection to identify malicious activity across GCP logs. Detect cryptocurrency mining, stolen API keys, compromised instances, and data exfiltration attempts. Configure automated response actions with Cloud Functions. Includes integration with Security Command Center and SIEM tools for centralized alerting.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Binary Authorization & Supply Chain Security</div>
-                <div class="service-price">GHS 5,800 - 38,000</div>
-                <div class="service-desc">Deployment-time enforcement of signed container images with Grafeas metadata. Integration with Container Analysis, Cloud Build, and Artifact Registry. Includes attestation authorities and break-glass procedures.</div>
+                <div class="service-name">Container Threat Detection</div>
+                <div class="service-price">GHS 5,000 - 22,000</div>
+                <div class="service-desc"><strong>Kubernetes Security Monitoring:</strong> Deploy Container Threat Detection for real-time security analysis of GKE workloads. Detect privilege escalations, reverse shells, binary planting, and suspicious container activity. Integrate with Security Command Center for centralized visibility. Includes runtime security policies, incident response playbooks, and forensics data collection.</div>
             </div>
 
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-google"></i></div>
                 <div class="service-category">GCP Security</div>
-                <div class="service-name">Data Loss Prevention API</div>
-                <div class="service-price">GHS 5,500 - 36,000</div>
-                <div class="service-desc">Automated discovery, classification, and de-identification of sensitive data across Cloud Storage, BigQuery, and Datastore. Custom infoTypes for Ghana-specific data, transformation techniques, and risk analysis.</div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fab fa-google"></i></div>
-                <div class="service-category">GCP Security</div>
-                <div class="service-name">Access Transparency & Cloud Audit Logs</div>
-                <div class="service-price">GHS 3,800 - 22,000</div>
-                <div class="service-desc">Near real-time logs of Google administrators accessing your content, custom log-based metrics, and audit log analysis. Includes log exports to BigQuery, Pub/Sub, and SIEM integration.</div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"><i class="fab fa-google"></i></div>
-                <div class="service-category">GCP Security</div>
-                <div class="service-name">GKE Enterprise Security</div>
-                <div class="service-price">GHS 9,500 - 68,000</div>
-                <div class="service-desc">Advanced container security with GKE Sandbox, Policy Controller (OPA/Gatekeeper), and Config Sync. Includes workload identity, binary authorization, and container-optimized OS hardening.</div>
+                <div class="service-name">Access Transparency + Audit Logs</div>
+                <div class="service-price">GHS 4,000 - 18,000</div>
+                <div class="service-desc"><strong>Comprehensive Audit & Compliance:</strong> Implement Access Transparency for detailed logs of Google staff access to customer content. Configure audit logging with retention policies for all GCP services. Develop custom dashboards for compliance reporting and security analytics. Includes log exports to BigQuery, Cloud Storage, and third-party SIEM solutions.</div>
             </div>
         </div>
 
-        <!-- Multi-Cloud & Hybrid Security Services (31-35) -->
+        <!-- Multi-Cloud & Container Security (7) -->
         <div style="margin: 60px 0 20px;">
-            <h2 style="color: #00ff9d; font-size: 28px; border-left: 4px solid #00ff9d; padding-left: 15px;">
-                <i class="fas fa-cloud" style="margin-right: 10px;"></i> Multi-Cloud & Hybrid Security Services
+            <h2 style="color: #00ff9d; font-size: 28px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-cloud"></i> Multi-Cloud & Container Security
             </h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                <div class="service-category">Multi-Cloud Security</div>
-                <div class="service-name">Cloud Security Posture Management (CSPM)</div>
-                <div class="service-price">GHS 12,000 - 85,000</div>
-                <div class="service-desc">Unified security posture management across AWS, Azure, and GCP using tools like Wiz, Orca, or Lacework. Includes misconfiguration detection, compliance monitoring, and automated remediation across all cloud providers with a single dashboard.</div>
+                <div class="service-icon"><i class="fas fa-docker"></i></div>
+                <div class="service-category">Container Security</div>
+                <div class="service-name">Kubernetes RBAC + OPA Gatekeeper</div>
+                <div class="service-price">GHS 8,000 - 35,000</div>
+                <div class="service-desc"><strong>Comprehensive Kubernetes Authorization & Policy Enforcement:</strong> Design and implement fine-grained RBAC across multiple clusters with least-privilege principles. Deploy OPA Gatekeeper for dynamic admission control with custom policies. Enforce security standards including privileged containers, host network access, allowed registries, and resource limits. Includes policy-as-code development, testing frameworks, and audit logging for compliance reporting.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                <div class="service-category">Multi-Cloud Security</div>
-                <div class="service-name">Cloud Workload Protection Platform (CWPP)</div>
-                <div class="service-price">GHS 10,500 - 72,000</div>
-                <div class="service-desc">Unified workload protection for VMs, containers, and serverless across clouds using Prisma Cloud or Aqua Security. Includes vulnerability management, runtime protection, and compliance scanning for all workloads.</div>
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <div class="service-category">Container Security</div>
+                <div class="service-name">Container Image Security Scanning</div>
+                <div class="service-price">GHS 6,000 - 28,000</div>
+                <div class="service-desc"><strong>Automated Vulnerability Management for Containers:</strong> Implement continuous image scanning across development, CI/CD, and production environments. Integrate with popular registries (ECR, ACR, GCR, Docker Hub) to automatically scan for OS and application-level vulnerabilities. Detect malware, secrets, and configuration drift. Includes severity-based prioritization, fix recommendations, and integration with vulnerability management workflows.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                <div class="service-category">Multi-Cloud Security</div>
-                <div class="service-name">Cross-Cloud Identity Federation</div>
-                <div class="service-price">GHS 8,500 - 58,000</div>
-                <div class="service-desc">Unified identity management across AWS, Azure, and GCP with Okta or Auth0. Includes SSO implementation, automated user provisioning, and consistent access policies across all cloud platforms.</div>
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="service-category">Container Security</div>
+                <div class="service-name">Kubernetes Network Policies + Cilium</div>
+                <div class="service-price">GHS 7,500 - 33,000</div>
+                <div class="service-desc"><strong>Advanced Network Security for Containers:</strong> Design and implement micro-segmentation using Kubernetes Network Policies and Cilium eBPF. Enforce zero-trust networking between pods, services, and external endpoints. Implement encryption-in-transit with mTLS, DNS-based policies, and API-aware security rules. Includes network flow visibility, security audit logging, and integration with monitoring tools for threat detection.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                 <div class="service-category">Multi-Cloud Security</div>
-                <div class="service-name">Multi-Cloud Encryption Strategy</div>
-                <div class="service-price">GHS 7,800 - 52,000</div>
-                <div class="service-desc">Consistent encryption approach across clouds with centralized key management using HashiCorp Vault or AWS KMS + Azure Key Vault + GCP KMS integration. Includes envelope encryption, key rotation, and audit logging.</div>
+                <div class="service-name">Crossplane + Multi-Cloud IAM</div>
+                <div class="service-price">GHS 12,000 - 50,000</div>
+                <div class="service-desc"><strong>Unified Multi-Cloud Security Control Plane:</strong> Deploy Crossplane to manage infrastructure and security policies consistently across AWS, Azure, and GCP. Implement centralized IAM with federated identities and role-based access across cloud providers. Configure consistent security policies, encryption standards, and compliance controls. Includes automated drift detection and remediation for security configurations.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                <div class="service-icon"><i class="fas fa-key"></i></div>
                 <div class="service-category">Multi-Cloud Security</div>
-                <div class="service-name">Hybrid Cloud Networking Security</div>
-                <div class="service-price">GHS 11,000 - 78,000</div>
-                <div class="service-desc">Secure connectivity between on-premises and multiple clouds using Aviatrix or Cisco Cloud ACI. Includes encrypted transit, micro-segmentation, and consistent network policy across environments.</div>
+                <div class="service-name">HashiCorp Vault Multi-Cloud</div>
+                <div class="service-price">GHS 9,000 - 42,000</div>
+                <div class="service-desc"><strong>Enterprise Secrets Management Across Clouds:</strong> Deploy HashiCorp Vault for centralized secrets management across AWS, Azure, and GCP. Implement dynamic database credentials, PKI as a service, and encryption-as-a-service. Configure cross-cloud replication for high availability and disaster recovery. Includes audit logging, policy-as-code with Sentinel, and integration with Kubernetes for pod identity.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                <div class="service-category">Compliance</div>
-                <div class="service-name">Multi-Cloud Compliance Automation</div>
-                <div class="service-price">GHS 9,500 - 65,000</div>
-                <div class="service-desc">Automated compliance monitoring across all clouds for GDPR, HIPAA, PCI-DSS, ISO 27001, and SOC2. Includes evidence collection, continuous auditing, and auditor-ready reporting with tools like Tugboat Logic or Vanta.</div>
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">CSPM Multi-Cloud Implementation</div>
+                <div class="service-price">GHS 15,000 - 65,000</div>
+                <div class="service-desc"><strong>Cloud Security Posture Management Across All Clouds:</strong> Deploy CSPM solution (Prisma Cloud, Wiz, or Orca) for unified visibility across AWS, Azure, and GCP. Identify misconfigurations, compliance violations, and attack paths. Implement automated remediation workflows and CIEM (Cloud Infrastructure Entitlement Management). Includes comprehensive reporting for CIS, NIST, ISO 27001, and PCI DSS compliance.</div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Multi-Cloud Disaster Recovery</div>
+                <div class="service-price">GHS 14,000 - 60,000</div>
+                <div class="service-desc"><strong>Cross-Cloud Disaster Recovery & Business Continuity:</strong> Design and implement disaster recovery across multiple cloud providers. Configure cross-region and cross-cloud replication for critical workloads. Implement automated failover testing with Chaos Engineering practices. Define RPO/RTO requirements and maintain runbooks. Includes regular DR drills, compliance reporting, and cost optimization for DR infrastructure.</div>
             </div>
         </div>
 
-        <!-- Specialized Cloud Security Services (36-40) -->
+        <!-- Cloud Security Compliance & Training (5) -->
         <div style="margin: 60px 0 20px;">
-            <h2 style="color: #00ff9d; font-size: 28px; border-left: 4px solid #00ff9d; padding-left: 15px;">
-                <i class="fas fa-crown" style="margin-right: 10px;"></i> Specialized Cloud Security Services
+            <h2 style="color: #00ff9d; font-size: 28px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-clipboard-check"></i> Cloud Compliance & Training
             </h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-database"></i></div>
-                <div class="service-category">Database Security</div>
-                <div class="service-name">Cloud Database Activity Monitoring</div>
-                <div class="service-price">GHS 8,200 - 56,000</div>
-                <div class="service-desc">Real-time monitoring of database activity across RDS, Aurora, Cloud SQL, and Azure SQL using Imperva or Datadog. Includes anomalous access detection, SQL injection prevention, and privileged user monitoring with immediate alerting.</div>
+                <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                <div class="service-category">Cloud Compliance</div>
+                <div class="service-name">PCI DSS Cloud Implementation</div>
+                <div class="service-price">GHS 18,000 - 80,000</div>
+                <div class="service-desc"><strong>Complete PCI DSS Compliance for Cloud Environments:</strong> Implement all 12 PCI DSS requirements across cloud infrastructure. Deploy cardholder data environment with proper segmentation, encryption, and access controls. Configure continuous compliance monitoring, quarterly scans, and annual assessments. Includes documentation for SAQ D, evidence collection, and auditor support.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-robot"></i></div>
-                <div class="service-category">AI/ML Security</div>
-                <div class="service-name">AI/ML Model Security & Privacy</div>
-                <div class="service-price">GHS 12,000 - 90,000</div>
-                <div class="service-desc">Security assessment of AI/ML pipelines across SageMaker, Azure ML, and Vertex AI. Includes model inversion protection, differential privacy implementation, and adversarial attack prevention with robust training techniques.</div>
+                <div class="service-icon"><i class="fas fa-shield"></i></div>
+                <div class="service-category">Cloud Compliance</div>
+                <div class="service-name">HIPAA Cloud Implementation</div>
+                <div class="service-price">GHS 16,000 - 75,000</div>
+                <div class="service-desc"><strong>HIPAA-Compliant Cloud Architecture:</strong> Design and implement cloud environments meeting HIPAA Security and Privacy Rules. Deploy protected health information (PHI) workloads with proper encryption, access controls, and audit logging. Configure business associate agreements (BAAs) with cloud providers. Includes risk assessment, contingency planning, and documentation for OCR audits.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-file-code"></i></div>
-                <div class="service-category">DevSecOps</div>
-                <div class="service-name">Cloud Infrastructure as Code Security</div>
-                <div class="service-price">GHS 7,500 - 48,000</div>
-                <div class="service-desc">Security scanning of Terraform, CloudFormation, and ARM templates using Checkov or tfsec. Includes pre-deployment policy enforcement, drift detection, and automated remediation of misconfigurations across all cloud providers.</div>
+                <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                <div class="service-category">Cloud Compliance</div>
+                <div class="service-name">ISO 27001 Cloud Readiness</div>
+                <div class="service-price">GHS 15,000 - 70,000</div>
+                <div class="service-desc"><strong>ISO 27001 Certification Support for Cloud:</strong> Prepare cloud infrastructure for ISO 27001 certification. Implement Annex A controls relevant to cloud environments including A.8 (asset management), A.9 (access control), A.10 (cryptography), and A.12 (operations security). Develop required documentation, risk treatment plans, and statement of applicability. Includes gap assessment and audit preparation.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-chart-line"></div>
-                <div class="service-category">Cloud Cost Security</div>
-                <div class="service-name">Cloud Security Cost Optimization</div>
-                <div class="service-price">GHS 6,500 - 42,000</div>
-                <div class="service-desc">Balance security requirements with cloud costs through resource right-sizing, reserved instance optimization, and security tool consolidation. Includes FinOps integration with security controls for optimal spending.</div>
+                <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+                <div class="service-category">Cloud Training</div>
+                <div class="service-name">Cloud Security Team Training</div>
+                <div class="service-price">GHS 8,000 - 30,000</div>
+                <div class="service-desc"><strong>Comprehensive Cloud Security Training for Teams:</strong> Customized training program covering cloud security fundamentals, threat modeling, secure architecture design, and incident response. Includes hands-on labs for AWS, Azure, and GCP security controls. Covers identity management, network security, data protection, and compliance automation. Delivered remotely with 12 months of post-training support.</div>
             </div>
 
             <div class="service-card">
-                <div class="service-icon"><i class="fas fa-search"></i></div>
-                <div class="service-category">Cloud Forensics</div>
-                <div class="service-name">Cloud Incident Response & Forensics</div>
-                <div class="service-price">GHS 15,000 - 120,000</div>
-                <div class="service-desc">24/7 incident response readiness with cloud-native forensic tools. Includes automated evidence collection, timeline analysis, and root cause investigation across AWS, Azure, and GCP. Retainer options available for immediate response.</div>
+                <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Security Architecture Review</div>
+                <div class="service-price">GHS 10,000 - 45,000</div>
+                <div class="service-desc"><strong>Comprehensive Cloud Security Architecture Assessment:</strong> Thorough review of cloud security architecture across all providers. Evaluate identity framework, network design, data protection, monitoring capabilities, and incident response readiness. Deliver detailed findings, prioritized remediation roadmap, and reference architecture designs. Includes threat modeling, attack path analysis, and executive presentation.</div>
             </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div style="margin: 60px 0; padding: 30px; background: rgba(0,255,157,0.05); border-radius: 20px;">
+            <h3 style="color: #00ff9d; font-size: 24px; margin-bottom: 20px; text-align: center;">📊 Complete Cloud Security Coverage</h3>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; text-align: center;">
+                <div>
+                    <div style="font-size: 36px; color: #00ff9d;">10</div>
+                    <div>AWS Services</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; color: #00ff9d;">10</div>
+                    <div>Azure Services</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; color: #00ff9d;">8</div>
+                    <div>GCP Services</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; color: #00ff9d;">7</div>
+                    <div>Multi-Cloud</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; color: #00ff9d;">5</div>
+                    <div>Compliance/Training</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: #b0b0b0;">Total: 40 comprehensive cloud security services with Ghana market pricing</p>
         </div>
     `;
 }

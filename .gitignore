@@ -1,21 +1,32 @@
+# Dependencies
 node_modules/
+.pm2/
+*.log
+
+# Environment
 .env
 .env.local
-logs/
-*.log
+.env.*.local
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# IDE
 .vscode/
 .idea/
-portfolio-backups/
+*.swp
+*.swo
+
+# Vercel
+.vercel
+
+# Backups
+*-backup/
+*.backup
+*.backup-*
+
+# Large files
 *.tar.gz
-.pm2/
-vpn-config/*.key
-ssl/*.key
-grafana-data/
-prometheus-data/
-*.iso
-*.AppImage
-__pycache__/
-*.pyc
-.terraform/
-*.tfstate
+*.zip
+*.tgz
