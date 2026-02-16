@@ -8,8 +8,7 @@
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "github": {
-    "silent": true,
-    "autoAlias": true,
+    "silent": false,
     "autoJobCancelation": true
   }
 }
