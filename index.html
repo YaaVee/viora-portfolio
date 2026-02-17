@@ -1199,7 +1199,7 @@
         <nav>
             <div class="logo">VYM</div>
             <div class="nav-links">
-                <a href="#" onclick="console.log("🏠 Loading home page...");
+                <a href="#" onclick="console.log(' Loading home page...');
     showPage("home");
     document.getElementById("js-status").innerText = "Home page loaded"; return false;" id="nav-home">Home</a>
                 <a href="#" onclick="showPage('services'); return false;" id="nav-services">Services</a>
@@ -1242,12 +1242,6 @@
     
     <script>
     console.log("🔍 Script starting...");
-    window.onerror = function(msg, url, line) {
-        document.getElementById("js-status").innerText = "ERROR: " + msg;
-        console.error("Error:", msg, "at line", line);
-        return false;
-    };
-    console.log("Script started");
     window.onerror = function(msg, url, line) {
         console.log("Error: " + msg + " at line " + line);
         return false;
