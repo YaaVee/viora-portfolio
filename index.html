@@ -1199,7 +1199,9 @@
         <nav>
             <div class="logo">VYM</div>
             <div class="nav-links">
-                <a href="#" onclick="showPage('home'); return false;" id="nav-home">Home</a>
+                <a href="#" onclick="console.log("🏠 Loading home page...");
+    showPage("home");
+    document.getElementById("js-status").innerText = "Home page loaded"; return false;" id="nav-home">Home</a>
                 <a href="#" onclick="showPage('services'); return false;" id="nav-services">Services</a>
                 <a href="#" onclick="showPage('cloud-security'); return false;" id="nav-cloud-security">Cloud Security</a>
                 <a href="#" onclick="showPage('network-security'); return false;" id="nav-network-security">Network Security</a>
@@ -1239,6 +1241,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
+    console.log("🔍 Script starting...");
+    window.onerror = function(msg, url, line) {
+        document.getElementById("js-status").innerText = "ERROR: " + msg;
+        console.error("Error:", msg, "at line", line);
+        return false;
+    };
+    console.log("Script started");
+    window.onerror = function(msg, url, line) {
+        console.log("Error: " + msg + " at line " + line);
+        return false;
+    };
         // ============================================
         // AUTO-DEBUG, AUTO-HEAL, AUTO-START SYSTEM
         // ============================================
@@ -1277,7 +1290,9 @@
             }
             
             try {
-                showPage('home');
+                console.log("🏠 Loading home page...");
+    showPage("home");
+    document.getElementById("js-status").innerText = "Home page loaded";
                 addDebugLog('✅ Navigation system active', 'success');
             } catch (e) {
                 handleError('Navigation failed', e);
@@ -5176,7 +5191,9 @@ function getProjectIcon(category) {
         }
 
         // Load home page by default
-        showPage('home');
+        console.log("🏠 Loading home page...");
+        showPage("home");
+        document.getElementById("js-status").innerText = "Home page loaded";
     </script>
 </body>
 </html>
