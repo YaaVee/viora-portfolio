@@ -3814,4 +3814,290 @@ function filterCaseStudies(industry) {
         showPage('home');
     </script>
 </body>
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="services-section">
+    <div class="container">
+        <h2 class="section-title">Security Services</h2>
+        <p class="section-subtitle">100+ comprehensive security solutions with measurable results</p>
+        
+        <div class="services-grid" id="services-container">
+            <!-- SERVICES WILL BE INSERTED HERE -->
+        </div>
+    </div>
+</section>
+
+<script>
+// Services data - 100+ entries following Why/What/Results format
+const servicesData = [
+    // ===== NETWORK SECURITY (1-20) =====
+    {
+        title: "Enterprise Firewall Architecture",
+        why: "Why implement enterprise firewall architecture? Because basic perimeter defense is insufficient against modern threats. This service provides defense-in-depth with next-gen firewalls, intrusion prevention, application control, and advanced threat protection.",
+        what: [
+            "Next-generation firewall deployment (Palo Alto, Fortinet, Cisco Firepower)",
+            "Deep packet inspection and SSL/TLS decryption for encrypted traffic analysis",
+            "Application-aware rules with user identification integration (AD/LDAP)",
+            "Threat intelligence feeds for zero-day protection (WildFire, Talos)",
+            "High availability clustering with automatic failover (Active/Passive)",
+            "Centralized management with Panorama/FortiManager",
+            "Traffic shaping and QoS for business-critical applications",
+            "VPN termination with IPSec and SSL VPN capabilities"
+        ],
+        results: "Results: 99.99% uptime with HA clustering, 85% reduction in successful perimeter breaches, complete network visibility with application identification, and compliance with PCI DSS Requirement 1. Business impact: $2.5M annualized loss avoidance."
+    },
+    {
+        title: "Zero Trust Network Architecture (ZTNA)",
+        why: "Why implement Zero Trust? Because traditional castle-and-moat security fails when attackers are inside the network. This service implements 'never trust, always verify' principles to protect against lateral movement and insider threats.",
+        what: [
+            "Micro-segmentation with VMware NSX or Cisco ACI",
+            "Identity-aware proxy with BeyondCorp principles",
+            "Continuous authentication and authorization (Okta, Ping Identity)",
+            "Device posture checking before resource access",
+            "Just-in-time access provisioning with automatic revocation",
+            "Encrypted internal traffic with mTLS (Istio, Linkerd)",
+            "Session monitoring with UEBA analytics",
+            "Integration with SIEM for real-time threat detection"
+        ],
+        results: "Results: 95% reduction in lateral movement capabilities, 80% decrease in insider threat impact, complete visibility into user-to-resource connections, and compliance with NIST 800-207 Zero Trust guidelines."
+    },
+    {
+        title: "Intrusion Detection & Prevention (IDS/IPS)",
+        why: "Why deploy IDS/IPS? Because threats bypass traditional defenses and dwell undetected for months. This service provides real-time threat detection and automated blocking before damage occurs.",
+        what: [
+            "Signature-based detection with Snort/Suricata rulesets",
+            "Anomaly-based detection using machine learning models",
+            "Protocol analysis and traffic normalization",
+            "Threat intelligence integration (AlienVault OTX, MISP)",
+            "Automated blocking with firewall integration",
+            "PCAP capture for forensic investigation",
+            "TLS/SSL inspection capabilities",
+            "Cloud-delivered IPS for remote offices"
+        ],
+        results: "Results: 99.5% threat detection rate, 60-second mean time to detection, 5-minute automated response time, and prevention of ransomware outbreaks. Compliance with PCI DSS Requirement 11.4."
+    },
+    {
+        title: "Secure SD-WAN Implementation",
+        why: "Why migrate to Secure SD-WAN? Because MPLS is expensive and branch connectivity lacks security. This service delivers cost-effective, secure connectivity with integrated security stack.",
+        what: [
+            "VeloCloud/Viptela/Fortinet SD-WAN deployment",
+            "Integrated next-gen firewall and IPS capabilities",
+            "Application-aware routing with QoS policies",
+            "Direct internet breakout with cloud-delivered security",
+            "VPN overlay with AES-256 encryption",
+            "Centralized orchestration and monitoring",
+            "Zero-touch provisioning for branches",
+            "WAN optimization for bandwidth efficiency"
+        ],
+        results: "Results: 60% reduction in WAN costs, 99.99% application availability, 5x bandwidth increase, and integrated security at all branch locations. 12-month ROI achieved in 8 months."
+    },
+    {
+        title: "Network Segmentation & Micro-segmentation",
+        why: "Why segment your network? Because flat networks allow ransomware to spread from IoT to critical servers in minutes. This service creates security zones that contain breaches and protect critical assets.",
+        what: [
+            "VLAN design and implementation with 802.1Q tagging",
+            "Private VLANs for isolation within segments",
+            "Firewall rule optimization and policy cleanup",
+            "VMware NSX micro-segmentation for data center",
+            "Kubernetes network policies for container environments",
+            "AWS Security Groups and Network ACLs",
+            "Azure Network Security Groups implementation",
+            "PCI DSS compliant segment design"
+        ],
+        results: "Results: 90% reduction in attack surface, containment of breaches to single segments, simplified compliance auditing, and 50% reduction in firewall rule sprawl."
+    },
+    {
+        title: "DDoS Protection Services",
+        why: "Why implement DDoS protection? Because a single DDoS attack can cost $100,000+ per hour in lost revenue and reputational damage. This service provides multi-layered defense against volumetric and application-layer attacks.",
+        what: [
+            "Cloud-based scrubbing centers (Cloudflare, Akamai, AWS Shield)",
+            "On-premises mitigation appliances (Arbor, Radware, F5)",
+            "BGP routing with RTBH and FlowSpec capabilities",
+            "Rate limiting and connection tracking",
+            "Application-layer DDoS protection (WAF integration)",
+            "24/7 SOC monitoring with DDoS playbooks",
+            "Traffic profiling and baseline establishment",
+            "Automated mitigation triggers"
+        ],
+        results: "Results: Mitigation of 99% of attacks within 30 seconds, protection against 500+ Gbps volumetric attacks, zero downtime during attack events, and compliance with financial industry regulations."
+    },
+    {
+        title: "VPN & Remote Access Security",
+        why: "Why secure remote access? Because unsecured remote connections are the #1 entry point for ransomware groups. This service provides enterprise-grade VPN with multi-factor authentication and endpoint posture checks.",
+        what: [
+            "SSL VPN deployment (Pulse Secure, F5, Fortinet)",
+            "IPSec site-to-site VPN configuration",
+            "Multi-factor authentication integration (Duo, RSA, Google Authenticator)",
+            "Endpoint compliance scanning before connection",
+            "Split tunneling policies for security vs performance",
+            "VPN logging and monitoring with SIEM integration",
+            "Client certificate management",
+            "High availability VPN gateway design"
+        ],
+        results: "Results: 100% encrypted remote connections, 99.9% reduction in credential theft-related breaches, seamless remote access for 5000+ users, and compliance with remote access policies."
+    },
+    {
+        title: "Network Access Control (NAC)",
+        why: "Why implement NAC? Because unidentified devices on your network are security blind spots. This service ensures only authorized and compliant devices can access network resources.",
+        what: [
+            "802.1X authentication with RADIUS (Cisco ISE, Aruba ClearPass)",
+            "Device profiling and fingerprinting",
+            "Guest network access with captive portal",
+            "Endpoint posture assessment (antivirus, patch level)",
+            "Quarantine and remediation for non-compliant devices",
+            "Integration with MDM/EMM solutions",
+            "Wired and wireless enforcement",
+            "IoT device visibility and segmentation"
+        ],
+        results: "Results: 100% visibility of all network-connected devices, 75% reduction in unauthorized access incidents, automated compliance enforcement, and simplified guest access management."
+    },
+    {
+        title: "Wireless Network Security",
+        why: "Why secure wireless networks? Because rogue APs and weak encryption expose your network to parking lot attacks. This service implements enterprise-grade wireless security with intrusion prevention.",
+        what: [
+            "WPA3-Enterprise deployment with 802.1X",
+            "Wireless intrusion prevention system (WIPS)",
+            "Rogue AP detection and automated containment",
+            "RF monitoring and spectrum analysis",
+            "Client isolation and role-based access",
+            "Captive portal with social login options",
+            "Wireless mesh security for outdoor coverage",
+            "Centralized wireless controller architecture"
+        ],
+        results: "Results: 99.999% wireless availability, zero wireless breaches in 3 years, complete rogue AP detection within 60 seconds, and secure guest Wi-Fi for 1000+ concurrent users."
+    },
+    {
+        title: "Network Traffic Analysis & Visibility",
+        why: "Why need traffic visibility? Because you can't stop what you can't see. This service provides deep packet inspection and flow analysis to detect anomalies and optimize performance.",
+        what: [
+            "NetFlow/sFlow/IPFIX implementation",
+            "Deep packet inspection with packet brokers",
+            "Network detection and response (NDR) deployment",
+            "Encrypted traffic analysis without decryption",
+            "Baselining and anomaly detection",
+            "Application dependency mapping",
+            "Bandwidth monitoring and capacity planning",
+            "Threat hunting capabilities"
+        ],
+        results: "Results: 100% network visibility, 70% faster troubleshooting, detection of hidden C2 communications, and optimized bandwidth utilization saving 30% on circuit costs."
+    },
+    // CONTINUED IN NEXT BATCH...
+];
+
+// Function to render services with proper formatting
+function renderServices() {
+    const container = document.getElementById('services-container');
+    if (!container) return;
+    
+    let html = '';
+    servicesData.forEach(service => {
+        html += `
+            <div class="service-card">
+                <h3>${service.title}</h3>
+                <div class="service-desc">
+                    <strong>Why implement this?</strong> ${service.why}
+                    
+                    <strong>Implementation includes:</strong>
+                    <ul>
+                        ${service.what.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                    
+                    <strong>Results:</strong> ${service.results}
+                </div>
+                <div class="service-footer">
+                    <button class="service-btn">Learn More</button>
+                </div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+}
+
+// Run when DOM is loaded
+document.addEventListener('DOMContentLoaded', renderServices);
+</script>
+
+<!-- Add styles for services if not already present -->
+<style>
+.services-section {
+    padding: 80px 0;
+    background: var(--bg-dark, #0a0a0a);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--card-bg, #111);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid var(--border-color, #222);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-green, #00ff9d);
+}
+
+.service-card h3 {
+    color: var(--neon-green, #00ff9d);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.service-desc {
+    color: var(--text-light, #aaa);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.service-desc strong {
+    color: var(--text-white, #fff);
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.service-desc ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.service-desc li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+.service-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.service-btn {
+    background: transparent;
+    border: 1px solid var(--neon-green, #00ff9d);
+    color: var(--neon-green, #00ff9d);
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-btn:hover {
+    background: var(--neon-green, #00ff9d);
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</section>
 </html>
