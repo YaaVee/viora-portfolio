@@ -1,0 +1,20 @@
+<!-- WEB DEV PAGE CONTENT - Replace the existing getWebDevPage() function -->
+function getWebDevPage() {
+    // Extract web development services from the main services page
+    const allServices = getServicesPage();
+    const webServices = allServices.split('<div class="services-grid">')[1].split('</div>')[0]
+        .split('<div class="service-card">')
+        .filter(card => card.includes('Web Development') || card.includes('WAF') || card.includes('OWASP') || card.includes('API') || card.includes('WordPress') || card.includes('e-commerce'))
+        .map(card => '<div class="service-card">' + card)
+        .join('');
+    
+    return `
+        <div class="page-header">
+            <h1>Web Development & Security Services</h1>
+            <p>100+ specialized web development and security services</p>
+        </div>
+        <div class="services-grid">
+            ${webServices}
+        </div>
+    `;
+}

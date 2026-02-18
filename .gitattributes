@@ -1,0 +1,46 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Documents
+*.md text diff=markdown
+*.txt text
+
+# Config files
+*.json text
+*.yml text
+*.yaml text
+*.toml text
+*.ini text
+*.conf text
+
+# Web files
+*.html text diff=html
+*.css text diff=css
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Archives
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+*.gz binary
+
+# Executables
+*.exe binary
+*.dll binary
+*.so binary

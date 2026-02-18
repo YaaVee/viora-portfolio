@@ -1,0 +1,28 @@
+Cloud Security Best Practices:
+
+AWS Security:
+- Enable CloudTrail in all regions
+- Use IAM roles with least privilege
+- Enable S3 Block Public Access
+- Use Security Groups, not NACLs, for stateful filtering
+- Enable AWS Config for compliance monitoring
+- Use AWS WAF for web application protection
+- Enable GuardDuty for threat detection
+
+Azure Security:
+- Use Azure Security Center for posture management
+- Implement Azure Sentinel for SIEM
+- Enable Azure Defender for workload protection
+- Use Azure Policy for compliance enforcement
+- Implement Network Security Groups properly
+- Enable Azure DDoS Protection
+- Use Key Vault for secrets management
+
+GCP Security:
+- Use Security Command Center for visibility
+- Implement Cloud Armor for WAF/DDoS
+- Enable VPC Service Controls
+- Use Forseti for policy enforcement
+- Enable Cloud IDS for threat detection
+- Use Cloud KMS for encryption
+- Implement IAM with least privilege

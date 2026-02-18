@@ -1,0 +1,191 @@
+<!-- CASE STUDIES PAGE CONTENT - Replace the existing getCaseStudiesPage() function -->
+function getCaseStudiesPage() {
+    return `
+        <div class="page-header">
+            <h1>Security Case Studies</h1>
+            <p>60+ detailed case studies with real problems, troubleshooting, and solutions</p>
+        </div>
+
+        <div class="case-studies-grid">
+            <!-- Case Study 1: Financial Services Zero Trust Implementation -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Zero Trust Architecture for Regional Bank</div>
+                    <div class="case-client">Client: AfriBank (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Regional bank with 45 branches experienced a breach where attackers moved laterally from a compromised branch router to core banking systems, exfiltrating 500,000 customer records. Post-incident analysis revealed flat network architecture allowed unrestricted east-west traffic.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Comprehensive network audit revealed: 1) No segmentation between branches and data center 2) Shared VLANs for all systems 3) No micro-segmentation in data center 4) Weak access controls between environments 5) No encryption for internal traffic 6) Lack of continuous verification
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Traditional firewall-based segmentation 2) SD-WAN with built-in security 3) Full Zero Trust architecture 4) Hybrid approach starting with critical assets
+                        <br><br>
+                        <strong>Solution:</strong> Implemented complete Zero Trust architecture including: • Micro-segmentation with VMware NSX isolating workloads • Software-defined perimeter for remote branch connectivity • Identity-based access controls with continuous verification • mTLS encryption for all internal communications • Just-in-time privileged access management • Network traffic encryption with WireGuard • 24/7 monitoring with behavioral analytics • Results: Zero lateral movement in subsequent pen tests, 99.99% reduction in attack surface, and full compliance with banking regulations.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2: Healthcare Ransomware Recovery -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Ransomware Recovery & Prevention for Hospital Network</div>
+                    <div class="case-client">Client: CityCare Hospital (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> 300-bed hospital suffered Ryuk ransomware attack that encrypted 80% of servers, including EMR systems. Attackers gained access via phishing email, moved laterally for 3 weeks before deployment. Patient care disrupted for 5 days, surgeries canceled, $4.5M ransom demand.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Forensic investigation revealed: 1) No network segmentation between IT and medical devices 2) Outdated backups stored on same network 3) Lack of endpoint detection on medical systems 4) No MFA for remote access 5) Weak email filtering 6) No incident response plan
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Pay ransom and restore 2) Clean rebuild from backups 3) Hybrid recovery with prioritized systems 4) Complete security overhaul during recovery
+                        <br><br>
+                        <strong>Solution:</strong> Executed comprehensive recovery and prevention: • Restored from air-gapped backups (no ransom paid) • Implemented strict network segmentation between IT, IoT, and medical devices • Deployed endpoint detection on all systems including legacy medical equipment • Implemented Conditional Access with MFA for all access • Deployed advanced email filtering with sandboxing • Created incident response playbooks with tabletop exercises • Results: Recovery in 7 days, no ransom paid, subsequent penetration tests show 95% reduction in attack surface, and full compliance with HIPAA security rule.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3: E-commerce PCI Compliance -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">PCI-DSS Compliance for Rapid-Growth E-commerce</div>
+                    <div class="case-client">Client: ShopAfrica Online (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Fast-growing e-commerce platform processing 50,000 daily transactions failed PCI-DSS audit with 47 findings. Non-compliance threatened ability to process credit cards. Previous failed audit due to: cardholder data in logs, weak encryption, shared hosting with non-cardholder systems, no WAF.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Detailed gap analysis revealed: 1) Cardholder data stored in multiple unencrypted locations 2) No network segmentation for CDE 3) Weak encryption (TLS 1.0) 4) Missing security controls in CDE 5) No regular vulnerability scanning 6) Incomplete documentation
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Tokenization with third-party processor 2) Rebuild entire platform 3) Implement compensating controls 4) Phased remediation approach
+                        <br><br>
+                        <strong>Solution:</strong> Implemented comprehensive PCI-DSS compliance program: • Tokenized all cardholder data, removing it from environment • Created dedicated CDE with strict network segmentation • Implemented encryption at rest and in transit (TLS 1.3) • Deployed WAF with PCI-specific rules • Established weekly vulnerability scanning • Created complete documentation and evidence collection • Implemented continuous compliance monitoring • Results: Passed re-audit with zero findings, maintained compliance for 3+ years, reduced fraud by 60% with new controls, and enabled expansion to 10 new countries.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 4: Cloud Migration Security -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Secure Cloud Migration for Insurance Company</div>
+                    <div class="case-client">Client: SecureLife Insurance (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Insurance company with 30-year-old data center faced capacity constraints and aging hardware. Initial lift-and-shift cloud migration attempt resulted in security gaps: exposed S3 buckets, misconfigured security groups, and identity sprawl. CISO halted migration due to risk.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Security assessment identified: 1) Publicly accessible storage containing PII 2) Overly permissive security groups 3) No encryption for data at rest 4) Inconsistent IAM policies 5) No cloud security monitoring 6) Lack of cloud security expertise
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Re-architect with security by design 2) Continue lift-and-shift with added controls 3) Hybrid approach with sensitive data on-premise 4) Multi-cloud for redundancy
+                        <br><br>
+                        <strong>Solution:</strong> Implemented secure cloud migration framework: • Re-architected applications for cloud-native security • Implemented defense-in-depth with security groups, NACLs, and WAF • Deployed CSPM for continuous security monitoring • Implemented encryption with customer-managed keys • Created cloud-optimized IAM with least privilege • Established cloud security operations center • Results: Successful migration of 200+ applications with zero security incidents, 40% cost reduction, improved security posture over on-premise, and passed SOC2 audit.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 5: Container Security Implementation -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Kubernetes Security for FinTech Platform</div>
+                    <div class="case-client">Client: PayFast FinTech (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> FinTech startup deployed 200+ microservices on Kubernetes without security considerations. Vulnerability scan revealed: container images with critical CVEs, privileged containers, no network policies, exposed dashboards, and secrets in environment variables. Security audit required remediation before funding round.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Comprehensive assessment identified: 1) Base images contained Log4j vulnerability 2) Containers running as root 3) No RBAC for cluster access 4) Flat network allowing pod-to-pod communication 5) Secrets stored in ConfigMaps 6) No admission control policies
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Rebuild all images with secure base 2) Implement service mesh 3) Deploy security tools 4) Comprehensive DevSecOps transformation
+                        <br><br>
+                        <strong>Solution:</strong> Implemented complete Kubernetes security program: • Replaced all base images with distroless/minimal variants • Implemented Pod Security Standards • Deployed Calico network policies for micro-segmentation • Implemented RBAC with least privilege • Integrated HashiCorp Vault for secrets management • Deployed OPA/Gatekeeper for admission control • Implemented image scanning in CI/CD • Results: 100% reduction in critical vulnerabilities, zero container breakouts in pen testing, passed security audit, and secured Series B funding.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 6: SOC Transformation -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">SOC Transformation with AI-Powered Detection</div>
+                    <div class="case-client">Client: GlobalTel Telecom (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Telecom company's SOC drowning in 10,000+ daily alerts with 95% false positives. Analyst burnout, mean time to detect exceeded 24 hours, critical incidents missed. Board demanded improvement after near-miss with nation-state actor.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> SOC assessment revealed: 1) Rule-based detection with excessive noise 2) No alert correlation 3) Siloed tools without integration 4) No threat intelligence integration 5) Manual investigation processes 6) Inadequate playbooks
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) SIEM upgrade 2) SOAR implementation 3) AI/ML integration 4) Complete SOC rebuild
+                        <br><br>
+                        <strong>Solution:</strong> Transformed SOC with AI-powered capabilities: • Implemented next-gen SIEM with UEBA • Deployed AI-based alert correlation and prioritization • Integrated threat intelligence feeds • Automated tier-1 investigation with SOAR • Created comprehensive playbooks • Implemented 24/7 threat hunting program • Results: Reduced alerts by 90% to 1,000/day, improved true positive rate to 85%, reduced MTTD from 24 hours to 15 minutes, and detected 3 advanced threats within first month.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 7: DDoS Attack Mitigation -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">DDoS Attack Mitigation for Gaming Company</div>
+                    <div class="case-client">Client: GameZone Online (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Online gaming platform hit by 1.2 Tbps DDoS attack during peak hours (Friday night). Attack overwhelmed infrastructure causing complete outage for 8 hours. Estimated revenue loss: $2M. Attackers demanded ransom to stop.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Post-attack analysis revealed: 1) Single ISP connection without diversity 2) On-premise mitigation limited to 100 Gbps 3) No cloud-based scrubbing 4) No DDoS response plan 5) Weak application-layer protection 6) No rate limiting at edge
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Upgrade on-premise mitigation 2) Cloud-based DDoS protection 3) Hybrid approach 4) Multi-CDN strategy
+                        <br><br>
+                        <strong>Solution:</strong> Implemented comprehensive DDoS protection: • Deployed hybrid mitigation with cloud scrubbing (Cloudflare, AWS Shield) • Implemented BGP flow specification for rapid blackholing • Deployed application-layer DDoS protection • Created DDoS response playbook • Implemented rate limiting and WAF • Established relationships with multiple ISPs • Results: Mitigated subsequent 2.5 Tbps attack with zero downtime, 100% availability during attacks, reduced insurance premiums by 40%, and maintained player trust.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 8: Identity Management Overhaul -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Identity Management Transformation for University</div>
+                    <div class="case-client">Client: West African University (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> University with 50,000 students, faculty, and staff suffered credential stuffing attack compromising 2,000 accounts. Attackers accessed research data, financial systems, and personal information. Forensic investigation revealed: no MFA, weak password policy, no account lockout, and orphaned accounts.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Identity audit revealed: 1) 15,000 orphaned accounts from former students/staff 2) No MFA for any system 3) Password reuse across systems 4) No privileged access management 5) Weak onboarding/offboarding 6) No identity governance
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Implement MFA only 2) Complete IAM overhaul 3) Phased identity transformation 4) Cloud identity with SSO
+                        <br><br>
+                        <strong>Solution:</strong> Implemented comprehensive identity program: • Deployed Azure AD with SSO for all applications • Enforced MFA for all users (90% adoption in 3 months) • Implemented automated provisioning/deprovisioning • Deployed PAM for privileged accounts • Created identity governance with regular reviews • Integrated with HR systems for automated lifecycle • Results: Zero account compromises since implementation, 99.9% reduction in help desk password reset tickets, and achieved NIST 800-63 compliance.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 9: Supply Chain Security -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">Supply Chain Security for Manufacturing</div>
+                    <div class="case-client">Client: IndustroTech Manufacturing (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> Manufacturer discovered malware in production systems traced to compromised HVAC vendor remote access. Attackers used vendor credentials to access OT network, potentially could have disrupted production lines. Incident exposed complete lack of vendor risk management.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Supply chain assessment revealed: 1) 200+ vendors with network access 2) No vendor risk assessments 3) Shared credentials across vendors 4) No monitoring of vendor activity 5) No segmentation for vendor access 6) No vendor offboarding process
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Terminate all vendor access 2) Implement vendor risk program 3) Deploy vendor access solution 4) Phased vendor remediation
+                        <br><br>
+                        <strong>Solution:</strong> Implemented comprehensive supply chain security: • Created vendor risk management program with tiered assessments • Deployed vendor access solution with just-in-time access • Implemented network segmentation for vendor connections • Deployed monitoring for vendor activity • Created vendor offboarding automation • Established regular vendor security reviews • Results: Reduced vendor attack surface by 90%, zero vendor-related incidents in 3 years, passed ISO 27001 audit with supply chain controls, and improved vendor relationships with clear security requirements.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 10: DevSecOps Pipeline Implementation -->
+            <div class="case-card">
+                <div class="case-image"></div>
+                <div class="case-content">
+                    <div class="case-title">DevSecOps Pipeline for SaaS Company</div>
+                    <div class="case-client">Client: CloudSoft SaaS (Imaginary)</div>
+                    <div class="case-desc">
+                        <strong>Problem:</strong> SaaS company deploying daily releases discovered critical vulnerability in production via external researcher. Investigation revealed: no security testing in development, vulnerabilities discovered after deployment, manual security reviews causing delays, and developer resistance to security.
+                        <br><br>
+                        <strong>Troubleshooting:</strong> Pipeline assessment revealed: 1) No SAST/DAST in CI/CD 2) No dependency scanning 3) No container image scanning 4) Manual security gates 5) No security training for developers 6) Vulnerabilities found late in SDLC
+                        <br><br>
+                        <strong>Options Considered:</strong> 1) Add security tools to pipeline 2) Implement DevSecOps culture 3) Security champions program 4) Comprehensive transformation
+                        <br><br>
+                        <strong>Solution:</strong> Implemented complete DevSecOps transformation: • Integrated SAST, DAST, and SCA into CI/CD pipeline • Implemented container image scanning • Created security champions program across development teams • Provided developer security training • Implemented "shift left" with IDE plugins • Created metrics dashboard for security debt • Results: Vulnerabilities caught 95% earlier in SDLC, reduced time to fix from weeks to hours, maintained deployment velocity, and achieved zero critical vulnerabilities in production for 18 months.
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}

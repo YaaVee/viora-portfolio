@@ -1,0 +1,73 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run tests
+      run: npm test
+    
+    - name: Security scan
+      run: |
+        npm audit
+        npx snyk test
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v20
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        vercel-args: '--prod'
+    
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ~/viora-portfolio
+          git pull
+          ./deploy.sh
+    
+    - name: Notify success
+      if: success()
+      run: |
+        curl -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT }}/sendMessage \
+          -d chat_id=${{ secrets.TELEGRAM_CHAT }} \
+          -d text="✅ Deployment successful: ${{ github.repository }}"
+    
+    - name: Notify failure
+      if: failure()
+      run: |
+        curl -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT }}/sendMessage \
+          -d chat_id=${{ secrets.TELEGRAM_CHAT }} \
+          -d text="❌ Deployment failed: ${{ github.repository }}"

@@ -1169,7 +1169,6 @@
             padding: 20px;
         }
     </style>
-<script src="https://meet.jit.si/external_api.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -1267,6 +1266,7 @@
             
             // Initialize all components
             try {
+                showPage('home');
                 initParticles();
                 addDebugLog('✅ Particles system initialized', 'success');
             } catch (e) {
@@ -1674,6 +1674,7 @@
         }
 
         // HOME PAGE - WITH YOUR ACTUAL IMAGE
+
         function getHomePage() {
             return `
                 <section class="hero">
@@ -1760,8 +1761,6 @@
                 </section>
             `;
         }
-
-        // SERVICES PAGE - 100 SERVICES (Network Security, Cloud Security, Web Dev, etc.)
         function getServicesPage() {
             return `
                 <div class="page-header">
@@ -3386,95 +3385,6 @@
         }
 
         // Load home page by default
-    </script>
 </body>
 </html>
-<!-- HOME PAGE CONTENT - Replace the existing getHomePage() function -->
-function getHomePage() {
-    return `
-        <section class="hero">
-            <div class="hero-content">
-                <div class="greeting">Hello, I'm</div>
-                <h1 class="name">Viora Yaba<br><span>Mensah</span></h1>
-                <div class="title">Cloud Security Engineer | DevSecOps Implementation Specialist</div>
-                
-                <div class="contact-bar">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+233 240524332</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:vvioraviorav@gmail.com">vvioraviorav@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/YaaVee">YaaVee</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="http://www.linkedin.com/in/viora-mensah-75676135b">Viora Mensah</a>
-                    </div>
-                </div>
 
-                <div class="buttons">
-                    <a href="#" onclick="showPage('contact'); return false;" class="btn btn-primary">Hire Me</a>
-                    <a href="#" onclick="showPage('services'); return false;" class="btn btn-secondary">View Services</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://i.postimg.cc/pXnPQm4K/1000078549.jpg" 
-                     alt="Viora Yaba Mensah"
-                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'%3E%3Ccircle cx=\'200\' cy=\'200\' r=\'200\' fill=\'%2300ff9d\'/%3E%3Ctext x=\'200\' y=\'210\' font-size=\'40\' text-anchor=\'middle\' fill=\'%230a0a0a\' font-family=\'Arial\' font-weight=\'bold\'%3EVYM%3C/text%3E%3C/svg%3E'">
-            </div>
-        </section>
-
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Security Services</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Project Success</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">GitHub Projects</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">60+</div>
-                <div class="stat-label">Case Studies</div>
-            </div>
-        </div>
-
-        <section>
-            <h2 class="section-title">Featured Expertise</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="service-category">Security Architecture</div>
-                    <div class="service-name">Zero Trust Implementation</div>
-                    <div class="service-price">Enterprise</div>
-                    <div class="service-desc">Complete zero trust architecture design and implementation with micro-segmentation, continuous verification, and automated policy enforcement. Why implement Zero Trust? Because traditional perimeter-based security fails when attackers breach the network. This service ensures every access request is verified regardless of source, reducing breach impact by over 90% and containing lateral movement instantly.</div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                    <div class="service-category">Cloud Security</div>
-                    <div class="service-name">Multi-Cloud Security Posture</div>
-                    <div class="service-price">Enterprise</div>
-                    <div class="service-desc">Unified security management across AWS, Azure, and GCP with automated compliance monitoring and threat detection. Why multi-cloud security? Because managing separate security tools for each cloud creates gaps and complexity. This service provides centralized visibility, consistent policies, and automated remediation across all cloud environments.</div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-robot"></i></div>
-                    <div class="service-category">AI Security</div>
-                    <div class="service-name">ML-Powered Threat Detection</div>
-                    <div class="service-price">Enterprise</div>
-                    <div class="service-desc">Custom machine learning models for anomaly detection, user behavior analytics, and predictive threat intelligence. Why AI-powered detection? Because signature-based tools miss novel attacks. This service identifies zero-day exploits, insider threats, and advanced persistent threats that traditional security tools cannot detect.</div>
-                </div>
-            </div>
-        </section>
-    `;
-}
-<!-- Add Jitsi API before closing head -->
-<script src="https://meet.jit.si/external_api.js"></script>

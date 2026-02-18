@@ -1169,6 +1169,7 @@
             padding: 20px;
         }
     </style>
+<script src="https://meet.jit.si/external_api.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>

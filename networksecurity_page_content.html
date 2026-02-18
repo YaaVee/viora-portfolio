@@ -1,0 +1,20 @@
+<!-- NETWORK SECURITY PAGE CONTENT - Replace the existing getNetworkSecurityPage() function -->
+function getNetworkSecurityPage() {
+    // Extract network security services from the main services page
+    const allServices = getServicesPage();
+    const networkServices = allServices.split('<div class="services-grid">')[1].split('</div>')[0]
+        .split('<div class="service-card">')
+        .filter(card => card.includes('Network Security') || card.includes('fa-shield-alt') || card.includes('fa-network-wired') || card.includes('firewall') || card.includes('VPN') || card.includes('IDS') || card.includes('IPS'))
+        .map(card => '<div class="service-card">' + card)
+        .join('');
+    
+    return `
+        <div class="page-header">
+            <h1>Network Security Services</h1>
+            <p>100+ specialized network security services for enterprise environments</p>
+        </div>
+        <div class="services-grid">
+            ${networkServices}
+        </div>
+    `;
+}

@@ -1,0 +1,21 @@
+OWASP Top 10 Vulnerabilities:
+
+1. Injection: SQL, NoSQL, OS command injection occurs when untrusted data is sent to an interpreter. Prevention: Use parameterized queries, prepared statements, and input validation.
+
+2. Broken Authentication: Improper implementation of authentication allows attackers to compromise passwords, session tokens. Prevention: Implement MFA, secure session management, and password policies.
+
+3. Sensitive Data Exposure: APIs not properly protecting sensitive data like financial information. Prevention: Encrypt all sensitive data at rest and in transit, disable caching for sensitive responses.
+
+4. XML External Entities (XXE): Older XML processors evaluate external entity references. Prevention: Disable XML external entity processing, use less complex data formats like JSON.
+
+5. Broken Access Control: Restrictions not properly enforced allowing unauthorized access. Prevention: Implement proper access control checks, deny by default, log access control failures.
+
+6. Security Misconfiguration: Insecure default configurations, incomplete setups exposed. Prevention: Implement automated security hardening processes, regular configuration reviews.
+
+7. Cross-Site Scripting (XSS): Applications including untrusted data in web pages without validation. Prevention: Use context-aware escaping, implement CSP headers, validate inputs.
+
+8. Insecure Deserialization: Flaws allowing remote code execution. Prevention: Implement integrity checks, isolate deserialization in low-privilege environments.
+
+9. Using Components with Known Vulnerabilities: Libraries and frameworks with known vulnerabilities. Prevention: Regular vulnerability scanning, remove unused dependencies, monitor CVE databases.
+
+10. Insufficient Logging & Monitoring: Missing visibility into breaches. Prevention: Implement comprehensive logging, real-time monitoring, incident response procedures.

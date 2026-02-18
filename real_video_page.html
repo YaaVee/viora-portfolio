@@ -1,0 +1,156 @@
+function getVideoPage() {
+    const roomName = generateRoomName();
+    
+    return `
+        <div class="page-header">
+            <h1>Real Video Conferencing</h1>
+            <p>Self-hosted Jitsi Meet with E2EE | Room: ${roomName}</p>
+        </div>
+
+        <div class="video-controls-bar" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="display-name" value="User${Math.floor(Math.random() * 1000)}" 
+                   style="padding: 8px; background: #1a1a1a; border: 1px solid #00ff9d; border-radius: 5px; color: white;">
+            <button onclick="joinMeeting()" class="btn btn-primary">
+                <i class="fas fa-video"></i> Join Meeting
+            </button>
+            <button onclick="copyRoomLink()" class="btn btn-secondary">
+                <i class="fas fa-link"></i> Copy Invite Link
+            </button>
+            <button onclick="toggleE2EE()" class="btn btn-secondary" id="e2ee-btn">
+                <i class="fas fa-lock"></i> E2EE: OFF
+            </button>
+        </div>
+
+        <div id="jitsi-container" style="height: 600px; border-radius: 15px; overflow: hidden; border: 1px solid #00ff9d;"></div>
+
+        <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+            <div class="stat-item">
+                <div class="stat-number" id="participant-count">0</div>
+                <div class="stat-label">Participants</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="audio-status">-</div>
+                <div class="stat-label">Audio</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="video-status">-</div>
+                <div class="stat-label">Video</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="recording-status">-</div>
+                <div class="stat-label">Recording</div>
+            </div>
+        </div>
+    `;
+}
+
+let jitsiApi = null;
+let e2eeEnabled = false;
+const roomName = 'portfolio-' + Math.random().toString(36).substring(7);
+
+function generateRoomName() {
+    return roomName;
+}
+
+function joinMeeting() {
+    const displayName = document.getElementById('display-name').value || 'Anonymous';
+    const domain = 'localhost'; // Change to your domain
+    
+    const options = {
+        roomName: roomName,
+        width: '100%',
+        height: '100%',
+        parentNode: document.querySelector('#jitsi-container'),
+        configOverwrite: {
+            startWithAudioMuted: false,
+            startWithVideoMuted: false,
+            enableRecording: true,
+            enableNoAudioDetection: true,
+            enableNoisyMicDetection: true,
+            enableWelcomePage: false,
+            enableE2EE: true,
+            prejoinPageEnabled: false,
+            toolbarButtons: [
+                'microphone', 'camera', 'closedcaptions', 'desktop',
+                'fullscreen', 'hangup', 'chat', 'recording',
+                'livestreaming', 'etherpad', 'settings', 'raisehand',
+                'videoquality', 'filmstrip', 'feedback', 'stats',
+                'tileview', 'videobackgroundblur', 'security'
+            ]
+        },
+        interfaceConfigOverwrite: {
+            SHOW_JITSI_WATERMARK: false,
+            SHOW_WATERMARK_FOR_GUESTS: false,
+            DEFAULT_BACKGROUND: '#0a0a0a',
+            DISABLE_FOCUS_INDICATOR: false,
+            DISABLE_DOMINANT_SPEAKER_INDICATOR: false
+        },
+        userInfo: {
+            displayName: displayName
+        }
+    };
+
+    jitsiApi = new JitsiMeetExternalAPI(domain, options);
+    
+    // Event handlers
+    jitsiApi.addEventListener('videoConferenceJoined', (event) => {
+        document.getElementById('participant-count').textContent = event.numParticipants || 1;
+    });
+    
+    jitsiApi.addEventListener('participantJoined', () => {
+        updateParticipantCount();
+    });
+    
+    jitsiApi.addEventListener('participantLeft', () => {
+        updateParticipantCount();
+    });
+    
+    jitsiApi.addEventListener('audioMuteStatusChanged', (event) => {
+        document.getElementById('audio-status').textContent = event.muted ? 'Muted' : 'Active';
+    });
+    
+    jitsiApi.addEventListener('videoMuteStatusChanged', (event) => {
+        document.getElementById('video-status').textContent = event.muted ? 'Off' : 'On';
+    });
+    
+    jitsiApi.addEventListener('recordingStatusChanged', (event) => {
+        document.getElementById('recording-status').textContent = event.on ? 'Recording' : 'Stopped';
+    });
+    
+    jitsiApi.addEventListener('readyToClose', () => {
+        document.querySelector('#jitsi-container').innerHTML = '';
+    });
+}
+
+function updateParticipantCount() {
+    jitsiApi.getParticipantsInfo().then(participants => {
+        document.getElementById('participant-count').textContent = participants.length;
+    });
+}
+
+function toggleE2EE() {
+    e2eeEnabled = !e2eeEnabled;
+    const btn = document.getElementById('e2ee-btn');
+    
+    if (jitsiApi) {
+        jitsiApi.executeCommand('toggleE2EE');
+        btn.innerHTML = e2eeEnabled ? 
+            '<i class="fas fa-lock"></i> E2EE: ON' : 
+            '<i class="fas fa-lock-open"></i> E2EE: OFF';
+        btn.style.background = e2eeEnabled ? '#00ff9d' : '';
+        btn.style.color = e2eeEnabled ? '#0a0a0a' : '';
+    }
+}
+
+function copyRoomLink() {
+    const url = window.location.href.split('?')[0] + '?room=' + roomName;
+    navigator.clipboard.writeText(url);
+    alert('Meeting link copied to clipboard!');
+}
+
+// Auto-join when page loads
+window.addEventListener('load', () => {
+    if (window.location.pathname.includes('video')) {
+        setTimeout(joinMeeting, 1000);
+    }
+});

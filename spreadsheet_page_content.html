@@ -1,0 +1,28 @@
+<!-- SPREADSHEET PAGE CONTENT - Replace the existing getSpreadsheetPage() function -->
+function getSpreadsheetPage() {
+    // Extract spreadsheet automation services from the main services page
+    const allServices = getServicesPage();
+    const spreadsheetServices = allServices.split('<div class="services-grid">')[1].split('</div>')[0]
+        .split('<div class="service-card">')
+        .filter(card => card.includes('Spreadsheet Automation') || card.includes('file-excel') || card.includes('compliance') || card.includes('tracking') || card.includes('dashboard'))
+        .map(card => {
+            // Convert service-card to automation-card format
+            return card.replace('service-card', 'automation-card')
+                      .replace('service-icon', 'automation-icon')
+                      .replace('service-category', '')
+                      .replace('service-price', '')
+                      .replace('service-desc', '');
+        })
+        .map(card => '<div class="automation-card">' + card.split('<div class="automation-card">')[1])
+        .join('');
+    
+    return `
+        <div class="page-header">
+            <h1>Spreadsheet Automation Services</h1>
+            <p>100+ specialized spreadsheet automation services for security teams</p>
+        </div>
+        <div class="spreadsheet-grid">
+            ${spreadsheetServices}
+        </div>
+    `;
+}

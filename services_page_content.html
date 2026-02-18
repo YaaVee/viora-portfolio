@@ -1,0 +1,357 @@
+<!-- SERVICES PAGE CONTENT - Replace the existing getServicesPage() function -->
+function getServicesPage() {
+    return `
+        <div class="page-header">
+            <h1>Complete Security Services Portfolio</h1>
+            <p>500+ specialized security services delivered with 100% success rate</p>
+        </div>
+        <div class="services-grid">
+            <!-- NETWORK SECURITY (25 Services) -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Enterprise Firewall Architecture</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement enterprise firewall architecture? Because basic perimeter defense is insufficient against modern threats. This service provides defense-in-depth with next-gen firewalls, intrusion prevention, application control, and advanced threat protection. Includes HA configuration ensuring 99.999% uptime and automated failover. Critical for preventing data breaches that cost businesses millions. Implementation includes: • Next-generation firewall deployment (Palo Alto, Fortinet, Cisco) • Deep packet inspection and SSL decryption • Application-aware rules and user identification • Threat intelligence integration for zero-day protection • Automated policy optimization and rule cleanup • High availability clustering with automatic failover • VPN concentration with split tunneling controls • Traffic shaping and QoS for critical applications • Comprehensive logging and SIEM integration • Regular rule audits and compliance reporting</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Zero Trust Network Implementation</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why Zero Trust? Because the traditional castle-and-moat model fails when attackers breach the perimeter. Zero Trust assumes breach and verifies every request regardless of source. This service implements micro-segmentation, continuous authentication, and least-privilege access across your entire infrastructure. Reduces attack surface by 90% and contains breaches instantly. Implementation includes: • Software-defined perimeter (SDP) deployment • Micro-segmentation with VMware NSX or Cisco ACI • Just-in-time privileged access management • Continuous device posture assessment • Identity-aware proxy implementation • Encrypted internal communications (mTLS) • Dynamic policy enforcement based on risk • Automated threat containment • Legacy system integration and gradual migration • Complete audit trail of all access attempts</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-search"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Advanced Threat Detection (IDS/IPS)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why deploy advanced threat detection? Because modern attacks evade signature-based detection. This service implements machine learning-based anomaly detection, behavioral analysis, and threat intelligence integration. Identifies zero-day exploits, advanced persistent threats, and insider attacks before they cause damage. Includes 24/7 monitoring and automated response. Implementation includes: • Suricata/Snort/Zeek deployment with custom rules • Machine learning anomaly detection models • Threat intelligence feed integration • Network traffic analysis and baselining • Protocol analysis and deep packet inspection • Automated alert correlation and prioritization • Incident response orchestration • Threat hunting capabilities • Compliance reporting for regulations • Regular rule updates and tuning</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Secure Wireless Architecture</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure wireless? Because unsecured WiFi is the easiest entry point for attackers. This service implements WPA3-Enterprise, 802.1X authentication, rogue AP detection, and wireless intrusion prevention. Ensures that even if someone captures wireless traffic, they cannot decrypt it. Critical for organizations with mobile workforce or guest access. Implementation includes: • WPA3-Enterprise deployment with 802.1X • RADIUS server configuration (FreeRADIUS, Cisco ISE) • Certificate-based authentication • Rogue AP detection and containment • Wireless intrusion prevention system • Guest network isolation and captive portal • Band steering and load balancing • RF spectrum analysis and optimization • Client device posture assessment • Regular security audits and penetration testing</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Segmentation & Micro-segmentation</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why segment networks? Because flat networks allow attackers to move laterally once inside. This service implements VLANs, ACLs, and software-defined micro-segmentation to isolate workloads, contain breaches, and protect critical assets. Reduces breach impact from days to minutes and simplifies compliance with PCI-DSS, HIPAA, and GDPR requirements. Implementation includes: • VLAN design and implementation • Layer 3 routing with ACLs • DMZ architecture for public services • Micro-segmentation with VMware NSX • East-west traffic inspection • Workload isolation based on sensitivity • Compliance zone separation (PCI, HIPAA) • Inter-zone firewall policies • Network access control integration • Continuous segmentation validation</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-dns"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Secure DNS Architecture</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure DNS? Because DNS is a common attack vector for data exfiltration, phishing, and malware communication. This service implements DNSSEC to prevent cache poisoning, DNS filtering to block malicious domains, and DNS over HTTPS/TLS for privacy. Protects against DNS tunneling, amplification attacks, and data theft. Implementation includes: • DNSSEC implementation and key management • DNS filtering with threat intelligence • DNS over HTTPS/TLS configuration • Response Policy Zones (RPZ) for malware blocking • Split-horizon DNS for internal/external resolution • DNS logging and analytics • DDoS protection for DNS infrastructure • Redundant DNS architecture • Zone transfer security • Regular DNS security audits</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-traffic-light"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Secure Load Balancing & DDoS Protection</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement secure load balancing? Because DDoS attacks can take your business offline in minutes. This service combines application delivery with built-in DDoS mitigation, SSL/TLS offloading, and web application firewall capabilities. Ensures 99.99% availability even during large-scale attacks and traffic spikes. Implementation includes: • Load balancer deployment (HAProxy, F5, Nginx) • SSL/TLS offloading and certificate management • DDoS mitigation with on-premise and cloud solutions • Web application firewall integration • Health checks and automatic failover • Session persistence configuration • Rate limiting and traffic shaping • Real-time traffic analytics • Global server load balancing • Automated scaling during traffic spikes</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Access Control (NAC)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement NAC? Because unmanaged devices on your network are security blind spots. This service ensures only compliant, authorized devices access your network. Checks for up-to-date antivirus, patches, and compliance before granting access. Prevents infected devices from spreading malware and non-compliant devices from violating policies. Implementation includes: • 802.1X deployment with EAP-TLS • RADIUS server configuration (Cisco ISE, Aruba ClearPass) • Device posture assessment • Guest access management • IoT device fingerprinting and isolation • Integration with MDM/UEM solutions • Automated remediation workflows • VLAN assignment based on device type • Certificate management • Compliance reporting and auditing</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Traffic Analysis & Forensics</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why analyze traffic? Because you can't stop what you can't see. This service provides deep packet inspection, NetFlow analysis, and full packet capture for forensic investigation. Identifies command & control traffic, data exfiltration, and unusual patterns. Essential for incident response and understanding exactly what happened during a breach. Implementation includes: • NetFlow/sFlow deployment and analysis • Full packet capture capabilities • Network forensic analysis tools (ELK, Splunk) • Baseline traffic profiling • Anomaly detection algorithms • Protocol analysis and decoding • PCAP storage and retention policies • Integration with SIEM for correlation • Threat hunting capabilities • Compliance reporting for investigations</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bug"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Red Team & Penetration Testing</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why conduct penetration testing? Because you need to find vulnerabilities before attackers do. This service simulates real-world attacks using the same tools and techniques as adversaries. Provides actionable remediation guidance and validates your security controls. Essential for compliance and understanding your true risk posture. Implementation includes: • External network penetration testing • Internal network penetration testing • Wireless network assessment • Social engineering simulations • Web application testing • API security testing • Mobile application assessment • Physical security assessments • Detailed reporting with remediation guidance • Compliance validation (PCI, HIPAA, etc.)</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-clock"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">DDoS Mitigation Strategy</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why prepare for DDoS? Because attacks are increasing in size and frequency. This service implements hybrid on-premise and cloud-based DDoS protection. Automatically detects and mitigates volumetric, protocol, and application-layer attacks. Ensures business continuity even during large-scale extortion attempts. Implementation includes: • DDoS risk assessment • On-premise mitigation appliances • Cloud-based scrubbing services • Hybrid architecture design • BGP routing and Anycast configuration • Real-time attack detection algorithms • Automated mitigation triggers • Traffic scrubbing and filtering • Post-attack analysis • Regular DDoS tabletop exercises</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Security Policy & Governance</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why develop security policies? Because technical controls without governance fail. This service develops comprehensive security policies, standards, and procedures aligned with ISO 27001, NIST, and industry best practices. Includes incident response plans, acceptable use policies, and regular policy reviews. The foundation of any mature security program. Implementation includes: • Security policy framework development • Acceptable use policies • Incident response procedures • Change management policies • Access control policies • Data classification guidelines • Vendor security requirements • Policy exception management • Employee acknowledgment tracking • Regular policy review cycles</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-arrows-alt-h"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">SD-WAN Security Integration</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure SD-WAN? Because connecting branches directly to cloud and internet increases attack surface. This service integrates security directly into SD-WAN including next-gen firewall, IPS, and secure web gateway. Provides consistent security policies across all locations with centralized management and visibility. Implementation includes: • SD-WAN deployment (VeloCloud, Viptela, Silver Peak) • Integrated firewall and IPS • Secure web gateway capabilities • Cloud on-ramp security • Zero-trust branch architecture • Centralized policy management • Application-aware routing with security • Encrypted overlay networks • Integration with cloud security services • Branch location security assessments</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-vector-square"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Virtual Network Security (VMware NSX)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure virtual networks? Because virtualized data centers need micro-segmentation. This service implements VMware NSX distributed firewalls, micro-segmentation, and service insertion. Provides granular security for east-west traffic within the data center, containing breaches and protecting workloads. Implementation includes: • NSX deployment and configuration • Distributed firewall rules • Micro-segmentation design • Service insertion for third-party security • Identity-based firewall policies • Network introspection • Endpoint protection integration • NSX intelligence analytics • Multi-hypervisor support • Regular security policy reviews</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">VoIP & UC Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure VoIP? Because voice traffic can be intercepted and used for social engineering. This service implements SIP security, SRTP encryption, and toll fraud prevention. Protects against eavesdropping, call hijacking, and unauthorized use of phone systems. Essential for organizations with unified communications. Implementation includes: • VoIP infrastructure security assessment • SIP trunking security • SRTP encryption implementation • Toll fraud detection and prevention • VoIP-specific firewall rules • Quality of Service configuration • Call recording security • Integration with identity management • VoIP penetration testing • Incident response for telecom fraud</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Remote Access & VPN Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure remote access? Because remote work is permanent and attackers target VPNs. This service implements secure VPN architectures with multi-factor authentication, device posture checking, and split-tunneling controls. Ensures remote workers don't become the weakest link in your security. Implementation includes: • VPN gateway deployment (AnyConnect, OpenVPN, WireGuard) • Multi-factor authentication integration • Device posture assessment before access • Split-tunneling controls • VPN traffic inspection • Client certificate management • Remote desktop security • Privileged remote access controls • VPN logging and monitoring • Regular VPN penetration testing</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Security Architecture Review</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why review network architecture? Because security gaps hide in complexity. This service provides comprehensive review of your network security architecture against industry best practices (NIST, CIS, SANS). Identifies design flaws, misconfigurations, and improvement opportunities before attackers exploit them. Implementation includes: • Current architecture documentation review • Security control effectiveness assessment • Segmentation and isolation analysis • Firewall rule base review • VPN architecture evaluation • Wireless security assessment • Cloud connectivity review • Compliance gap analysis • Remediation roadmap development • Executive summary with risk ratings</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-eye"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Visibility & Monitoring</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why gain network visibility? Because you can't protect what you can't see. This service implements network monitoring, flow analysis, and packet capture to provide complete visibility into network traffic. Identifies shadow IT, unusual patterns, and potential threats in real-time. Implementation includes: • Network monitoring deployment (PRTG, Nagios, Zabbix) • NetFlow/sFlow/ipfix collection • Packet capture infrastructure • Network performance baselining • Bandwidth usage analysis • Application discovery and tracking • Shadow IT identification • Real-time alerting for anomalies • Historical data retention • Executive dashboards and reporting</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Automated Network Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why automate network security? Because manual response is too slow for modern attacks. This service implements security automation and orchestration for network devices. Automatically responds to threats by updating firewall rules, blocking IPs, and isolating compromised hosts in seconds. Implementation includes: • Security orchestration platform deployment • Playbook development for common threats • Automated firewall rule updates • Threat intelligence integration • Incident response automation • Network device configuration automation • Compliance validation automation • Reporting and metrics automation • Integration with ticketing systems • Continuous improvement processes</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">CASB Integration</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why integrate CASB? Because employees use unauthorized cloud services (Shadow IT). This service implements Cloud Access Security Brokers to discover, control, and secure cloud application usage. Prevents data loss, detects anomalous behavior, and extends security policies to SaaS applications. Implementation includes: • CASB deployment (Netskope, McAfee, Microsoft) • Shadow IT discovery and risk assessment • Data loss prevention policies • Cloud application governance • User behavior analytics • Integration with existing security tools • Compliance monitoring for cloud apps • Threat protection for sanctioned apps • Real-time policy enforcement • Detailed reporting and dashboards</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">OT/IoT Network Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure OT/IoT networks? Because industrial control systems and IoT devices are vulnerable and can cause physical damage. This service implements specialized security for operational technology and IoT environments including network segmentation, protocol filtering, and anomaly detection. Implementation includes: • OT network discovery and asset inventory • Purdue model segmentation • Industrial protocol filtering (Modbus, Profinet) • IoT device fingerprinting • Air-gap and DMZ design • OT-specific monitoring tools • Secure remote access for vendors • IoT device lifecycle management • Integration with existing security tools • Incident response for OT environments</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Cloud Network Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure cloud networks? Because cloud networks are software-defined and require different approaches. This service implements secure VPC/VNet design, network ACLs, security groups, and cloud-native firewall capabilities across AWS, Azure, and GCP. Implementation includes: • VPC/VNet segmentation design • Security group and NACL optimization • Cloud firewall deployment (AWS WAF, Azure Firewall) • Transit gateway security • Direct Connect/VPN security • Cloud-native DDoS protection • Network flow logs analysis • Multi-cloud network security • Infrastructure as Code security • Regular cloud network audits</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Mobile Device Network Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure mobile devices? Because mobile devices access corporate networks from anywhere. This service implements mobile device management (MDM), mobile threat defense, and secure connectivity for iOS and Android devices. Protects against mobile malware, phishing, and data leakage. Implementation includes: • MDM deployment (Intune, Workspace ONE) • Mobile threat defense integration • VPN-on-demand configuration • Per-app VPN implementation • Certificate-based authentication • Jailbreak/root detection • Mobile phishing protection • Secure container deployment • Compliance policies for devices • Integration with conditional access</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Security Metrics & Reporting</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why measure network security? Because you can't improve what you don't measure. This service implements comprehensive metrics and reporting for network security effectiveness. Provides visibility into security posture, incident trends, and control effectiveness for management and compliance. Implementation includes: • Security metrics framework development • Key Performance Indicator definition • Automated data collection • Executive dashboards • Technical detailed reports • Compliance reporting templates • Trend analysis and forecasting • Benchmarking against peers • Remediation tracking • Quarterly business reviews</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <div class="service-category">Network Security</div>
+                <div class="service-name">Network Security Continuous Improvement</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement continuous improvement? Because security is not a one-time project. This service provides ongoing network security optimization including regular reviews, updates, and improvements. Ensures your network security evolves with changing threats and business requirements. Implementation includes: • Quarterly security reviews • Rule base optimization • Technology refresh planning • Emerging threat assessment • Security control testing • Configuration drift remediation • Staff training and awareness • Incident lesson implementation • Maturity model assessments • Long-term security roadmap</div>
+            </div>
+
+            <!-- CLOUD SECURITY (25 Services) -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-aws"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">AWS Security Architecture</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement AWS security? Because misconfigured S3 buckets alone have exposed billions of records. This service implements defense-in-depth across all AWS services including IAM with least privilege, VPC segmentation, Security Groups, AWS WAF, Shield Advanced, GuardDuty, Security Hub, and Config. Achieves CIS AWS Foundations Benchmark compliance. Implementation includes: • IAM roles and policies with least privilege • Multi-factor authentication enforcement • VPC design with public/private subnets • Security Group and NACL optimization • AWS WAF deployment with custom rules • Shield Advanced for DDoS protection • GuardDuty for threat detection • Security Hub for centralized view • AWS Config for compliance monitoring • CloudTrail for audit logging • Encryption with KMS at rest and in transit • Regular security assessments and remediation</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-microsoft"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Azure Security Center & Defender</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure Azure? Because cloud complexity increases attack surface. This service implements Microsoft Defender for Cloud, Azure Sentinel SIEM, just-in-time VM access, adaptive application controls, and regulatory compliance monitoring. Provides unified security management across hybrid and multi-cloud environments. Implementation includes: • Microsoft Defender for Cloud configuration • Azure Sentinel SIEM deployment • Just-in-time VM access implementation • Adaptive application controls • Regulatory compliance monitoring • Azure Policy enforcement • Network security group optimization • Azure Firewall deployment • Key Vault for secrets management • Azure DDoS Protection • Integration with on-premise security tools • Continuous compliance assessment</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-google"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">GCP Security Command Center</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure GCP? Because cloud-native threats require cloud-native defense. This service implements Security Command Center, Cloud Armor, VPC Service Controls, and Forseti security tools. Provides asset inventory, vulnerability detection, and policy enforcement across your GCP organization. Implementation includes: • Security Command Center configuration • Cloud Armor WAF and DDoS protection • VPC Service Controls for data exfiltration prevention • Forseti security policy enforcement • IAM role optimization • Cloud IDS for threat detection • Data Loss Prevention API integration • GKE security hardening • Cloud Audit Logs analysis • Compliance scanning (CIS benchmarks) • Automated remediation workflows • Security health analytics</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-docker"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Kubernetes Security (K8s)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure Kubernetes? Because container environments introduce new attack vectors including container escapes, privilege escalation, and supply chain attacks. This service implements RBAC with least privilege, pod security standards, network policies, admission controllers, and container image scanning. Implementation includes: • RBAC configuration with least privilege • Pod Security Standards enforcement • Network policies for micro-segmentation • Admission controllers (OPA/Gatekeeper) • Container image vulnerability scanning • Runtime security with Falco • Secrets management integration • Service mesh security (Istio) • Compliance with NSA Kubernetes Hardening Guide • Supply chain security for images • Security Context constraints • Regular penetration testing</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-migration"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Secure Cloud Migration</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why migrate securely? Because rushed migrations introduce critical vulnerabilities. This service provides end-to-end security for cloud migration including risk assessment, secure data transfer with encryption, identity federation, and security validation. Ensures zero security gaps during migration. Implementation includes: • Pre-migration security assessment • Data encryption during transit • Identity federation setup • Security control validation • Compliance verification • Secure cutover planning • Post-migration security review • Data classification during migration • Access control implementation • Continuous monitoring during migration • Incident response readiness • Security documentation updates</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-key"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud IAM & Identity Governance</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement cloud IAM? Because identity is the new perimeter and 80% of breaches involve compromised credentials. This service provides comprehensive identity and access management including SSO integration, MFA enforcement, privileged access management, and automated access reviews. Implementation includes: • Single Sign-On integration (Okta, Azure AD) • Multi-factor authentication enforcement • Just-in-time privileged access • Role engineering with least privilege • Automated access certification • Privileged access management for cloud • Service account security • Identity lifecycle management • Access analytics and reporting • Integration with HR systems • Emergency access procedures • Regular access reviews</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-lock"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Encryption & Key Management</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement cloud encryption? Because encryption is your last line of defense if other controls fail. This service implements encryption at rest and in transit using customer-managed keys, envelope encryption, and hardware security modules. Ensures data remains protected even if cloud infrastructure is compromised. Implementation includes: • Encryption at rest for all data services • TLS configuration for data in transit • Customer-managed key implementation • Key rotation policies and automation • HSM integration for root keys • Envelope encryption strategy • Key access auditing and logging • Cross-region key replication • Disaster recovery for keys • Integration with cloud KMS services • Compliance with data protection regulations • Key lifecycle management</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">CSPM (Cloud Security Posture Management)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement CSPM? Because misconfigurations are the #1 cause of cloud breaches. This service uses tools like Prisma Cloud, Wiz, or Orca to continuously monitor for misconfigurations, compliance violations, and security drift. Automatically remediates issues and provides compliance reporting. Implementation includes: • CSPM tool deployment and configuration • Continuous compliance monitoring • Misconfiguration detection and alerting • Automated remediation workflows • Multi-cloud visibility (AWS, Azure, GCP) • Compliance reporting (CIS, NIST, PCI) • Threat detection integration • Vulnerability prioritization • Identity and access analytics • Data security posture management • Infrastructure as Code scanning • Regular posture assessments</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-server"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Serverless Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure serverless? Because serverless doesn't mean threat-less. This service implements security for AWS Lambda, Azure Functions, and Google Cloud Functions including IAM permissions, dependency scanning, runtime protection, and input validation. Prevents injection attacks and privilege escalation. Implementation includes: • Function IAM permissions optimization • Dependency vulnerability scanning • Third-party library security assessment • Runtime protection and monitoring • Input validation and sanitization • Secrets management for functions • Function-level monitoring • Cold start security considerations • Integration with cloud security tools • Function access logging • Event source security • Regular security testing of functions</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Database Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure cloud databases? Because databases store your most valuable data. This service implements encryption, activity monitoring, vulnerability assessment, and advanced threat protection for RDS, DynamoDB, Cosmos DB, and Cloud SQL. Detects and prevents SQL injection, data exfiltration, and unauthorized access. Implementation includes: • Database encryption at rest • TLS for database connections • Network isolation and security groups • Database activity monitoring • Vulnerability assessment scanning • Advanced threat protection • Backup encryption and retention • Access control optimization • Audit logging and analysis • Data classification integration • Compliance reporting • Regular security assessments</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Security Monitoring & SIEM</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why monitor cloud environments? Because threats evolve constantly. This service implements cloud-native SIEM solutions that aggregate logs, detect threats, and automate response. Provides real-time visibility across AWS, Azure, and GCP with machine learning-based anomaly detection. Implementation includes: • Cloud-native SIEM deployment (Sentinel, Security Hub) • Multi-cloud log aggregation • Threat detection rule creation • Anomaly detection algorithms • Automated alert triage • Incident response orchestration • Compliance reporting • Threat hunting capabilities • Integration with existing SOC tools • 24/7 monitoring and response • Regular use case updates • Performance and tuning optimization</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Compliance Automation</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why automate cloud compliance? Because manual compliance is unsustainable in dynamic cloud environments. This service implements automated compliance monitoring for GDPR, HIPAA, PCI-DSS, ISO 27001, SOC2, and regional regulations. Continuously assesses controls and generates auditor-ready reports. Implementation includes: • Compliance framework mapping • Automated control assessments • Evidence collection automation • Auditor-ready report generation • Continuous compliance dashboards • Remediation workflow automation • Policy as code implementation • Compliance drift detection • Integration with GRC tools • Regulatory change tracking • Executive compliance reporting • Regular compliance audits</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">CASB (Cloud Access Security Broker)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement CASB? Because employees use unauthorized cloud services that bypass security controls. This service discovers, controls, and secures cloud application usage. Prevents data loss, detects anomalous behavior, and extends security policies to SaaS applications. Implementation includes: • CASB deployment (Netskope, McAfee) • Shadow IT discovery and risk assessment • Data loss prevention for cloud apps • Threat protection for sanctioned apps • User behavior analytics • Integration with existing security tools • Compliance monitoring for cloud apps • Real-time policy enforcement • Cloud application governance • Detailed reporting and dashboards • Regular CASB rule updates • Incident response integration</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Multi-Cloud Security Architecture</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement multi-cloud security? Because using multiple clouds increases complexity and creates security gaps. This service designs and implements consistent security controls across AWS, Azure, and GCP including unified identity management, consistent network security, and centralized monitoring. Implementation includes: • Multi-cloud security framework • Unified identity and access management • Consistent network security policies • Centralized security monitoring • Common compliance framework • Data protection across clouds • Workload security standardization • Cloud-agnostic security tools • Security automation across clouds • Multi-cloud incident response • Regular architecture reviews • Cross-cloud security governance</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-vpc"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Secure VPC/VNet Design</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement secure virtual networking? Because network segmentation is your first line of defense in the cloud. This service designs and implements secure Virtual Private Cloud (VPC) and Virtual Network (VNet) architectures with proper subnet segmentation, network ACLs, and security groups. Implementation includes: • VPC/VNet design with public/private subnets • Network ACL and security group optimization • Transit gateway architecture • VPN and Direct Connect security • VPC peering and sharing security • Network flow logs analysis • Multi-account network design • Hub-spoke network architecture • Network segmentation for compliance • Automated network security validation • Regular network security reviews • Cloud-native firewall integration</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Web Application Firewall</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement cloud WAF? Because web applications in the cloud are constantly under attack. This service implements and tunes cloud-native WAF solutions including AWS WAF, Azure WAF, and Google Cloud Armor. Protects web applications against OWASP Top 10 and automated bots. Implementation includes: • Cloud WAF deployment and configuration • OWASP Top 10 protection rules • Custom rule creation for application logic • Rate limiting and bot mitigation • Geo-blocking and IP reputation filtering • WAF logging and monitoring • Integration with CDN services • Automated rule updates • Regular WAF rule tuning • Attack visibility dashboards • Incident response integration • WAF performance optimization</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cloud-meatball"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud DDoS Protection</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement cloud DDoS protection? Because DDoS attacks can take cloud applications offline in minutes. This service implements cloud-native DDoS protection including AWS Shield Advanced, Azure DDoS Protection, and Google Cloud Armor Managed Protection. Implementation includes: • DDoS protection enablement • Always-on attack detection • Automatic mitigation configuration • Layer 3/4 DDoS protection • Layer 7 DDoS mitigation • Real-time attack visibility • Incident response procedures • Post-attack analysis • Integration with WAF and CDN • Cost optimization for protection • Regular DDoS testing • Compliance with availability requirements</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-archive"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud Storage Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure cloud storage? Because misconfigured storage buckets have exposed billions of records. This service implements comprehensive security for S3, Blob Storage, and Cloud Storage including bucket policies, access controls, encryption, and versioning. Implementation includes: • Storage access policies and ACLs • Encryption at rest configuration • Versioning and object lock enablement • Public access blocking • Lifecycle policy implementation • Storage logging and monitoring • Data classification integration • Cross-region replication security • Storage compliance validation • Automated remediation for misconfigurations • Data retention policy enforcement • Regular storage security audits</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Cloud CI/CD Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure cloud CI/CD pipelines? Because deployment pipelines are attractive targets for attackers. This service integrates security into cloud CI/CD including AWS CodePipeline, Azure DevOps, and Google Cloud Build. Implements automated security testing at every stage. Implementation includes: • Security gates in CI/CD pipelines • SAST/DAST tool integration • Dependency scanning • Container image scanning • Infrastructure as Code security • Secret detection and prevention • Compliance validation in pipeline • Artifact signing and verification • Deployment approval workflows • CI/CD audit logging • Security metrics from pipelines • Developer security training</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-infinity"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Infrastructure as Code (IaC) Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement IaC security? Because infrastructure defined as code can contain security flaws. This service implements security scanning for Terraform, CloudFormation, and ARM templates to identify misconfigurations before deployment. Prevents deployment of insecure infrastructure. Implementation includes: • IaC security scanning integration • Policy as code implementation • Terraform security best practices • CloudFormation security validation • ARM template security checks • Compliance validation pre-deployment • Drift detection and remediation • Version control security • Peer review automation • Security modules and templates • Developer security guidance • Continuous security improvement</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Container Registry Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why secure container registries? Because compromised registries can distribute malware across your infrastructure. This service implements security for container registries including access controls, image signing, vulnerability scanning, and retention policies. Implementation includes: • Registry access controls and authentication • Image vulnerability scanning • Image signing and trust • Retention policy implementation • Geo-replication security • Integration with CI/CD pipelines • Registry audit logging • Notary and content trust • Base image security • Registry backup and DR • Compliance with supply chain security • Regular registry security audits</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Container Runtime Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement container runtime security? Because containers can be compromised after deployment. This service implements runtime security using tools like Falco, Aqua, or Twistlock to detect and prevent malicious activity. Monitors for container escapes and privilege escalations. Implementation includes: • Runtime security tool deployment • Behavioral monitoring for containers • Container escape detection • Privilege escalation prevention • File integrity monitoring • Network anomaly detection • Incident response automation • Compliance monitoring • Integration with Kubernetes • Security event logging • Performance impact optimization • Regular rule updates and tuning</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Container Image Security</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement container image security? Because vulnerable images are the root cause of most container incidents. This service implements comprehensive image scanning for vulnerabilities, malware, and secrets. Ensures only secure images are deployed. Implementation includes: • CI/CD-integrated image scanning • Vulnerability severity prioritization • Base image hardening • Minimal image recommendations • Secret detection in images • Malware scanning • Image compliance validation • Image signing and verification • SBOM generation • Image provenance tracking • Vulnerability remediation guidance • Regular image updates and patching</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="service-category">Cloud Security</div>
+                <div class="service-name">Service Mesh Security (Istio)</div>
+                <div class="service-price">Enterprise</div>
+                <div class="service-desc">Why implement service mesh security? Because service-to-service communication needs encryption and authentication. This service implements Istio service mesh with mTLS, authorization policies, and fine-grained access controls for microservices. Implementation includes: • Istio deployment and configuration • Automatic mTLS implementation • Authorization policy creation • Service-to-service authentication • Traffic encryption between services • Access control for microservices • Observability and monitoring • Integration with Kubernetes • Zero-trust service mesh • Security policy as code • Service identity management • Regular mesh security audits</div>
+            </div>
+        </div>
+    `;
+}

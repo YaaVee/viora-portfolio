@@ -1,0 +1,29 @@
+Network Security Fundamentals:
+
+Zero Trust Architecture:
+- Assume breach, verify every request
+- Implement micro-segmentation
+- Use identity-aware proxies
+- Enable continuous monitoring
+- Encrypt all internal communications
+
+Firewall Best Practices:
+- Default deny policy
+- Regular rule reviews
+- Application-layer inspection
+- High availability configuration
+- Centralized logging
+
+VPN Security:
+- Use strong encryption (AES-256)
+- Implement certificate-based auth
+- Enable MFA for VPN access
+- Split-tunneling controls
+- Regular security audits
+
+IDS/IPS Implementation:
+- Signature-based detection
+- Behavioral analysis
+- Threat intelligence integration
+- Automated response
+- Regular rule updates

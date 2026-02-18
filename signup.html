@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join VYM Security AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid #00ff9d;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 50px rgba(0,255,157,0.2);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00ff9d, #00b8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .subtitle {
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .invite-info {
+            background: rgba(0,255,157,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .invite-info h3 {
+            color: #00ff9d;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .invite-info p {
+            color: #b0b0b0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #00ff9d;
+        }
+        .password-requirements {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+        .requirement {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .requirement.met {
+            color: #00ff9d;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #00ff9d, #00b8ff);
+            border: none;
+            border-radius: 10px;
+            color: #0a0a0a;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0,255,157,0.3);
+        }
+        .error {
+            color: #ff4444;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255,68,68,0.1);
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            text-align: center;
+            display: none;
+        }
+        .success i {
+            font-size: 60px;
+            color: #00ff9d;
+            margin-bottom: 20px;
+        }
+        .success h3 {
+            color: #00ff9d;
+            margin-bottom: 10px;
+        }
+        .success p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+        }
+        .api-key {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #00ff9d;
+            word-break: break-all;
+            margin: 20px 0;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-link a {
+            color: #00ff9d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">VYM Security AI</div>
+            
+            <!-- Loading State -->
+            <div id="loading" style="text-align: center; padding: 40px;">
+                <i class="fas fa-spinner fa-pulse fa-3x" style="color: #00ff9d;"></i>
+                <p style="margin-top: 20px; color: #b0b0b0;">Validating invite...</p>
+            </div>
+
+            <!-- Invite Info & Signup Form -->
+            <div id="signupForm" style="display: none;">
+                <div class="invite-info" id="inviteDetails">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+                <h2>Create Your Account</h2>
+                <p class="subtitle">You've been invited to access enterprise AI security tools</p>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Choose a username (letters, numbers, underscore)">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Your email address">
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Create a strong password">
+                    <div class="password-requirements" id="passwordRequirements">
+                        <div class="requirement" id="req-length">
+                            <i class="fas fa-circle"></i> At least 8 characters
+                        </div>
+                        <div class="requirement" id="req-uppercase">
+                            <i class="fas fa-circle"></i> One uppercase letter
+                        </div>
+                        <div class="requirement" id="req-lowercase">
+                            <i class="fas fa-circle"></i> One lowercase letter
+                        </div>
+                        <div class="requirement" id="req-number">
+                            <i class="fas fa-circle"></i> One number
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error" id="errorMessage"></div>
+
+                <button onclick="createAccount()">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+
+                <div class="login-link">
+                    Already have an account? <a href="/">Login</a>
+                </div>
+            </div>
+
+            <!-- Success State -->
+            <div id="success" class="success" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>Account Created Successfully!</h3>
+                <p>Your account is ready. Here's your API key:</p>
+                <div class="api-key" id="apiKey"></div>
+                <p style="font-size: 12px; color: #666;">Save this key - you won't see it again!</p>
+                <button onclick="goToDashboard()">
+                    <i class="fas fa-arrow-right"></i> Go to Dashboard
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3001/api';
+        
+        // Get invite code from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const inviteCode = urlParams.get('invite');
+
+        if (!inviteCode) {
+            // No invite code, show error
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'block';
+            document.getElementById('inviteDetails').innerHTML = `
+                <div style="color: #ff4444;">
+                    <i class="fas fa-exclamation-triangle"></i> No invite code provided
+                </div>
+                <p style="margin-top: 10px;">You need a valid invite to access this page.</p>
+            `;
+        } else {
+            // Validate invite
+            validateInvite(inviteCode);
+        }
+
+        async function validateInvite(code) {
+            try {
+                const response = await fetch(`${API_URL}/invite/${code}`);
+                const data = await response.json();
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('signupForm').style.display = 'block';
+
+                if (data.valid) {
+                    // Valid invite - show details
+                    document.getElementById('inviteDetails').innerHTML = `
+                        <h3><i class="fas fa-gift"></i> You're Invited!</h3>
+                        <p><strong>Quota:</strong> ${data.quota} AI queries/month</p>
+                        <p><strong>Expires:</strong> ${new Date(data.expiresAt).toLocaleDateString()}</p>
+                        <p><strong>Features:</strong> AI Chat, Code Analysis, Security Tools</p>
+                    `;
+                } else {
+                    // Invalid or expired invite
+                    document.getElementById('inviteDetails').innerHTML = `
+                        <div style="color: #ff4444;">
+                            <i class="fas fa-exclamation-triangle"></i> 
+                            ${data.used ? 'Invite already used' : 'Invite expired or invalid'}
+                        </div>
+                    `;
+                    document.getElementById('username').disabled = true;
+                    document.getElementById('email').disabled = true;
+                    document.getElementById('password').disabled = true;
+                    document.querySelector('button').disabled = true;
+                }
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('signupForm').style.display = 'block';
+                document.getElementById('inviteDetails').innerHTML = `
+                    <div style="color: #ff4444;">
+                        <i class="fas fa-exclamation-triangle"></i> Error validating invite
+                    </div>
+                `;
+            }
+        }
+
+        // Password validation
+        document.getElementById('password').addEventListener('input', function(e) {
+            const password = e.target.value;
+            
+            // Check requirements
+            const hasLength = password.length >= 8;
+            const hasUppercase = /[A-Z]/.test(password);
+            const hasLowercase = /[a-z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+
+            updateRequirement('req-length', hasLength);
+            updateRequirement('req-uppercase', hasUppercase);
+            updateRequirement('req-lowercase', hasLowercase);
+            updateRequirement('req-number', hasNumber);
+        });
+
+        function updateRequirement(id, met) {
+            const el = document.getElementById(id);
+            if (met) {
+                el.classList.add('met');
+                el.querySelector('i').className = 'fas fa-check-circle';
+            } else {
+                el.classList.remove('met');
+                el.querySelector('i').className = 'fas fa-circle';
+            }
+        }
+
+        async function createAccount() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorEl = document.getElementById('errorMessage');
+
+            // Validate password
+            if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/)) {
+                showError('Password does not meet requirements');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/auth/signup-with-invite`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        inviteCode,
+                        username,
+                        email,
+                        password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Success - show API key
+                    document.getElementById('signupForm').style.display = 'none';
+                    document.getElementById('success').style.display = 'block';
+                    document.getElementById('apiKey').textContent = data.apiKey;
+                    
+                    // Store tokens
+                    localStorage.setItem('accessToken', data.accessToken);
+                    localStorage.setItem('refreshToken', data.refreshToken);
+                    localStorage.setItem('apiKey', data.apiKey);
+                } else {
+                    showError(data.error || 'Failed to create account');
+                }
+            } catch (error) {
+                showError('Connection error');
+            }
+        }
+
+        function showError(message) {
+            const errorEl = document.getElementById('errorMessage');
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+        }
+
+        function goToDashboard() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

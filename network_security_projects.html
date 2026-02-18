@@ -1,0 +1,238 @@
+<!-- NETWORK SECURITY PROJECTS - Add to projects-grid in getProjectsPage() -->
+
+<!-- FIREWALL PROJECTS (20) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-firewall"></i></div>
+    <div class="project-content">
+        <div class="project-title">pfSense Enterprise Firewall Configuration</div>
+        <div class="project-tech">
+            <span class="tech-tag">pfSense</span>
+            <span class="tech-tag">FreeBSD</span>
+            <span class="tech-tag">OpenVPN</span>
+            <span class="tech-tag">Snort</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Small to medium businesses need enterprise-grade firewall capabilities without enterprise costs. This project implements a complete pfSense firewall solution with HA, VPN, and IDS/IPS.<br><br>
+            <strong>What it does:</strong> • Configures VLANs for network segmentation • Sets up site-to-site VPN with IPsec • Implements Snort/Suricata for intrusion detection • Configures traffic shaping for QoS • Sets up failover and load balancing • Implements captive portal for guest access • Provides detailed firewall logging to ELK stack<br><br>
+            <strong>Results:</strong> Enterprise security at 90% lower cost, 99.99% uptime with HA, and complete network visibility.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/pfsense-enterprise-config" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-firewall"></i></div>
+    <div class="project-content">
+        <div class="project-title">OPNsense IDS/IPS Setup with Suricata</div>
+        <div class="project-tech">
+            <span class="tech-tag">OPNsense</span>
+            <span class="tech-tag">Suricata</span>
+            <span class="tech-tag">ELK Stack</span>
+            <span class="tech-tag">FreeBSD</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Network intrusions go undetected without proper IDS/IPS. This project implements a comprehensive intrusion detection and prevention system using OPNsense and Suricata with centralized logging.<br><br>
+            <strong>What it does:</strong> • Configures Suricata for multi-gigabit inspection • Implements emerging threats ruleset • Sets up automated rule updates • Forwards alerts to ELK for visualization • Creates custom rules for application-specific threats • Implements blocking for critical threats • Provides alert dashboards and reporting<br><br>
+            <strong>Results:</strong> Detection of 95% of network-based attacks, automated blocking of malicious traffic, and complete visibility into network threats.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/opnsense-ids-setup" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-firewall"></i></div>
+    <div class="project-content">
+        <div class="project-title">Fortinet FortiGate VPN Cluster</div>
+        <div class="project-tech">
+            <span class="tech-tag">FortiGate</span>
+            <span class="tech-tag">FortiOS</span>
+            <span class="tech-tag">IPsec</span>
+            <span class="tech-tag">SD-WAN</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Remote work requires reliable, secure VPN access. This project implements a high-availability FortiGate VPN cluster with SD-WAN capabilities.<br><br>
+            <strong>What it does:</strong> • Sets up active-passive HA cluster • Configures IPsec VPN with certificate authentication • Implements split-tunneling for performance • Adds MFA with FortiToken • Configures SD-WAN for optimal routing • Implements VPN load balancing • Provides detailed VPN logging and monitoring<br><br>
+            <strong>Results:</strong> 99.99% VPN availability, support for 5000+ concurrent users, and secure remote access from anywhere.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/fortigate-vpn-cluster" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-firewall"></i></div>
+    <div class="project-content">
+        <div class="project-title">Cisco ASA AnyConnect VPN Automation</div>
+        <div class="project-tech">
+            <span class="tech-tag">Cisco ASA</span>
+            <span class="tech-tag">AnyConnect</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Ansible</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Managing Cisco ASA configurations manually is error-prone and time-consuming. This project automates ASA configuration, especially for AnyConnect VPN deployments.<br><br>
+            <strong>What it does:</strong> • Automates AnyConnect deployment using Ansible • Configures split-tunneling and DNS • Sets up certificate authentication • Automates backup of ASA configs • Implements configuration validation • Provides VPN usage analytics • Automates firmware updates<br><br>
+            <strong>Results:</strong> 90% reduction in configuration errors, automated compliance with security baselines, and simplified VPN management.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/cisco-asa-anyconnect" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<!-- VPN PROJECTS (20) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-lock"></i></div>
+    <div class="project-content">
+        <div class="project-title">WireGuard Site-to-Site VPN Mesh</div>
+        <div class="project-tech">
+            <span class="tech-tag">WireGuard</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Traditional VPNs are complex and slow. WireGuard offers better performance and simpler configuration. This project implements a full mesh VPN connecting multiple sites using WireGuard.<br><br>
+            <strong>What it does:</strong> • Sets up WireGuard on Linux gateways • Creates full mesh between all sites • Implements dynamic routing with BGP • Provides automated key management • Sets up monitoring and alerting • Implements failover paths • Provides bandwidth aggregation across sites<br><br>
+            <strong>Results:</strong> 200% faster VPN performance, simpler management, and resilient connectivity between all sites.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/wireguard-mesh-vpn" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-lock"></i></div>
+    <div class="project-content">
+        <div class="project-title">OpenVPN Access Server with LDAP Integration</div>
+        <div class="project-tech">
+            <span class="tech-tag">OpenVPN</span>
+            <span class="tech-tag">LDAP</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Prometheus</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Managing VPN users individually doesn't scale. This project integrates OpenVPN with LDAP/Active Directory for centralized user management.<br><br>
+            <strong>What it does:</strong> • Deploys OpenVPN Access Server in Docker • Integrates with LDAP for authentication • Implements group-based access policies • Sets up MFA with Google Authenticator • Provides monitoring with Prometheus/Grafana • Automates certificate management • Implements client configuration profiles<br><br>
+            <strong>Results:</strong> Centralized user management, seamless MFA integration, and complete VPN visibility.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/openvpn-ldap-integration" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<!-- IDS/IPS PROJECTS (20) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-search"></i></div>
+    <div class="project-content">
+        <div class="project-title">Snort IDS with Barnyard2 and MySQL</div>
+        <div class="project-tech">
+            <span class="tech-tag">Snort</span>
+            <span class="tech-tag">Barnyard2</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">BASE</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Raw Snort alerts are hard to analyze at scale. This project implements a complete Snort IDS with Barnyard2 for output processing and MySQL/BASE for alert analysis.<br><br>
+            <strong>What it does:</strong> • Configures Snort for inline IPS mode • Sets up Barnyard2 for alert processing • Stores alerts in MySQL database • Provides BASE web interface for analysis • Implements custom rules for environment • Sets up automated rule updates • Creates alert dashboards and reporting<br><br>
+            <strong>Results:</strong> Centralized alert management, historical alert analysis, and effective threat hunting capabilities.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/snort-barnyard-mysql" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-search"></i></div>
+    <div class="project-content">
+        <div class="project-title">Suricata IDS with Elastic Stack</div>
+        <div class="project-tech">
+            <span class="tech-tag">Suricata</span>
+            <span class="tech-tag">Elasticsearch</span>
+            <span class="tech-tag">Kibana</span>
+            <span class="tech-tag">Filebeat</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Modern IDS needs modern visualization. This project integrates Suricata with the Elastic Stack for real-time threat visualization and analysis.<br><br>
+            <strong>What it does:</strong> • Configures Suricata for high-speed inspection • Sends alerts to Elasticsearch via Filebeat • Creates Kibana dashboards for threat visualization • Implements TLS fingerprinting (JA3) • Sets up geolocation mapping of attackers • Provides real-time alert dashboards • Enables historical threat hunting<br><br>
+            <strong>Results:</strong> Real-time threat visualization, 80% faster investigation, and beautiful security dashboards for management.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/suricata-elk-stack" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<!-- LOAD BALANCER PROJECTS (15) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-balance-scale"></i></div>
+    <div class="project-content">
+        <div class="project-title">HAProxy with Let's Encrypt Automation</div>
+        <div class="project-tech">
+            <span class="tech-tag">HAProxy</span>
+            <span class="tech-tag">Let's Encrypt</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Bash</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> SSL certificate management for load balancers is often manual and error-prone. This project automates HAProxy configuration with Let's Encrypt certificate issuance and renewal.<br><br>
+            <strong>What it does:</strong> • Configures HAProxy for layer 7 load balancing • Automates Let's Encrypt certificate issuance • Implements automatic certificate renewal • Sets up SSL termination with perfect forward secrecy • Configures backend health checks • Implements rate limiting and DDoS protection • Provides monitoring with Prometheus<br><br>
+            <strong>Results:</strong> Zero-downtime SSL management, always-valid certificates, and enterprise-grade load balancing.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/haproxy-letsencrypt" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<!-- ROUTING PROJECTS (15) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-route"></i></div>
+    <div class="project-content">
+        <div class="project-title">FRRouting BGP Lab with Docker</div>
+        <div class="project-tech">
+            <span class="tech-tag">FRRouting</span>
+            <span class="tech-tag">BGP</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> BGP misconfigurations can cause major outages. This project creates a complete BGP lab environment using Docker for safe testing and learning.<br><br>
+            <strong>What it does:</strong> • Deploys FRRouting containers for BGP routing • Sets up full mesh iBGP and eBGP • Implements route maps and prefix lists • Configures BGP communities for traffic engineering • Sets up BGP monitoring with Prometheus • Provides BGP looking glass interface • Automates lab deployment with Python<br><br>
+            <strong>Results:</strong> Safe BGP testing environment, 90% faster learning curve, and prevention of BGP misconfigurations.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/frr-bgp-lab" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>
+
+<!-- NETWORK AUTOMATION PROJECTS (10) -->
+<div class="project-card" data-category="network">
+    <div class="project-image"><i class="fas fa-robot"></i></div>
+    <div class="project-content">
+        <div class="project-title">Ansible Network Automation Framework</div>
+        <div class="project-tech">
+            <span class="tech-tag">Ansible</span>
+            <span class="tech-tag">Cisco</span>
+            <span class="tech-tag">Juniper</span>
+            <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Manual network device configuration is slow and inconsistent. This project provides a complete Ansible framework for automating network device configuration across multiple vendors.<br><br>
+            <strong>What it does:</strong> • Provides playbooks for common network tasks • Supports multi-vendor (Cisco, Juniper, Arista) • Implements configuration backup and versioning • Automates compliance checking • Provides network validation tests • Integrates with Git for change management • Includes role-based access control<br><br>
+            <strong>Results:</strong> 95% reduction in configuration errors, consistent configurations across all devices, and automated compliance.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/ansible-network-automation" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,601 @@
+<!-- 50 ADDITIONAL CASE STUDIES - Add to case-studies-grid in getCaseStudiesPage() -->
+
+<!-- CASE STUDY 11: FinTech Mobile App Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">FinTech Mobile App Security Overhaul</div>
+        <div class="case-client">Client: PayWise FinTech (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> FinTech mobile app with 500,000 users suffered a critical security breach where attackers bypassed biometric authentication and transferred funds from 200 accounts. Forensic investigation revealed: insecure local storage of biometric templates, lack of certificate pinning, and vulnerable API endpoints. Regulatory fines threatened business viability.<br><br>
+            <strong>Troubleshooting:</strong> Comprehensive security assessment revealed: 1) Biometric data stored in plaintext in SharedPreferences 2) No SSL certificate pinning allowing MITM attacks 3) API endpoints accepting requests from any origin 4) Hardcoded API keys in Android APK 5) No rate limiting on transfer endpoints 6) Weak session management with long-lived tokens 7) No device integrity checks (root/jailbreak detection) 8) Insecure data caching in app storage<br><br>
+            <strong>Options Considered:</strong> 1) Incremental fixes starting with highest risk 2) Complete app rewrite with security by design 3) Hybrid approach with security library integration 4) Third-party mobile security solution 5) Biometric alternative with server-side verification<br><br>
+            <strong>Solution:</strong> Implemented comprehensive mobile security overhaul: • Moved biometric verification to server-side with secure enclave • Implemented SSL certificate pinning with backup pins • Added device integrity checks (root/jailbreak detection) • Encrypted all local storage with Android Keystore/Keychain • Removed all hardcoded secrets to backend • Implemented OAuth2 with short-lived tokens and refresh rotation • Added rate limiting per user/device • Implemented behavioral analytics for fraud detection • Added transaction signing with HMAC • Deployed runtime application self-protection (RASP) • Results: Zero security incidents in 18 months, passed security audit, regained user trust, and regulatory compliance achieved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 12: Healthcare IoT Device Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare IoT Device Security Implementation</div>
+        <div class="case-client">Client: MediTech Health Systems (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Regional hospital network discovered unauthorized access to patient monitoring systems via compromised infusion pumps. Attackers could potentially alter medication doses. Investigation revealed 500+ connected medical devices with no security controls, running outdated software, and using default credentials.<br><br>
+            <strong>Troubleshooting:</strong> Medical device assessment revealed: 1) Devices running Windows Embedded with no patches 2) Default credentials unchanged on 80% of devices 3) Flat network with no segmentation 4) No inventory of connected medical devices 5) Vendor remote access without controls 6) No monitoring for device anomalies 7) Devices unable to run security agents 8) No incident response for medical devices<br><br>
+            <strong>Options Considered:</strong> 1) Replace all devices with modern ones ($10M cost) 2) Network segmentation only 3) Medical device security gateway solution 4) Vendor-managed security service 5) Phased approach with critical devices first<br><br>
+            <strong>Solution:</strong> Implemented medical device security program: • Deployed passive network monitoring for device discovery • Created isolated VLAN for medical devices with strict firewall rules • Implemented Medigate/Ordr for medical device security • Changed all default credentials with random generation • Deployed vendor remote access with just-in-time provisioning • Implemented device behavior baselining and anomaly detection • Created incident response playbooks for medical devices • Established patch management process with vendor coordination • Implemented security awareness for clinical staff • Results: Complete visibility of all medical devices, zero security incidents in 2 years, compliance with FDA pre-market guidance, and improved patient safety.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 13: E-commerce Platform DDoS Attack -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">E-commerce Platform DDoS Defense</div>
+        <div class="case-client">Client: ShopFast Online (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Popular e-commerce platform hit by 1.5 Tbps DDoS attack during Black Friday sales, causing 8 hours of downtime and $5M in lost revenue. Attackers used IoT botnet for volumetric attack combined with application-layer attacks targeting checkout API.<br><br>
+            <strong>Troubleshooting:</strong> Post-attack analysis revealed: 1) Single ISP connection without diversity 2) On-premise mitigation limited to 100 Gbps 3) No cloud-based DDoS protection 4) Application layer vulnerable to slowloris 5) No rate limiting on API endpoints 6) CDN not configured for DDoS 7) No DDoS response plan 8) Monitoring alerts missed early warning signs<br><br>
+            <strong>Options Considered:</strong> 1) Upgrade on-premise mitigation hardware 2) Cloud-based DDoS protection service 3) Multi-CDN strategy 4) Hybrid on-premise + cloud approach 5) Application-level rate limiting only<br><br>
+            <strong>Solution:</strong> Implemented comprehensive DDoS protection: • Deployed Cloudflare Enterprise for global DDoS mitigation • Implemented AWS Shield Advanced for cloud infrastructure • Added multiple ISP connections with BGP anycast • Deployed application-layer DDoS protection with rate limiting • Implemented Web Application Firewall with DDoS rules • Created automated DDoS response playbooks • Established real-time DDoS monitoring and alerting • Conducted regular DDoS tabletop exercises • Implemented CDN with edge caching for static content • Added API gateway with throttling per client • Results: Mitigated subsequent 2.8 Tbps attack with zero downtime, maintained 99.99% availability during peak sales, and reduced insurance premiums by 40%.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 14: Manufacturing OT Security Breach -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Manufacturing OT Network Security</div>
+        <div class="case-client">Client: IndusTech Manufacturing (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Automotive parts manufacturer suffered production stoppage when ransomware infected OT network, encrypting PLC configurations. Attackers entered via phishing email through IT network, then pivoted to OT. Production halted for 5 days, $20M loss.<br><br>
+            <strong>Troubleshooting:</strong> OT security assessment revealed: 1) No separation between IT and OT networks 2) Direct internet access from OT workstations 3) No segmentation between PLCs 4) Outdated Windows XP systems in OT 5) Vendor remote access without controls 6) No OT security monitoring 7) No backups for PLC configurations 8) Missing incident response for OT<br><br>
+            <strong>Options Considered:</strong> 1) Air-gap OT network completely 2) Implement Purdue model with firewalls 3) Deploy OT-specific security solution 4) Replace all OT systems 5) Phased OT security program<br><br>
+            <strong>Solution:</strong> Implemented OT security architecture: • Deployed Purdue model with firewalls between levels • Implemented unidirectional gateways for critical data flow • Created DMZ for IT-OT communication • Deployed OT-specific monitoring (Nozomi/Claroty) • Implemented application whitelisting on OT workstations • Established secure vendor access with jump hosts • Created offline backups for PLC configurations • Developed OT incident response plan • Conducted OT security training for engineers • Implemented physical security for critical assets • Results: Complete IT-OT isolation, zero cross-contamination incidents, production continuity maintained during subsequent IT incidents, and compliance with NIST SP 800-82.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 15: SaaS Company Data Breach Response -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">SaaS Company Data Breach & Recovery</div>
+        <div class="case-client">Client: CloudSoft SaaS (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Fast-growing SaaS company discovered exposed database containing 2M customer records including PII. Database was publicly accessible due to misconfigured security group. Exposure lasted 3 weeks before discovery via external researcher. GDPR fines threatened company survival.<br><br>
+            <strong>Troubleshooting:</strong> Investigation revealed: 1) Security group allowed 0.0.0.0/0 to database port 2) No database encryption at rest 3) No network segmentation for databases 4) Missing CloudTrail logging for critical events 5) No automated scanning for misconfigurations 6) Weak IAM policies with over-permission 7) No database activity monitoring 8) Incident response plan outdated<br><br>
+            <strong>Options Considered:</strong> 1) Immediate containment and notification 2) Complete infrastructure rebuild 3) Implement CSPM solution 4) Third-party security assessment 5) Gradual security improvement program<br><br>
+            <strong>Solution:</strong> Executed comprehensive incident response and prevention: • Immediately restricted database access to application tier only • Notified affected customers with transparency • Implemented AWS Config rules for security group monitoring • Deployed AWS Security Hub with automated remediation • Enabled encryption at rest for all databases • Implemented VPC segmentation with private subnets • Deployed database activity monitoring • Created infrastructure as code with security scanning • Implemented CI/CD security gates • Conducted security training for DevOps team • Results: No regulatory fines due to swift response, 99% reduction in misconfigurations, complete infrastructure visibility, and SOC2 Type II certification achieved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 16: University Ransomware Attack -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">University Ransomware Recovery</div>
+        <div class="case-client">Client: State University (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Large university with 50,000 students suffered ransomware attack that encrypted research data, student records, and administrative systems. Attackers gained access via compromised student credentials, moved laterally for 2 months before deployment. Classes cancelled, research lost, $8M ransom demanded.<br><br>
+            <strong>Troubleshooting:</strong> Investigation revealed: 1) No MFA for student/staff accounts 2) Flat network allowing lateral movement 3) Outdated backups stored on same network 4) No segmentation for research data 5) Weak endpoint protection on faculty devices 6) No security awareness training 7) Unpatched vulnerabilities in learning management system 8) No incident response capability<br><br>
+            <strong>Options Considered:</strong> 1) Pay ransom and restore 2) Clean rebuild from offline backups 3) Selective recovery of critical systems 4) Hybrid approach with insurance support 5) Complete network rebuild with security<br><br>
+            <strong>Solution:</strong> Executed comprehensive recovery and prevention: • Restored all systems from air-gapped backups (no ransom paid) • Implemented Duo MFA for all faculty/staff/students • Deployed network segmentation between academic/research/admin • Implemented Zero Trust architecture with micro-segmentation • Deployed endpoint detection on all devices • Created security awareness program with phishing simulations • Established 24/7 security operations center • Implemented backup strategy with 3-2-1 rule • Deployed vulnerability management program • Results: Complete recovery within 3 weeks, zero ransom paid, 99% reduction in successful phishing, and achieved NIST cybersecurity framework compliance.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 17: Crypto Exchange Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Cryptocurrency Exchange Security Architecture</div>
+        <div class="case-client">Client: CryptoVault Exchange (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Cryptocurrency exchange preparing for launch needed enterprise-grade security to protect customer assets. Previous exchanges lost millions to hacks. Required security architecture that could withstand sophisticated attacks while maintaining performance for high-frequency trading.<br><br>
+            <strong>Troubleshooting:</strong> Security requirements analysis revealed: 1) Need for cold wallet storage with multi-signature 2) Hot wallet protection with withdrawal limits 3) DDoS protection for trading platform 4) Web application firewall for exchange interface 5) API security for trading bots 6) Real-time fraud detection 7) Regulatory compliance (FinCEN, SEC) 8) Penetration testing before launch<br><br>
+            <strong>Options Considered:</strong> 1) Build security in-house 2) Use third-party custodial services 3) Hybrid approach with hardware security modules 4) Bug bounty program 5) Insurance coverage<br><br>
+            <strong>Solution:</strong> Implemented comprehensive exchange security: • Deployed multi-signature cold storage with geographic distribution • Implemented hot wallet with automated withdrawal limits • Deployed AWS Shield and Cloudflare for DDoS protection • Implemented WAF with custom rules for trading patterns • Deployed API gateway with rate limiting and authentication • Implemented machine learning fraud detection • Engaged third-party penetration testing • Launched bug bounty program on HackerOne • Obtained crime insurance coverage • Implemented real-time monitoring and alerting • Results: Successful launch with $100M in first month, zero security incidents in 2 years, passed regulatory audits, and maintained 99.99% uptime.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 18: Government Agency Zero Trust -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Government Agency Zero Trust Implementation</div>
+        <div class="case-client">Client: National Digital Services Agency (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Government agency with 50,000 employees needed to modernize security to meet executive order requirements for zero trust architecture. Legacy VPN-based access was slow, insecure, and couldn't support remote work at scale. Required complete transformation without disrupting citizen services.<br><br>
+            <strong>Troubleshooting:</strong> Assessment revealed: 1) Perimeter-based security with no internal controls 2) VPN concentrators at capacity 3) No device compliance checks 4) Weak authentication with passwords only 5) Flat network allowing lateral movement 6) No visibility into cloud application usage 7) Shadow IT with unauthorized SaaS 8) Legacy applications incompatible with modern auth<br><br>
+            <strong>Options Considered:</strong> 1) Phased zero trust implementation 2) Commercial zero trust platform 3) Build in-house solution 4) Hybrid approach with legacy support 5) Cloud-first zero trust strategy<br><br>
+            <strong>Solution:</strong> Implemented comprehensive zero trust architecture: • Deployed Zscaler ZIA/ZPA for secure access • Implemented Okta for identity with MFA • Created device trust with endpoint compliance • Deployed micro-segmentation with Illumio • Implemented CASB for shadow IT discovery • Created application migration plan for legacy apps • Deployed 24/7 security monitoring • Established zero trust policies and governance • Conducted employee training and communication • Implemented continuous compliance monitoring • Results: Complete zero trust architecture in 18 months, VPN eliminated, 99% reduction in lateral movement risk, support for 50,000 remote workers, and compliance with executive order requirements.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 19: Healthcare Data Breach Response -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Data Breach Investigation</div>
+        <div class="case-client">Client: Regional Health System (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Healthcare system discovered unauthorized access to patient records affecting 100,000 patients. Investigation needed to determine scope, preserve evidence, and prevent further access while maintaining critical healthcare operations.<br><br>
+            <strong>Troubleshooting:</strong> Forensic investigation revealed: 1) Compromised credentials of billing clerk 2) Access from unusual locations (foreign countries) 3) Data exfiltration of 50GB over 3 months 4) No MFA on critical systems 5) Missing audit logs for data access 6) Insider threat indicators ignored 7) No data loss prevention controls 8) Weak termination procedures<br><br>
+            <strong>Options Considered:</strong> 1) Immediate system takedown (disrupts patient care) 2) Selective containment with monitoring 3) Law enforcement involvement 4) Privacy notification strategy 5) Regulatory reporting timeline<br><br>
+            <strong>Solution:</strong> Executed coordinated incident response: • Contained compromised accounts while maintaining operations • Preserved forensic evidence with chain of custody • Engaged law enforcement (FBI, HHS) • Notified affected patients with credit monitoring • Implemented MFA across all systems • Deployed UEBA for insider threat detection • Implemented DLP for PHI protection • Strengthened termination procedures • Conducted privacy impact assessment • Implemented 24/7 security monitoring • Results: Complete understanding of breach scope, no further unauthorized access, regulatory compliance with HIPAA breach notification, and restored patient trust through transparency.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 20: Financial Services API Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Financial Services API Security Breach</div>
+        <div class="case-client">Client: GlobalBank Financial (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Bank discovered API vulnerability exposing customer account data. Attackers exploited missing rate limiting to brute-force API keys and access account information. 10,000 customer records exposed before detection.<br><br>
+            <strong>Troubleshooting:</strong> API security assessment revealed: 1) No rate limiting on authentication endpoints 2) API keys in client-side code 3) No API gateway for security controls 4) Missing input validation 5) Excessive data in API responses 6) No API monitoring or logging 7) Weak API authentication 8) No API versioning leading to legacy vulnerabilities<br><br>
+            <strong>Options Considered:</strong> 1) Fix individual vulnerabilities 2) Implement API gateway 3) Complete API redesign 4) Third-party API security solution 5) Phased API security program<br><br>
+            <strong>Solution:</strong> Implemented comprehensive API security: • Deployed Kong API gateway with rate limiting • Implemented OAuth2 with short-lived tokens • Added API keys stored securely on server • Implemented input validation for all endpoints • Deployed API monitoring with anomaly detection • Created API security testing in CI/CD • Implemented API discovery and inventory • Added encryption for all API traffic • Deployed WAF with API-specific rules • Results: Zero API-related incidents since implementation, complete API visibility, compliance with PSD2 regulations, and developer-friendly secure API platform.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 21: E-learning Platform Privacy Compliance -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">E-learning Platform GDPR Compliance</div>
+        <div class="case-client">Client: LearnSmart Education (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> E-learning platform with 2M European users faced GDPR compliance deadline with significant gaps. Risk of fines up to €80M. Data inventory incomplete, consent management missing, and data subject request process manual and slow.<br><br>
+            <strong>Troubleshooting:</strong> Privacy assessment revealed: 1) No data inventory or mapping 2) Missing consent mechanisms 3) Data retention beyond requirements 4) No process for subject access requests 5) International data transfers without safeguards 6) Third-party processors not assessed 7) No breach notification procedure 8) Privacy policy outdated<br><br>
+            <strong>Options Considered:</strong> 1) Manual compliance with consultants 2) Privacy automation platform 3) Phased implementation 4) Data minimization approach 5) Third-party privacy solution<br><br>
+            <strong>Solution:</strong> Implemented GDPR compliance program: • Deployed OneTrust for privacy management • Created complete data inventory and mapping • Implemented consent management platform • Automated subject access request processing • Established data retention schedules • Conducted third-party processor assessments • Implemented data transfer mechanisms (SCCs) • Created breach notification procedure • Updated privacy policy and notices • Conducted employee privacy training • Results: Full GDPR compliance within 6 months, zero regulatory actions, automated privacy operations, and competitive advantage with privacy-conscious users.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 22: Manufacturing Ransomware Recovery -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Manufacturing Ransomware Recovery</div>
+        <div class="case-client">Client: PrecisionParts Manufacturing (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Precision manufacturing company hit by ransomware that encrypted both production systems and backups. Attackers demanded $3M for decryption. Production halted, customer orders delayed, company faced bankruptcy within weeks.<br><br>
+            <strong>Troubleshooting:</strong> Investigation revealed: 1) Backups stored on same network as production 2) No offline/air-gapped backups 3) Weak endpoint protection 4) No network segmentation 5) Remote access without MFA 6) Outdated systems with known vulnerabilities 7) No incident response plan 8) Insurance coverage insufficient<br><br>
+            <strong>Options Considered:</strong> 1) Pay ransom (no guarantee of recovery) 2) Rebuild from scratch (months) 3) Forensic recovery attempt 4) Hybrid approach with partial rebuild 5) Bankruptcy and restart<br><br>
+            <strong>Solution:</strong> Executed emergency recovery: • Negotiated with attackers while investigating • Discovered backup vulnerability and recovered some data • Implemented new backup strategy with immutable storage • Rebuilt critical systems from clean sources • Implemented network segmentation between IT/OT • Deployed endpoint detection and response • Implemented MFA for all remote access • Created comprehensive incident response plan • Obtained cyber insurance with proper coverage • Results: Partial recovery within 2 weeks, full recovery in 6 weeks, no ransom paid, implemented resilient backup strategy, and business continuity maintained.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 23: Retail Chain POS Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Retail Chain POS Security Implementation</div>
+        <div class="case-client">Client: MegaMart Retail (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Retail chain with 500 stores discovered POS malware on 50 systems, potentially compromising customer payment data. Investigation revealed attackers gained access through corporate network and moved laterally to stores. PCI-DSS compliance at risk.<br><br>
+            <strong>Troubleshooting:</strong> POS security assessment revealed: 1) Flat network connecting stores to corporate 2) No segmentation for POS systems 3) Remote access without controls 4) Weak passwords on POS terminals 5) No application whitelisting 6) Missing encryption for card data 7) No POS-specific monitoring 8) Outdated POS software<br><br>
+            <strong>Options Considered:</strong> 1) Replace all POS systems 2) Implement network segmentation 3) Deploy POS security solution 4) Tokenization with third-party 5) Phased store-by-store rollout<br><br>
+            <strong>Solution:</strong> Implemented comprehensive POS security: • Segmented POS network from corporate network • Implemented application whitelisting on all POS terminals • Deployed endpoint protection with POS-specific rules • Implemented encryption for card data at point of interaction • Deployed network monitoring for POS traffic • Implemented secure remote access with MFA • Created POS security baseline and hardening • Deployed file integrity monitoring • Implemented regular PCI-DSS assessments • Results: Zero POS malware incidents in 3 years, PCI-DSS compliance maintained, customer trust preserved, and secure foundation for omnichannel retail.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 24: Cloud Migration Security Incident -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Cloud Migration Security Incident</div>
+        <div class="case-client">Client: DataCore Systems (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> During migration to AWS, company exposed 500GB of sensitive data in public S3 bucket. Data discovered by security researcher before internal detection. Exposure included customer PII, source code, and internal credentials.<br><br>
+            <strong>Troubleshooting:</strong> Investigation revealed: 1) Migration scripts created public bucket without review 2) No automated checks for public buckets 3) IAM policies overly permissive 4) No encryption enabled 5) CloudTrail not enabled in new region 6) Security team not involved in migration 7) No cloud security training 8) Missing cloud security policies<br><br>
+            <strong>Options Considered:</strong> 1) Immediate bucket lockdown and notification 2) Comprehensive cloud security implementation 3) Pause migration for security review 4) Third-party cloud security assessment 5) Cloud security training program<br><br>
+            <strong>Solution:</strong> Implemented cloud security program: • Secured bucket and notified affected customers • Enabled AWS Config with automated remediation • Implemented S3 Block Public Access at organization level • Deployed AWS Security Hub and GuardDuty • Created infrastructure as code with security scanning • Implemented CI/CD security gates • Conducted cloud security training for all teams • Created cloud security policies and standards • Deployed CSPM solution for continuous monitoring • Results: No further cloud security incidents, complete cloud visibility, successful migration completion, and mature cloud security posture.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 25: Law Firm Insider Threat -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Law Firm Insider Threat Detection</div>
+        <div class="case-client">Client: Sterling Legal Partners (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Prestigious law firm discovered departing partner downloaded 50,000 sensitive documents before joining competitor. Documents included client communications, trade secrets, and litigation strategies. Client trust and firm reputation at risk.<br><br>
+            <strong>Troubleshooting:</strong> Investigation revealed: 1) No DLP controls for data exfiltration 2) Excessive access privileges for partners 3) No monitoring of document access 4) USB ports enabled on workstations 5) Cloud sync tools allowed 6) No offboarding procedure for departing attorneys 7) Missing user behavior analytics 8) Legal hold process manual<br><br>
+            <strong>Options Considered:</strong> 1) Legal action against former partner 2) Implement DLP solution 3) UEBA deployment 4) Comprehensive insider threat program 5) Client notification strategy<br><br>
+            <strong>Solution:</strong> Implemented insider threat program: • Deployed DLP solution monitoring for sensitive data • Implemented UEBA for behavioral analytics • Created least-privilege access model • Disabled USB ports and controlled cloud sync • Implemented offboarding procedure with account termination • Deployed document watermarking for traceability • Created insider threat response playbooks • Conducted legal and HR coordination • Implemented privileged access monitoring • Results: Zero subsequent data exfiltration incidents, client trust maintained through transparency, legal action successful against former partner, and comprehensive insider threat prevention.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 26: Telecom Network Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Telecom Network Security Overhaul</div>
+        <div class="case-client">Client: ConnectTel Communications (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Telecom provider discovered sophisticated attackers in their network for 6 months, accessing customer call records and potentially intercepting communications. Attackers exploited vulnerabilities in SS7 protocol and network management systems.<br><br>
+            <strong>Troubleshooting:</strong> Network security assessment revealed: 1) SS7 vulnerabilities allowing location tracking 2) Diameter protocol weaknesses 3) Network management systems exposed 4) No network segmentation between systems 5) Vendor backdoors present 6) Weak authentication for network devices 7) No monitoring for signaling anomalies 8) Outdated network equipment<br><br>
+            <strong>Options Considered:</strong> 1) SS7 firewall deployment 2) Network modernization 3) Signaling monitoring solution 4) Vendor security assessment 5) Phased security implementation<br><br>
+            <strong>Solution:</strong> Implemented telecom security architecture: • Deployed SS7 firewall with signaling screening • Implemented Diameter edge agent for security • Segregated network management systems • Conducted vendor security assessments • Implemented strong authentication for all network devices • Deployed signaling monitoring and anomaly detection • Modernized critical network infrastructure • Implemented 24/7 security monitoring • Created incident response for telecom-specific threats • Results: Zero successful network intrusions since implementation, protection of subscriber privacy, compliance with telecom regulations, and customer trust maintained.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 27: SaaS Company SOC2 Certification -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">SaaS Company SOC2 Certification</div>
+        <div class="case-client">Client: CloudScale SaaS (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Fast-growing SaaS company needed SOC2 Type II certification to close enterprise deals. Current security controls were ad-hoc and undocumented. Audit preparation seemed overwhelming with limited security team.<br><br>
+            <strong>Troubleshooting:</strong> Readiness assessment revealed: 1) No documented security policies 2) Incomplete access reviews 3) No change management process 4) Missing vendor risk assessments 5) Inadequate logging and monitoring 6) No incident response plan 7) Weak password policies 8) No security awareness training<br><br>
+            <strong>Options Considered:</strong> 1) Hire consultants for full program 2) Use compliance automation platform 3) Phased implementation 4) Hybrid approach with tools and consultants 5) Delay certification while building program<br><br>
+            <strong>Solution:</strong> Implemented SOC2 compliance program: • Deployed Drata for continuous compliance automation • Created comprehensive security policies and procedures • Implemented access reviews with automation • Established change management process • Deployed vendor risk management program • Implemented centralized logging and monitoring • Created incident response plan with testing • Deployed password manager and MFA • Conducted security awareness training • Results: SOC2 Type II certification achieved in 4 months, enterprise deals closed, security team efficiency improved 10x, and continuous compliance maintained.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 28: Healthcare Ransomware Prevention -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Ransomware Prevention Program</div>
+        <div class="case-client">Client: Community Health Network (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Regional health network recognized ransomware threat to patient care. Near-miss incident with phishing email prompted proactive prevention program. Needed to protect 10 hospitals and 50 clinics without disrupting care.<br><br>
+            <strong>Troubleshooting:</strong> Risk assessment revealed: 1) Phishing susceptibility high (30% click rate) 2) No offline backups 3) Weak endpoint protection 4) No network segmentation 5) Legacy medical devices unpatched 6) Remote access without MFA 7) No incident response capability 8) Limited security budget<br><br>
+            <strong>Options Considered:</strong> 1) Basic antivirus and backups 2) Comprehensive ransomware prevention 3) Insurance-focused approach 4) Phased implementation 5) Managed security service<br><br>
+            <strong>Solution:</strong> Implemented ransomware prevention program: • Deployed phishing simulation and training (click rate reduced to 2%) • Implemented immutable backups with 3-2-1 strategy • Deployed endpoint detection and response • Created network segmentation for medical devices • Implemented patch management program • Deployed MFA for all remote access • Created incident response playbooks • Obtained cyber insurance with proper coverage • Conducted regular tabletop exercises • Results: Zero ransomware incidents in 3 years, 90% reduction in phishing susceptibility, successful recovery from isolated incidents, and patient care protected.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 29: Financial Services DevSecOps -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Financial Services DevSecOps Transformation</div>
+        <div class="case-client">Client: CapitalOne Financial (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Financial services company with 500 developers faced slow release cycles due to manual security reviews. Security was bottleneck, taking weeks per release. Developers frustrated, business demanded faster time-to-market.<br><br>
+            <strong>Troubleshooting:</strong> DevSecOps assessment revealed: 1) Security at end of SDLC only 2) Manual code reviews 3) No automated security testing 4) Security tools not integrated 5) Developers lack security training 6) No security metrics 7) Compliance reviews manual 8) Security seen as blocker<br><br>
+            <strong>Options Considered:</strong> 1) Add more security reviewers 2) Implement DevSecOps tools 3) Security champions program 4) Training and culture change 5) Comprehensive transformation<br><br>
+            <strong>Solution:</strong> Implemented DevSecOps transformation: • Integrated SAST/DAST/SCA into CI/CD pipelines • Created security champions program (50 developers trained) • Implemented infrastructure as code scanning • Deployed automated compliance checks • Created security metrics dashboard • Shifted security left with IDE plugins • Implemented threat modeling in design phase • Conducted security training for all developers • Results: Release time reduced from weeks to hours, 90% of vulnerabilities caught before production, developer satisfaction improved, and security embedded in culture.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 30: E-commerce Platform Fraud Detection -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">E-commerce Platform Fraud Detection</div>
+        <div class="case-client">Client: GlobalShop E-commerce (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Fast-growing e-commerce platform saw fraud losses increasing to $2M annually. Fraudsters used stolen credit cards, account takeover, and return fraud. Manual review couldn't scale with 10,000 daily orders.<br><br>
+            <strong>Troubleshooting:</strong> Fraud analysis revealed: 1) No real-time fraud detection 2) Manual review of only high-value orders 3) No device fingerprinting 4) Weak account security 5) No velocity checks 6) Return process easily abused 7) No machine learning models 8) Fraud team overwhelmed<br><br>
+            <strong>Options Considered:</strong> 1) Third-party fraud solution 2) Build in-house ML models 3) Hybrid approach 4) Insurance for fraud losses 5) Stricter payment validation<br><br>
+            <strong>Solution:</strong> Implemented ML-powered fraud detection: • Deployed Sift/Forter for fraud prevention • Implemented device fingerprinting • Created real-time velocity checks • Deployed machine learning models for fraud scoring • Implemented 3D Secure 2.0 • Created automated review workflows • Deployed account security with MFA • Implemented return fraud detection • Results: Fraud losses reduced by 85%, automated review of 99% of orders, improved customer experience with fewer false declines, and fraud team focused on high-value cases.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 31: University Research Data Protection -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">University Research Data Protection</div>
+        <div class="case-client">Client: Research University (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> University research lab discovered sensitive research data (medical trials, defense contracts) accessible to unauthorized users. Data shared freely across departments with no controls. Risk of intellectual property theft and regulatory violations.<br><br>
+            <strong>Troubleshooting:</strong> Data protection assessment revealed: 1) No data classification 2) Shared drives with open permissions 3) No encryption for sensitive data 4) Research data on personal devices 5) No DLP controls 6) Third-party researchers without oversight 7) No data access monitoring 8) Grant requirements for data protection unmet<br><br>
+            <strong>Options Considered:</strong> 1) Lock down all research data 2) Implement data classification program 3) Deploy DLP solution 4) Research data management platform 5) Phased implementation by research area<br><br>
+            <strong>Solution:</strong> Implemented research data protection: • Created data classification framework • Implemented Microsoft Information Protection • Deployed DLP for sensitive research data • Created secure research collaboration platform • Implemented encryption for all research data • Deployed access reviews and monitoring • Established data handling guidelines • Conducted researcher training • Implemented grant compliance reporting • Results: Research data protected, compliance with grant requirements, zero data loss incidents, and researchers empowered to collaborate securely.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 32: Manufacturing Supply Chain Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Manufacturing Supply Chain Security</div>
+        <div class="case-client">Client: AutoParts International (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Auto parts manufacturer discovered counterfeit components in supply chain that passed through multiple vendors. Components could cause safety failures. Investigation revealed compromised vendor systems and lack of supply chain visibility.<br><br>
+            <strong>Troubleshooting:</strong> Supply chain assessment revealed: 1) No vendor security requirements 2) No component tracking 3) Multiple tiers of suppliers unmonitored 4) No verification of component origin 5) Vendor systems easily compromised 6) No incident coordination with vendors 7) Contract language lacking security 8) No backup suppliers identified<br><br>
+            <strong>Options Considered:</strong> 1) Bring supply chain in-house 2) Implement vendor security program 3) Blockchain for traceability 4) Third-party supply chain security 5) Phased vendor remediation<br><br>
+            <strong>Solution:</strong> Implemented supply chain security program: • Created vendor security requirements and assessments • Implemented component tracking with blockchain • Deployed vendor risk management platform • Established multi-tier supply chain visibility • Conducted vendor security training • Created incident coordination procedures • Updated contracts with security requirements • Identified and qualified backup suppliers • Results: Complete supply chain visibility, zero counterfeit components, vendor security posture improved, and supply chain resilience enhanced.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 33: Healthcare Telemedicine Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Telemedicine Security</div>
+        <div class="case-client">Client: VirtualCare Health (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Telemedicine provider rapidly scaled during pandemic, but security couldn't keep up. Patient consultations recorded and stored insecurely, platform vulnerabilities exposed patient data. Risk of HIPAA violations and loss of patient trust.<br><br>
+            <strong>Troubleshooting:</strong> Security assessment revealed: 1) Video calls not end-to-end encrypted 2) Recordings stored in public cloud bucket 3) No access controls for recordings 4) Patient data in chat unencrypted 5) Platform vulnerabilities (XSS, injection) 6) No security testing before release 7) Provider devices unmanaged 8) Patients accessing from insecure networks<br><br>
+            <strong>Options Considered:</strong> 1) Pause service for security rebuild 2) Third-party telemedicine platform 3) Security overlay solution 4) Phased security improvements 5) HIPAA compliance program<br><br>
+            <strong>Solution:</strong> Implemented telemedicine security: • Deployed end-to-end encryption for all video/chat • Implemented secure storage with access controls • Secured recordings with encryption and audit trails • Fixed platform vulnerabilities with penetration testing • Implemented secure development lifecycle • Deployed device management for providers • Created patient security guidelines • Achieved HIPAA compliance certification • Results: Zero security incidents, patient trust maintained, regulatory compliance achieved, and platform scaled to 1M consultations.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 34: Energy Sector OT Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Energy Sector OT Security Implementation</div>
+        <div class="case-client">Client: PowerGen Energy (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Power generation company faced increasing cyber threats to critical infrastructure. NERC CIP compliance required, but OT systems were vulnerable. Previous security incidents caused minor disruptions. Need to protect grid stability.<br><br>
+            <strong>Troubleshooting:</strong> OT security assessment revealed: 1) Flat network with IT connectivity 2) Legacy systems unpatched 3) Vendor remote access uncontrolled 4) No OT monitoring 5) Weak physical security 6) No incident response for OT 7) Missing security controls in SCADA 8) NERC CIP gaps identified<br><br>
+            <strong>Options Considered:</strong> 1) Air-gap OT network 2) Implement Purdue model 3) Deploy OT security monitoring 4) Vendor access control solution 5) Phased NERC CIP compliance<br><br>
+            <strong>Solution:</strong> Implemented OT security architecture: • Deployed Purdue model with firewalls and diodes • Implemented OT monitoring with Nozomi • Created DMZ for vendor access with just-in-time • Deployed physical security for critical assets • Established OT incident response procedures • Implemented NERC CIP compliance controls • Conducted OT security training • Deployed backup control center • Results: NERC CIP compliance achieved, zero OT security incidents, grid stability maintained, and regulator confidence restored.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 35: SaaS Company Identity Management -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">SaaS Company Identity Management</div>
+        <div class="case-client">Client: CloudCore SaaS (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Fast-growing SaaS company with 1000 employees managed identity across 50+ SaaS applications with spreadsheets. Offboarding took weeks, former employees retained access. Security audit revealed critical access risks.<br><br>
+            <strong>Troubleshooting:</strong> Identity assessment revealed: 1) No centralized identity provider 2) Manual onboarding/offboarding 3) Orphaned accounts from former employees 4) Shared accounts for multiple applications 5) No MFA enforcement 6) No access reviews 7) Privileged accounts unmanaged 8) No integration with HR<br><br>
+            <strong>Options Considered:</strong> 1) Manual cleanup of accounts 2) Implement identity provider 3) Deploy identity governance 4) Phased identity program 5) Managed identity service<br><br>
+            <strong>Solution:</strong> Implemented identity management program: • Deployed Okta as centralized identity provider • Integrated all 50+ SaaS applications • Implemented automated provisioning/deprovisioning • Enforced MFA for all users • Deployed privileged access management • Created automated access reviews • Integrated with HR system for lifecycle • Implemented identity analytics and reporting • Results: Offboarding reduced from weeks to minutes, zero orphaned accounts, 100% MFA adoption, compliance with access review requirements, and improved security posture.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 36: Retail Chain PCI-DSS Compliance -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Retail Chain PCI-DSS Compliance</div>
+        <div class="case-client">Client: ValueMart Retail (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Regional retail chain with 200 stores faced PCI-DSS compliance failure after QSA audit revealed 50+ findings. Card brands threatened fines and potential loss of payment processing ability. Business at risk.<br><br>
+            <strong>Troubleshooting:</strong> PCI assessment revealed: 1) Cardholder data stored unnecessarily 2) No network segmentation for CDE 3) Weak encryption (SSL/TLS 1.0) 4) Default passwords on POS systems 5) No vulnerability scanning 6) Incomplete documentation 7) No penetration testing 8) Third-party compliance unverified<br><br>
+            <strong>Options Considered:</strong> 1) Tokenization with third-party 2) Complete network rebuild 3) Phased remediation 4) PCI-as-a-service solution 5) Engage QSA for remediation support<br><br>
+            <strong>Solution:</strong> Implemented PCI-DSS compliance program: • Tokenized all cardholder data with third-party • Created dedicated CDE with network segmentation • Upgraded to TLS 1.2/1.3 everywhere • Changed all default credentials • Implemented weekly vulnerability scanning • Deployed continuous compliance monitoring • Conducted annual penetration testing • Created complete documentation • Results: Passed re-audit with zero findings, maintained compliance for 3+ years, reduced PCI scope by 90%, and avoided regulatory fines.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 37: Healthcare Cloud Migration -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Cloud Migration Security</div>
+        <div class="case-client">Client: HealthFirst Systems (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Healthcare organization needed to migrate EHR system to AWS for scalability and disaster recovery. HIPAA compliance and patient safety paramount. Previous cloud migration attempts failed security reviews.<br><br>
+            <strong>Troubleshooting:</strong> Cloud readiness assessment revealed: 1) EHR system not cloud-optimized 2) Data classification incomplete 3) Encryption requirements unclear 4) BAA with AWS required 5) Access controls complex 6) Audit logging insufficient 7) Disaster recovery untested 8) Staff lacked cloud security skills<br><br>
+            <strong>Options Considered:</strong> 1) Lift-and-shift with security overlay 2) Re-architect for cloud-native 3) Hybrid approach 4) Managed cloud service 5) Phased migration by module<br><br>
+            <strong>Solution:</strong> Implemented secure cloud migration: • Executed BAA with AWS • Encrypted all PHI at rest and in transit • Implemented least-privilege IAM roles • Deployed CloudTrail and Config for audit • Created VPC with private subnets for EHR • Implemented disaster recovery with pilot light • Conducted staff cloud security training • Performed penetration testing post-migration • Results: Successful HIPAA-compliant migration, 99.99% availability, disaster recovery tested and working, and $2M annual cost savings.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 38: Financial Services Insider Threat -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Financial Services Insider Threat Program</div>
+        <div class="case-client">Client: Meridian Investments (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Investment firm discovered trader manipulating systems for personal gain, causing $5M loss. Investigation revealed pattern of suspicious behavior missed by existing controls. Need to detect insider threats proactively.<br><br>
+            <strong>Troubleshooting:</strong> Insider threat assessment revealed: 1) No user behavior monitoring 2) Excessive access privileges 3) No separation of duties 4) Manual trade reviews only 5) No DLP for financial data 6) Weak termination procedures 7) No insider threat policy 8) Culture discouraged reporting<br><br>
+            <strong>Options Considered:</strong> 1) Terminate involved employees 2) Implement UEBA solution 3) Create insider threat program 4) Strengthen access controls 5) Cultural and training initiatives<br><br>
+            <strong>Solution:</strong> Implemented insider threat program: • Deployed UEBA for behavioral analytics • Implemented privileged access management • Enforced separation of duties • Deployed DLP for financial data • Created insider threat response team • Established whistleblower program • Conducted employee training • Implemented automated trade monitoring • Results: Early detection of three subsequent insider incidents, prevention of additional losses, regulatory compliance achieved, and security culture improved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 39: E-commerce Platform WAF Implementation -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">E-commerce Platform WAF Implementation</div>
+        <div class="case-client">Client: FashionHub Online (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> E-commerce site suffered repeated SQL injection and XSS attacks, with successful compromise twice in 6 months. Custom application code vulnerable, development team unable to fix all issues quickly.<br><br>
+            <strong>Troubleshooting:</strong> Application security assessment revealed: 1) Multiple SQL injection vulnerabilities 2) XSS in product reviews 3) Weak input validation 4) No WAF in place 5) Development lacking security training 6) No security testing in CI/CD 7) Third-party plugins vulnerable 8) Legacy code unmaintained<br><br>
+            <strong>Options Considered:</strong> 1) Fix all code vulnerabilities (months) 2) Implement WAF as virtual patch 3) Rewrite application 4) Third-party security testing 5) Phased remediation with WAF<br><br>
+            <strong>Solution:</strong> Implemented WAF with virtual patching: • Deployed AWS WAF with OWASP core rule set • Created virtual patches for known vulnerabilities • Implemented rate limiting and bot mitigation • Deployed WAF logging to Security Hub • Created custom rules for application logic • Implemented automatic rule updates • Conducted developer security training • Performed regular penetration testing • Results: Zero successful attacks since WAF implementation, vulnerabilities patched virtually while code fixed, development team trained, and security posture improved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 40: Manufacturing IIoT Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Manufacturing IIoT Security Implementation</div>
+        <div class="case-client">Client: SmartFactory Industries (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Industry 4.0 initiative deployed 10,000 IIoT sensors across factory floor. Security not considered initially, leaving production data exposed and potential for sabotage. Production efficiency gains at risk.<br><br>
+            <strong>Troubleshooting:</strong> IIoT security assessment revealed: 1) Sensors with default credentials 2) Unencrypted data transmission 3) Direct internet exposure 4) No device authentication 5) Firmware outdated 6) No update mechanism 7) Network segmentation missing 8) No monitoring for IIoT devices<br><br>
+            <strong>Options Considered:</strong> 1) Replace all IIoT devices 2) Implement IIoT security gateway 3) Network segmentation only 4) Vendor security requirements 5) Phased security rollout<br><br>
+            <strong>Solution:</strong> Implemented IIoT security architecture: • Deployed IIoT gateway with encryption • Changed all default credentials • Implemented device authentication with certificates • Created isolated IIoT network segment • Deployed firmware update mechanism • Implemented IIoT monitoring and anomaly detection • Established vendor security requirements • Conducted IIoT security training • Results: Production data protected, zero IIoT security incidents, Industry 4.0 benefits realized, and scalable secure IIoT foundation.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 41: Government Agency Cloud Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Government Agency Cloud Security</div>
+        <div class="case-client">Client: State Digital Services (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> State government agency moving citizen services to cloud faced FedRAMP compliance requirements. Previous security reviews failed due to incomplete controls. Citizen data at risk, project delayed 18 months.<br><br>
+            <strong>Troubleshooting:</strong> FedRAMP readiness assessment revealed: 1) Incomplete security documentation 2) Continuous monitoring not implemented 3) Incident response untested 4) Access controls insufficient 5) Encryption gaps identified 6) Third-party assessments missing 7) Staff lacked FedRAMP expertise 8) Budget constraints<br><br>
+            <strong>Options Considered:</strong> 1) Hire FedRAMP consultants 2) Use FedRAMP-authorized cloud 3) Phased compliance approach 4) Managed security service 5) Extend on-premise systems<br><br>
+            <strong>Solution:</strong> Achieved FedRAMP compliance: • Engaged FedRAMP advisory consultants • Selected FedRAMP-authorized cloud provider • Implemented continuous monitoring with Splunk • Created complete security documentation • Deployed automated access controls • Implemented encryption for all citizen data • Conducted third-party assessments • Trained staff on FedRAMP requirements • Results: FedRAMP authorization achieved, citizen services launched securely, compliance maintained continuously, and project completed within budget.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 42: Financial Services DLP Implementation -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Financial Services DLP Implementation</div>
+        <div class="case-client">Client: SecureBank Financial (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Bank discovered customer data leaked via email by employees. No visibility into data movement. Regulatory fines and reputational damage risk. Need to prevent data loss while maintaining productivity.<br><br>
+            <strong>Troubleshooting:</strong> Data protection assessment revealed: 1) No DLP controls 2) Email unmonitored 3) USB drives allowed 4) Cloud uploads unrestricted 5) Printing uncontrolled 6) No data classification 7) Employee training lacking 8) Incident response for data loss missing<br><br>
+            <strong>Options Considered:</strong> 1) Block all data movement 2) Implement DLP solution 3) Employee monitoring 4) Data classification program 5) Phased DLP rollout<br><br>
+            <strong>Solution:** Implemented comprehensive DLP program: • Deployed Microsoft Information Protection • Created data classification framework • Implemented DLP policies for email and endpoints • Blocked unauthorized USB and cloud uploads • Monitored printing of sensitive data • Conducted employee training • Created incident response for DLP alerts • Implemented data loss reporting • Results: 90% reduction in data loss incidents, regulatory compliance achieved, employee awareness improved, and customer data protected.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 43: Healthcare Mobile App Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Mobile App Security</div>
+        <div class="case-client">Client: CareConnect Health (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Healthcare provider launched patient portal mobile app without security testing. App vulnerabilities exposed patient data, received negative press and regulatory scrutiny. 100,000 downloads at risk.<br><br>
+            <strong>Troubleshooting:</strong> Mobile app assessment revealed: 1) Insecure data storage 2) No certificate pinning 3) API vulnerabilities 4) Weak authentication 5) Session management flaws 6) Reverse engineering possible 7) No app shielding 8) Development lacked security training<br><br>
+            <strong>Options Considered:</strong> 1) Pull app from stores 2) Rapid security fix 3) Complete rewrite 4) Mobile security wrapper 5) Phased security improvements<br><br>
+            <strong>Solution:</strong> Implemented mobile app security: • Fixed all identified vulnerabilities • Implemented certificate pinning • Added runtime application self-protection • Deployed API security gateway • Implemented biometric authentication • Added app shielding against reverse engineering • Conducted developer security training • Established mobile app security testing • Results: App restored to stores, zero subsequent security incidents, patient trust rebuilt, and regulatory compliance achieved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 44: University Cyber Range -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">University Cyber Range Implementation</div>
+        <div class="case-client">Client: Technical University (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> University cybersecurity program needed hands-on training environment for 500 students. Existing labs inadequate, students graduated without practical skills. Employers complained of theoretical-only knowledge.<br><br>
+            <strong>Troubleshooting:</strong> Training needs assessment revealed: 1) No cyber range 2) Isolated lab environments only 3) Limited real-world scenarios 4) No red/blue team exercises 5) Capture-the-flag events manual 6) Industry certifications required 7) Faculty lacked range expertise 8) Budget constraints<br><br>
+            <strong>Options Considered:</strong> 1) Build custom cyber range 2) Commercial cyber range product 3) Cloud-based training platform 4) Academic partnerships 5) Phased implementation<br><br>
+            <strong>Solution:</strong> Implemented university cyber range: • Deployed cloud-based cyber range (Immersive Labs) • Created 200+ real-world scenarios • Implemented red team/blue team exercises • Deployed automated capture-the-flag • Integrated with curriculum • Trained faculty on range usage • Conducted industry certification prep • Partnered with employers for scenarios • Results: Student practical skills improved 80%, job placement rate increased, industry partnerships formed, and university recognized as cybersecurity center of excellence.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 45: Retail Chain Security Awareness -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Retail Chain Security Awareness Program</div>
+        <div class="case-client">Client: National Retail Group (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Retail chain with 10,000 employees suffered multiple phishing incidents leading to credential theft. Previous training ineffective, click rates remained high. Security culture weak across organization.<br><br>
+            <strong>Troubleshooting:</strong> Training assessment revealed: 1) Annual compliance training only 2) No phishing simulations 3) Content not engaging 4) No metrics on effectiveness 5) Management not involved 6) Different roles same training 7) No reinforcement 8) Culture of security absent<br><br>
+            <strong>Options Considered:</strong> 1) More compliance training 2) Phishing simulations only 3) Comprehensive awareness program 4) Gamified training 5) Role-based content<br><br>
+            <strong>Solution:** Implemented security awareness program: • Deployed KnowBe4 for training and phishing • Created role-based training content • Implemented monthly phishing simulations • Gamified training with leaderboards • Involved management in security messaging • Measured and reported metrics • Reinforced with posters and communications • Celebrated security champions • Results: Phishing click rate reduced from 25% to 3%, security culture improved, incidents decreased, and employees engaged in security.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 46: Energy Sector Incident Response -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Energy Sector Incident Response</div>
+        <div class="case-client">Client: National Grid Operator (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Energy grid operator detected sophisticated malware in SCADA systems. Potential for power outage affecting millions. Need to contain, eradicate, and recover while maintaining grid stability.<br><br>
+            <strong>Troubleshooting:</strong> Incident investigation revealed: 1) APT actor targeting energy sector 2) Malware designed to disrupt operations 3) Multiple systems compromised 4) Data exfiltration occurring 5) Incident response plan for IT only 6) OT expertise lacking 7) Communication plan missing 8) Regulatory reporting required<br><br>
+            <strong>Options Considered:</strong> 1) Immediate system shutdown (risks blackout) 2) Selective containment 3) FBI/CISA involvement 4) OT incident response experts 5) Phased remediation<br><br>
+            <strong>Solution:</strong> Executed OT incident response: • Engaged CISA and FBI • Deployed OT incident response team • Contained malware while maintaining operations • Conducted forensic analysis • Removed malware from all systems • Implemented enhanced monitoring • Created OT-specific incident plan • Conducted after-action review • Results: Grid stability maintained, malware fully removed, no power disruption, lessons learned implemented, and sector-wide sharing improved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 47: SaaS Company Vendor Risk -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">SaaS Company Vendor Risk Management</div>
+        <div class="case-client">Client: CloudScale SaaS (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> SaaS company discovered critical vendor (cloud provider) had security incident potentially affecting customer data. No visibility into vendor security posture. Customer trust at risk.<br><br>
+            <strong>Troubleshooting:</strong> Vendor risk assessment revealed: 1) No vendor security assessments 2) Third-party dependencies unknown 3) Contracts missing security requirements 4) No vendor monitoring 5) Incident coordination lacking 6) No backup vendors identified 7) Vendor concentration risk 8) Customer communication plan missing<br><br>
+            <strong>Options Considered:</strong> 1) Accept vendor risk 2) Implement vendor risk program 3) Multi-cloud strategy 4) Vendor security ratings 5) Phased vendor management<br><br>
+            <strong>Solution:</strong> Implemented vendor risk management: • Deployed vendor risk management platform • Assessed all critical vendors • Updated contracts with security requirements • Implemented continuous vendor monitoring • Created vendor incident coordination • Established multi-cloud strategy • Developed vendor concentration analysis • Created customer communication templates • Results: Complete vendor visibility, zero vendor-related incidents, customer trust maintained, and regulatory compliance achieved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 48: Healthcare Medical Device Patching -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Healthcare Medical Device Patching</div>
+        <div class="case-client">Client: Metropolitan Hospital (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Hospital discovered critical vulnerabilities in 500+ medical devices (infusion pumps, MRI machines, patient monitors). Vendors slow to provide patches, devices cannot be taken offline during patient care. Risk to patient safety.<br><br>
+            <strong>Troubleshooting:</strong> Medical device assessment revealed: 1) Devices running outdated OS 2) No patch mechanism 3) Vendor support ending 4) Network exposure unnecessary 5) No virtual patching 6) Inventory incomplete 7) Risk acceptance process missing 8) Replacement budget insufficient<br><br>
+            <strong>Options Considered:</strong> 1) Replace all devices ($20M) 2) Network segmentation 3) Virtual patching 4) Vendor remediation program 5) Phased replacement with mitigations<br><br>
+            <strong>Solution:** Implemented medical device risk mitigation: • Segregated devices to isolated network • Deployed virtual patching with IPS • Implemented vendor remediation program • Created device inventory with risks • Established risk acceptance process • Deployed monitoring for device anomalies • Prioritized replacement of critical devices • Conducted staff training on risks • Results: Patient safety protected, vulnerabilities mitigated, regulatory compliance maintained, and systematic device replacement underway.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 49: Financial Services Cloud Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">Financial Services Cloud Security</div>
+        <div class="case-client">Client: Investment Bank (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> Investment bank moving trading applications to AWS needed ultra-low latency while maintaining security. Traditional security controls added latency unacceptable for high-frequency trading. Need innovative approach.<br><br>
+            <strong>Troubleshooting:</strong> Performance-security assessment revealed: 1) WAF adds 5ms latency 2) VPN adds 3ms 3) Encryption adds 2ms 4) Compliance requirements strict 5) Regulatory oversight intense 6) Trading algorithms sensitive 7) Competition fierce 8) Budget available for optimization<br><br>
+            <strong>Options Considered:</strong> 1) Accept latency for security 2) Optimize security stack 3) Hardware-based security 4) Edge security solutions 5) Custom security optimization<br><br>
+            <strong>Solution:</strong> Implemented low-latency security: • Deployed AWS WAF at edge with CloudFront • Used dedicated network connections (Direct Connect) • Implemented hardware security modules at edge • Optimized encryption algorithms (AES-NI) • Deployed security groups at hypervisor level • Used AWS PrivateLink for secure connections • Implemented real-time monitoring with minimal impact • Results: Sub-millisecond latency achieved, security maintained, regulatory compliance satisfied, and competitive advantage preserved.
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY 50: University Research Security -->
+<div class="case-card">
+    <div class="case-image"></div>
+    <div class="case-content">
+        <div class="case-title">University Research Security Program</div>
+        <div class="case-client">Client: Research University (Imaginary)</div>
+        <div class="case-desc">
+            <strong>Problem:</strong> University research labs with sensitive data (medical, defense, proprietary) lacked security controls. Researchers prioritized openness over security. Multiple minor incidents, major breach feared.<br><br>
+            <strong>Troubleshooting:</strong> Research security assessment revealed: 1) No data classification 2) Open file shares 3) Personal devices used 4) Collaboration tools insecure 5) Grant requirements unmet 6) Researchers resistant to controls 7) No security support for labs 8) Culture of openness vs security<br><br>
+            <strong>Options Considered:</strong> 1) Impose security controls (resistance) 2) Collaborate with researchers 3) Security concierge service 4) Grant compliance program 5) Phased implementation by lab<br><br>
+            <strong>Solution:</strong> Implemented research security program: • Created research security team as partners • Developed data classification with researchers • Deployed secure collaboration platforms • Implemented grant compliance support • Provided security concierge for labs • Created researcher security training • Deployed monitoring with researcher input • Established balanced security controls • Results: Research data protected, researcher collaboration improved, grant compliance achieved, and security culture embraced.
+        </div>
+    </div>
+</div>

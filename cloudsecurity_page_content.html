@@ -1,0 +1,20 @@
+<!-- CLOUD SECURITY PAGE CONTENT - Replace the existing getCloudSecurityPage() function -->
+function getCloudSecurityPage() {
+    // Extract cloud security services from the main services page
+    const allServices = getServicesPage();
+    const cloudServices = allServices.split('<div class="services-grid">')[1].split('</div>')[0]
+        .split('<div class="service-card">')
+        .filter(card => card.includes('Cloud Security') || card.includes('fab fa-aws') || card.includes('fab fa-microsoft') || card.includes('fab fa-google') || card.includes('fa-docker') || card.includes('Kubernetes') || card.includes('Container'))
+        .map(card => '<div class="service-card">' + card)
+        .join('');
+    
+    return `
+        <div class="page-header">
+            <h1>Cloud Security Services</h1>
+            <p>100+ specialized cloud security services across all major platforms</p>
+        </div>
+        <div class="services-grid">
+            ${cloudServices}
+        </div>
+    `;
+}

@@ -1,0 +1,181 @@
+function getRealtimeAIPage() {
+    return `
+        <div class="page-header">
+            <h1>Real AI Security Assistant</h1>
+            <p>Powered by Ollama LLM with security knowledge base</p>
+        </div>
+
+        <div class="ai-container">
+            <div class="ai-chat">
+                <h3 style="margin-bottom: 15px; color: #00ff9d;">
+                    <i class="fas fa-brain"></i> AI Security Expert
+                </h3>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot">
+                        <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="message-content">
+                            Hello! I'm your real AI security assistant running on Ollama LLM.
+                            I can help with:
+                            • Cloud security (AWS, Azure, GCP)
+                            • Network security & firewalls
+                            • DevSecOps practices
+                            • Vulnerability analysis
+                            • Compliance frameworks
+                            
+                            What would you like to know?
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" 
+                           placeholder="Ask a security question..." 
+                           onkeypress="if(event.key==='Enter') sendRealMessage()">
+                    <button onclick="sendRealMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="model-status" style="margin-top: 10px; font-size: 12px;">
+                    <span class="status-dot"></span> Connected to Ollama (llama2)
+                </div>
+            </div>
+
+            <div class="code-analyzer">
+                <h3 style="margin-bottom: 15px; color: #00ff9d;">
+                    <i class="fas fa-code"></i> Code Security Analyzer
+                </h3>
+                <textarea class="code-input" id="code-input" 
+                    placeholder="Paste your code here for real vulnerability analysis...">def authenticate_user(username, password):
+    # Simple authentication
+    if username == "admin" and password == "password123":
+        return True
+    return False</textarea>
+                <select id="code-language" style="margin: 10px 0; padding: 8px; background: #1a1a1a; color: #00ff9d; border: 1px solid #00ff9d; border-radius: 5px;">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="go">Go</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="php">PHP</option>
+                </select>
+                <button class="analyze-btn" onclick="analyzeRealCode()">
+                    <i class="fas fa-shield"></i> Analyze Security
+                </button>
+                <div id="analysis-result" style="margin-top: 15px; padding: 15px; background: rgba(0,255,157,0.05); border-radius: 10px;"></div>
+            </div>
+        </div>
+
+        <div class="threat-feed">
+            <h3 style="margin-bottom: 15px; color: #00ff9d;">
+                <i class="fas fa-shield-alt"></i> Live Threat Intelligence
+            </h3>
+            <div id="threat-feed">
+                <!-- Dynamically updated via WebSocket -->
+            </div>
+        </div>
+    `;
+}
+
+// Real AI functions
+async function sendRealMessage() {
+    const input = document.getElementById('chat-input');
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Add user message
+    const chat = document.getElementById('chat-messages');
+    chat.innerHTML += `
+        <div class="message user">
+            <div class="message-avatar"><i class="fas fa-user"></i></div>
+            <div class="message-content">${escapeHtml(message)}</div>
+        </div>
+    `;
+    
+    // Show typing indicator
+    chat.innerHTML += `
+        <div class="message bot" id="typing-indicator">
+            <div class="message-avatar"><i class="fas fa-robot"></i></div>
+            <div class="message-content"><i class="fas fa-spinner fa-pulse"></i> Thinking...</div>
+        </div>
+    `;
+    
+    chat.scrollTop = chat.scrollHeight;
+    input.value = '';
+
+    try {
+        // Call real AI backend
+        const response = await fetch('http://localhost:3001/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message })
+        });
+        
+        const data = await response.json();
+        
+        // Remove typing indicator
+        document.getElementById('typing-indicator').remove();
+        
+        // Add AI response
+        chat.innerHTML += `
+            <div class="message bot">
+                <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                <div class="message-content">
+                    ${escapeHtml(data.answer)}
+                    ${data.sources ? '<br><br><small>Sources: ' + data.sources.join(', ') + '</small>' : ''}
+                </div>
+            </div>
+        `;
+        
+    } catch (error) {
+        document.getElementById('typing-indicator').remove();
+        chat.innerHTML += `
+            <div class="message bot">
+                <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                <div class="message-content">
+                    ⚠️ Error connecting to AI backend. Make sure Ollama is running.
+                </div>
+            </div>
+        `;
+    }
+    
+    chat.scrollTop = chat.scrollHeight;
+}
+
+async function analyzeRealCode() {
+    const code = document.getElementById('code-input').value;
+    const language = document.getElementById('code-language').value;
+    const result = document.getElementById('analysis-result');
+    
+    result.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Analyzing code with CodeLlama...';
+    
+    try {
+        const response = await fetch('http://localhost:3001/api/analyze-code', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code, language })
+        });
+        
+        const data = await response.json();
+        
+        let severityColor = '#00ff9d';
+        if (data.severity === 'high') severityColor = '#ff4444';
+        else if (data.severity === 'medium') severityColor = '#ffaa00';
+        
+        let html = `<div style="color: ${severityColor}; font-weight: bold;">${data.summary}</div>`;
+        html += '<ul style="margin-top: 10px;">';
+        data.issues.forEach(issue => {
+            html += `<li style="margin-bottom: 5px;">${escapeHtml(issue)}</li>`;
+        });
+        html += '</ul>';
+        
+        result.innerHTML = html;
+        
+    } catch (error) {
+        result.innerHTML = '⚠️ Error analyzing code. Make sure AI backend is running.';
+    }
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}

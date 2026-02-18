@@ -1,0 +1,27 @@
+<!-- AI AUGMENTATION PAGE CONTENT - Replace the existing getAIAugmentationPage() function -->
+function getAIAugmentationPage() {
+    // Extract AI security services from the main services page
+    const allServices = getServicesPage();
+    const aiServices = allServices.split('<div class="services-grid">')[1].split('</div>')[0]
+        .split('<div class="service-card">')
+        .filter(card => card.includes('AI Security') || card.includes('fa-robot') || card.includes('machine learning') || card.includes('ML') || card.includes('chatbot') || card.includes('anomaly'))
+        .map(card => {
+            // Convert service-card to ai-feature-card format
+            return card.replace('service-card', 'ai-feature-card')
+                      .replace('service-icon', '')
+                      .replace('service-price', '')
+                      .replace('service-category', '');
+        })
+        .map(card => '<div class="ai-feature-card">' + card.split('<div class="ai-feature-card">')[1])
+        .join('');
+    
+    return `
+        <div class="page-header">
+            <h1>AI Augmentation Services</h1>
+            <p>100+ AI-powered security services to supercharge your defenses</p>
+        </div>
+        <div class="ai-features">
+            ${aiServices}
+        </div>
+    `;
+}

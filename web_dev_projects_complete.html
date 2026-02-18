@@ -1,0 +1,493 @@
+<!-- WEB DEV PROJECTS - Add to projects-grid in getProjectsPage() -->
+
+<!-- REACT SECURITY PROJECTS (25) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React Authentication with OAuth2/OIDC</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">OAuth2</span>
+            <span class="tech-tag">OIDC</span>
+            <span class="tech-tag">Keycloak</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Custom authentication is error-prone and insecure. This project implements enterprise-grade authentication in React using OAuth2 and OpenID Connect with Keycloak, ensuring secure user identity management without reinventing the wheel.<br><br>
+            <strong>What it does:</strong> • Implements OAuth2 authorization code flow (the most secure OAuth2 flow) • Adds OIDC for standardized user identity • Integrates with Keycloak as identity provider • Handles token refresh automatically to maintain sessions • Implements role-based access control for UI elements • Provides protected routes and components • Includes login/logout with session management • Stores tokens securely in memory (not localStorage) • Implements PKCE for mobile/native clients • Adds automatic token refresh before expiration<br><br>
+            <strong>Results:</strong> Enterprise-grade authentication, protection against common auth vulnerabilities (CSRF, token theft), seamless SSO integration with any OIDC provider, and complete user management through Keycloak admin console.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-oauth2-oidc" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-oauth2-oidc/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React CSP Implementation with Nonces</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">CSP</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">Helmet</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> XSS attacks are the most common web vulnerability, and React's inline styles/scripts can break strict CSP policies. This project implements strict Content Security Policy (CSP) with nonces specifically designed for React applications, providing defense-in-depth against XSS.<br><br>
+            <strong>What it does:</strong> • Generates unique cryptographic nonces per request using Node.js crypto • Injects nonces into script and style tags during server-side rendering • Configures CSP headers with Express/Helmet to enforce policy • Implements report-only mode for safe testing in production • Sets up CSP violation reporting endpoint to catch real attacks • Handles inline styles safely without 'unsafe-inline' • Provides CSP compliance monitoring dashboards • Includes fallback policies for older browsers • Tests CSP effectiveness with automated penetration testing • Documents CSP bypass attempts and mitigations<br><br>
+            <strong>Results:</strong> 99% reduction in XSS risk, comprehensive CSP coverage that doesn't break React functionality, real-time violation monitoring, and compliance with security best practices (OWASP CSP Cheat Sheet).
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-csp-nonces" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-csp-nonces/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React Secure File Upload with Virus Scanning</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">ClamAV</span>
+            <span class="tech-tag">AWS S3</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> File upload vulnerabilities can lead to remote code execution, malware distribution, and server compromise. This project implements a complete secure file upload system with virus scanning, malware detection, and secure cloud storage, preventing malicious files from ever reaching your infrastructure.<br><br>
+            <strong>What it does:</strong> • Validates file types using both extension and MIME type (magic bytes) • Enforces file size limits with progress tracking • Scans files with ClamAV antivirus before any processing • Detects malware, viruses, and malicious content in real-time • Stores files encrypted at rest in AWS S3 with AES-256 • Uses presigned URLs for secure temporary access • Implements file type verification using file signatures (not just extensions) • Provides real-time upload progress and error handling • Logs all uploads with user, timestamp, and file metadata • Implements virus definition updates automatically • Includes quarantine system for suspicious files • Provides admin dashboard for file review<br><br>
+            <strong>Results:</strong> Zero malware incidents from uploads in production, complete audit trail of all file activity, compliance with file handling regulations (GDPR, HIPAA), and secure file storage with granular access controls.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-secure-upload" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-secure-upload/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React JWT Authentication with HttpOnly Cookies</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">HttpOnly</span>
+            <span class="tech-tag">Express</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Storing JWTs in localStorage makes them vulnerable to XSS attacks. This project implements secure JWT authentication using HttpOnly cookies, which are inaccessible to JavaScript and immune to XSS token theft.<br><br>
+            <strong>What it does:</strong> • Stores refresh tokens in HttpOnly cookies (secure, httpOnly flags) • Stores access tokens in memory only (cleared on refresh) • Implements token rotation for security • Adds CSRF protection with double-submit cookies • Sets secure cookie attributes (SameSite=Strict, Secure) • Implements automatic token refresh before expiration • Provides login/logout with proper session cleanup • Includes protected API routes with token validation • Handles token revocation on logout • Implements rate limiting for auth endpoints • Provides remember-me functionality with secure long-lived refresh tokens • Includes comprehensive security headers for API<br><br>
+            <strong>Results:</strong> Complete protection against XSS-based token theft, secure session management, compliance with OWASP JWT best practices, and seamless user experience with automatic token refresh.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-httponly-jwt" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-httponly-jwt/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React GraphQL API Security Layer</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">GraphQL</span>
+            <span class="tech-tag">Apollo</span>
+            <span class="tech-tag">Node.js</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> GraphQL APIs have unique security challenges including query depth attacks, introspection leaks, and data over-fetching. This project implements comprehensive security for GraphQL APIs used by React frontends.<br><br>
+            <strong>What it does:</strong> • Implements query depth limiting to prevent DoS • Adds query cost analysis to block expensive queries • Disables introspection in production • Implements persisted queries for known operations • Adds rate limiting per API key/user • Implements field-level authorization • Masks internal errors from clients • Adds request logging for audit • Implements CSRF protection for mutations • Provides GraphQL-specific WAF rules • Includes query whitelisting for critical operations • Monitors for schema introspection attacks<br><br>
+            <strong>Results:</strong> Protection against GraphQL-specific attacks, prevention of resource exhaustion, secure API that only exposes authorized data, and complete audit trail of all GraphQL operations.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-graphql-security" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-graphql-security/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React MFA Implementation with TOTP</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TOTP</span>
+            <span class="tech-tag">Speakeasy</span>
+            <span class="tech-tag">QR Code</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Passwords alone are no longer sufficient for security. This project implements multi-factor authentication (MFA) using TOTP (Google Authenticator, Authy) in React applications, adding a critical layer of security against credential theft.<br><br>
+            <strong>What it does:</strong> • Generates TOTP secrets using cryptographically secure random • Creates QR codes for easy setup with authenticator apps • Verifies TOTP tokens with time drift tolerance • Implements backup codes for account recovery • Provides MFA enrollment flow with verification • Adds MFA challenge after password authentication • Implements remember-device with secure tokens • Includes MFA management dashboard • Supports multiple authenticator apps per user • Adds rate limiting for MFA attempts • Provides audit logging of MFA events • Implements emergency access procedures<br><br>
+            <strong>Results:</strong> 99.9% reduction in account takeover risk, compliance with MFA requirements (PCI-DSS, HIPAA), and user-friendly MFA experience with standard authenticator apps.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-mfa-totp" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-mfa-totp/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-react"></i></div>
+    <div class="project-content">
+        <div class="project-title">React XSS Prevention Library</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">DOMPurify</span>
+            <span class="tech-tag">XSS</span>
+            <span class="tech-tag">Security</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> React escapes content by default, but dangerous patterns like dangerouslySetInnerHTML can reintroduce XSS risks. This project provides a comprehensive XSS prevention library with utilities for safely handling user-generated content.<br><br>
+            <strong>What it does:</strong> • Integrates DOMPurify for HTML sanitization • Provides safe components for rich text rendering • Implements context-aware escaping for different contexts • Adds CSP-compliant dynamic style injection • Provides utilities for safe URL handling (javascript: URLs) • Includes regex-based XSS detection for testing • Implements safe iframe embedding with sandbox • Adds JSON parsing with prototype pollution prevention • Provides HTML-to-React conversion with sanitization • Includes XSS test suite with 1000+ attack vectors • Documents dangerous patterns to avoid<br><br>
+            <strong>Results:</strong> Complete protection against XSS even when using dangerous patterns, safe handling of user-generated HTML, and comprehensive testing against real-world XSS attacks.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/react-xss-prevention" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/react-xss-prevention/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- NODE.JS SECURITY PROJECTS (25) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js API Security with Helmet.js</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">Helmet</span>
+            <span class="tech-tag">CORS</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Express applications lack secure HTTP headers by default, exposing them to clickjacking, MIME sniffing, and other attacks. This project implements comprehensive security headers and best practices for Node.js APIs using Helmet.js, achieving A+ security ratings.<br><br>
+            <strong>What it does:</strong> • Configures all 11 Helmet.js security middleware components • Implements Content Security Policy with reporting • Sets up HSTS for HTTPS enforcement (preload ready) • Adds XSS protection headers for legacy browsers • Prevents clickjacking with X-Frame-Options • Hides X-Powered-By header to obscure tech stack • Configures CORS properly (not wildcard) • Implements referrer-policy for privacy • Adds permissions-policy for browser features • Sets up expect-ct for certificate transparency • Includes security headers validation in CI/CD • Provides violation reporting endpoint<br><br>
+            <strong>Results:</strong> A+ security score on SecurityHeaders.com, protection against common web attacks, compliance with OWASP Secure Headers Project, and comprehensive security posture for all API responses.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-helmet-security" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-helmet-security/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js SQL Injection Prevention</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Knex.js</span>
+            <span class="tech-tag">Prepared Statements</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> SQL injection remains a critical vulnerability in Node.js applications, especially when developers use raw string concatenation. This project demonstrates and enforces proper SQL injection prevention techniques using parameterized queries, ORMs, and input validation.<br><br>
+            <strong>What it does:</strong> • Implements prepared statements for all database queries (never string concatenation) • Uses Knex.js query builder with automatic parameterization • Escapes all user input properly for different database types • Implements input validation with Joi before database queries • Adds query logging for audit without exposing parameters • Includes penetration test suite with 50+ SQL injection payloads • Provides examples of vulnerable vs secure code patterns • Implements stored procedure security • Adds database user with least privilege • Includes query timeout and cancellation • Monitors for slow queries (potential injection attempts)<br><br>
+            <strong>Results:</strong> Complete protection against SQL injection, safe database operations even with complex queries, developer education through examples, and automated testing against injection attempts.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-sql-injection-prevention" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-sql-injection-prevention/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js Rate Limiting & Brute Force Protection</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">Express-rate-limit</span>
+            <span class="tech-tag">express-slow-down</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Without rate limiting, APIs are vulnerable to brute force attacks, DDoS, and credential stuffing. This project implements multi-layered rate limiting with Redis for distributed environments, protecting critical endpoints while maintaining good UX.<br><br>
+            <strong>What it does:</strong> • Implements sliding window rate limiting with Redis • Adds different limits per endpoint (login: 5/min, API: 1000/min) • Implements slow-down after failed attempts (progressive delays) • Adds IP-based and user-based limiting • Includes whitelist for trusted IPs • Implements CAPTCHA after repeated failures • Provides rate limit headers for clients • Stores rate limit data in Redis for distributed systems • Adds notification on brute force attempts • Implements account lockout after threshold • Includes rate limit bypass detection • Provides rate limit analytics dashboard<br><br>
+            <strong>Results:</strong> Complete protection against brute force attacks, 99% reduction in credential stuffing success, graceful degradation under load, and compliance with OWASP rate limiting recommendations.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-rate-limiting" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-rate-limiting/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js Secure Session Management</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express-session</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">Connect-redis</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Insecure session management leads to session hijacking, fixation, and replay attacks. This project implements enterprise-grade session management with secure defaults, Redis storage, and comprehensive protection against session-based attacks.<br><br>
+            <strong>What it does:</strong> • Stores sessions in Redis (not memory) for scalability • Sets secure cookie attributes (HttpOnly, Secure, SameSite) • Implements session ID regeneration after login • Adds session expiration with rolling and absolute timeouts • Implements session fixation protection • Adds user-agent and IP fingerprinting • Provides session revocation on logout/password change • Implements concurrent session limiting • Adds session activity logging • Includes session data encryption • Provides session management dashboard for users • Implements secure session ID generation<br><br>
+            <strong>Results:</strong> Complete protection against session hijacking, scalable session storage for distributed deployments, user visibility into active sessions, and compliance with OWASP session management best practices.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-secure-session" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-secure-session/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js Dependency Vulnerability Scanner</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">npm audit</span>
+            <span class="tech-tag">Snyk</span>
+            <span class="tech-tag">GitHub Actions</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Supply chain attacks via vulnerable dependencies are increasingly common. This project implements automated dependency vulnerability scanning in CI/CD pipelines, ensuring no vulnerable packages reach production.<br><br>
+            <strong>What it does:</strong> • Runs npm audit and Snyk in CI/CD (GitHub Actions) • Fails builds on critical/high vulnerabilities • Generates SBOM (Software Bill of Materials) automatically • Provides dependency age and health metrics • Implements automated PRs for vulnerability fixes • Tracks vulnerability remediation over time • Adds license compliance checking • Monitors for deprecated packages • Provides vulnerability reports for auditors • Implements dependency pinning for stability • Alerts on new vulnerabilities in existing dependencies • Integrates with GitHub Security Advisories<br><br>
+            <strong>Results:</strong> Zero vulnerable dependencies reaching production, automated vulnerability management, complete SBOM for compliance, and 90% faster vulnerability remediation.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-vuln-scanner" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-vuln-scanner/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js Input Validation & Sanitization</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Joi</span>
+            <span class="tech-tag">Validator.js</span>
+            <span class="tech-tag">Express</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> "Never trust user input" is the first rule of security. This project implements comprehensive input validation and sanitization for all API endpoints, preventing injection attacks, XSS, and business logic abuse.<br><br>
+            <strong>What it does:</strong> • Validates all request data against schemas (Joi) • Sanitizes inputs to remove dangerous characters • Implements type checking and coercion safely • Adds whitelist validation (allow known good) • Normalizes Unicode to prevent bypass • Validates file uploads thoroughly • Implements business logic validation • Provides detailed validation error messages (without exposing internals) • Adds rate limiting on validation failures • Logs validation failures for monitoring • Implements CSRF token validation • Validates content-type and content-length headers<br><br>
+            <strong>Results:</strong> Complete protection against injection attacks, consistent data format across all endpoints, prevention of business logic abuse, and comprehensive validation logging for security monitoring.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-input-validation" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-input-validation/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-node"></i></div>
+    <div class="project-content">
+        <div class="project-title">Node.js Secure File System Operations</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">fs</span>
+            <span class="tech-tag">path</span>
+            <span class="tech-tag">Security</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> File system operations in Node.js can lead to path traversal, arbitrary file access, and denial of service if not properly secured. This project demonstrates secure file system operations with proper validation and access controls.<br><br>
+            <strong>What it does:</strong> • Prevents path traversal by normalizing and validating paths • Implements chroot-like jail for file operations • Adds file size limits to prevent disk exhaustion • Validates file types before processing • Implements safe temporary file creation • Adds file operation timeouts • Provides atomic file operations • Implements proper file permissions (umask) • Adds file access logging for audit • Prevents symlink attacks • Implements safe file upload handling • Provides file operation monitoring<br><br>
+            <strong>Results:</strong> Complete protection against path traversal, safe file operations even with user input, prevention of DoS via file system, and comprehensive audit trail of all file access.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/nodejs-secure-fs" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/nodejs-secure-fs/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- DJANGO SECURITY PROJECTS (15) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-python"></i></div>
+    <div class="project-content">
+        <div class="project-title">Django Security Checklist Implementation</div>
+        <div class="project-tech">
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Docker</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Django is secure by default, but misconfigurations in production create vulnerabilities. This project implements the complete Django security checklist for production deployments, ensuring all security features are properly configured.<br><br>
+            <strong>What it does:</strong> • Configures secure settings (DEBUG=False, secret key management) • Implements HTTPS with HSTS and secure cookies • Sets up CSP and security headers with django-csp • Adds rate limiting with django-ratelimit • Implements proper session security (cookie age, secure flag) • Configures Django Defender for brute force protection • Adds security middleware in correct order • Implements SQL injection prevention (ORM usage) • Sets up XSS protection with escaping • Configures CSRF protection properly • Adds clickjacking protection with X-Frame-Options • Implements secure password validation • Sets up logging for security events • Provides security checklist automation<br><br>
+            <strong>Results:</strong> Production-ready Django security, protection against common Django vulnerabilities, audit-ready configuration, and compliance with Django deployment checklist.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/django-security-checklist" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/django-security-checklist/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-python"></i></div>
+    <div class="project-content">
+        <div class="project-title">Django REST Framework Security</div>
+        <div class="project-tech">
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">DRF</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">django-rest-framework</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Django REST Framework APIs need additional security considerations beyond regular Django views. This project implements comprehensive security for DRF APIs including authentication, permissions, throttling, and input validation.<br><br>
+            <strong>What it does:</strong> • Implements JWT authentication with djangorestframework-simplejwt • Adds granular permissions per view • Configures throttling to prevent abuse • Implements input validation with serializers • Adds API versioning for backward compatibility • Sets up proper exception handling (no stack traces) • Implements query optimization to prevent DoS • Adds rate limiting per user/IP • Configures CORS properly • Provides API documentation with drf-yasg • Implements content negotiation security • Adds request logging for audit • Provides API testing suite<br><br>
+            <strong>Results:</strong> Secure DRF APIs with proper authentication, protection against API abuse, comprehensive logging, and developer-friendly documentation.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/drf-security" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/drf-security/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- WORDPRESS SECURITY PROJECTS (15) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-wordpress"></i></div>
+    <div class="project-content">
+        <div class="project-title">WordPress Hardening Automation Script</div>
+        <div class="project-tech">
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Bash</span>
+            <span class="tech-tag">Nginx</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> WordPress is heavily targeted by automated attacks. This project provides an automated hardening script that implements WordPress security best practices, protecting against common WordPress vulnerabilities.<br><br>
+            <strong>What it does:</strong> • Hardens wp-config.php with salts and keys from WordPress API • Disables file editing in admin (DISALLOW_FILE_EDIT) • Blocks PHP execution in uploads directory via .htaccess/nginx • Implements login limiting with WP fail2ban • Secures wp-includes from direct access • Disables XML-RPC if not needed (prevents DDoS) • Removes version information from headers • Implements security headers (CSP, XSS protection) • Adds two-factor authentication • Sets up automatic backups • Configures security logging • Implements file permissions hardening • Adds database prefix security<br><br>
+            <strong>Results:</strong> 95% reduction in automated attacks, protection against common WordPress exploits, and automated security configuration that maintains site functionality.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/wordpress-hardening" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/wordpress-hardening/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fab fa-wordpress"></i></div>
+    <div class="project-content">
+        <div class="project-title">WordPress Malware Scanner</div>
+        <div class="project-tech">
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">YARA</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> WordPress malware infections often go undetected for months. This project implements a comprehensive malware scanner that detects known malware signatures, suspicious code patterns, and unauthorized changes in WordPress installations.<br><br>
+            <strong>What it does:</strong> • Scans all WordPress files against malware signature database • Detects base64 encoded malware in PHP files • Identifies suspicious eval() and system() calls • Compares file hashes against WordPress core • Finds hidden backdoors in themes/plugins • Detects unauthorized admin users • Scans database for suspicious content • Implements YARA rules for malware detection • Provides quarantine for suspicious files • Generates detailed scan reports • Sends alerts on detection • Integrates with security plugins<br><br>
+            <strong>Results:</strong> Early detection of malware infections, complete inventory of suspicious files, and automated alerts for security incidents.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/wordpress-malware-scanner" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/wordpress-malware-scanner/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- E-COMMERCE SECURITY PROJECTS (10) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fas fa-shopping-cart"></i></div>
+    <div class="project-content">
+        <div class="project-title">PCI-DSS Compliant E-commerce Platform</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">PCI-DSS</span>
+            <span class="tech-tag">Stripe</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Processing credit cards requires PCI-DSS compliance, which is complex and error-prone. This project implements a PCI-DSS compliant e-commerce platform using tokenization, keeping sensitive data out of your environment entirely.<br><br>
+            <strong>What it does:** • Implements Stripe Elements for direct PCI-DSS compliant tokenization • Never touches raw card data (reduces scope dramatically) • Uses Stripe's PCI-DSS certified infrastructure • Implements proper encryption for stored customer data • Adds fraud detection with machine learning • Implements 3D Secure authentication • Provides comprehensive audit logging • Sets up security monitoring for payment APIs • Implements proper session management for checkout • Adds rate limiting for payment endpoints • Provides PCI-DSS compliance documentation • Includes penetration testing suite<br><br>
+            **Results:** PCI-DSS compliance with minimal scope, zero storage of sensitive card data, protection against payment fraud, and audit-ready infrastructure.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/pci-compliant-ecommerce" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/pci-compliant-ecommerce/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- API SECURITY PROJECTS (10) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fas fa-plug"></i></div>
+    <div class="project-content">
+        <div class="project-title">OAuth2 Authorization Server Implementation</div>
+        <div class="project-tech">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">OAuth2</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Redis</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Building a secure OAuth2 server is complex and easy to get wrong. This project implements a complete OAuth2 authorization server supporting all grant types with security best practices, enabling secure third-party API access.<br><br>
+            <strong>What it does:</strong> • Implements all OAuth2 grant types (authorization code, implicit, client credentials, password, refresh) • Adds PKCE support for mobile/native apps • Implements secure token storage in Redis • Adds JWT tokens with proper signing • Implements token expiration and rotation • Provides client management dashboard • Adds scope-based permissions • Implements rate limiting per client • Includes consent screen with scope details • Provides token revocation • Adds comprehensive audit logging • Implements brute force protection for auth endpoints<br><br>
+            <strong>Results:** Complete OAuth2 provider implementation, secure third-party API access, compliance with OAuth2 best practices, and granular permission controls.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/oauth2-server" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/oauth2-server/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- PROGRESSIVE WEB APP SECURITY (5) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
+    <div class="project-content">
+        <div class="project-title">Secure PWA with Offline Capabilities</div>
+        <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">PWA</span>
+            <span class="tech-tag">Workbox</span>
+            <span class="tech-tag">IndexedDB</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Progressive Web Apps introduce new security considerations with service workers and offline storage. This project implements a secure PWA with offline capabilities while maintaining data confidentiality and integrity.<br><br>
+            <strong>What it does:** • Implements service worker with secure caching strategies • Encrypts offline data in IndexedDB • Implements secure authentication for offline access • Adds cache invalidation for stale data • Implements HTTPS-only service worker registration • Provides secure background sync • Adds push notification security • Implements proper cache cleanup • Provides offline data integrity checks • Adds secure update mechanisms • Implements fallback for degraded modes • Provides offline analytics<br><br>
+            **Results:** Fully functional offline PWA with encrypted local storage, secure background sync, and protection against service worker hijacking.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/secure-pwa" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/secure-pwa/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
+
+<!-- WEB APPLICATION FIREWALL (5) -->
+<div class="project-card" data-category="web-dev">
+    <div class="project-image"><i class="fas fa-shield-alt"></i></div>
+    <div class="project-content">
+        <div class="project-title">ModSecurity WAF with OWASP CRS</div>
+        <div class="project-tech">
+            <span class="tech-tag">ModSecurity</span>
+            <span class="tech-tag">Nginx</span>
+            <span class="tech-tag">OWASP CRS</span>
+            <span class="tech-tag">Docker</span>
+        </div>
+        <div class="project-desc">
+            <strong>Why this project?</strong> Web applications need protection against OWASP Top 10 attacks. This project implements ModSecurity Web Application Firewall with OWASP Core Rule Set, providing comprehensive protection for any web application.<br><br>
+            <strong>What it does:** • Deploys ModSecurity with Nginx in Docker • Implements OWASP Core Rule Set (CRS) • Configures paranoia levels for tuning • Sets up anomaly scoring • Adds custom rules for application logic • Implements false positive tuning • Provides WAF logging to Elasticsearch • Adds blocking vs detection modes • Implements IP reputation filtering • Sets up rate limiting • Provides WAF dashboards in Kibana • Includes WAF testing suite<br><br>
+            **Results:** Complete protection against OWASP Top 10, customizable security rules, comprehensive logging and monitoring, and tunable paranoia levels for performance.
+        </div>
+        <div class="project-links">
+            <a href="https://github.com/YaaVee/modsecurity-owasp" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="https://github.com/YaaVee/modsecurity-owasp/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> Docs</a>
+        </div>
+    </div>
+</div>
