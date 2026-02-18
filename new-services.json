@@ -1,0 +1,1202 @@
+[
+  {
+    "title": "BGP Security & Route Filtering",
+    "why": "Why implement BGP Security & Route Filtering? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Documentation and runbook creation for operations",
+      "Automated network security policy enforcement",
+      "Integration with existing network security infrastructure",
+      "Knowledge transfer and team training sessions",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Security hardening based on Network Security benchmarks",
+      "Network Security monitoring and alerting configuration",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Azure Blueprints Security Implementation",
+    "why": "Why implement Azure Blueprints Security Implementation? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Cloud Security monitoring and alerting configuration",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Cloud Security benchmarks",
+      "Integration with existing cloud security infrastructure",
+      "Automated cloud security policy enforcement"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "GitLab Security Scanning Integration",
+    "why": "Why implement GitLab Security Scanning Integration? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Integration with existing devsecops infrastructure",
+      "Automated devsecops policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "DevSecOps monitoring and alerting configuration",
+      "Security hardening based on DevSecOps benchmarks",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOC 2 Type II Preparation",
+    "why": "Why implement SOC 2 Type II Preparation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Compliance monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Security hardening based on Compliance benchmarks",
+      "Documentation and runbook creation for operations",
+      "Automated compliance policy enforcement",
+      "Integration with existing compliance infrastructure",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Threat Detection & Response (ITDR)",
+    "why": "Why implement Identity Threat Detection & Response (ITDR)? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated identity & access policy enforcement",
+      "Integration with existing identity & access infrastructure",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Security hardening based on Identity & Access benchmarks",
+      "Post-implementation security testing and validation",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Identity & Access monitoring and alerting configuration"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Operational Technology (OT) Security",
+    "why": "Why implement Operational Technology (OT) Security? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Network Security benchmarks",
+      "Network Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Automated network security policy enforcement",
+      "Integration with existing network security infrastructure",
+      "Post-implementation security testing and validation",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Spot Instance Security Configuration",
+    "why": "Why implement Spot Instance Security Configuration? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Cloud Security monitoring and alerting configuration",
+      "Integration with existing cloud security infrastructure",
+      "Knowledge transfer and team training sessions",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Automated cloud security policy enforcement",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Cloud Security benchmarks"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Supply Chain Security with SLSA",
+    "why": "Why implement Supply Chain Security with SLSA? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated devsecops policy enforcement",
+      "DevSecOps monitoring and alerting configuration",
+      "Integration with existing devsecops infrastructure",
+      "Knowledge transfer and team training sessions",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Security hardening based on DevSecOps benchmarks",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOX IT General Controls",
+    "why": "Why implement SOX IT General Controls? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Compliance benchmarks",
+      "Compliance monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Automated compliance policy enforcement",
+      "Integration with existing compliance infrastructure",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Federated Identity (SAML/OIDC) Setup",
+    "why": "Why implement Federated Identity (SAML/OIDC) Setup? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated identity & access policy enforcement",
+      "Documentation and runbook creation for operations",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Identity & Access benchmarks",
+      "Identity & Access monitoring and alerting configuration",
+      "Integration with existing identity & access infrastructure",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Anycast Network Implementation",
+    "why": "Why implement Anycast Network Implementation? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement",
+      "Network Security monitoring and alerting configuration",
+      "Security hardening based on Network Security benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Google Workspace Security Setup",
+    "why": "Why implement Google Workspace Security Setup? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Cloud Security benchmarks",
+      "Cloud Security monitoring and alerting configuration",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing cloud security infrastructure",
+      "Automated cloud security policy enforcement",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SCA Tool Integration (Snyk)",
+    "why": "Why implement SCA Tool Integration (Snyk)? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Integration with existing devsecops infrastructure",
+      "Automated devsecops policy enforcement",
+      "DevSecOps monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on DevSecOps benchmarks"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "LGPD Compliance Implementation",
+    "why": "Why implement LGPD Compliance Implementation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Integration with existing compliance infrastructure",
+      "Automated compliance policy enforcement",
+      "Compliance monitoring and alerting configuration",
+      "Security hardening based on Compliance benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Verification & KYC Integration",
+    "why": "Why implement Identity Verification & KYC Integration? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Identity & Access benchmarks",
+      "Identity & Access monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Integration with existing identity & access infrastructure",
+      "Post-implementation security testing and validation",
+      "Automated identity & access policy enforcement"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "VXLAN Security Design",
+    "why": "Why implement VXLAN Security Design? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement",
+      "Security hardening based on Network Security benchmarks",
+      "Network Security monitoring and alerting configuration",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Confidential Computing Deployment",
+    "why": "Why implement Confidential Computing Deployment? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Cloud Security benchmarks",
+      "Cloud Security monitoring and alerting configuration",
+      "Automated cloud security policy enforcement",
+      "Documentation and runbook creation for operations",
+      "Integration with existing cloud security infrastructure",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Security Gates in CI/CD",
+    "why": "Why implement Security Gates in CI/CD? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "DevSecOps monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "Automated devsecops policy enforcement",
+      "Security hardening based on DevSecOps benchmarks",
+      "Integration with existing devsecops infrastructure"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "CSA STAR Attestation",
+    "why": "Why implement CSA STAR Attestation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Compliance benchmarks",
+      "Compliance monitoring and alerting configuration",
+      "Automated compliance policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing compliance infrastructure",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Entra ID (Azure AD) Security Hardening",
+    "why": "Why implement Entra ID (Azure AD) Security Hardening? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Integration with existing identity & access infrastructure",
+      "Documentation and runbook creation for operations",
+      "Identity & Access monitoring and alerting configuration",
+      "Security hardening based on Identity & Access benchmarks",
+      "Automated identity & access policy enforcement",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "BGP Security & Route Filtering",
+    "why": "Why implement BGP Security & Route Filtering? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Security hardening based on Network Security benchmarks",
+      "Post-implementation security testing and validation",
+      "Integration with existing network security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Automated network security policy enforcement",
+      "Network Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Azure Blueprints Security Implementation",
+    "why": "Why implement Azure Blueprints Security Implementation? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Integration with existing cloud security infrastructure",
+      "Security hardening based on Cloud Security benchmarks",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Cloud Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Automated cloud security policy enforcement",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "GitLab Security Scanning Integration",
+    "why": "Why implement GitLab Security Scanning Integration? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Integration with existing devsecops infrastructure",
+      "Automated devsecops policy enforcement",
+      "DevSecOps monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Security hardening based on DevSecOps benchmarks",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOC 2 Type II Preparation",
+    "why": "Why implement SOC 2 Type II Preparation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Compliance benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Compliance monitoring and alerting configuration",
+      "Automated compliance policy enforcement",
+      "Integration with existing compliance infrastructure",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Threat Detection & Response (ITDR)",
+    "why": "Why implement Identity Threat Detection & Response (ITDR)? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Integration with existing identity & access infrastructure",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Identity & Access monitoring and alerting configuration",
+      "Automated identity & access policy enforcement",
+      "Security hardening based on Identity & Access benchmarks",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Operational Technology (OT) Security",
+    "why": "Why implement Operational Technology (OT) Security? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Network Security monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Integration with existing network security infrastructure",
+      "Security hardening based on Network Security benchmarks",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Automated network security policy enforcement"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Spot Instance Security Configuration",
+    "why": "Why implement Spot Instance Security Configuration? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Cloud Security monitoring and alerting configuration",
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Cloud Security benchmarks",
+      "Automated cloud security policy enforcement"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Supply Chain Security with SLSA",
+    "why": "Why implement Supply Chain Security with SLSA? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Integration with existing devsecops infrastructure",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "DevSecOps monitoring and alerting configuration",
+      "Security hardening based on DevSecOps benchmarks",
+      "Automated devsecops policy enforcement"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOX IT General Controls",
+    "why": "Why implement SOX IT General Controls? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Integration with existing compliance infrastructure",
+      "Documentation and runbook creation for operations",
+      "Automated compliance policy enforcement",
+      "Compliance monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Compliance benchmarks",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Federated Identity (SAML/OIDC) Setup",
+    "why": "Why implement Federated Identity (SAML/OIDC) Setup? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Identity & Access benchmarks",
+      "Identity & Access monitoring and alerting configuration",
+      "Automated identity & access policy enforcement",
+      "Integration with existing identity & access infrastructure",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Anycast Network Implementation",
+    "why": "Why implement Anycast Network Implementation? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Network Security monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Network Security benchmarks",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Google Workspace Security Setup",
+    "why": "Why implement Google Workspace Security Setup? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated cloud security policy enforcement",
+      "Cloud Security monitoring and alerting configuration",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Cloud Security benchmarks",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SCA Tool Integration (Snyk)",
+    "why": "Why implement SCA Tool Integration (Snyk)? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "DevSecOps monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Integration with existing devsecops infrastructure",
+      "Automated devsecops policy enforcement",
+      "Security hardening based on DevSecOps benchmarks"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "LGPD Compliance Implementation",
+    "why": "Why implement LGPD Compliance Implementation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated compliance policy enforcement",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Compliance monitoring and alerting configuration",
+      "Integration with existing compliance infrastructure",
+      "Knowledge transfer and team training sessions",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Security hardening based on Compliance benchmarks"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Verification & KYC Integration",
+    "why": "Why implement Identity Verification & KYC Integration? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Identity & Access monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Integration with existing identity & access infrastructure",
+      "Post-implementation security testing and validation",
+      "Automated identity & access policy enforcement",
+      "Security hardening based on Identity & Access benchmarks",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "VXLAN Security Design",
+    "why": "Why implement VXLAN Security Design? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Integration with existing network security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Automated network security policy enforcement",
+      "Network Security monitoring and alerting configuration",
+      "Security hardening based on Network Security benchmarks",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Confidential Computing Deployment",
+    "why": "Why implement Confidential Computing Deployment? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Cloud Security benchmarks",
+      "Cloud Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Automated cloud security policy enforcement",
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Security Gates in CI/CD",
+    "why": "Why implement Security Gates in CI/CD? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Security hardening based on DevSecOps benchmarks",
+      "DevSecOps monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Automated devsecops policy enforcement",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "CSA STAR Attestation",
+    "why": "Why implement CSA STAR Attestation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated compliance policy enforcement",
+      "Post-implementation security testing and validation",
+      "Integration with existing compliance infrastructure",
+      "Documentation and runbook creation for operations",
+      "Compliance monitoring and alerting configuration",
+      "Security hardening based on Compliance benchmarks",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Entra ID (Azure AD) Security Hardening",
+    "why": "Why implement Entra ID (Azure AD) Security Hardening? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Integration with existing identity & access infrastructure",
+      "Automated identity & access policy enforcement",
+      "Identity & Access monitoring and alerting configuration",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Security hardening based on Identity & Access benchmarks",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "BGP Security & Route Filtering",
+    "why": "Why implement BGP Security & Route Filtering? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Network Security monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Security hardening based on Network Security benchmarks",
+      "Documentation and runbook creation for operations",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Azure Blueprints Security Implementation",
+    "why": "Why implement Azure Blueprints Security Implementation? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Cloud Security monitoring and alerting configuration",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Automated cloud security policy enforcement",
+      "Security hardening based on Cloud Security benchmarks",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "GitLab Security Scanning Integration",
+    "why": "Why implement GitLab Security Scanning Integration? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Documentation and runbook creation for operations",
+      "Security hardening based on DevSecOps benchmarks",
+      "Post-implementation security testing and validation",
+      "DevSecOps monitoring and alerting configuration",
+      "Automated devsecops policy enforcement",
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOC 2 Type II Preparation",
+    "why": "Why implement SOC 2 Type II Preparation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated compliance policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Compliance monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Compliance benchmarks",
+      "Post-implementation security testing and validation",
+      "Integration with existing compliance infrastructure",
+      "Scytals/ComplianceScorecard deployment with best practices"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Threat Detection & Response (ITDR)",
+    "why": "Why implement Identity Threat Detection & Response (ITDR)? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated identity & access policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Identity & Access monitoring and alerting configuration",
+      "Integration with existing identity & access infrastructure",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Identity & Access benchmarks"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Operational Technology (OT) Security",
+    "why": "Why implement Operational Technology (OT) Security? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Automated network security policy enforcement",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Network Security monitoring and alerting configuration",
+      "Integration with existing network security infrastructure",
+      "Security hardening based on Network Security benchmarks"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Spot Instance Security Configuration",
+    "why": "Why implement Spot Instance Security Configuration? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Cloud Security monitoring and alerting configuration",
+      "Automated cloud security policy enforcement",
+      "Integration with existing cloud security infrastructure",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Security hardening based on Cloud Security benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Supply Chain Security with SLSA",
+    "why": "Why implement Supply Chain Security with SLSA? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated devsecops policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "DevSecOps monitoring and alerting configuration",
+      "Integration with existing devsecops infrastructure",
+      "Security hardening based on DevSecOps benchmarks",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOX IT General Controls",
+    "why": "Why implement SOX IT General Controls? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated compliance policy enforcement",
+      "Integration with existing compliance infrastructure",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Compliance benchmarks",
+      "Knowledge transfer and team training sessions",
+      "Compliance monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Scytals/ComplianceScorecard deployment with best practices"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Federated Identity (SAML/OIDC) Setup",
+    "why": "Why implement Federated Identity (SAML/OIDC) Setup? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Documentation and runbook creation for operations",
+      "Identity & Access monitoring and alerting configuration",
+      "Security hardening based on Identity & Access benchmarks",
+      "Automated identity & access policy enforcement",
+      "Post-implementation security testing and validation",
+      "Integration with existing identity & access infrastructure",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Anycast Network Implementation",
+    "why": "Why implement Anycast Network Implementation? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "Integration with existing network security infrastructure",
+      "Network Security monitoring and alerting configuration",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Automated network security policy enforcement",
+      "Security hardening based on Network Security benchmarks"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Google Workspace Security Setup",
+    "why": "Why implement Google Workspace Security Setup? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Security hardening based on Cloud Security benchmarks",
+      "Automated cloud security policy enforcement",
+      "Integration with existing cloud security infrastructure",
+      "Cloud Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SCA Tool Integration (Snyk)",
+    "why": "Why implement SCA Tool Integration (Snyk)? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on DevSecOps benchmarks",
+      "Knowledge transfer and team training sessions",
+      "Automated devsecops policy enforcement",
+      "DevSecOps monitoring and alerting configuration",
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "LGPD Compliance Implementation",
+    "why": "Why implement LGPD Compliance Implementation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Integration with existing compliance infrastructure",
+      "Knowledge transfer and team training sessions",
+      "Post-implementation security testing and validation",
+      "Automated compliance policy enforcement",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Security hardening based on Compliance benchmarks",
+      "Documentation and runbook creation for operations",
+      "Compliance monitoring and alerting configuration"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Verification & KYC Integration",
+    "why": "Why implement Identity Verification & KYC Integration? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Integration with existing identity & access infrastructure",
+      "Post-implementation security testing and validation",
+      "Automated identity & access policy enforcement",
+      "Documentation and runbook creation for operations",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Security hardening based on Identity & Access benchmarks",
+      "Identity & Access monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "VXLAN Security Design",
+    "why": "Why implement VXLAN Security Design? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Automated network security policy enforcement",
+      "Integration with existing network security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Network Security monitoring and alerting configuration",
+      "Security hardening based on Network Security benchmarks",
+      "Knowledge transfer and team training sessions",
+      "BGP monitoring with ThousandEyes deployment with best practices"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Confidential Computing Deployment",
+    "why": "Why implement Confidential Computing Deployment? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Security hardening based on Cloud Security benchmarks",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "Integration with existing cloud security infrastructure",
+      "Automated cloud security policy enforcement",
+      "Cloud Security monitoring and alerting configuration"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Security Gates in CI/CD",
+    "why": "Why implement Security Gates in CI/CD? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "DevSecOps monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Automated devsecops policy enforcement",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Security hardening based on DevSecOps benchmarks"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "CSA STAR Attestation",
+    "why": "Why implement CSA STAR Attestation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Automated compliance policy enforcement",
+      "Compliance monitoring and alerting configuration",
+      "Integration with existing compliance infrastructure",
+      "Security hardening based on Compliance benchmarks",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Entra ID (Azure AD) Security Hardening",
+    "why": "Why implement Entra ID (Azure AD) Security Hardening? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "Integration with existing identity & access infrastructure",
+      "Security hardening based on Identity & Access benchmarks",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Identity & Access monitoring and alerting configuration",
+      "Automated identity & access policy enforcement"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "BGP Security & Route Filtering",
+    "why": "Why implement BGP Security & Route Filtering? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Security hardening based on Network Security benchmarks",
+      "Documentation and runbook creation for operations",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement",
+      "Network Security monitoring and alerting configuration"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Azure Blueprints Security Implementation",
+    "why": "Why implement Azure Blueprints Security Implementation? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Cloud Security benchmarks",
+      "Cloud Security monitoring and alerting configuration",
+      "Post-implementation security testing and validation",
+      "Automated cloud security policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Bridgecrew/Checkov for IaC deployment with best practices"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "GitLab Security Scanning Integration",
+    "why": "Why implement GitLab Security Scanning Integration? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Integration with existing devsecops infrastructure",
+      "Post-implementation security testing and validation",
+      "Automated devsecops policy enforcement",
+      "Documentation and runbook creation for operations",
+      "DevSecOps monitoring and alerting configuration",
+      "Security hardening based on DevSecOps benchmarks",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOC 2 Type II Preparation",
+    "why": "Why implement SOC 2 Type II Preparation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Automated compliance policy enforcement",
+      "Security hardening based on Compliance benchmarks",
+      "Post-implementation security testing and validation",
+      "Integration with existing compliance infrastructure",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "Compliance monitoring and alerting configuration",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Threat Detection & Response (ITDR)",
+    "why": "Why implement Identity Threat Detection & Response (ITDR)? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Identity & Access monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Automated identity & access policy enforcement",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing identity & access infrastructure",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Identity & Access benchmarks"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Operational Technology (OT) Security",
+    "why": "Why implement Operational Technology (OT) Security? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Network Security monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Integration with existing network security infrastructure",
+      "Security hardening based on Network Security benchmarks",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Automated network security policy enforcement"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Spot Instance Security Configuration",
+    "why": "Why implement Spot Instance Security Configuration? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Cloud Security monitoring and alerting configuration",
+      "Documentation and runbook creation for operations",
+      "Automated cloud security policy enforcement",
+      "Security hardening based on Cloud Security benchmarks",
+      "Integration with existing cloud security infrastructure",
+      "Bridgecrew/Checkov for IaC deployment with best practices"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Supply Chain Security with SLSA",
+    "why": "Why implement Supply Chain Security with SLSA? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "DevSecOps monitoring and alerting configuration",
+      "Automated devsecops policy enforcement",
+      "Security hardening based on DevSecOps benchmarks",
+      "Post-implementation security testing and validation",
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SOX IT General Controls",
+    "why": "Why implement SOX IT General Controls? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Compliance monitoring and alerting configuration",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Security hardening based on Compliance benchmarks",
+      "Integration with existing compliance infrastructure",
+      "Automated compliance policy enforcement",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Federated Identity (SAML/OIDC) Setup",
+    "why": "Why implement Federated Identity (SAML/OIDC) Setup? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Identity & Access benchmarks",
+      "Knowledge transfer and team training sessions",
+      "Identity & Access monitoring and alerting configuration",
+      "Automated identity & access policy enforcement",
+      "Integration with existing identity & access infrastructure",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Anycast Network Implementation",
+    "why": "Why implement Anycast Network Implementation? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Integration with existing network security infrastructure",
+      "Automated network security policy enforcement",
+      "Network Security monitoring and alerting configuration",
+      "Security hardening based on Network Security benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Google Workspace Security Setup",
+    "why": "Why implement Google Workspace Security Setup? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Integration with existing cloud security infrastructure",
+      "Automated cloud security policy enforcement",
+      "Cloud Security monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions",
+      "Security hardening based on Cloud Security benchmarks",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "SCA Tool Integration (Snyk)",
+    "why": "Why implement SCA Tool Integration (Snyk)? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on DevSecOps benchmarks",
+      "Post-implementation security testing and validation",
+      "Documentation and runbook creation for operations",
+      "DevSecOps monitoring and alerting configuration",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Integration with existing devsecops infrastructure",
+      "Automated devsecops policy enforcement",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "LGPD Compliance Implementation",
+    "why": "Why implement LGPD Compliance Implementation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Integration with existing compliance infrastructure",
+      "Documentation and runbook creation for operations",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Compliance benchmarks",
+      "Automated compliance policy enforcement",
+      "Compliance monitoring and alerting configuration",
+      "Knowledge transfer and team training sessions"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Identity Verification & KYC Integration",
+    "why": "Why implement Identity Verification & KYC Integration? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Integration with existing identity & access infrastructure",
+      "Security hardening based on Identity & Access benchmarks",
+      "Documentation and runbook creation for operations",
+      "Knowledge transfer and team training sessions",
+      "Identity & Access monitoring and alerting configuration",
+      "Automated identity & access policy enforcement"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "VXLAN Security Design",
+    "why": "Why implement VXLAN Security Design? Because BGP hijacks can reroute traffic through attacker-controlled networks. This service provides comprehensive network security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "BGP monitoring with ThousandEyes deployment with best practices",
+      "Integration with existing network security infrastructure",
+      "Post-implementation security testing and validation",
+      "Security hardening based on Network Security benchmarks",
+      "Automated network security policy enforcement",
+      "Documentation and runbook creation for operations",
+      "Network Security monitoring and alerting configuration"
+    ],
+    "results": "Results: 95% improvement in network security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Confidential Computing Deployment",
+    "why": "Why implement Confidential Computing Deployment? Because identity is the new perimeter in the cloud. This service provides comprehensive cloud security protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Bridgecrew/Checkov for IaC deployment with best practices",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Integration with existing cloud security infrastructure",
+      "Documentation and runbook creation for operations",
+      "Automated cloud security policy enforcement",
+      "Cloud Security monitoring and alerting configuration",
+      "Security hardening based on Cloud Security benchmarks"
+    ],
+    "results": "Results: 95% improvement in cloud security security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Security Gates in CI/CD",
+    "why": "Why implement Security Gates in CI/CD? Because developer velocity shouldn't compromise security. This service provides comprehensive devsecops protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Post-implementation security testing and validation",
+      "Integration with existing devsecops infrastructure",
+      "OWASP ZAP/Burp for DAST deployment with best practices",
+      "Knowledge transfer and team training sessions",
+      "DevSecOps monitoring and alerting configuration",
+      "Automated devsecops policy enforcement",
+      "Security hardening based on DevSecOps benchmarks",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in devsecops security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "CSA STAR Attestation",
+    "why": "Why implement CSA STAR Attestation? Because proving compliance is as important as being secure. This service provides comprehensive compliance protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Security hardening based on Compliance benchmarks",
+      "Scytals/ComplianceScorecard deployment with best practices",
+      "Integration with existing compliance infrastructure",
+      "Automated compliance policy enforcement",
+      "Post-implementation security testing and validation",
+      "Knowledge transfer and team training sessions",
+      "Compliance monitoring and alerting configuration",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in compliance security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  },
+  {
+    "title": "Entra ID (Azure AD) Security Hardening",
+    "why": "Why implement Entra ID (Azure AD) Security Hardening? Because identity is the new perimeter in modern IT. This service provides comprehensive identity & access protection with measurable security outcomes and business alignment.",
+    "what": [
+      "Knowledge transfer and team training sessions",
+      "Identity & Access monitoring and alerting configuration",
+      "YubiKey/Token2 for FIDO2 deployment with best practices",
+      "Integration with existing identity & access infrastructure",
+      "Security hardening based on Identity & Access benchmarks",
+      "Post-implementation security testing and validation",
+      "Automated identity & access policy enforcement",
+      "Documentation and runbook creation for operations"
+    ],
+    "results": "Results: 95% improvement in identity & access security posture, 80% reduction in related incidents, 60% faster audit preparation, and compliance with industry standards. Business impact: risk reduction and operational efficiency."
+  }
+]
