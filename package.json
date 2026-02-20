@@ -1,0 +1,12 @@
+{
+  "name": "viora-portfolio",
+  "version": "1.0.0",
+  "description": "Viora's Portfolio with AEGIS AI Governance Demo",
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'Static site, no build needed'"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}

@@ -1,21 +1,14 @@
+# Dependencies
 node_modules/
+package-lock.json
+
+# Environment
 .env
 .env.local
-logs/
-*.log
+.env.production
+
+# Vercel
+.vercel
+vercel.json
 .DS_Store
-.vscode/
-.idea/
-portfolio-backups/
-*.tar.gz
-.pm2/
-vpn-config/*.key
-ssl/*.key
-grafana-data/
-prometheus-data/
-*.iso
-*.AppImage
-__pycache__/
-*.pyc
-.terraform/
-*.tfstate
+*.log
