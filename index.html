@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="projects-data.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viora Yaba Mensah - DevSecOps Engineer</title>
@@ -290,7 +291,7 @@
 
         .hero-image {
             flex: 1;
-            text-align: center;
+            text-align: right;
             animation: float 6s ease-in-out infinite;
         }
 
@@ -300,20 +301,20 @@
         }
 
         .hero-image img {
-            width: 450px;
-            height: 450px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #00ff9d;
-            box-shadow: 0 0 50px rgba(0,255,157,0.3);
-            transition: all 0.3s ease;
-        }
+    width: 500px;
+    height: 500px;
+    border-radius: 50% !important;  /* Force circle */
+    object-fit: cover !important;     /* Force cover */
+    border: 4px solid #00ff9d;
+    box-shadow: 0 0 50px rgba(0,255,157,0.3);
+    transition: all 0.3s ease;
+}
 
-        .hero-image img:hover {
-            transform: scale(1.05);
-            border-color: #00b8ff;
-            box-shadow: 0 0 70px rgba(0,255,157,0.5);
-        }
+.hero-image img:hover {
+    transform: scale(1.05);
+    border-color: #00b8ff;
+    box-shadow: 0 0 100px rgba(0,255,157,0.5);
+}
 
         /* Stats Section */
         .stats {
@@ -1702,7 +1703,7 @@
                         </div>
                     </div>
                     <div class="hero-image">
-                        <img src="profile.jpg" alt="Viora Yaba Mensah" onerror="this.src='https://ui-avatars.com/api/?name=Viora+Mensah&size=400&background=00ff9d&color=0a0a0a&bold=true'">
+            <img src="profile-circle.jpg" alt="Viora Yaba Mensah" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #00ff88; box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);">
                     </div>
                 </section>
 
@@ -2812,685 +2813,72 @@ function filterProjects(category) {
         }
     });
 }
-<!-- ============================================ -->
-<!-- AEGIS AI GOVERNANCE DEMO - ADD THIS SECTION -->
-<!-- ============================================ -->
-<section id="aegis-demo" style="padding: 60px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <h2 style="color: white; font-size: 2.5em; margin-bottom: 20px;">🛡️ AI Governance Demo</h2>
-        <p style="color: rgba(255,255,255,0.9); font-size: 1.2em; margin-bottom: 40px;">
-            See my AEGIS AI Controller in action - real-time policy enforcement for autonomous AI agents
-        </p>
-        
-        <div style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
-            <!-- Live Demo Iframe -->
-            <iframe 
-                src="https://aegis.vercel.app" 
-                style="width: 100%; height: 500px; border: none; border-radius: 10px; margin-bottom: 20px;"
-                title="AEGIS AI Governance Demo"
-                loading="lazy"
-            ></iframe>
-            
-            <!-- Buttons -->
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://aegis.vercel.app" target="_blank" 
-                   style="padding: 15px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-                    🚀 Open Full Demo
-                </a>
-                <a href="https://github.com/viora/aegis" target="_blank" 
-                   style="padding: 15px 30px; background: #333; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-                    📦 View Source on GitHub
-                </a>
-            </div>
-            
-            <!-- Quick Test Examples -->
-            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                <p style="margin-bottom: 15px;"><strong>Try these examples in the demo:</strong></p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <span style="padding: 8px 16px; background: #28a745; color: white; border-radius: 20px;">✅ read public/data</span>
-                    <span style="padding: 8px 16px; background: #dc3545; color: white; border-radius: 20px;">❌ write /etc/passwd</span>
-                    <span style="padding: 8px 16px; background: #dc3545; color: white; border-radius: 20px;">❌ execute /bin/bash</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
  
-        // CASE STUDIES PAGE - 40 Imaginary Scenarios with Realistic Technical Solutions
-function getCaseStudiesPage() {
-    const caseStudies = [
-        // ===== FINANCIAL SERVICES (1-8) =====
-        {
-            id: 1,
-            title: "Crypto Exchange Security Breach Recovery",
-            client: "NovaCrypt Exchange",
-            industry: "Cryptocurrency",
-            problem: "A decentralized crypto exchange experienced a sophisticated hot wallet compromise resulting in $2.3M in potential losses. Attackers exploited a vulnerability in the transaction signing process and had established persistence through a compromised API key.",
-            troubleshooting: "Conducted emergency incident response including: isolating affected systems, analyzing blockchain transactions to trace attacker patterns, reviewing API logs to identify the initial compromise vector, and performing memory forensics on validator nodes to detect backdoors.",
-            solution: "Implemented a multi-signature cold wallet architecture requiring 5-of-7 approvals for large transactions. Deployed hardware security modules (HSMs) for key management. Created an AI-based anomaly detection system for transaction patterns. Established a bug bounty program with bounties up to $50,000. Recovered 85% of funds through rapid response.",
-            technologies: ["HSM", "Multi-sig wallets", "Blockchain forensics", "Anomaly detection"],
-            timeline: "2 weeks",
-            icon: "fa-bitcoin"
-        },
-        {
-            id: 2,
-            title: "Core Banking System Migration Security",
-            client: "Meridian Trust Bank",
-            industry: "Banking",
-            problem: "During a legacy core banking system migration to a modern platform, customer transaction data was being corrupted during ETL processes. Approximately 15,000 transactions failed to reconcile, and test migrations showed data integrity issues with interest calculations and account balances.",
-            troubleshooting: "Deployed database replication monitoring to identify exact points of data corruption. Used checksum validation across source and target databases. Implemented transaction replay testing with historical data. Conducted schema analysis to identify compatibility issues with date/time formats and currency precision.",
-            solution: "Created an ETL validation framework that automatically compares source and target data with cryptographic hashing. Implemented dual-write strategy during cutover with real-time reconciliation. Deployed database firewall to block unauthorized schema changes. Established continuous data validation cron jobs running every 15 minutes post-migration.",
-            technologies: ["ETL validation", "Database replication", "Checksum verification", "Data reconciliation"],
-            timeline: "3 months",
-            icon: "fa-university"
-        },
-        {
-            id: 3,
-            title: "Payment Gateway PCI-DSS Compliance Failure",
-            client: "PayFlow Financial",
-            industry: "Fintech",
-            problem: "A payment processor failed their PCI-DSS audit due to cardholder data being stored in unencrypted application logs. The logs contained full PAN (Primary Account Number) data from 3 months of transactions, affecting approximately 500,000 customers.",
-            troubleshooting: "Conducted log forensics to determine scope of exposure. Analyzed application code to identify where PAN data was being logged. Reviewed log rotation and retention policies. Assessed SIEM rules for detecting sensitive data in logs.",
-            solution: "Implemented real-time log scrubbing using regular expressions to mask PAN data before writing. Deployed a data loss prevention (DLP) solution specifically for structured data. Created automated log scanning that alerts on any credit card pattern. Established quarterly log review audits with automated reporting.",
-            technologies: ["Log scrubbing", "DLP", "PCI-DSS controls", "SIEM integration"],
-            timeline: "6 weeks",
-            icon: "fa-credit-card"
-        },
-        {
-            id: 4,
-            title: "Mobile Banking App MITM Vulnerability",
-            client: "VaultLine Financial",
-            industry: "Mobile Banking",
-            problem: "A mobile banking application was found vulnerable to man-in-the-middle attacks due to improper certificate pinning implementation. Security researchers demonstrated the ability to intercept login credentials and transaction data on public WiFi networks.",
-            troubleshooting: "Decompiled the mobile app to analyze certificate validation logic. Tested network traffic interception using custom proxy configurations. Reviewed SSL/TLS implementation across all API endpoints. Assessed certificate management and renewal procedures.",
-            solution: "Implemented dynamic certificate pinning with backup pins stored in secure hardware-backed keystore. Deployed certificate transparency monitoring to detect fraudulent certificates. Added certificate validation at both application and API gateway levels. Created automated mobile app security testing pipeline.",
-            technologies: ["Certificate pinning", "Mobile security", "API gateway", "SSL/TLS"],
-            timeline: "3 weeks",
-            icon: "fa-mobile-alt"
-        },
-        {
-            id: 5,
-            title: "Investment Platform API Rate Limiting Breach",
-            client: "WealthSphere Invest",
-            industry: "Wealth Management",
-            problem: "An algorithmic trading platform's API lacked proper rate limiting, allowing a malicious actor to execute 50,000 unauthorized trades in 3 minutes, manipulating stock prices and causing $1.8M in client losses.",
-            troubleshooting: "Analyzed API access logs to identify the attack pattern. Reviewed authentication mechanisms for API keys. Assessed trading algorithms for circuit breaker triggers. Investigated whether the attack exploited any authentication bypass vulnerabilities.",
-            solution: "Implemented multi-layer rate limiting at API gateway, application, and database levels. Deployed adaptive rate limiting that adjusts based on user behavior patterns. Created real-time trading circuit breakers that halt activity when thresholds are exceeded. Added anomaly detection for trading patterns.",
-            technologies: ["Rate limiting", "API security", "Circuit breakers", "Anomaly detection"],
-            timeline: "4 weeks",
-            icon: "fa-chart-line"
-        },
-        {
-            id: 6,
-            title: "Cross-Border Payment Settlement Delays",
-            client: "GlobalRemit Transfer",
-            industry: "Remittance",
-            problem: "International payment settlements were experiencing 8-12 hour delays due to inefficient reconciliation processes between correspondent banks. The manual verification system couldn't handle the 50,000 daily transaction volume.",
-            troubleshooting: "Mapped the end-to-end payment flow across 12 correspondent banks. Identified bottlenecks in manual compliance checks. Analyzed SWIFT message processing times. Reviewed KYC/AML verification workflows.",
-            solution: "Implemented a blockchain-based settlement layer providing real-time transaction finality. Deployed smart contracts for automated compliance checks. Created a unified API layer connecting all correspondent banks. Established automated reconciliation with cryptographic proof.",
-            technologies: ["Blockchain", "Smart contracts", "API integration", "Automated reconciliation"],
-            timeline: "4 months",
-            icon: "fa-globe"
-        },
-        {
-            id: 7,
-            title: "Credit Scoring Algorithm Bias Detection",
-            client: "FairScore Analytics",
-            industry: "Credit Bureau",
-            problem: "A machine learning-based credit scoring model was found to have demographic bias, resulting in 15% higher rejection rates for certain applicant groups. This created regulatory risk and potential discrimination lawsuits.",
-            troubleshooting: "Conducted fairness audits across demographic segments. Analyzed feature importance to identify biased input variables. Reviewed training data for representation issues. Tested model predictions against protected class data.",
-            solution: "Implemented adversarial debiasing techniques in the model training pipeline. Created fairness constraints in the optimization function. Deployed continuous bias monitoring dashboards. Established regular model audits with third-party validation.",
-            technologies: ["ML fairness", "Adversarial debiasing", "Bias monitoring", "Model validation"],
-            timeline: "8 weeks",
-            icon: "fa-chart-pie"
-        },
-        {
-            id: 8,
-            title: "Treasury Management System Ransomware",
-            client: "CapitalBridge Holdings",
-            industry: "Investment Banking",
-            problem: "A treasury management system was hit by ransomware that encrypted 15 years of historical transaction data. The attack propagated through a compromised VPN credential of a third-party vendor.",
-            troubleshooting: "Isolated affected systems to prevent lateral spread. Conducted forensic analysis of the attack vector. Assessed backup integrity and recovery capabilities. Reviewed third-party access controls and vendor risk management.",
-            solution: "Implemented air-gapped backup strategy with immutable storage. Deployed zero-trust network access (ZTNA) replacing traditional VPN. Created third-party risk management platform with continuous monitoring. Established incident response playbook with regular tabletop exercises.",
-            technologies: ["Immutable backups", "ZTNA", "Vendor risk management", "Incident response"],
-            timeline: "6 weeks",
-            icon: "fa-shield-virus"
-        },
+        // CASE STUDIES PAGE - Detailed
+        function getCaseStudiesPage() {
+            return `
+                <div class="page-header">
+                    <h1>Case Studies</h1>
+                    <p>Events Cases</p>
+                </div>
 
-        // ===== HEALTHCARE (9-16) =====
-        {
-            id: 9,
-            title: "Hospital Network Segmentation Failure",
-            client: "Regional Health System",
-            industry: "Healthcare",
-            problem: "A ransomware attack spread from an infected IoT patient monitor to the entire hospital network, affecting 500+ devices including MRI machines and patient records systems. The flat network design allowed lateral movement.",
-            troubleshooting: "Mapped network topology to identify segmentation gaps. Analyzed firewall rules for inter-VLAN traffic. Reviewed IoT device security configurations. Assessed medical device firmware vulnerabilities.",
-            solution: "Implemented micro-segmentation with granular firewall rules between device types. Deployed NAC (Network Access Control) for all medical IoT devices. Created separate VLANs for patient care, administrative, and public networks. Established medical device security assessment program.",
-            technologies: ["Micro-segmentation", "NAC", "Medical IoT security", "VLAN design"],
-            timeline: "3 months",
-            icon: "fa-hospital"
-        },
-        {
-            id: 10,
-            title: "Telemedicine Platform Encryption Failure",
-            client: "VirtualCare Connect",
-            industry: "Telehealth",
-            problem: "A telemedicine platform was streaming patient consultations without proper end-to-end encryption. Security researchers discovered that video streams could be intercepted and viewed by unauthorized parties on the same network.",
-            troubleshooting: "Analyzed WebRTC implementation for encryption gaps. Tested network traffic capture during live consultations. Reviewed key exchange mechanisms. Assessed compliance with healthcare privacy regulations.",
-            solution: "Implemented end-to-end encryption using the Signal Protocol for all media streams. Deployed certificate pinning for WebRTC connections. Created encrypted recording storage with client-side decryption. Established quarterly penetration testing for the platform.",
-            technologies: ["Signal Protocol", "WebRTC security", "E2E encryption", "Certificate pinning"],
-            timeline: "5 weeks",
-            icon: "fa-video"
-        },
-        {
-            id: 11,
-            title: "Electronic Health Record Access Audit Failure",
-            client: "MediRecord Systems",
-            industry: "Healthcare IT",
-            problem: "Audit logs for electronic health record access were incomplete, failing to capture 40% of user access events. During a regulatory audit, they couldn't prove who accessed specific patient records, risking $2M in fines.",
-            troubleshooting: "Reviewed database trigger configurations for audit logging. Analyzed application code for missing audit calls. Tested concurrent access scenarios for logging race conditions. Assessed SIEM ingestion of audit events.",
-            solution: "Implemented blockchain-based audit logging providing tamper-evident access records. Deployed database activity monitoring (DAM) as a backup audit source. Created real-time audit log validation with alerts for gaps. Established automated compliance reporting.",
-            technologies: ["Blockchain audit", "DAM", "SIEM", "Compliance automation"],
-            timeline: "8 weeks",
-            icon: "fa-file-medical"
-        },
-        {
-            id: 12,
-            title: "Medical Device Firmware Vulnerability",
-            client: "MedTech Innovations",
-            industry: "Medical Devices",
-            problem: "A line of insulin pumps was found to have a critical firmware vulnerability allowing remote attackers to modify dosage settings. The devices lacked proper authentication and used hardcoded credentials.",
-            troubleshooting: "Conducted binary analysis of firmware to identify vulnerabilities. Tested radio communication protocols for replay attacks. Reviewed manufacturing processes for secure credential management. Assessed over-the-air update mechanisms.",
-            solution: "Implemented secure boot with code signing for all firmware updates. Deployed hardware security module (HSM) for key storage. Created signed firmware update pipeline with version rollback protection. Established medical device security lab for continuous testing.",
-            technologies: ["Secure boot", "HSM", "Firmware signing", "Code analysis"],
-            timeline: "4 months",
-            icon: "fa-syringe"
-        },
-        {
-            id: 13,
-            title: "Healthcare API Data Exposure",
-            client: "HealthSync Integrations",
-            industry: "Healthcare API",
-            problem: "A FHIR API used by healthcare apps was exposing patient data due to improper authorization checks. Developers discovered that authenticated users could access any patient's records by simply changing the patient ID in the URL.",
-            troubleshooting: "Reviewed API authorization middleware implementation. Tested horizontal privilege escalation scenarios. Analyzed API rate limiting and monitoring. Assessed OAuth2 scope implementation.",
-            solution: "Implemented ABAC (Attribute-Based Access Control) with relationship-based authorization. Deployed API gateway with JWT validation and scope enforcement. Created automated API security testing in CI/CD. Established real-time monitoring for anomalous API access patterns.",
-            technologies: ["ABAC", "OAuth2", "JWT", "API gateway"],
-            timeline: "6 weeks",
-            icon: "fa-code-branch"
-        },
-        {
-            id: 14,
-            title: "Clinical Trial Data Integrity Compromise",
-            client: "PharmaResearch Global",
-            industry: "Pharmaceuticals",
-            problem: "Clinical trial data for a promising cancer drug was found to have unauthorized modifications. A researcher had altered outcome data to make the drug appear more effective, potentially affecting FDA approval.",
-            troubleshooting: "Analyzed database transaction logs to identify unauthorized changes. Reviewed access controls for trial data. Assessed audit trail completeness. Investigated separation of duties in data entry processes.",
-            solution: "Implemented immutable audit trails using write-once read-many (WORM) storage. Deployed blockchain-based data notarization for all trial results. Created automated data integrity verification with cryptographic hashing. Established mandatory separation of duties with approval workflows.",
-            technologies: ["WORM storage", "Blockchain notarization", "Data integrity", "Separation of duties"],
-            timeline: "3 months",
-            icon: "fa-flask"
-        },
-        {
-            id: 15,
-            title: "Healthcare IoT Botnet Infection",
-            client: "City Health Network",
-            industry: "Healthcare IoT",
-            problem: "Hundreds of hospital IoT devices (patient monitors, infusion pumps, temperature sensors) were infected with botnet malware, causing network congestion and intermittent device failures. The devices were using default credentials.",
-            troubleshooting: "Scanned network for compromised IoT devices. Analyzed malware behavior and command & control communication. Reviewed device credential policies. Assessed network segmentation effectiveness.",
-            solution: "Implemented network micro-segmentation isolating IoT devices to dedicated VLANs. Deployed IoT security platform with device fingerprinting and behavioral analytics. Created automated credential rotation for all medical devices. Established zero-trust network access for device management.",
-            technologies: ["IoT security", "Network segmentation", "Behavioral analytics", "Zero trust"],
-            timeline: "2 months",
-            icon: "fa-network-wired"
-        },
-        {
-            id: 16,
-            title: "Healthcare Blockchain Interoperability",
-            client: "HealthChain Consortium",
-            industry: "Healthcare Blockchain",
-            problem: "A consortium of 50 hospitals attempting to share patient data via blockchain faced 30-second transaction times, making the system unusable for real-time care coordination. The blockchain couldn't handle the 10,000 daily transaction volume.",
-            troubleshooting: "Analyzed blockchain consensus mechanism performance. Reviewed smart contract efficiency for data storage. Tested network latency between hospital nodes. Assessed database synchronization strategies.",
-            solution: "Implemented layer-2 scaling solution with off-chain state channels for frequent transactions. Deployed hybrid architecture combining blockchain for audit trail with traditional database for fast queries. Created optimized smart contracts reducing gas costs by 80%. Established caching layer for frequently accessed data.",
-            technologies: ["Layer-2 scaling", "State channels", "Hybrid architecture", "Smart contract optimization"],
-            timeline: "4 months",
-            icon: "fa-link"
-        },
+                <div class="case-studies-grid">
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Bank Security Transformation</div>
+                            <div class="case-client">LCB Bank</div>
+                            <div class="case-desc">Implemented comprehensive network security across 50+ branches including next-gen firewalls, IDS/IPS, and 24/7 security monitoring. Reduced security incidents by 95% and achieved ISO 27001 certification within 8 months.</div>
+                        </div>
+                    </div>
 
-        // ===== E-COMMERCE & RETAIL (17-24) =====
-        {
-            id: 17,
-            title: "Black Friday Shopping Cart Exploit",
-            client: "MegaMart Online",
-            industry: "E-commerce",
-            problem: "During Black Friday sales, attackers exploited a race condition in the shopping cart system to apply unlimited discount coupons. They purchased $500,000 worth of merchandise at 90% off before detection.",
-            troubleshooting: "Analyzed transaction logs to identify the attack pattern. Reviewed coupon validation logic for race conditions. Tested concurrent request handling. Assessed inventory management system integration.",
-            solution: "Implemented distributed locking for coupon applications using Redis. Deployed idempotent API design preventing duplicate processing. Created real-time fraud detection rules for coupon abuse. Established rate limiting on checkout endpoints.",
-            technologies: ["Distributed locking", "Redis", "Idempotent APIs", "Fraud detection"],
-            timeline: "3 weeks",
-            icon: "fa-shopping-cart"
-        },
-        {
-            id: 18,
-            title: "E-commerce Platform PCI Scope Reduction",
-            client: "ShopStream Retail",
-            industry: "E-commerce",
-            problem: "An e-commerce platform's PCI-DSS scope included 200 servers because payment data was being processed on the same infrastructure as the main application, significantly increasing compliance costs and audit burden.",
-            troubleshooting: "Mapped payment data flow across all systems. Identified where cardholder data was stored, processed, or transmitted. Reviewed tokenization implementation. Assessed iframe integration with payment provider.",
-            solution: "Implemented iframe-based payment integration keeping cardholder data within PCI-compliant iframe. Deployed tokenization at the edge, replacing PAN with tokens before reaching application servers. Created network segmentation isolating payment systems to a dedicated PCI zone. Established quarterly scope validation scans.",
-            technologies: ["PCI scope reduction", "Tokenization", "iframe integration", "Network segmentation"],
-            timeline: "2 months",
-            icon: "fa-credit-card"
-        },
-        {
-            id: 19,
-            title: "Inventory Management API Overload",
-            client: "GlobalMart Distribution",
-            industry: "Retail",
-            problem: "During peak holiday season, the inventory management API collapsed under 10x normal load, causing 4 hours of downtime and $2M in lost sales. The API couldn't scale due to database connection limits.",
-            troubleshooting: "Analyzed API performance metrics during the failure. Reviewed database connection pooling configuration. Tested load balancing effectiveness. Assessed caching implementation for inventory data.",
-            solution: "Implemented read replicas for inventory queries, separating from write operations. Deployed Redis caching layer reducing database queries by 90%. Created connection pooling with dynamic scaling based on load. Established auto-scaling for API instances based on queue depth.",
-            technologies: ["Read replicas", "Redis caching", "Connection pooling", "Auto-scaling"],
-            timeline: "4 weeks",
-            icon: "fa-boxes"
-        },
-        {
-            id: 20,
-            title: "Loyalty Program Points Theft",
-            client: "RewardsPlus",
-            industry: "Retail Loyalty",
-            problem: "Attackers exploited an API vulnerability to transfer loyalty points between accounts without authorization, stealing approximately 50 million points worth $500,000. The API lacked proper ownership validation.",
-            troubleshooting: "Analyzed API logs to identify unauthorized point transfers. Reviewed authorization logic for point transactions. Tested for IDOR (Insecure Direct Object References) vulnerabilities. Assessed rate limiting on sensitive operations.",
-            solution: "Implemented cryptographic signing of point transfer requests with user-specific keys. Deployed behavioral analytics detecting unusual point redemption patterns. Created multi-factor authentication for high-value transfers. Established transaction limits with velocity checks.",
-            technologies: ["Cryptographic signing", "Behavioral analytics", "MFA", "Velocity checks"],
-            timeline: "3 weeks",
-            icon: "fa-gift"
-        },
-        {
-            id: 21,
-            title: "Supply Chain Vendor Portal Breach",
-            client: "RetailCorp Supply",
-            industry: "Supply Chain",
-            problem: "A compromised vendor credential allowed attackers to access the supplier portal and modify shipping addresses for 50 high-value orders, redirecting $800,000 in merchandise to fraudulent addresses.",
-            troubleshooting: "Traced the attack to a specific vendor account with weak password. Analyzed portal access logs for unusual patterns. Reviewed vendor onboarding and offboarding processes. Assessed MFA implementation for vendor accounts.",
-            solution: "Implemented mandatory MFA for all vendor accounts using TOTP. Deployed vendor risk scoring based on behavior and transaction patterns. Created just-in-time access provisioning with automatic revocation. Established vendor security requirements in contracts.",
-            technologies: ["MFA", "Risk scoring", "JIT access", "Vendor security"],
-            timeline: "5 weeks",
-            icon: "fa-truck"
-        },
-        {
-            id: 22,
-            title: "E-commerce Search Engine Injection",
-            client: "FindIt Marketplace",
-            industry: "E-commerce",
-            problem: "Attackers injected malicious JavaScript into product search results through a stored XSS vulnerability. The script stole session cookies from 10,000 users, allowing account takeover and fraudulent purchases.",
-            troubleshooting: "Analyzed search input sanitization and output encoding. Reviewed CSP headers for XSS mitigation. Tested for bypasses in input validation. Assessed session management security.",
-            solution: "Implemented strict CSP with nonce-based script execution. Deployed context-aware output encoding for all user-supplied data. Created automated XSS scanning in CI/CD pipeline. Established HttpOnly and Secure flags for all session cookies.",
-            technologies: ["CSP", "Output encoding", "XSS prevention", "Secure cookies"],
-            timeline: "2 weeks",
-            icon: "fa-search"
-        },
-        {
-            id: 23,
-            title: "Omnichannel Inventory Desync",
-            client: "Unified Retail Group",
-            industry: "Retail",
-            problem: "Real-time inventory synchronization between online store and physical locations failed during peak season, resulting in 500+ customers being told items were in stock when they weren't, causing significant brand damage.",
-            troubleshooting: "Analyzed message queue for inventory updates between systems. Reviewed database replication lag between locations. Tested conflict resolution for simultaneous updates. Assessed event-driven architecture reliability.",
-            solution: "Implemented event sourcing with CQRS pattern for inventory management. Deployed optimistic concurrency control with version stamps. Created real-time inventory dashboard with synchronization status. Established compensating transactions for failed updates.",
-            technologies: ["Event sourcing", "CQRS", "Optimistic concurrency", "Compensating transactions"],
-            timeline: "6 weeks",
-            icon: "fa-store"
-        },
-        {
-            id: 24,
-            title: "Recommendation Engine Data Poisoning",
-            client: "TrendSetter AI",
-            industry: "Retail AI",
-            problem: "Attackers manipulated product recommendation algorithms by creating fake user accounts and artificially inflating views/purchases of competitor products, causing the AI to recommend inferior products and reducing sales by 15%.",
-            troubleshooting: "Analyzed training data for anomalies and poisoning attempts. Reviewed feature importance in recommendation models. Tested model resilience to adversarial examples. Assessed user behavior validation.",
-            solution: "Implemented robust statistics for outlier detection in training data. Deployed adversarial training making models resilient to manipulation. Created user reputation scoring to filter synthetic activity. Established continuous model validation against baseline metrics.",
-            technologies: ["Adversarial ML", "Robust statistics", "User reputation", "Model validation"],
-            timeline: "2 months",
-            icon: "fa-brain"
-        },
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">E-commerce Security Overhaul</div>
+                            <div class="case-client">Commerce Ghana</div>
+                            <div class="case-desc">Led PCI-DSS compliance initiative for Ghana's largest e-commerce platform. Implemented WAF, fraud detection ML models, and secure payment processing. Achieved compliance and reduced payment fraud by 99%.</div>
+                        </div>
+                    </div>
 
-        // ===== MANUFACTURING & INDUSTRIAL (25-32) =====
-        {
-            id: 25,
-            title: "Industrial Control System Ransomware",
-            client: "Precision Manufacturing",
-            industry: "Manufacturing",
-            problem: "Ransomware infected the industrial control network, encrypting PLC configurations and halting production for 5 days. The attack entered through a compromised HVAC contractor's laptop connected to the OT network.",
-            troubleshooting: "Isolated OT network to prevent further spread. Analyzed firewall rules between IT and OT networks. Reviewed contractor remote access policies. Assessed backup viability for PLC configurations.",
-            solution: "Implemented unidirectional gateways between IT and OT networks preventing any inbound connections. Deployed air-gapped backup system for all PLC configurations. Created OT-specific endpoint protection with whitelisting. Established contractor onboarding process with dedicated jump hosts.",
-            technologies: ["Unidirectional gateways", "Air-gapped backups", "Application whitelisting", "OT security"],
-            timeline: "8 weeks",
-            icon: "fa-industry"
-        },
-        {
-            id: 26,
-            title: "SCADA System Authentication Bypass",
-            client: "WaterWorks Utilities",
-            industry: "Water Treatment",
-            problem: "A SCADA system controlling water treatment facilities had a hardcoded backdoor account that was discovered and exploited, allowing unauthorized changes to chemical dosing levels, potentially endangering public health.",
-            troubleshooting: "Analyzed SCADA firmware for hidden accounts. Reviewed authentication mechanisms across all control systems. Tested network segmentation between SCADA and corporate network. Assessed vendor secure development practices.",
-            solution: "Implemented multi-factor authentication for all SCADA access using hardware tokens. Deployed network-based anomaly detection for OT protocols. Created configuration management database tracking all authorized changes. Established vendor security requirements in procurement.",
-            technologies: ["OT authentication", "Hardware tokens", "Protocol anomaly detection", "Configuration management"],
-            timeline: "6 weeks",
-            icon: "fa-water"
-        },
-        {
-            id: 27,
-            title: "Supply Chain BOM Integrity Compromise",
-            client: "AeroTech Components",
-            industry: "Aerospace",
-            problem: "A supplier's Bill of Materials (BOM) system was compromised, with attackers subtly altering component specifications for critical aircraft parts. The changes would have caused premature fatigue failure if undetected.",
-            troubleshooting: "Traced BOM modifications to compromised supplier credentials. Analyzed cryptographic signatures on BOM documents. Reviewed supplier authentication and authorization processes. Assessed supply chain verification procedures.",
-            solution: "Implemented blockchain-based BOM verification with multi-party signatures. Deployed digital twins for all critical components enabling real-time verification. Created automated BOM validation against trusted sources. Established cryptographic chain of custody for all specifications.",
-            technologies: ["Blockchain verification", "Digital twins", "BOM validation", "Chain of custody"],
-            timeline: "4 months",
-            icon: "fa-plane"
-        },
-        {
-            id: 28,
-            title: "Predictive Maintenance System Failure",
-            client: "RailCorp Logistics",
-            industry: "Transportation",
-            problem: "A predictive maintenance system for train bearings started generating false failure alerts, causing unnecessary maintenance shutdowns and delaying 200+ shipments. The ML model had degraded due to sensor drift.",
-            troubleshooting: "Analyzed sensor data quality and calibration status. Reviewed model performance metrics over time. Tested for concept drift in the ML pipeline. Assessed data preprocessing and feature engineering.",
-            solution: "Implemented automated data quality validation with alerts for sensor drift. Deployed model monitoring with statistical tests for concept drift. Created ensemble model combining multiple algorithms for robustness. Established continuous model retraining pipeline with fresh data.",
-            technologies: ["Data quality", "Concept drift detection", "Ensemble learning", "ML pipeline"],
-            timeline: "5 weeks",
-            icon: "fa-train"
-        },
-        {
-            id: 29,
-            title: "Industrial Robot Fleet Hijacking",
-            client: "AutoBuild Assembly",
-            industry: "Automotive",
-            problem: "Attackers compromised the robot control network and reprogrammed 15 assembly line robots to operate at unsafe speeds, causing a collision that damaged $2M in equipment and injured two workers.",
-            troubleshooting: "Isolated robot network and analyzed control logs. Reviewed robot programming interface security. Assessed safety system integration with control systems. Investigated remote access mechanisms.",
-            solution: "Implemented safety-rated PLCs separate from control networks with hardwired emergency stops. Deployed network segmentation isolating robot control from corporate network. Created robot behavior monitoring with anomaly detection. Established mandatory security updates for all industrial controllers.",
-            technologies: ["Safety PLCs", "Network segmentation", "Robot monitoring", "Industrial security"],
-            timeline: "3 months",
-            icon: "fa-robot"
-        },
-        {
-            id: 30,
-            title: "Smart Grid Demand Response Manipulation",
-            client: "EnergyGrid Cooperative",
-            industry: "Utilities",
-            problem: "Attackers manipulated smart meter data to artificially trigger demand response events, causing voltage fluctuations that damaged transformers and caused $5M in equipment failure across the grid.",
-            troubleshooting: "Analyzed smart meter data for manipulation patterns. Reviewed demand response algorithm logic. Tested meter authentication and encryption. Assessed grid control system resilience.",
-            solution: "Implemented cryptographic attestation for all smart meter readings. Deployed grid-scale anomaly detection using physics-informed AI. Created redundant control paths with manual override capability. Established real-time grid monitoring with automatic isolation.",
-            technologies: ["Cryptographic attestation", "Physics-informed AI", "Redundant controls", "Grid monitoring"],
-            timeline: "6 months",
-            icon: "fa-bolt"
-        },
-        {
-            id: 31,
-            title: "Chemical Plant Safety System Bypass",
-            client: "ChemCorp Processing",
-            industry: "Chemical",
-            problem: "During a routine upgrade, technicians accidentally bypassed safety instrumented systems (SIS) while testing new controls, creating a situation where a pressure vessel overpressurized and nearly caused a catastrophic release.",
-            troubleshooting: "Reviewed bypass procedures and authorization workflows. Analyzed alarm logs during the incident. Tested SIS integration with control systems. Assessed safety culture and training.",
-            solution: "Implemented mandatory two-person rule for safety system bypasses with biometric verification. Deployed tamper-evident logging for all bypass events. Created automated alerts to management when safety systems are bypassed. Established virtual safety barriers that cannot be disabled remotely.",
-            technologies: ["Two-person rule", "Biometric verification", "Tamper-evident logging", "Virtual safety barriers"],
-            timeline: "8 weeks",
-            icon: "fa-flask"
-        },
-        {
-            id: 32,
-            title: "Oil Pipeline Leak Detection Failure",
-            client: "PetroFlow Pipelines",
-            industry: "Oil & Gas",
-            problem: "A leak detection system failed to identify a small pipeline leak for 3 days, resulting in 50,000 gallons of oil spill. The system's acoustic sensors had been incorrectly calibrated during maintenance.",
-            troubleshooting: "Analyzed acoustic sensor calibration records. Reviewed leak detection algorithm parameters. Tested sensor data quality and validation. Assessed maintenance procedures and documentation.",
-            solution: "Implemented multi-modal leak detection combining acoustic, pressure, and flow data with ML fusion. Deployed automatic sensor calibration validation before maintenance sign-off. Created redundant leak detection using satellite imagery analysis. Established continuous model validation against known leak scenarios.",
-            technologies: ["Sensor fusion", "ML leak detection", "Satellite monitoring", "Model validation"],
-            timeline: "4 months",
-            icon: "fa-oil-can"
-        },
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Cloud Migration Security</div>
+                            <div class="case-client">Telecom Ghana</div>
+                            <div class="case-desc">Securely migrated critical telecom infrastructure to AWS with zero downtime. Implemented defense-in-depth security architecture, IAM, and continuous compliance monitoring. Saved 40% in operational costs.</div>
+                        </div>
+                    </div>
 
-        // ===== TECHNOLOGY & SOFTWARE (33-40) =====
-        {
-            id: 33,
-            title: "SaaS Platform Data Leak via Search Indexing",
-            client: "CloudSync Solutions",
-            industry: "SaaS",
-            problem: "A document management SaaS platform accidentally allowed search engines to index private customer documents, exposing sensitive business plans and financial data from 200 companies for 3 weeks before detection.",
-            troubleshooting: "Analyzed robots.txt configuration and meta tags. Reviewed search engine crawl logs. Tested authentication bypasses in document access. Assessed CDN and caching configurations.",
-            solution: "Implemented X-Robots-Tag headers preventing indexing of authenticated content. Deployed canonical URL validation ensuring only intended versions are accessible. Created automated scanning for sensitive data exposure. Established quarterly external attack surface reviews.",
-            technologies: ["Robots header", "Canonical URLs", "Data exposure scanning", "Attack surface management"],
-            timeline: "2 weeks",
-            icon: "fa-cloud"
-        },
-        {
-            id: 34,
-            title: "Docker Registry Cryptomining Exploit",
-            client: "ContainerWorks",
-            industry: "DevOps",
-            problem: "Attackers compromised a public Docker registry and injected cryptomining malware into popular base images. Over 10,000 developers downloaded infected images, resulting in cryptomining on their build servers.",
-            troubleshooting: "Analyzed image layers to identify malware insertion point. Reviewed registry access controls and audit logs. Tested image signing and verification. Assessed supply chain security practices.",
-            solution: "Implemented notary for image signing and verification at pull time. Deployed vulnerability scanning for all images in registry with automatic quarantine. Created trusted build pipeline with reproducible builds. Established software bill of materials (SBOM) for all images.",
-            technologies: ["Notary", "Image signing", "Vulnerability scanning", "SBOM"],
-            timeline: "4 weeks",
-            icon: "fa-docker"
-        },
-        {
-            id: 35,
-            title: "Kubernetes RBAC Privilege Escalation",
-            client: "CloudNative Apps",
-            industry: "Kubernetes",
-            problem: "A developer accidentally received cluster-admin privileges due to a misconfigured RBAC policy, allowing them to accidentally delete production namespaces and cause 8 hours of downtime for critical applications.",
-            troubleshooting: "Reviewed RBAC configuration and role bindings. Analyzed audit logs for privilege usage. Tested principle of least privilege compliance. Assessed change management processes.",
-            solution: "Implemented OPA/Gatekeeper policies enforcing RBAC best practices. Deployed just-in-time privilege elevation with approval workflows. Created automated RBAC auditing with drift detection. Established namespace isolation with network policies.",
-            technologies: ["OPA/Gatekeeper", "JIT access", "RBAC auditing", "Network policies"],
-            timeline: "3 weeks",
-            icon: "fa-cubes"
-        },
-        {
-            id: 36,
-            title: "Terraform State File Exposure",
-            client: "InfraCode",
-            industry: "Infrastructure as Code",
-            problem: "A Terraform state file stored in public S3 bucket exposed AWS access keys, database passwords, and infrastructure configuration for 50 production environments. The bucket had been misconfigured as public-readable.",
-            troubleshooting: "Analyzed S3 bucket policies and ACLs. Reviewed Terraform backend configuration. Test for public access to state files. Assessed secrets management practices.",
-            solution: "Implemented remote state locking with DynamoDB and encryption at rest. Deployed backend configuration requiring encryption and access logging. Created automated S3 bucket policy validation in CI/CD. Established secrets management using HashiCorp Vault.",
-            technologies: ["Remote state", "Encryption", "Bucket policy validation", "Vault"],
-            timeline: "2 weeks",
-            icon: "fa-code"
-        },
-        {
-            id: 37,
-            title: "GitHub Actions Secrets Leak",
-            client: "DevFlow CI",
-            industry: "CI/CD",
-            problem: "A developer accidentally printed GitHub secrets to build logs in a CI pipeline, exposing API keys for 30 production services. The logs were publicly accessible for 2 weeks before rotation.",
-            troubleshooting: "Analyzed build logs for secret exposure patterns. Reviewed GitHub Actions secret masking configuration. Tested for secret leakage in various scenarios. Assessed log retention and access controls.",
-            solution: "Implemented custom secret redaction in log output using正则表达式. Deployed pre-commit hooks preventing secret commits. Created automated secret scanning in CI/CD with build failure on detection. Established forced secret rotation with audit trail.",
-            technologies: ["Log redaction", "Pre-commit hooks", "Secret scanning", "Automated rotation"],
-            timeline: "1 week",
-            icon: "fa-github"
-        },
-        {
-            id: 38,
-            title: "Database Connection Pool Exhaustion",
-            client: "DataFlow Analytics",
-            industry: "Data Platform",
-            problem: "A misconfigured connection pool in a microservices architecture led to database connection exhaustion, causing cascading failures across 15 services and 6 hours of platform unavailability.",
-            troubleshooting: "Analyzed connection pool metrics and database logs. Reviewed connection timeout and retry configurations. Tested circuit breaker behavior under load. Assessed service dependency health checks.",
-            solution: "Implemented dynamic connection pooling with circuit breakers and bulkheads. Deployed read replicas for analytical queries separating from transactional workload. Created connection pool monitoring with predictive alerts. Established graceful degradation with fallback mechanisms.",
-            technologies: ["Circuit breakers", "Bulkheads", "Read replicas", "Predictive monitoring"],
-            timeline: "3 weeks",
-            icon: "fa-database"
-        },
-        {
-            id: 39,
-            title: "WebAssembly Cryptojacking",
-            client: "MediaStream CDN",
-            industry: "Content Delivery",
-            problem: "Attackers injected WebAssembly cryptominers into JavaScript libraries served through a CDN, affecting 500,000 website visitors who unknowingly had their browsers mining cryptocurrency without consent.",
-            troubleshooting: "Analyzed CDN logs for unauthorized file modifications. Reviewed JavaScript library integrity verification. Tested Subresource Integrity (SRI) implementation. Assessed CDN access controls.",
-            solution: "Implemented Subresource Integrity (SRI) with automatic hash generation in build pipeline. Deployed CDN with immutable content and version pinning. Created automated content scanning for malicious scripts. Established supply chain security with dependency verification.",
-            technologies: ["SRI", "Immutable CDN", "Content scanning", "Supply chain security"],
-            timeline: "2 weeks",
-            icon: "fa-file-code"
-        },
-        {
-            id: 40,
-            title: "Serverless Function Cold Start DoS",
-            client: "LambdaScale Apps",
-            industry: "Serverless",
-            problem: "Attackers exploited cold start behavior by sending traffic patterns that constantly cycled through random function invocations, preventing any instances from staying warm and increasing latency from 100ms to 10 seconds.",
-            troubleshooting: "Analyzed invocation patterns and cold start frequency. Reviewed concurrency limits and provisioning configurations. Tested various invocation patterns for DoS potential. Assessed function memory and initialization code.",
-            solution: "Implemented provisioned concurrency with predictive scaling based on traffic patterns. Deployed scheduled warming with canary functions maintaining baseline instances. Created function optimization reducing cold start time to under 100ms. Established WAF rules blocking random invocation patterns.",
-            technologies: ["Provisioned concurrency", "Predictive scaling", "Cold start optimization", "WAF rules"],
-            timeline: "4 weeks",
-            icon: "fa-cloud-upload-alt"
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">DevSecOps Transformation</div>
+                            <div class="case-client">Social Development Bank</div>
+                            <div class="case-desc">Transformed development practices with DevSecOps implementation. Integrated security into CI/CD pipelines, automated vulnerability scanning, and reduced deployment time from weeks to hours while improving security posture.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Healthcare Data Protection</div>
+                            <div class="case-client">Clara Teaching Hospital</div>
+                            <div class="case-desc">Implemented HIPAA-compliant security controls for patient records system. Deployed encryption, access controls, and audit logging. Successfully passed external audit and improved patient data security.</div>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image"></div>
+                        <div class="case-content">
+                            <div class="case-title">Fintech Security Architecture</div>
+                            <div class="case-client">Teepay</div>
+                            <div class="case-desc">Designed and implemented security architecture for mobile money platform. Included real-time fraud detection, transaction monitoring, and regulatory compliance. Handles millions in transactions daily with zero security incidents.</div>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
-    ];
-
-    // Build case studies HTML
-    let caseStudiesHTML = '';
-    
-    caseStudies.forEach(study => {
-        // Create technology tags
-        const techTags = study.technologies.map(tech => 
-            `<span class="tech-tag">${tech}</span>`
-        ).join('');
-        
-        caseStudiesHTML += `
-            <div class="case-card" onclick="toggleCaseDetails(${study.id})" style="cursor: pointer;">
-                <div class="case-image" style="background: linear-gradient(135deg, #00ff9d20, #00b8ff20); display: flex; align-items: center; justify-content: center;">
-                    <i class="fas ${study.icon}" style="font-size: 60px; color: #00ff9d; opacity: 0.7;"></i>
-                </div>
-                <div class="case-content">
-                    <div class="case-title">${study.title}</div>
-                    <div class="case-client" style="display: flex; justify-content: space-between;">
-                        <span><i class="fas fa-building"></i> ${study.client}</span>
-                        <span><i class="fas fa-tag"></i> ${study.industry}</span>
-                    </div>
-                    <div class="case-tech" style="margin: 10px 0;">
-                        ${techTags}
-                    </div>
-                    <div id="case-preview-${study.id}" class="case-preview">
-                        <p><strong>⚠️ Problem:</strong> ${study.problem.substring(0, 150)}...</p>
-                        <p><small style="color: #00ff9d;">Click to expand full case study →</small></p>
-                    </div>
-                    <div id="case-full-${study.id}" class="case-full" style="display: none; margin-top: 15px;">
-                        <div style="background: rgba(0,255,157,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                            <h4 style="color: #ff4444; margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> Problem</h4>
-                            <p>${study.problem}</p>
-                        </div>
-                        <div style="background: rgba(255,255,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                            <h4 style="color: #ffaa00; margin-bottom: 10px;"><i class="fas fa-search"></i> Troubleshooting</h4>
-                            <p>${study.troubleshooting}</p>
-                        </div>
-                        <div style="background: rgba(0,255,0,0.1); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                            <h4 style="color: #00ff9d; margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Solution</h4>
-                            <p>${study.solution}</p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; color: #b0b0b0; font-size: 0.9em;">
-                            <span><i class="fas fa-clock"></i> Timeline: ${study.timeline}</span>
-                            <span><i class="fas fa-cog"></i> ${study.technologies.length} technologies</span>
-                        </div>
-                        <p style="margin-top: 10px;"><small style="color: #00ff9d;">Click to collapse ↑</small></p>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-
-    return `
-        <div class="page-header">
-            <h1>Case Studies</h1>
-            <p>40+ real-world security challenges and their technical solutions</p>
-        </div>
-
-        <div class="case-filters" style="margin: 30px 0; display: flex; gap: 10px; flex-wrap: wrap;">
-            <button class="filter-btn active" onclick="filterCaseStudies('all')">All Industries</button>
-            <button class="filter-btn" onclick="filterCaseStudies('financial')">Financial</button>
-            <button class="filter-btn" onclick="filterCaseStudies('healthcare')">Healthcare</button>
-            <button class="filter-btn" onclick="filterCaseStudies('retail')">Retail</button>
-            <button class="filter-btn" onclick="filterCaseStudies('manufacturing')">Manufacturing</button>
-            <button class="filter-btn" onclick="filterCaseStudies('tech')">Technology</button>
-        </div>
-
-        <div class="case-studies-grid" id="case-studies-grid">
-            ${caseStudiesHTML}
-        </div>
-
-        <div style="margin: 50px 0; padding: 30px; background: rgba(0,255,157,0.05); border-radius: 15px; text-align: center;">
-            <h3 style="color: #00ff9d; margin-bottom: 20px;">📊 Case Study Statistics</h3>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-                <div>
-                    <div style="font-size: 40px; color: #00ff9d;">40+</div>
-                    <div>Case Studies</div>
-                </div>
-                <div>
-                    <div style="font-size: 40px; color: #00ff9d;">8</div>
-                    <div>Industries</div>
-                </div>
-                <div>
-                    <div style="font-size: 40px; color: #00ff9d;">100%</div>
-                    <div>Real Solutions</div>
-                </div>
-                <div>
-                    <div style="font-size: 40px; color: #00ff9d;">0</div>
-                    <div>Real Companies</div>
-                </div>
-            </div>
-            <p style="margin-top: 20px; color: #b0b0b0;">All case studies are imaginary scenarios with realistic technical solutions</p>
-        </div>
-    `;
-}
-
-// Toggle case study details
-function toggleCaseDetails(id) {
-    const preview = document.getElementById(`case-preview-${id}`);
-    const full = document.getElementById(`case-full-${id}`);
-    
-    if (full.style.display === 'none') {
-        preview.style.display = 'none';
-        full.style.display = 'block';
-    } else {
-        preview.style.display = 'block';
-        full.style.display = 'none';
-    }
-}
-
-// Filter case studies by industry
-function filterCaseStudies(industry) {
-    // Update active filter button
-    document.querySelectorAll('.case-filters .filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    event.target.classList.add('active');
-    
-    // This would need the actual case studies data to filter
-    // For now, we'll just show/hide based on the industry mapping
-    const industryMap = {
-        'financial': [1,2,3,4,5,6,7,8],
-        'healthcare': [9,10,11,12,13,14,15,16],
-        'retail': [17,18,19,20,21,22,23,24],
-        'manufacturing': [25,26,27,28,29,30,31,32],
-        'tech': [33,34,35,36,37,38,39,40]
-    };
-    
-    const cards = document.querySelectorAll('.case-card');
-    if (industry === 'all') {
-        cards.forEach(card => card.style.display = 'block');
-    } else {
-        cards.forEach((card, index) => {
-            const studyId = index + 1;
-            if (industryMap[industry].includes(studyId)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-}
 
         // AI AUGMENTATION PAGE - Detailed
         function getAIAugmentationPage() {
@@ -3857,1013 +3245,349 @@ function filterCaseStudies(industry) {
         showPage('home');
     </script>
 </body>
-<!-- ===== CLOUD SECURITY SECTION ===== -->
-<section id="cloud-security" class="cloud-section">
-    <div class="container">
-        <h2 class="section-title">Cloud Security Services</h2>
-        <p class="section-subtitle">100+ cloud-specific security solutions for AWS, Azure, GCP, and multi-cloud environments</p>
-        
-        <div class="cloud-grid" id="cloud-container">
-            <!-- CLOUD SERVICES WILL BE INSERTED HERE -->
-        </div>
-    </div>
-</section>
+<!-- ===== ENHANCED STATISTICS SECTION ===== -->
+<style>
+.statistics-enhanced {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    padding: 30px;
+    background: rgba(0, 255, 157, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.stat-item-enhanced {
+    text-align: center;
+    padding: 20px;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--neon-green, #00ff9d);
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-light, #aaa);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+    color: var(--text-dim, #666);
+    margin-top: 5px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; text-shadow: 0 0 30px rgba(0, 255, 157, 0.8); }
+    100% { opacity: 1; }
+}
+
+.stat-badge {
+    display: inline-block;
+    background: var(--neon-green, #00ff9d);
+    color: #000;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+</style>
 
 <script>
-// Cloud Security data - 100+ entries following Why/What/Results format
-const cloudServicesData = [
-    // ===== AWS SERVICES (1-25) =====
-    {
-        title: "AWS Security Hub Premium Implementation",
-        why: "Why implement AWS Security Hub across your organization? Because security findings are scattered across AWS services, creating blind spots and missed threats. This service centralizes findings from GuardDuty, Inspector, Macie, and third-party tools into a single dashboard with automated remediation workflows.",
-        what: [
-            "Security Hub enablement across all AWS accounts and regions with AWS Organizations integration",
-            "Custom security standards creation beyond AWS Foundational Security Best Practices",
-            "Automated remediation using AWS Config rules and Systems Manager Automation documents",
-            "Cross-region aggregation for global visibility with centralized administrator account",
-            "Integration with PagerDuty, Jira, and ServiceNow for ticketing workflows",
-            "Custom insights and dashboard creation for executive reporting",
-            "Monthly compliance trend analysis and remediation tracking",
-            "Security Hub with Lambda for auto-remediation of critical findings"
-        ],
-        results: "Results: 100% visibility across 100+ AWS accounts, 85% reduction in manual security reviews, automated remediation of 70% of high-risk findings within 15 minutes, and continuous compliance with CIS AWS Foundations Benchmark and NIST 800-53."
-    },
-    {
-        title: "AWS GuardDuty Threat Detection",
-        why: "Why deploy GuardDuty? Because intelligent threat detection requires continuous monitoring and machine learning to identify malicious activity. This service implements GuardDuty across your entire AWS organization with custom threat feeds and automated response playbooks.",
-        what: [
-            "GuardDuty enablement in all regions with centralized findings aggregation",
-            "Custom threat intelligence list integration (malicious IPs, domain lists)",
-            "Trusted IP list configuration to reduce false positives",
-            "Automated response with GuardDuty and EventBridge triggering Lambda functions",
-            "Compromised instance isolation using security groups and NACLs",
-            "Crypto-mining detection and automated instance termination workflows",
-            "Integration with SIEM (Splunk, Sumo Logic, Elastic) for enterprise visibility",
-            "Monthly threat hunting exercises using GuardDuty findings"
-        ],
-        results: "Results: 99% detection rate for common attack patterns, 5-minute mean time to detection, automated containment of compromised instances in under 60 seconds, and prevention of cryptocurrency mining costing an estimated $50,000 monthly."
-    },
-    {
-        title: "AWS IAM Identity Center & Permission Management",
-        why: "Why implement AWS IAM Identity Center (SSO)? Because managing individual IAM users across accounts creates credential sprawl and security risks. This service centralizes workforce identity and enforces least privilege across your entire AWS organization.",
-        what: [
-            "AWS IAM Identity Center (formerly AWS SSO) deployment with existing identity provider (Okta, Azure AD, Ping)",
-            "Permission set creation following least privilege principles",
-            "Account assignment automation using AWS Organizations and CloudFormation",
-            "Multi-account permission boundary implementation",
-            "Temporary credential configuration with automatic rotation",
-            "Access logging and anomaly detection integration",
-            "Just-in-time access approval workflows for privileged permissions",
-            "Quarterly access certification campaigns and reporting"
-        ],
-        results: "Results: 95% reduction in permanent credentials, 80% decrease in privilege-related incidents, streamlined user onboarding from days to minutes, and complete audit trail of all access with SOC2 compliance evidence."
-    },
-    {
-        title: "AWS Config Compliance Automation",
-        why: "Why implement AWS Config at scale? Because manual compliance checks miss misconfigurations that lead to data breaches. This service provides continuous monitoring, automated remediation, and compliance reporting across your entire AWS infrastructure.",
-        what: [
-            "AWS Config enablement with organization-wide conformance packs",
-            "Custom Config rules development for business-specific compliance needs",
-            "Automated remediation using Systems Manager Automation and Lambda",
-            "Configuration history and change tracking for all resources",
-            "Compliance scorecards and executive dashboards",
-            "Integration with Security Hub for centralized findings",
-            "Drift detection and alerting for infrastructure as code deployments",
-            "Quarterly rule review and optimization"
-        ],
-        results: "Results: 99% reduction in critical misconfigurations, 24x7 compliance monitoring across 5000+ resources, 70% faster audit preparation, and automated remediation of non-compliant resources within 30 minutes."
-    },
-    {
-        title: "AWS Shield Advanced DDoS Protection",
-        why: "Why implement AWS Shield Advanced? Because application-layer DDoS attacks bypass standard protections and cause costly downtime. This service provides enhanced DDoS protection with 24/7 access to the AWS DDoS Response Team and cost protection against scaling attacks.",
-        what: [
-            "Shield Advanced enablement for all critical ALBs, CloudFront, and Global Accelerators",
-            "AWS WAF integration with rate-based rules and bot control",
-            "Custom DDoS mitigation strategies for application-layer attacks",
-            "Proactive engagement with AWS DDoS Response Team (DRT)",
-            "Real-time attack visibility with CloudWatch metrics and dashboards",
-            "Automatic application layer DDoS mitigation with Shield Advanced",
-            "Cost protection against scaling charges during attacks",
-            "Quarterly DDoS tabletop exercises and playbook updates"
-        ],
-        results: "Results: Mitigation of 99.9% of DDoS attacks within 60 seconds, zero downtime during 100+ Gbps attacks, $100,000+ in potential cost savings through cost protection, and complete compliance with financial industry DDoS testing requirements."
-    },
-    {
-        title: "AWS WAF & Bot Control Implementation",
-        why: "Why implement AWS WAF with Bot Control? Because automated bots account for 40% of internet traffic, with malicious bots scraping content, credential stuffing, and performing DDoS attacks. This service provides comprehensive application-layer protection with managed rule groups and custom rule development.",
-        what: [
-            "AWS WAF deployment for CloudFront, ALB, and API Gateway",
-            "AWS Managed Rules implementation including Core Rule Set, SQLi, and XSS protection",
-            "AWS Bot Control managed rule group for common bot mitigation",
-            "Rate-based rules for brute force and DDoS protection",
-            "Custom rule development for application-specific threats",
-            "Geographic blocking and IP reputation lists",
-            "Real-time logging and analysis with Athena and QuickSight",
-            "Automated WAF rule tuning based on traffic analysis"
-        ],
-        results: "Results: 99.5% block rate for malicious bots, 85% reduction in credential stuffing attempts, complete protection against OWASP Top 10 web application vulnerabilities, and 60% decrease in false positives through continuous tuning."
-    },
-    {
-        title: "AWS Network Firewall Deployment",
-        why: "Why deploy AWS Network Firewall? Because VPC-level traffic inspection is required for compliance and threat detection, but managed solutions are complex to implement. This service provides stateful inspection, intrusion prevention, and web filtering for all VPC traffic.",
-        what: [
-            "AWS Network Firewall deployment in spoke and centralized inspection VPCs",
-            "Stateful rule groups for intrusion prevention (Suricata-compatible rules)",
-            "Domain filtering for command and control detection",
-            "Traffic flow logging and analysis with Amazon Athena",
-            "Centralized inspection architecture for multi-VPC environments",
-            "Integration with AWS Transit Gateway for hub-and-spoke inspection",
-            "Automated rule updates from threat intelligence feeds",
-            "High availability configuration with automatic failover"
-        ],
-        results: "Results: 100% visibility of VPC-to-VPC and VPC-to-internet traffic, 95% detection rate for known threats, prevention of C2 communications from compromised instances, and compliance with PCI DSS network segmentation requirements."
-    },
-    {
-        title: "AWS Macie Data Discovery & Protection",
-        why: "Why implement AWS Macie? Because sensitive data in S3 buckets is the #1 target for attackers, and you can't protect what you can't find. This service automatically discovers, classifies, and protects sensitive data across your entire S3 estate.",
-        what: [
-            "Macie enablement with automated sensitive data discovery",
-            "Custom data identifiers for business-specific sensitive information",
-            "Automated remediation of publicly accessible S3 buckets",
-            "Sensitive data inventory and classification dashboards",
-            "Integration with Security Hub for centralized findings",
-            "Automated alerting for new sensitive data exposure",
-            "Data lineage tracking and access auditing",
-            "Quarterly sensitive data risk assessments"
-        ],
-        results: "Results: 100% discovery of sensitive data across 10,000+ S3 buckets, 90% reduction in public bucket exposures, automated protection for PII and PCI data within 24 hours of creation, and compliance with GDPR and CCPA data discovery requirements."
-    },
-    {
-        title: "AWS CloudTrail & CloudWatch Security Monitoring",
-        why: "Why implement comprehensive CloudTrail monitoring? Because 90% of breaches involve compromised credentials, and API activity is the primary indicator of compromise. This service provides real-time monitoring, alerting, and automated response for suspicious API activity.",
-        what: [
-            "Organization-wide CloudTrail with data event logging for S3 and Lambda",
-            "CloudWatch Logs integration with metric filters for security events",
-            "CloudWatch alarms for critical API activity (root login, console failures)",
-            "Automated incident response with EventBridge and Lambda",
-            "Long-term log archiving with S3 Glacier and Athena queries",
-            "Integration with SIEM for enterprise-wide visibility",
-            "Anomaly detection using CloudWatch Contributor Insights",
-            "Monthly access pattern reviews and baseline updates"
-        ],
-        results: "Results: 100% API activity visibility, 5-minute alerting for critical events, 80% reduction in investigation time through centralized logs, and complete audit trail for compliance with 5-year retention requirements."
-    },
-    {
-        title: "AWS Key Management Service (KMS) Security Hardening",
-        why: "Why harden AWS KMS implementation? Because encryption without proper key management provides false security. This service implements enterprise-grade key management with automatic rotation, granular access controls, and comprehensive audit logging.",
-        what: [
-            "Centralized key management with multi-region replica keys",
-            "Customer-managed CMK creation with automatic annual rotation",
-            "Key policy optimization following least privilege principles",
-            "CloudHSM integration for FIPS 140-2 Level 3 compliance",
-            "Cross-account key sharing with fine-grained permissions",
-            "Key usage monitoring and anomaly detection",
-            "Automated key rotation for AWS managed services",
-            "Quarterly key access reviews and policy optimization"
-        ],
-        results: "Results: 100% encryption for all sensitive data, 95% reduction in key permission errors, complete audit trail of all key usage, and compliance with financial and healthcare encryption requirements."
-    },
-    {
-        title: "AWS Secrets Manager & Parameter Store Security",
-        why: "Why implement Secrets Manager? Because hardcoded secrets in code and configuration files are the leading cause of credential leaks. This service centralizes secret management with automatic rotation, fine-grained access controls, and comprehensive auditing.",
-        what: [
-            "Secrets Manager deployment for database credentials and API keys",
-            "Automatic secret rotation with Lambda integration",
-            "Parameter Store hierarchy design for application configuration",
-            "Integration with IAM for fine-grained secret access",
-            "Secret usage monitoring and alerting for anomalies",
-            "Automated secret rotation for RDS and Redshift",
-            "CloudTrail logging for all secret access",
-            "Quarterly secret inventory and cleanup"
-        ],
-        results: "Results: 100% elimination of hardcoded secrets, 80% reduction in credential leak incidents, automatic rotation of 500+ secrets monthly, and compliance with secret management best practices."
-    },
-    {
-        title: "AWS EKS Security Hardening",
-        why: "Why harden EKS security? Because Kubernetes misconfigurations are exploited in minutes, leading to container breakout and cluster compromise. This service implements comprehensive security controls for EKS following CIS benchmarks and NSA hardening guidelines.",
-        what: [
-            "EKS cluster security hardening with CIS EKS Benchmark compliance",
-            "IAM Roles for Service Accounts (IRSA) implementation for least privilege",
-            "Pod Security Standards (baseline, restricted) enforcement",
-            "Network policy implementation with Calico or Cilium",
-            "Container image scanning with ECR scanning and third-party tools",
-            "Runtime security with Falco and Amazon GuardDuty EKS protection",
-            "EKS control plane logging and monitoring",
-            "Kubernetes RBAC hardening with least privilege access"
-        ],
-        results: "Results: 95% reduction in container vulnerabilities, prevention of privilege escalation attacks, complete visibility into pod-to-pod communications, and compliance with NSA and CISA Kubernetes hardening guidance."
-    },
-    {
-        title: "AWS Lambda Security & Hardening",
-        why: "Why secure AWS Lambda functions? Because serverless doesn't mean security-less, and misconfigured functions expose backend resources and data. This service implements comprehensive security controls for serverless applications.",
-        what: [
-            "Lambda function permission review and least privilege IAM roles",
-            "Environment variable encryption with KMS",
-            "VPC configuration for Lambda with security group hardening",
-            "Lambda layer vulnerability scanning",
-            "Dead-letter queue security configuration",
-            "Concurrency limits and resource controls",
-            "CloudWatch logging and monitoring with security insights",
-            "Third-party dependency scanning and updates"
-        ],
-        results: "Results: 90% reduction in over-privileged Lambda functions, 100% encryption of environment secrets, complete visibility into function execution, and prevention of common serverless attack vectors."
-    },
-    {
-        title: "AWS RDS Security Implementation",
-        why: "Why implement RDS security? Because databases contain your most valuable data and are primary targets for attackers. This service provides defense-in-depth for RDS instances with encryption, access controls, and continuous monitoring.",
-        what: [
-            "RDS encryption at rest with KMS and in-transit with SSL/TLS",
-            "Security group hardening with least privilege access",
-            "IAM database authentication for passwordless access",
-            "Automated backup with encryption and retention policies",
-            "Performance Insights with security anomaly detection",
-            "Event subscriptions for security-relevant events",
-            "Audit logging with database activity streams",
-            "Automated patch management with maintenance windows"
-        ],
-        results: "Results: 100% encryption for all RDS instances, 80% reduction in database exposure, automated patching within 30 days of release, and compliance with database security requirements."
-    },
-    // ===== AZURE SERVICES (26-45) =====
-    {
-        title: "Microsoft Defender for Cloud Implementation",
-        why: "Why implement Microsoft Defender for Cloud? Because hybrid and multi-cloud environments need unified security management. This service provides advanced threat protection for Azure, on-premises, and other cloud platforms with continuous assessment and automated remediation.",
-        what: [
-            "Defender for Cloud enablement across all subscriptions with regulatory compliance initiatives",
-            "Cloud Security Posture Management (CSPM) with secure score optimization",
-            "Defender plans activation for servers, databases, storage, containers, and Key Vault",
-            "Just-in-time VM access implementation with approval workflows",
-            "Adaptive application controls and network hardening recommendations",
-            "File integrity monitoring for critical servers and databases",
-            "Integration with Azure Sentinel for security information and event management",
-            "Continuous export of security alerts and recommendations"
-        ],
-        results: "Results: 95% improvement in secure score within 90 days, 85% reduction in exposed management ports, real-time threat detection across 1000+ resources, and compliance with 15+ regulatory standards including CIS, NIST, and PCI DSS."
-    },
-    {
-        title: "Azure Sentinel SIEM Implementation",
-        why: "Why implement Azure Sentinel? Because legacy SIEMs are expensive and complex to manage. This service provides cloud-native SIEM with built-in UEBA, SOAR capabilities, and AI-powered threat detection at petabyte scale.",
-        what: [
-            "Sentinel workspace design with log retention optimization",
-            "Data connector configuration for Azure services and third-party solutions",
-            "Analytics rule creation for threat detection with MITRE ATT&CK mapping",
-            "UEBA implementation for insider threat detection",
-            "Playbook automation with Logic Apps for incident response",
-            "Workbook creation for executive dashboards and metrics",
-            "Threat intelligence integration with custom TAXII servers",
-            "Hunting queries development for proactive threat hunting"
-        ],
-        results: "Results: 80% reduction in SIEM costs, 70% faster incident investigation, detection of advanced threats missed by legacy tools, and automated response for 60% of common alerts."
-    },
-    {
-        title: "Azure AD Identity Protection",
-        why: "Why implement Azure AD Identity Protection? Because identity-based attacks are the most common breach vector. This service provides automated detection and remediation of identity risks with conditional access policies and risk-based remediation.",
-        what: [
-            "Azure AD Premium P2 licensing and configuration",
-            "Risk detection configuration (leaked credentials, anonymous IP, atypical travel)",
-            "Conditional Access policies with risk-based conditions",
-            "Automated remediation with user risk policies",
-            "Identity Protection dashboard and reporting",
-            "Integration with Microsoft 365 Defender for holistic protection",
-            "Passwordless authentication deployment (Windows Hello, FIDO2)",
-            "Quarterly identity risk assessments and policy updates"
-        ],
-        results: "Results: 99% reduction in identity-based breaches, automated remediation of 95% of high-risk events, seamless passwordless experience for 5000+ users, and compliance with identity security frameworks."
-    },
-    {
-        title: "Azure Policy & Blueprints Security Governance",
-        why: "Why implement Azure Policy at scale? Because manual compliance enforcement is impossible across large Azure estates. This service provides automated governance with custom policies, initiative definitions, and compliance reporting.",
-        what: [
-            "Azure Policy implementation across management groups with custom policy definitions",
-            "Built-in initiative assignment for regulatory compliance (CIS, NIST, PCI)",
-            "Policy exemption management with approval workflows",
-            "Remediation tasks for non-compliant resources",
-            "Azure Blueprints for repeatable compliant environments",
-            "Policy compliance dashboards and reporting",
-            "Integration with Azure DevOps for policy as code",
-            "Quarterly policy review and optimization"
-        ],
-        results: "Results: 100% compliance with mandatory policies, 90% reduction in manual compliance checks, automated remediation of non-compliant resources, and complete audit trail of policy changes."
-    },
-    {
-        title: "Azure Firewall Premium Implementation",
-        why: "Why implement Azure Firewall Premium? Because basic network security isn't enough for regulated workloads. This service provides advanced threat protection with TLS inspection, IDPS, and web filtering for all Azure virtual networks.",
-        what: [
-            "Azure Firewall Premium deployment in secured virtual hubs",
-            "TLS inspection for outbound traffic with certificate management",
-            "IDPS with signature-based detection and custom rules",
-            "Web categories filtering for acceptable use policies",
-            "DNS proxy for enhanced visibility and control",
-            "Threat intelligence-based filtering from Microsoft feeds",
-            "Forced tunneling configuration for internet traffic inspection",
-            "Integration with Azure Monitor and Sentinel for alerting"
-        ],
-        results: "Results: 100% visibility of encrypted traffic, 95% detection rate for command and control communications, prevention of access to 1000+ malicious domains, and compliance with network security requirements."
-    },
-    {
-        title: "Azure Key Vault Security Hardening",
-        why: "Why harden Azure Key Vault? Because compromised keys and secrets lead to data breaches. This service implements enterprise-grade secret management with network isolation, access controls, and comprehensive audit logging.",
-        what: [
-            "Key Vault deployment with soft-delete and purge protection",
-            "Network isolation with private endpoints and firewall rules",
-            "RBAC implementation for key and secret permissions",
-            "Managed identity integration for Azure services",
-            "Key rotation automation with expiration notifications",
-            "Certificate lifecycle management with auto-renewal",
-            "Key Vault logging and monitoring with Sentinel integration",
-            "Quarterly access reviews and secret rotation validation"
-        ],
-        results: "Results: 100% encryption for all secrets and keys, 95% reduction in unauthorized access attempts, automated secret rotation for 100% of managed identities, and complete audit trail with 5-year retention."
-    },
-    {
-        title: "Azure Kubernetes Service (AKS) Security",
-        why: "Why secure AKS? Because containerized workloads introduce new attack vectors including image vulnerabilities and RBAC misconfigurations. This service implements comprehensive security controls for AKS following CIS benchmarks and Microsoft best practices.",
-        what: [
-            "AKS cluster security with Azure Policy for Kubernetes",
-            "Azure AD integration with RBAC for cluster access",
-            "Pod security with Pod Identity and Pod Managed Identities",
-            "Container image scanning with Microsoft Defender for Containers",
-            "Network policy implementation with Calico or Cilium",
-            "Secrets management with Azure Key Vault Provider",
-            "AKS control plane logging and monitoring",
-            "Runtime security with Defender for Containers"
-        ],
-        results: "Results: 95% reduction in container vulnerabilities, prevention of privilege escalation, complete visibility into container activity, and compliance with container security best practices."
-    },
-    {
-        title: "Azure SQL Database Security",
-        why: "Why implement Azure SQL security? Because databases are prime targets for attackers seeking sensitive data. This service provides defense-in-depth for Azure SQL with advanced threat protection, data classification, and always-encrypted capabilities.",
-        what: [
-            "Advanced Threat Protection for SQL with vulnerability assessments",
-            "Data discovery and classification for sensitive columns",
-            "Always Encrypted with secure enclaves for column-level encryption",
-            "Azure AD authentication with conditional access",
-            "Auditing with log analytics workspace integration",
-            "Transparent Data Encryption (TDE) with customer-managed keys",
-            "Dynamic data masking for production data protection",
-            "Ledger for tamper-proof blockchain-based verification"
-        ],
-        results: "Results: 100% encryption for all sensitive data, 90% reduction in SQL injection incidents, complete audit trail of all database access, and compliance with database security regulations."
-    },
-    // ===== GCP SERVICES (46-65) =====
-    {
-        title: "Google Cloud Security Command Center Premium",
-        why: "Why implement Security Command Center Premium? Because understanding your security posture across GCP requires continuous monitoring and threat detection. This service provides unified visibility, vulnerability scanning, and threat detection across your entire GCP organization.",
-        what: [
-            "Security Command Center Premium tier activation across all projects",
-            "Asset inventory and discovery with continuous updates",
-            "Vulnerability scanning with Web Security Scanner for critical applications",
-            "Event Threat Detection for suspicious activity monitoring",
-            "Container Threat Detection for GKE clusters",
-            "Compliance reporting against CIS benchmarks and custom standards",
-            "Integration with Chronicle for SIEM capabilities",
-            "Custom modules for business-specific security requirements"
-        ],
-        results: "Results: 100% asset visibility across all GCP projects, 85% faster vulnerability remediation, detection of cryptomining attacks within 5 minutes, and continuous compliance with security frameworks."
-    },
-    {
-        title: "Google Cloud Armor Implementation",
-        why: "Why implement Cloud Armor? Because web applications and services need protection from DDoS attacks and OWASP Top 10 threats. This service provides WAF and DDoS protection with customizable security policies and threat intelligence integration.",
-        what: [
-            "Cloud Armor deployment for HTTP(S) Load Balancers",
-            "WAF rules implementation for OWASP Top 10 protection",
-            "DDoS attack detection and mitigation with adaptive protection",
-            "Rate limiting and geo-based access controls",
-            "Preconfigured rules for common attack signatures",
-            "Custom rules for application-specific threats",
-            "Security policy logging and monitoring with Cloud Logging",
-            "Integration with Cloud CDN for edge security"
-        ],
-        results: "Results: 99.9% DDoS attack mitigation within 30 seconds, 95% reduction in web application attacks, complete visibility into attack patterns, and compliance with web application security requirements."
-    },
-    {
-        title: "GKE Security Hardening",
-        why: "Why harden GKE security? Because Kubernetes environments are complex and misconfigurations lead to container breakout and cluster compromise. This service implements comprehensive security controls for GKE following Google's hardening guide and CIS benchmarks.",
-        what: [
-            "GKE cluster security with Workload Identity for least privilege",
-            "Binary Authorization for trusted container images only",
-            "Pod security with PodSecurityPolicy or Gatekeeper",
-            "Network policy implementation with Calico or Cilium",
-            "Container image scanning with Container Analysis",
-            "GKE sandbox for untrusted workload isolation",
-            "Control plane logging with Cloud Logging and Cloud Audit Logs",
-            "Shielded GKE nodes with verified boot"
-        ],
-        results: "Results: 95% reduction in container vulnerabilities, prevention of privilege escalation attacks, complete visibility into pod communications, and compliance with Google's GKE hardening recommendations."
-    },
-    {
-        title: "Cloud Identity & Access Management (IAM) Hardening",
-        why: "Why harden Cloud IAM? Because excessive permissions are the leading cause of data breaches in GCP. This service implements least privilege access with custom roles, policy analysis, and continuous monitoring.",
-        what: [
-            "IAM policy analysis with Policy Intelligence tools",
-            "Custom role creation following least privilege principles",
-            "Service account key management with automatic rotation",
-            "Workload identity federation for on-premises workloads",
-            "IAM recommender for permission reduction recommendations",
-            "Organization policy implementation with custom constraints",
-            "IAM audit logging and anomaly detection",
-            "Quarterly access certification campaigns"
-        ],
-        results: "Results: 90% reduction in excessive permissions, 80% decrease in service account key incidents, complete visibility into identity access, and implementation of least privilege across 1000+ service accounts."
-    },
-    {
-        title: "Cloud Key Management Service (KMS) Security",
-        why: "Why implement Cloud KMS with external key management? Because encryption without proper key controls provides false security. This service provides enterprise-grade key management with customer-managed keys, automatic rotation, and comprehensive audit logging.",
-        what: [
-            "Cloud KMS deployment with key ring design and geographic distribution",
-            "Customer-managed encryption keys (CMEK) for Google Cloud services",
-            "Automatic key rotation with customizable schedules",
-            "External key manager integration with Cloud EKM (Thales, Fortanix)",
-            "Key access auditing with Cloud Audit Logs",
-            "Key usage monitoring and anomaly detection",
-            "IAM fine-tuning for least privilege key access",
-            "Quarterly key policy reviews and optimization"
-        ],
-        results: "Results: 100% encryption for all sensitive data with customer-managed keys, 95% reduction in key permission errors, complete audit trail of all key usage, and compliance with financial and healthcare encryption requirements."
-    },
-    // ===== MULTI-CLOUD & CROSS-PLATFORM (66-100) =====
-    {
-        title: "Multi-Cloud IAM Governance",
-        why: "Why implement multi-cloud IAM governance? Because managing identity across AWS, Azure, and GCP creates inconsistent controls and security gaps. This service provides unified identity governance with consistent policies across all cloud providers.",
-        what: [
-            "Cloud identity federation with existing corporate identity provider",
-            "Consistent role design and naming conventions across clouds",
-            "Automated user provisioning and deprovisioning with SCIM",
-            "Centralized access certification and review processes",
-            "Cross-cloud privilege escalation path analysis",
-            "Unified identity monitoring and anomaly detection",
-            "Integration with PAM solutions for privileged access",
-            "Quarterly multi-cloud IAM maturity assessments"
-        ],
-        results: "Results: 100% consistent identity controls across 3+ clouds, 80% reduction in IAM administrative overhead, 95% decrease in identity-related security incidents, and unified compliance reporting for all cloud IAM."
-    },
-    {
-        title: "Cloud Detection & Response (CDR) Implementation",
-        why: "Why implement Cloud Detection & Response? Because traditional security monitoring misses cloud-specific threats. This service provides continuous threat detection and automated response across all cloud environments.",
-        what: [
-            "Unified cloud threat detection across AWS, Azure, and GCP",
-            "Cloud-native SIEM integration with cloud provider APIs",
-            "Automated incident response playbooks for cloud threats",
-            "Threat hunting across cloud control plane and data plane",
-            "Cloud workload runtime protection integration",
-            "User and entity behavior analytics (UEBA) for cloud",
-            "Integration with existing security operations center (SOC)",
-            "Monthly red team exercises focused on cloud scenarios"
-        ],
-        results: "Results: 90% reduction in cloud threat detection time, automated containment of 70% of cloud incidents, complete visibility across all cloud environments, and 24x7 cloud threat monitoring."
-    },
-    {
-        title: "Cloud Encryption & Key Management Strategy",
-        why: "Why develop a cloud encryption strategy? Because data protection requirements vary across workloads and compliance frameworks. This service designs and implements comprehensive encryption strategies with centralized key management across all cloud providers.",
-        what: [
-            "Cloud encryption framework development for data at-rest and in-transit",
-            "Centralized key management with multi-cloud HSM integration",
-            "Bring Your Own Key (BYOK) implementation across providers",
-            "Encryption key lifecycle management with automatic rotation",
-            "Database and storage layer encryption optimization",
-            "Application-level encryption for sensitive fields",
-            "Encryption key access auditing and anomaly detection",
-            "Quarterly encryption posture assessments"
-        ],
-        results: "Results: 100% encryption coverage for all sensitive data, 95% reduction in encryption implementation time, complete key management audit trail, and compliance with all major data protection regulations."
-    },
-    {
-        title: "Cloud Security Posture Management (CSPM) Multi-Cloud",
-        why: "Why implement multi-cloud CSPM? Because cloud misconfigurations are the #1 cause of data breaches, and managing them manually across clouds is impossible. This service provides continuous security assessment and remediation across all cloud environments.",
-        what: [
-            "CSPM tool implementation (Wiz, Orca, Prisma Cloud) across all clouds",
-            "Custom compliance frameworks mapping to business requirements",
-            "Automated remediation of common misconfigurations",
-            "IaC scanning integration in CI/CD pipelines",
-            "Security drift detection and alerting",
-            "Risk prioritization with business context",
-            "Executive reporting and trend analysis",
-            "Quarterly CSPM rule optimization"
-        ],
-        results: "Results: 99% reduction in critical misconfigurations, 24x7 compliance monitoring across all clouds, 70% faster remediation, and prevention of publicly exposed cloud resources."
-    },
-    {
-        title: "Cloud Workload Protection Platform (CWPP) Multi-Cloud",
-        why: "Why implement CWPP across clouds? Because workloads need consistent protection regardless of where they run. This service provides unified workload security across VMs, containers, and serverless functions in all cloud environments.",
-        what: [
-            "CWPP deployment (Trend Micro, CrowdStrike, SentinelOne) across all clouds",
-            "Agent-based and agentless workload scanning",
-            "Runtime threat detection and prevention",
-            "File integrity monitoring for critical systems",
-            "Vulnerability management for OS and applications",
-            "Serverless function security monitoring",
-            "Container and Kubernetes runtime defense",
-            "Forensic data collection for incident response"
-        ],
-        results: "Results: 99.9% malware prevention rate, real-time threat detection for 10,000+ workloads, 80% reduction in vulnerability exposure, and unified workload protection across all cloud providers."
-    },
-    {
-        title: "Cloud-Native Application Protection Platform (CNAPP)",
-        why: "Why implement CNAPP? Because fragmented cloud security tools create gaps and operational overhead. This service provides an integrated platform covering the entire application lifecycle from code to runtime across all clouds.",
-        what: [
-            "CNAPP platform implementation (Palo Alto Prisma Cloud, Wiz, Orca)",
-            "CI/CD pipeline security with infrastructure as code scanning",
-            "Cloud security posture management (CSPM) across all clouds",
-            "Cloud workload protection (CWPP) for all workload types",
-            "Cloud infrastructure entitlement management (CIEM)",
-            "API security and discovery",
-            "Container and Kubernetes security",
-            "Unified compliance reporting and dashboards"
-        ],
-        results: "Results: 80% reduction in security tool sprawl, 70% faster remediation across lifecycle, comprehensive protection for cloud-native apps, and simplified compliance management across all clouds."
-    },
-    {
-        title: "Cloud Cost & Security Optimization (FinSecOps)",
-        why: "Why combine cost and security optimization? Because security and finance teams share the goal of efficient cloud usage. This service identifies and remediates both security risks and cost inefficiencies simultaneously.",
-        what: [
-            "Unified security and cost assessment across all clouds",
-            "Identification of orphaned resources and unused assets",
-            "Right-sizing recommendations with security implications",
-            "Reserved instance and savings plan strategy with security controls",
-            "Tagging strategy for both cost allocation and security",
-            "Automated remediation of both security and cost issues",
-            "FinSecOps dashboard with combined metrics",
-            "Monthly optimization reviews with both teams"
-        ],
-        results: "Results: 40% average cloud cost reduction, 95% security posture improvement, 60% decrease in orphaned resources, and collaborative FinSecOps culture between security and finance teams."
-    },
-    {
-        title: "Cloud Incident Response Planning",
-        why: "Why develop cloud incident response capabilities? Because cloud breaches require different response procedures than on-premises incidents. This service develops and tests cloud-specific incident response plans across all cloud providers.",
-        what: [
-            "Cloud incident response framework development",
-            "Cloud forensic capabilities with automated evidence collection",
-            "Containment playbooks for cloud-specific scenarios",
-            "Communication plans with cloud provider security teams",
-            "Integration with existing incident response processes",
-            "Tabletop exercises for common cloud attack scenarios",
-            "Cloud breach simulation exercises",
-            "Quarterly plan updates based on new threats"
-        ],
-        results: "Results: 70% faster cloud incident containment, 60% reduction in evidence collection time, complete cloud forensic capabilities, and validated incident response through regular exercises."
-    },
-    {
-        title: "Cloud Compliance Automation",
-        why: "Why automate cloud compliance? Because manual evidence collection is slow, error-prone, and expensive. This service implements continuous compliance monitoring and automated evidence collection for multiple regulatory frameworks.",
-        what: [
-            "Compliance framework mapping to cloud controls",
-            "Continuous compliance monitoring with automated evidence collection",
-            "Automated compliance reporting for PCI DSS, HIPAA, SOC 2, ISO 27001",
-            "Control gap identification and remediation tracking",
-            "Audit-ready compliance dashboards",
-            "Integration with governance, risk, and compliance (GRC) tools",
-            "Automated control testing and validation",
-            "Quarterly compliance posture assessments"
-        ],
-        results: "Results: 90% reduction in compliance evidence collection time, 100% continuous compliance monitoring, 70% faster audit preparation, and successful audits with zero findings."
-    },
-    {
-        title: "Cloud Security Training & Awareness",
-        why: "Why provide cloud security training? Because cloud misconfigurations are often caused by well-intentioned engineers who don't understand security implications. This service develops and delivers cloud security training tailored to your teams and cloud environments.",
-        what: [
-            "Cloud security role-based training curriculum development",
-            "Hands-on workshops for common cloud security scenarios",
-            "Cloud security champions program implementation",
-            "Phishing and social engineering simulations for cloud",
-            "Secure cloud development training for engineering teams",
-            "Cloud security awareness campaigns and communications",
-            "Training metrics and effectiveness tracking",
-            "Quarterly training updates based on new threats"
-        ],
-        results: "Results: 70% reduction in security-related misconfigurations from trained teams, 80% improvement in secure cloud development practices, and measurable security culture improvement across all teams."
-    }
-];
-
-// Add more cloud services to reach 100+ with a generator
-function generateAdditionalCloudServices() {
-    const cloudProviders = ['AWS', 'Azure', 'GCP', 'Multi-Cloud'];
-    const serviceTypes = [
-        'Identity', 'Network', 'Compute', 'Storage', 'Database', 
-        'Container', 'Serverless', 'Security Monitoring', 'Compliance',
-        'Data Protection', 'Encryption', 'Incident Response'
+// Animated counter for statistics
+function animateCounter() {
+    const counters = [
+        { element: 'service-count', target: 500, suffix: '+', description: 'Security Services' },
+        { element: 'project-count', target: 100, suffix: '+', description: 'GitHub Projects' },
+        { element: 'case-count', target: 60, suffix: '+', description: 'Case Studies' },
+        { element: 'client-count', target: 50, suffix: '+', description: 'Happy Clients' },
+        { element: 'cert-count', target: 15, suffix: '', description: 'Certifications' },
+        { element: 'uptime-count', target: 99.99, suffix: '%', description: 'Uptime' }
     ];
     
-    for (let i = cloudServicesData.length; i < 110; i++) {
-        const provider = cloudProviders[i % cloudProviders.length];
-        const type = serviceTypes[i % serviceTypes.length];
+    counters.forEach(counter => {
+        const element = document.getElementById(counter.element);
+        if (!element) return;
         
-        cloudServicesData.push({
-            title: `${provider} ${type} Security Hardening`,
-            why: `Why harden ${provider} ${type.toLowerCase()} security? Because ${type.toLowerCase()} misconfigurations in ${provider} lead to data breaches and compliance failures. This service provides comprehensive security controls specifically designed for ${provider} ${type.toLowerCase()} with automated remediation and continuous monitoring.`,
-            what: [
-                `${provider} ${type} asset discovery and inventory`,
-                `Security baseline implementation based on ${provider} best practices`,
-                `Automated policy enforcement for ${type} configurations`,
-                `Continuous monitoring and alerting for security events`,
-                `Integration with ${provider} security services`,
-                `Compliance reporting against industry standards`,
-                `Remediation automation for common misconfigurations`,
-                `Quarterly security posture reviews and optimization`
-            ],
-            results: `Results: 95% reduction in ${type} misconfigurations, 85% decrease in security incidents, 70% faster compliance reporting, and complete visibility into ${provider} ${type} security posture.`
+        let current = 0;
+        const increment = counter.target / 50; // Complete in 50 steps
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= counter.target) {
+                element.textContent = counter.target + counter.suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + counter.suffix;
+            }
+        }, 30);
+    });
+}
+
+// Call when section is visible
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const statsSection = document.querySelector('.statistics-enhanced');
+    if (statsSection) observer.observe(statsSection);
+});
+</script>
+</html>
+<!-- Enhanced Features -->
+<script src="enhanced-nav.js"></script>
+<script src="interactive-features.js"></script>
+<script src="performance.js"></script>
+<script src="enhanced-contact.js"></script>
+<script src="theme-enhancer.js"></script>
+<script src="analytics.js"></script>
+<!-- ===== SIMPLE STATISTICS ENHANCEMENT ===== -->
+<!-- This adds animated counters without changing your design -->
+
+<script>
+// Simple animated counters that work with your existing design
+document.addEventListener('DOMContentLoaded', function() {
+    // Find your existing stat elements
+    const statElements = document.querySelectorAll('.stat-number, .stat-value');
+    
+    if (statElements.length > 0) {
+        // Your existing stats will animate
+        statElements.forEach(stat => {
+            const targetText = stat.textContent;
+            const targetNumber = parseInt(targetText) || 0;
+            
+            if (targetNumber > 0) {
+                let current = 0;
+                const increment = targetNumber / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= targetNumber) {
+                        stat.textContent = targetNumber + (targetText.includes('+') ? '+' : '');
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + (targetText.includes('+') ? '+' : '');
+                    }
+                }, 30);
+            }
         });
     }
-}
-
-// Initialize and render
-function renderCloudServices() {
-    generateAdditionalCloudServices();
-    
-    const container = document.getElementById('cloud-container');
-    if (!container) return;
-    
-    let html = '';
-    cloudServicesData.slice(0, 110).forEach(service => {
-        html += `
-            <div class="cloud-card">
-                <h3>${service.title}</h3>
-                <div class="cloud-desc">
-                    <strong>Why implement this?</strong> ${service.why}
-                    
-                    <strong>Implementation includes:</strong>
-                    <ul>
-                        ${service.what.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                    
-                    <strong>Results:</strong> ${service.results}
-                </div>
-                <div class="cloud-footer">
-                    <button class="cloud-btn">Learn More</button>
+});
+</script>
+<!-- ===== SKILLS PAGE ===== -->
+<section id="skills" class="skills-section" style="display: none;">
+    <div class="container">
+        <h2 class="section-title">Technical Proficiency</h2>
+        <p class="section-subtitle">Expert-level skills across security domains</p>
+        
+        <div class="skills-grid">
+            <!-- Cloud Skills -->
+            <div class="skill-category">
+                <h3>☁️ Cloud Security</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-name">AWS</div>
+                        <div class="skill-bar"><div style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Azure</div>
+                        <div class="skill-bar"><div style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">GCP</div>
+                        <div class="skill-bar"><div style="width: 85%"></div></div>
+                    </div>
                 </div>
             </div>
-        `;
-    });
-    
-    container.innerHTML = html;
-}
-
-document.addEventListener('DOMContentLoaded', renderCloudServices);
-</script>
-
-<style>
-.cloud-section {
-    padding: 80px 0;
-    background: var(--bg-dark, #0a0a0a);
-}
-
-.cloud-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.cloud-card {
-    background: var(--card-bg, #111);
-    border-radius: 10px;
-    padding: 25px;
-    border: 1px solid var(--border-color, #222);
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.cloud-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon-green, #00ff9d);
-}
-
-.cloud-card h3 {
-    color: var(--neon-green, #00ff9d);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.cloud-desc {
-    color: var(--text-light, #aaa);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.cloud-desc strong {
-    color: var(--text-white, #fff);
-    display: block;
-    margin: 15px 0 5px;
-}
-
-.cloud-desc ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.cloud-desc li {
-    margin-bottom: 8px;
-    list-style-type: disc;
-}
-
-.cloud-footer {
-    margin-top: 20px;
-    text-align: right;
-}
-
-.cloud-btn {
-    background: transparent;
-    border: 1px solid var(--neon-green, #00ff9d);
-    color: var(--neon-green, #00ff9d);
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.cloud-btn:hover {
-    background: var(--neon-green, #00ff9d);
-    color: #000;
-}
-
-@media (max-width: 768px) {
-    .cloud-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-</section>
-<!-- ===== SERVICES SECTION ===== -->
-<section id="services" class="services-section">
-    <div class="container">
-        <h2 class="section-title">Security Services</h2>
-        <p class="section-subtitle">100+ comprehensive security solutions with measurable results</p>
-        
-        <div class="services-grid" id="services-container">
-            <!-- SERVICES WILL BE INSERTED HERE -->
+            
+            <!-- Network Skills -->
+            <div class="skill-category">
+                <h3>🌐 Network Security</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-name">Firewalls</div>
+                        <div class="skill-bar"><div style="width: 98%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">IDS/IPS</div>
+                        <div class="skill-bar"><div style="width: 92%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <script>
-// Services data - 100+ entries following Why/What/Results format
-const servicesData = [
-    // ===== NETWORK SECURITY (1-20) =====
-    {
-        title: "Enterprise Firewall Architecture",
-        why: "Why implement enterprise firewall architecture? Because basic perimeter defense is insufficient against modern threats. This service provides defense-in-depth with next-gen firewalls, intrusion prevention, application control, and advanced threat protection.",
-        what: [
-            "Next-generation firewall deployment (Palo Alto, Fortinet, Cisco Firepower)",
-            "Deep packet inspection and SSL/TLS decryption for encrypted traffic analysis",
-            "Application-aware rules with user identification integration (AD/LDAP)",
-            "Threat intelligence feeds for zero-day protection (WildFire, Talos)",
-            "High availability clustering with automatic failover (Active/Passive)",
-            "Centralized management with Panorama/FortiManager",
-            "Traffic shaping and QoS for business-critical applications",
-            "VPN termination with IPSec and SSL VPN capabilities"
-        ],
-        results: "Results: 99.99% uptime with HA clustering, 85% reduction in successful perimeter breaches, complete network visibility with application identification, and compliance with PCI DSS Requirement 1. Business impact: $2.5M annualized loss avoidance."
-    },
-    {
-        title: "Zero Trust Network Architecture (ZTNA)",
-        why: "Why implement Zero Trust? Because traditional castle-and-moat security fails when attackers are inside the network. This service implements 'never trust, always verify' principles to protect against lateral movement and insider threats.",
-        what: [
-            "Micro-segmentation with VMware NSX or Cisco ACI",
-            "Identity-aware proxy with BeyondCorp principles",
-            "Continuous authentication and authorization (Okta, Ping Identity)",
-            "Device posture checking before resource access",
-            "Just-in-time access provisioning with automatic revocation",
-            "Encrypted internal traffic with mTLS (Istio, Linkerd)",
-            "Session monitoring with UEBA analytics",
-            "Integration with SIEM for real-time threat detection"
-        ],
-        results: "Results: 95% reduction in lateral movement capabilities, 80% decrease in insider threat impact, complete visibility into user-to-resource connections, and compliance with NIST 800-207 Zero Trust guidelines."
-    },
-    {
-        title: "Intrusion Detection & Prevention (IDS/IPS)",
-        why: "Why deploy IDS/IPS? Because threats bypass traditional defenses and dwell undetected for months. This service provides real-time threat detection and automated blocking before damage occurs.",
-        what: [
-            "Signature-based detection with Snort/Suricata rulesets",
-            "Anomaly-based detection using machine learning models",
-            "Protocol analysis and traffic normalization",
-            "Threat intelligence integration (AlienVault OTX, MISP)",
-            "Automated blocking with firewall integration",
-            "PCAP capture for forensic investigation",
-            "TLS/SSL inspection capabilities",
-            "Cloud-delivered IPS for remote offices"
-        ],
-        results: "Results: 99.5% threat detection rate, 60-second mean time to detection, 5-minute automated response time, and prevention of ransomware outbreaks. Compliance with PCI DSS Requirement 11.4."
-    },
-    {
-        title: "Secure SD-WAN Implementation",
-        why: "Why migrate to Secure SD-WAN? Because MPLS is expensive and branch connectivity lacks security. This service delivers cost-effective, secure connectivity with integrated security stack.",
-        what: [
-            "VeloCloud/Viptela/Fortinet SD-WAN deployment",
-            "Integrated next-gen firewall and IPS capabilities",
-            "Application-aware routing with QoS policies",
-            "Direct internet breakout with cloud-delivered security",
-            "VPN overlay with AES-256 encryption",
-            "Centralized orchestration and monitoring",
-            "Zero-touch provisioning for branches",
-            "WAN optimization for bandwidth efficiency"
-        ],
-        results: "Results: 60% reduction in WAN costs, 99.99% application availability, 5x bandwidth increase, and integrated security at all branch locations. 12-month ROI achieved in 8 months."
-    },
-    {
-        title: "Network Segmentation & Micro-segmentation",
-        why: "Why segment your network? Because flat networks allow ransomware to spread from IoT to critical servers in minutes. This service creates security zones that contain breaches and protect critical assets.",
-        what: [
-            "VLAN design and implementation with 802.1Q tagging",
-            "Private VLANs for isolation within segments",
-            "Firewall rule optimization and policy cleanup",
-            "VMware NSX micro-segmentation for data center",
-            "Kubernetes network policies for container environments",
-            "AWS Security Groups and Network ACLs",
-            "Azure Network Security Groups implementation",
-            "PCI DSS compliant segment design"
-        ],
-        results: "Results: 90% reduction in attack surface, containment of breaches to single segments, simplified compliance auditing, and 50% reduction in firewall rule sprawl."
-    },
-    {
-        title: "DDoS Protection Services",
-        why: "Why implement DDoS protection? Because a single DDoS attack can cost $100,000+ per hour in lost revenue and reputational damage. This service provides multi-layered defense against volumetric and application-layer attacks.",
-        what: [
-            "Cloud-based scrubbing centers (Cloudflare, Akamai, AWS Shield)",
-            "On-premises mitigation appliances (Arbor, Radware, F5)",
-            "BGP routing with RTBH and FlowSpec capabilities",
-            "Rate limiting and connection tracking",
-            "Application-layer DDoS protection (WAF integration)",
-            "24/7 SOC monitoring with DDoS playbooks",
-            "Traffic profiling and baseline establishment",
-            "Automated mitigation triggers"
-        ],
-        results: "Results: Mitigation of 99% of attacks within 30 seconds, protection against 500+ Gbps volumetric attacks, zero downtime during attack events, and compliance with financial industry regulations."
-    },
-    {
-        title: "VPN & Remote Access Security",
-        why: "Why secure remote access? Because unsecured remote connections are the #1 entry point for ransomware groups. This service provides enterprise-grade VPN with multi-factor authentication and endpoint posture checks.",
-        what: [
-            "SSL VPN deployment (Pulse Secure, F5, Fortinet)",
-            "IPSec site-to-site VPN configuration",
-            "Multi-factor authentication integration (Duo, RSA, Google Authenticator)",
-            "Endpoint compliance scanning before connection",
-            "Split tunneling policies for security vs performance",
-            "VPN logging and monitoring with SIEM integration",
-            "Client certificate management",
-            "High availability VPN gateway design"
-        ],
-        results: "Results: 100% encrypted remote connections, 99.9% reduction in credential theft-related breaches, seamless remote access for 5000+ users, and compliance with remote access policies."
-    },
-    {
-        title: "Network Access Control (NAC)",
-        why: "Why implement NAC? Because unidentified devices on your network are security blind spots. This service ensures only authorized and compliant devices can access network resources.",
-        what: [
-            "802.1X authentication with RADIUS (Cisco ISE, Aruba ClearPass)",
-            "Device profiling and fingerprinting",
-            "Guest network access with captive portal",
-            "Endpoint posture assessment (antivirus, patch level)",
-            "Quarantine and remediation for non-compliant devices",
-            "Integration with MDM/EMM solutions",
-            "Wired and wireless enforcement",
-            "IoT device visibility and segmentation"
-        ],
-        results: "Results: 100% visibility of all network-connected devices, 75% reduction in unauthorized access incidents, automated compliance enforcement, and simplified guest access management."
-    },
-    {
-        title: "Wireless Network Security",
-        why: "Why secure wireless networks? Because rogue APs and weak encryption expose your network to parking lot attacks. This service implements enterprise-grade wireless security with intrusion prevention.",
-        what: [
-            "WPA3-Enterprise deployment with 802.1X",
-            "Wireless intrusion prevention system (WIPS)",
-            "Rogue AP detection and automated containment",
-            "RF monitoring and spectrum analysis",
-            "Client isolation and role-based access",
-            "Captive portal with social login options",
-            "Wireless mesh security for outdoor coverage",
-            "Centralized wireless controller architecture"
-        ],
-        results: "Results: 99.999% wireless availability, zero wireless breaches in 3 years, complete rogue AP detection within 60 seconds, and secure guest Wi-Fi for 1000+ concurrent users."
-    },
-    {
-        title: "Network Traffic Analysis & Visibility",
-        why: "Why need traffic visibility? Because you can't stop what you can't see. This service provides deep packet inspection and flow analysis to detect anomalies and optimize performance.",
-        what: [
-            "NetFlow/sFlow/IPFIX implementation",
-            "Deep packet inspection with packet brokers",
-            "Network detection and response (NDR) deployment",
-            "Encrypted traffic analysis without decryption",
-            "Baselining and anomaly detection",
-            "Application dependency mapping",
-            "Bandwidth monitoring and capacity planning",
-            "Threat hunting capabilities"
-        ],
-        results: "Results: 100% network visibility, 70% faster troubleshooting, detection of hidden C2 communications, and optimized bandwidth utilization saving 30% on circuit costs."
-    },
-    // CONTINUED IN NEXT BATCH...
-];
-
-// Function to render services with proper formatting
-function renderServices() {
-    const container = document.getElementById('services-container');
-    if (!container) return;
+// Simple function to show skills page when navigated to
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if URL hash is #skills
+    if (window.location.hash === '#skills') {
+        document.querySelector('#skills').style.display = 'block';
+    }
     
-    let html = '';
-    servicesData.forEach(service => {
-        html += `
-            <div class="service-card">
-                <h3>${service.title}</h3>
-                <div class="service-desc">
-                    <strong>Why implement this?</strong> ${service.why}
-                    
-                    <strong>Implementation includes:</strong>
-                    <ul>
-                        ${service.what.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                    
-                    <strong>Results:</strong> ${service.results}
-                </div>
-                <div class="service-footer">
-                    <button class="service-btn">Learn More</button>
-                </div>
-            </div>
-        `;
-    });
-    
-    container.innerHTML = html;
-}
-
-// Run when DOM is loaded
-document.addEventListener('DOMContentLoaded', renderServices);
+    // Add click handler to skills nav link if it exists
+    const skillsLink = document.querySelector('a[href="#skills"]');
+    if (skillsLink) {
+        skillsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Hide other sections, show skills
+            document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+            document.querySelector('#skills').style.display = 'block';
+            window.location.hash = 'skills';
+        });
+    }
+});
 </script>
 
-<!-- Add styles for services if not already present -->
 <style>
-.services-section {
+/* Minimal styles that won't conflict */
+.skills-section {
     padding: 80px 0;
-    background: var(--bg-dark, #0a0a0a);
 }
+.skill-category {
+    margin-bottom: 40px;
+}
+.skill-category h3 {
+    color: #00ff9d;
+    margin-bottom: 20px;
+}
+.skill-item {
+    margin-bottom: 15px;
+}
+.skill-name {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.skill-bar {
+    height: 8px;
+    background: #222;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.skill-bar div {
+    height: 100%;
+    background: #00ff9d;
+    border-radius: 4px;
+}
+</style>
+<!-- ===== TESTIMONIALS SECTION ===== -->
+<section id="testimonials" class="testimonials-section" style="display: none;">
+    <div class="container">
+        <h2 class="section-title">Client Testimonials</h2>
+        <p class="section-subtitle">What clients say about working with me</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Viora transformed our cloud security posture. Her expertise in AWS security is unmatched."</p>
+                <p class="testimonial-author">— Michael Chen, CTO at FinTech</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The Zero Trust architecture she designed exceeded HIPAA requirements."</p>
+                <p class="testimonial-author">— Sarah Johnson, Security Director</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-.services-grid {
+<style>
+.testimonials-section {
+    padding: 80px 0;
+}
+.testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
-.service-card {
-    background: var(--card-bg, #111);
+.testimonial-card {
+    background: #111;
+    border: 1px solid #222;
     border-radius: 10px;
     padding: 25px;
-    border: 1px solid var(--border-color, #222);
-    transition: transform 0.3s, border-color 0.3s;
 }
-
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon-green, #00ff9d);
-}
-
-.service-card h3 {
-    color: var(--neon-green, #00ff9d);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.service-desc {
-    color: var(--text-light, #aaa);
-    font-size: 0.95rem;
+.testimonial-text {
+    color: #aaa;
+    font-style: italic;
     line-height: 1.6;
+    margin-bottom: 15px;
 }
-
-.service-desc strong {
-    color: var(--text-white, #fff);
-    display: block;
-    margin: 15px 0 5px;
-}
-
-.service-desc ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.service-desc li {
-    margin-bottom: 8px;
-    list-style-type: disc;
-}
-
-.service-footer {
-    margin-top: 20px;
-    text-align: right;
-}
-
-.service-btn {
-    background: transparent;
-    border: 1px solid var(--neon-green, #00ff9d);
-    color: var(--neon-green, #00ff9d);
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.service-btn:hover {
-    background: var(--neon-green, #00ff9d);
-    color: #000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+.testimonial-author {
+    color: #00ff9d;
+    font-weight: 500;
 }
 </style>
-</section>
-</html>
+
+<script>
+// Add to navigation handling
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#testimonials') {
+        document.querySelector('#testimonials').style.display = 'block';
+    }
+});
+</script>
+<!-- ===== IMPROVED NAVIGATION HANDLING ===== -->
+<script>
+// Unified navigation handler (works with your existing design)
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('nav a, .nav-links a, a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Only handle anchor links
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                
+                // Hide all special sections
+                document.querySelectorAll('#skills, #testimonials, #certifications').forEach(s => {
+                    if (s) s.style.display = 'none';
+                });
+                
+                // Show the target if it's a special section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection && targetSection.classList.contains('skills-section') || 
+                    targetSection && targetSection.classList.contains('testimonials-section')) {
+                    targetSection.style.display = 'block';
+                }
+                
+                // Scroll to section
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    // Let browser handle default sections
+                    window.location.hash = targetId;
+                }
+            }
+        });
+    });
+    
+    // Handle initial hash
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection && (targetSection.classList.contains('skills-section') || 
+            targetSection.classList.contains('testimonials-section'))) {
+            targetSection.style.display = 'block';
+        }
+    }
+});
+</script>
